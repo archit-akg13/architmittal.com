@@ -1,0 +1,204 @@
+---
+title: "What is MCP Protocol? The USB Port for AI Agents"
+description: "MCP Protocol explained simply — what it is, why it matters, and how to use it with Claude and other AI agents."
+date: "2026-03-05"
+tags: ["MCP", "AI Agents", "Claude", "Protocol"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/what-is-mcp-protocol-usb-for-ai-agents"
+---
+
+## The Problem MCP Solves
+
+Imagine you have a brilliant assistant who can write code, analyze data, and answer complex questions — but they cannot access the internet, read your files, or check your database. That is what most AI models are like today. They are powerful thinkers trapped in a box with no hands.
+
+MCP — Model Context Protocol — gives AI models hands.
+
+It is a standardized way for AI agents to connect to external tools, databases, APIs, and services. Think of it like USB for AI. Before USB, every device needed its own proprietary connector. MCP does for AI what USB did for hardware: one standard protocol that connects everything.
+
+## The USB Analogy
+
+Before USB existed in the 1990s, connecting a printer required a parallel port cable. A mouse needed a PS/2 connector. A modem used a serial port. Every device, every cable, every driver was different. It was chaos.
+
+USB fixed this by creating one universal port that anything could plug into. Printers, keyboards, phones, cameras — one connector, one protocol, everything works.
+
+MCP does the same thing for AI agents:
+
+| Before MCP | After MCP |
+|---|---|
+| Custom code for each AI + tool integration | One standard protocol |
+| Every AI vendor builds their own plugin system | Universal tool interface |
+| Tools locked to specific AI platforms | Tools work with any MCP-compatible AI |
+| Developers rebuild integrations for each AI | Build once, connect everywhere |
+
+## How MCP Actually Works
+
+MCP uses a client-server architecture:
+
+### MCP Servers (The Tools)
+
+An MCP server is a lightweight program that exposes specific capabilities. For example:
+
+- A **filesystem MCP server** lets AI agents read and write files
+- A **database MCP server** lets agents run SQL queries
+- A **Slack MCP server** lets agents send messages
+- A **GitHub MCP server** lets agents create issues and pull requests
+
+Each server declares what it can do using a standardized format. It tells the AI: "I can read files, write files, and list directories. Here are the parameters I need."
+
+### MCP Clients (The AI)
+
+The AI agent (like Claude Code) acts as an MCP client. It discovers available servers, understands their capabilities, and calls them when needed. The key insight is that the AI decides which tools to use based on the task at hand.
+
+When you ask Claude Code to "read the config file and fix the bug," it:
+
+1. Checks its available MCP tools
+2. Finds the filesystem server
+3. Calls the "read file" tool with the config path
+4. Analyzes the content
+5. Calls the "write file" tool with the fix
+
+All through MCP. No custom code. No platform-specific integration.
+
+### The Communication Flow
+
+```
+User: "Check our database for users who signed up last week"
+  ↓
+AI Agent (Claude): "I need to query a database. Let me use the database MCP server."
+  ↓
+MCP Protocol: Standardized request to database server
+  ↓
+Database MCP Server: Runs the query, returns results
+  ↓
+AI Agent: "Here are the 47 users who signed up last week..."
+```
+
+The beauty is that the AI agent does not know or care about the database implementation details. PostgreSQL, MySQL, MongoDB — it does not matter. The MCP server handles the specifics.
+
+## Why MCP Matters for Developers
+
+### 1. Build Tools Once
+
+Before MCP, if you wanted your AI to interact with your company's internal API, you had to build a custom integration for each AI platform. ChatGPT plugins, Claude tools, Gemini extensions — each with their own format, their own requirements, their own deployment.
+
+With MCP, you build one server. It works with any MCP-compatible AI. Today that means Claude, but the protocol is open and other platforms are adopting it.
+
+### 2. Composability
+
+MCP servers can be mixed and matched. Need an AI that can read your database, check your Git history, and post to Slack? Connect three MCP servers. No custom glue code.
+
+This composability is incredibly powerful. I have built setups for clients where a single AI agent connects to 5-6 MCP servers and can handle complex, multi-step tasks that would have required custom development before.
+
+### 3. Security and Control
+
+MCP servers run on your infrastructure. Your data does not leave your system — the AI requests specific information through the protocol, and only the results travel back. This is fundamentally more secure than giving an AI broad access to your systems.
+
+You can also control exactly what capabilities each server exposes. A read-only database server for analysis. A file server limited to specific directories. Fine-grained access control built into the protocol.
+
+## Real-World MCP Use Cases
+
+### Automated Code Review
+
+I set up a Claude Code environment with MCP servers for Git, filesystem, and a linting API. The AI agent can:
+
+- Pull the latest changes from a branch
+- Read the modified files
+- Run the linter
+- Analyze the code changes
+- Write review comments
+
+All automated, all through MCP. What used to require a custom CI pipeline is now a single AI agent with the right tools connected.
+
+### Customer Support Intelligence
+
+For a client's support team, I connected MCP servers for their ticketing system (Freshdesk), knowledge base, and CRM. The AI agent can:
+
+- Read incoming support tickets
+- Search the knowledge base for relevant articles
+- Look up the customer's history in the CRM
+- Draft a response incorporating all context
+
+The support team reviews and sends the response, but the research and drafting — the time-consuming part — is handled by the AI through MCP connections.
+
+### Multi-Agent Workflows
+
+MCP enables multi-agent architectures where different AI agents handle different parts of a workflow. One agent researches, another writes, a third reviews — all sharing context through MCP servers.
+
+I have built content pipelines where:
+1. Agent 1 connects to a research MCP server (web search + document analysis)
+2. Agent 2 reads Agent 1's findings and writes content via a writing MCP server
+3. Agent 3 reviews the content against brand guidelines using a custom rules MCP server
+
+Each agent is specialized, and MCP provides the connective tissue.
+
+## Getting Started with MCP
+
+### Using MCP with Claude Code
+
+If you use Claude Code, MCP is already part of your workflow. Claude Code comes with built-in MCP servers for filesystem access, and you can add more through configuration.
+
+To add a custom MCP server, you add it to your Claude Code configuration:
+
+```json
+{
+  "mcpServers": {
+    "my-database": {
+      "command": "node",
+      "args": ["path/to/database-server.js"],
+      "env": {
+        "DATABASE_URL": "postgresql://..."
+      }
+    }
+  }
+}
+```
+
+### Building Your Own MCP Server
+
+The MCP SDK makes it straightforward to build custom servers. A basic server in TypeScript looks like:
+
+```typescript
+import { Server } from '@modelcontextprotocol/sdk/server/index.js'
+
+const server = new Server({
+  name: 'my-custom-server',
+  version: '1.0.0',
+})
+
+server.setRequestHandler('tools/list', async () => ({
+  tools: [{
+    name: 'get_weather',
+    description: 'Get weather for a city',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        city: { type: 'string', description: 'City name' },
+      },
+      required: ['city'],
+    },
+  }],
+}))
+
+server.setRequestHandler('tools/call', async (request) => {
+  if (request.params.name === 'get_weather') {
+    const city = request.params.arguments.city
+    const weather = await fetchWeather(city)
+    return { content: [{ type: 'text', text: JSON.stringify(weather) }] }
+  }
+})
+```
+
+The protocol handles discovery, capability negotiation, and communication. You focus on the business logic.
+
+## The Future of MCP
+
+MCP is still early, but the trajectory is clear. As more AI platforms adopt the protocol, we will see:
+
+- A marketplace of pre-built MCP servers for every popular service
+- Enterprise adoption for secure AI integration with internal systems
+- Complex multi-agent workflows becoming accessible to non-developers
+- AI agents that can genuinely interact with the real world through standardized tools
+
+If you are building AI-powered products or integrating AI into your business, learning MCP now puts you ahead. It is the infrastructure layer that makes AI agents actually useful in production.
+
+I build custom MCP servers for clients who need AI agents integrated with their existing systems. If you want to explore how MCP can automate your workflows, [book a consultation](/contact).

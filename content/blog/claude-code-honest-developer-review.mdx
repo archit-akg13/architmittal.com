@@ -1,0 +1,140 @@
+---
+title: "Claude Code Changed How I Work — An Honest Developer Review"
+description: "After months of using Claude Code for real projects, here's my honest take on what works, what doesn't, and why it changed my workflow."
+date: "2026-03-01"
+tags: ["Claude Code", "Developer Tools", "AI", "Review"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/claude-code-honest-developer-review"
+---
+
+## My Background With AI Coding Tools
+
+I have tried everything. GitHub Copilot for a year. Cursor for six months. ChatGPT for code generation since the GPT-4 launch. Amazon CodeWhisperer. Codeium. Tabnine. I have a strong opinion on what works and what is marketing hype.
+
+Claude Code is different from all of them. Not because it writes better code — although it does — but because it fundamentally changes what "using an AI coding tool" means. This is not autocomplete on steroids. This is a developer sitting next to you who can read your entire codebase, understand your architecture, and make meaningful changes across multiple files.
+
+Let me explain.
+
+## What Claude Code Actually Is
+
+Claude Code is a CLI tool from Anthropic. You run it in your terminal, inside your project directory. It can read your files, understand your project structure, run commands, and make edits. The key difference from other tools: it operates on your real codebase, not a chat window where you copy-paste code back and forth.
+
+When I say "fix the authentication bug in the user service," Claude Code will:
+
+1. Read the relevant files
+2. Understand the codebase context
+3. Find the bug
+4. Edit the files to fix it
+5. Run the tests to verify
+
+All in one go. No copy-pasting. No explaining your file structure. No "here is the fix, now go apply it manually."
+
+## What Works Incredibly Well
+
+### Multi-File Edits
+
+This is Claude Code's killer feature. Most AI coding tools work within a single file. Claude Code works across your entire project. When I ask it to "add a new API endpoint with validation, database model, and tests," it creates the route file, the model, the validation schema, the tests, and updates the barrel exports — all coordinated and consistent.
+
+I recently used it to add a complete lead capture system to a website. Contact form, API route, JSON storage, Telegram notifications, form validation — across 8 files, all in one session. Would have taken me half a day. Claude Code did it in 15 minutes.
+
+### Understanding Existing Code
+
+Claude Code reads your codebase before making changes. It does not guess at your patterns or conventions — it looks at your existing code and follows them. If your project uses a specific error handling pattern, Claude Code will use the same pattern. If you have a constants file, it will add new constants there instead of hardcoding values.
+
+This sounds simple, but it is a massive quality improvement over tools that generate code in isolation. The output feels like it belongs in your project because Claude Code actually read your project before writing.
+
+### Explaining and Debugging
+
+Sometimes I do not want code written. I want to understand why something is broken. Claude Code is exceptional at reading a stack trace, finding the root cause across multiple files, and explaining the issue clearly.
+
+Last week, a production deploy failed with a cryptic webpack error. I pasted the error into Claude Code and asked it to debug. It traced the issue to a circular dependency between two modules, explained exactly why it caused the build failure, and fixed it. What would have been an hour of git bisect and console logging was solved in two minutes.
+
+### Terminal Integration
+
+Because Claude Code runs in the terminal, it can run your actual commands. npm test, git status, database migrations — it can execute and read the output. When I say "run the tests and fix any failures," it runs the test suite, reads the output, identifies the failing tests, fixes the code, and re-runs the tests.
+
+This feedback loop is incredibly productive. Write code → run tests → fix failures → verify — all without leaving the AI conversation.
+
+## What Does Not Work (Yet)
+
+### Large Codebase Navigation
+
+On very large projects (50K+ lines), Claude Code sometimes struggles to find the right files. It can read any file you point it to, but discovering which files are relevant in a massive codebase requires some guidance. I have learned to be specific: "look at the auth middleware in src/middleware/auth.ts" rather than "fix the auth bug."
+
+### Complex Refactoring
+
+For straightforward refactoring — rename a variable, extract a function, move a file — Claude Code is excellent. For complex architectural refactoring — changing a monolith to microservices, rewriting a state management approach — it needs more hand-holding. The AI works best when the changes are well-scoped.
+
+### Frontend Visual Design
+
+Claude Code writes functional frontend code, but it does not "see" the result. If I say "make the button look better," it will change CSS properties, but it cannot evaluate whether the result actually looks better. For visual work, I still use the browser and make adjustments manually.
+
+### Rate Limits
+
+During heavy usage sessions, you hit rate limits. This is the reality of API-based tools — there is a cost per token, and extended sessions with large codebases burn through context quickly. I have learned to break my work into focused sessions rather than trying to do everything in one conversation.
+
+## How It Changed My Workflow
+
+### Before Claude Code
+
+My typical day looked like:
+
+1. Read the requirement
+2. Plan the implementation in my head
+3. Write code file by file
+4. Copy-paste between files to maintain consistency
+5. Write tests
+6. Debug failures
+7. Iterate
+
+Total for a medium feature: 4-6 hours.
+
+### After Claude Code
+
+1. Read the requirement
+2. Tell Claude Code what I want, with context on constraints and patterns
+3. Review the changes it makes
+4. Run tests, have Claude Code fix any issues
+5. Make manual adjustments for edge cases
+
+Total for a medium feature: 1-2 hours.
+
+The time savings are real, but the bigger change is cognitive. I spend less mental energy on boilerplate and mechanical coding, and more on architecture, design decisions, and code review. I am a better developer because I can focus on the hard problems.
+
+## Claude Code vs The Competition
+
+### vs GitHub Copilot
+
+Copilot is autocomplete. Claude Code is a collaborator. Copilot suggests the next line. Claude Code understands the task and builds the solution. They are not competing products — they solve different problems. I use both: Copilot for inline suggestions while typing, Claude Code for feature-level work.
+
+### vs Cursor
+
+Cursor is closer to Claude Code in ambition. It understands project context and can make multi-file edits. The main differences: Claude Code runs in the terminal (I prefer this — no IDE lock-in), and Claude's model is significantly better at understanding complex codebases and Indian English instructions.
+
+Cursor has better visual integration since it is a full IDE. Claude Code has better reasoning and more reliable code generation. If you live in VS Code, Cursor is convenient. If you live in the terminal, Claude Code is superior.
+
+### vs ChatGPT
+
+ChatGPT for coding is a chat window. You paste code in, get code out. There is no project awareness, no file editing, no command execution. For quick questions and isolated code snippets, ChatGPT is fine. For real development work, it is not in the same category as Claude Code.
+
+## Tips for Getting the Most Out of Claude Code
+
+1. **Be specific about context.** Tell it which files matter, which patterns to follow, which constraints exist. The more context, the better the output.
+
+2. **Work in focused sessions.** Instead of one massive conversation, break work into feature-sized sessions. This keeps context sharp and avoids rate limits.
+
+3. **Review everything.** Claude Code is good, but it is not infallible. Read the diffs. Understand the changes. Do not blindly accept.
+
+4. **Use it for exploration.** When you are unsure how to approach a problem, ask Claude Code to analyze the codebase and suggest approaches. Even if you do not use its code, the analysis is valuable.
+
+5. **Set up your CLAUDE.md.** The CLAUDE.md file in your project root tells Claude Code about your conventions, patterns, and preferences. A well-written CLAUDE.md dramatically improves output quality.
+
+## The Bottom Line
+
+Claude Code is not a replacement for developers. It is a force multiplier. It handles the mechanical, repetitive, cross-file work that eats up development time, freeing me to focus on the problems that actually require human judgment.
+
+Is it perfect? No. Large codebase navigation needs improvement, rate limits are frustrating during intensive sessions, and it cannot evaluate visual design. But the core capability — understanding a codebase and making coordinated, multi-file changes based on natural language instructions — is genuinely transformative.
+
+I build faster, ship more, and spend more time on the interesting problems. For a developer who values productivity and is comfortable reviewing AI-generated code, Claude Code is the most impactful tool I have adopted in years.
+
+If you want to see how Claude Code can accelerate your development workflow, [book a session](/contact) and I will walk you through a live demo.

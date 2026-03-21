@@ -1,0 +1,155 @@
+---
+title: "n8n vs Zapier: Why I Switched and Saved ₹12K/Year"
+description: "A real cost comparison between n8n and Zapier, with migration tips for Indian businesses looking to save on automation tools."
+date: "2026-03-10"
+tags: ["Automation", "n8n", "Zapier", "Comparison"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/n8n-vs-zapier-real-cost-comparison"
+---
+
+## Why I Left Zapier
+
+I was a Zapier power user for two years. Built over 30 zaps, automated client onboarding, synced CRMs with email tools, and connected just about everything that had an API. It worked great — until I looked at the bill.
+
+₹15,000 per year for the Professional plan. And I was constantly hitting task limits, paying overages, and working around the 5-step zap restriction on lower tiers. The moment a workflow got complex, Zapier wanted more money.
+
+Then I discovered n8n. Self-hosted. Open source. Unlimited workflows. Unlimited steps. Zero per-task pricing.
+
+After migrating everything, my annual automation tool cost dropped from ₹15,000 to ₹3,000 (just VPS hosting). Here is the full breakdown and migration guide.
+
+## The Real Cost Comparison
+
+Let me show you numbers that Zapier does not want you to see:
+
+| Feature | Zapier (Professional) | n8n (Self-Hosted) |
+|---|---|---|
+| Monthly cost | ₹1,250/month | ₹250/month (VPS share) |
+| Annual cost | ₹15,000 | ₹3,000 |
+| Task limit | 2,000/month | Unlimited |
+| Workflow steps | 100+ (paid tier) | Unlimited |
+| Custom code | Limited | Full Node.js |
+| Self-hosting | No | Yes |
+| Data privacy | Their servers | Your server |
+| API access | Limited | Full |
+
+The ₹12,000 annual savings is significant, but the real value is in the unlimited tasks. With Zapier, I was constantly monitoring my task count. With n8n, I run thousands of automations without worrying about overages.
+
+## Where n8n Wins
+
+### 1. Complex Workflows Without Limits
+
+In Zapier, anything beyond a linear 5-step flow requires the Professional plan. And even then, building branching logic with filters and paths feels clunky. In n8n, I regularly build workflows with 20+ nodes, multiple branches, error handling, and loops.
+
+One client project required a workflow that pulled data from a Google Sheet, enriched it with an API call, ran conditional logic based on the results, split into three parallel branches, and sent outputs to Slack, email, and a database. In n8n, this was one workflow built in an afternoon. In Zapier, this would have required multiple zaps chained together with webhooks — more complex, more fragile, and more expensive.
+
+### 2. Custom Code Nodes
+
+n8n lets you drop JavaScript or Python nodes anywhere in a workflow. Need to transform data in a way that no pre-built integration supports? Write a 10-line function. Need to call an obscure API that does not have a Zapier integration? HTTP request node with custom headers.
+
+This alone justifies the switch for any developer. Zapier's code steps exist but are severely limited — timeout restrictions, no npm packages, and a sandboxed environment that makes anything non-trivial impossible.
+
+### 3. Self-Hosting and Data Privacy
+
+For Indian businesses dealing with sensitive data — financial information, customer PII, internal documents — sending everything through Zapier's US servers is a compliance concern. With n8n self-hosted on an Indian VPS, data never leaves the country.
+
+I run n8n on the same VPS that hosts my other projects. The resource overhead is minimal — n8n runs comfortably on a 2GB RAM instance.
+
+### 4. Version Control for Workflows
+
+n8n workflows are JSON files. You can export them, version control them with git, share them as templates, and import them on another instance. Try doing that with Zapier.
+
+I maintain a library of workflow templates that I deploy for clients in minutes. Each template is a tested, version-controlled JSON file.
+
+## Where Zapier Still Wins
+
+I want to be fair. Zapier is not terrible. It is just expensive for what it offers. Here is where it genuinely wins:
+
+### 1. Zero Setup Required
+
+Zapier works in your browser. No server, no installation, no Docker, no maintenance. For someone who has never touched a terminal, this is enormous.
+
+### 2. Integration Count
+
+Zapier has 6,000+ pre-built integrations. n8n has around 400+ native nodes. For niche SaaS tools, Zapier might already have a connector while n8n requires a custom HTTP request node.
+
+### 3. Reliability Without Effort
+
+Zapier handles uptime, scaling, and monitoring. With self-hosted n8n, you are responsible for keeping it running. I use PM2 and have not had downtime in months, but it does require initial setup.
+
+## The Migration Process
+
+Moving from Zapier to n8n took me a weekend. Here is the process I followed:
+
+### Step 1: Inventory Your Zaps
+
+Export a list of every active zap with its trigger, actions, and frequency. I had 32 active zaps. I categorized them:
+
+- **Simple (2-3 steps):** 18 zaps — migrated in under 10 minutes each
+- **Medium (4-6 steps):** 10 zaps — took 20-30 minutes each
+- **Complex (7+ steps):** 4 zaps — took 1-2 hours each
+
+### Step 2: Set Up n8n
+
+I installed n8n using Docker on my existing VPS:
+
+```bash
+docker run -d --name n8n \
+  -p 5678:5678 \
+  -v n8n_data:/home/node/.n8n \
+  --restart unless-stopped \
+  n8nio/n8n
+```
+
+Behind Nginx with SSL, accessible at a subdomain. Total setup time: 30 minutes.
+
+### Step 3: Migrate in Priority Order
+
+I started with the highest-frequency, lowest-complexity zaps. This gave me quick wins and built familiarity with n8n's interface. The simple zaps migrated almost identically — trigger node, action node, done.
+
+For complex zaps, I took the opportunity to redesign. Several Zapier workflows were overly complicated because of platform limitations. In n8n, the same logic was simpler because I could use loops, custom code, and unlimited branching.
+
+### Step 4: Run in Parallel
+
+I ran both Zapier and n8n side-by-side for two weeks. Same triggers, same outputs. This caught edge cases and gave me confidence that n8n handled everything correctly.
+
+### Step 5: Cancel Zapier
+
+After two weeks of parallel running with zero discrepancies, I cancelled my Zapier subscription.
+
+## Common Migration Gotchas
+
+1. **Webhook URLs change.** Any external service sending webhooks to Zapier needs to be updated to point to your n8n instance.
+2. **OAuth re-authentication.** You will need to reconnect Google, Slack, and other OAuth services in n8n.
+3. **Timezone handling.** n8n uses your server's timezone. Make sure it matches your business timezone.
+4. **Error notifications.** Set up n8n's built-in error workflow to notify you on Slack or email when a workflow fails.
+
+## My Current Setup
+
+I now run 40+ workflows on n8n covering:
+
+- Client onboarding (form submission → CRM → welcome email → Slack notification)
+- Content distribution (new blog post → LinkedIn → Twitter → Dev.to → Hashnode)
+- Invoice reminders (overdue check → WhatsApp message → email escalation)
+- Lead qualification (form submission → AI scoring → CRM update → team notification)
+- Server monitoring (health checks → Telegram alerts)
+
+Total cost: ₹250/month for VPS share. Total Zapier equivalent: at least ₹2,500/month for the task volume I run.
+
+## Should You Switch?
+
+**Switch to n8n if:**
+- You are spending more than ₹500/month on Zapier
+- You need complex, multi-step workflows
+- You want unlimited automations
+- Data privacy matters to your business
+- You or someone on your team is comfortable with basic server management
+
+**Stay on Zapier if:**
+- You have fewer than 5 simple automations
+- Nobody on your team can manage a server
+- You need a specific niche integration that n8n does not support
+- The cost is not a concern
+
+For most Indian businesses running serious automations, n8n is the obvious choice. The ₹12K annual savings is just the beginning — the real value is in the flexibility to build automations you could not build on Zapier at any price.
+
+If you want help migrating from Zapier to n8n, [let me know](/contact). I have done this migration for multiple clients and can get you running in a day.
