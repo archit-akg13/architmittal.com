@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { SERVICES } from '@/lib/constants'
 
 export default function ServicesSection() {
@@ -8,9 +9,10 @@ export default function ServicesSection() {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {SERVICES.map((service) => (
-          <div
+          <Link
             key={service.title}
-            className="border border-gray-200 rounded-xl p-6 hover:border-lime transition-colors group"
+            href="/case-studies"
+            className="border border-gray-200 rounded-xl p-6 hover:border-lime transition-colors group block"
           >
             <span className="text-3xl mb-3 block">{service.icon}</span>
             <h3 className="font-heading font-semibold text-lg text-heading mb-2 group-hover:text-lime transition-colors">
@@ -19,7 +21,7 @@ export default function ServicesSection() {
             <p className="font-body text-body text-sm leading-relaxed">
               {service.description}
             </p>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
