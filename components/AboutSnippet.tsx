@@ -1,12 +1,19 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutSnippet() {
   return (
     <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        {/* Photo placeholder */}
-        <div className="w-40 h-40 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-          <span className="text-subtle text-sm font-body">Photo</span>
+        <div className="w-[180px] h-[180px] sm:w-[200px] sm:h-[200px] flex-shrink-0">
+          <Image
+            src="/images/archit-about-200.png"
+            alt="Archit Mittal"
+            width={200}
+            height={200}
+            loading="lazy"
+            className="rounded-full"
+          />
         </div>
 
         <div>

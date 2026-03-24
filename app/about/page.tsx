@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { TOPMATE_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -10,8 +11,15 @@ export default function AboutPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
       <div className="flex flex-col md:flex-row items-start gap-8 mb-12">
-        <div className="w-32 h-32 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-          <span className="text-subtle text-sm font-body">Photo</span>
+        <div className="w-[150px] h-[150px] flex-shrink-0">
+          <Image
+            src="/images/archit-profile.png"
+            alt="Archit Mittal"
+            width={150}
+            height={150}
+            loading="lazy"
+            className="rounded-full"
+          />
         </div>
         <div>
           <h1 className="font-heading font-bold text-3xl sm:text-4xl text-heading mb-3">
@@ -25,7 +33,7 @@ export default function AboutPage() {
           </p>
           <p className="font-body text-body leading-relaxed">
             My toolkit includes Claude Code, n8n, MCP Protocol, multi-agent AI systems, and deep experience
-            with LLM APIs. I write about automation on LinkedIn (9,400+ followers), Dev.to, and Hashnode,
+            with LLM APIs. I write about automation on LinkedIn (9,500+ followers), Dev.to, and Hashnode,
             sharing practical insights that help businesses automate smarter.
           </p>
         </div>
@@ -50,7 +58,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Work With Me */}
       <section className="bg-lime/5 border border-lime/20 rounded-xl p-8 text-center">
         <h2 className="font-heading font-bold text-2xl text-heading mb-3">Work With Me</h2>
         <p className="font-body text-body mb-6 max-w-lg mx-auto">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { TOPMATE_URL } from '@/lib/constants'
 import SocialIcon from './SocialIcon'
 
@@ -5,8 +6,15 @@ export default function AuthorBox() {
   return (
     <div className="border border-gray-200 rounded-xl p-6 my-8">
       <div className="flex flex-col sm:flex-row items-start gap-4">
-        <div className="w-16 h-16 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-          <span className="text-subtle text-xs font-body">AM</span>
+        <div className="w-16 h-16 flex-shrink-0">
+          <Image
+            src="/images/archit-profile.png"
+            alt="Archit Mittal"
+            width={64}
+            height={64}
+            loading="lazy"
+            className="rounded-full"
+          />
         </div>
         <div>
           <h4 className="font-heading font-semibold text-heading">Archit Mittal</h4>
