@@ -13,12 +13,12 @@ export default function AboutPage() {
       <div className="flex flex-col md:flex-row items-start gap-8 mb-12">
         <div className="w-[150px] h-[150px] flex-shrink-0">
           <Image
-            src="/images/archit-profile.png"
+            src="/images/archit-headshot-400.jpg"
             alt="Archit Mittal"
             width={150}
             height={150}
             loading="lazy"
-            className="rounded-full"
+            className="rounded-full border-[3px] border-lime object-cover"
           />
         </div>
         <div>
