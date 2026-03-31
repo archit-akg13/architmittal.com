@@ -6,6 +6,7 @@ import rehypeHighlight from 'rehype-highlight'
 import rehypeSlug from 'rehype-slug'
 import { getAllPosts, getPostBySlug, getRelatedPosts } from '@/lib/blog'
 import { SITE_URL } from '@/lib/constants'
+import { BLOG_FAQS } from '@/lib/blog-faqs'
 import AuthorBox from '@/components/AuthorBox'
 import ShareButtons from '@/components/ShareButtons'
 import EmailCapture from '@/components/EmailCapture'
@@ -70,6 +71,17 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     mainEntityOfPage: `${SITE_URL}/blog/${frontmatter.slug}`,
   }
 
+  const faqs = BLOG_FAQS[params.slug] || []
+  const faqSchema = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
+  } : null
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -84,6 +96,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         {/* Breadcrumb */}

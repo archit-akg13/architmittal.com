@@ -7,7 +7,8 @@ const API_BASE = '/api/v1'
 type Metrics = {
   dau: number; wau: number; mau: number
   totalPageviews: number; totalUniques: number
-  subscribers: { verified: number; pending: number; unsubscribed: number }
+  subscribers?: { verified?: number; pending?: number; unsubscribed?: number }
+  verified?: number; pending?: number; unverified?: number
 }
 
 type DailyData = { date: string; views: number; unique_visitors: number }[]
@@ -116,7 +117,7 @@ export default function AdminPage() {
             <MetricCard label="MAU" value={metrics.mau} />
             <MetricCard label="Total Views" value={metrics.totalPageviews} />
             <MetricCard label="Uniques" value={metrics.totalUniques} />
-            <MetricCard label="Subscribers" value={metrics.subscribers.verified} sub={`${metrics.subscribers.pending} pending`} />
+            <MetricCard label="Subscribers" value={metrics.subscribers?.verified ?? metrics.verified ?? 0} sub={`${metrics.subscribers?.pending ?? metrics.pending ?? 0} pending`} />
           </div>
         )}
 

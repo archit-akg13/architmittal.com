@@ -4,6 +4,7 @@ import ServicesSection from '@/components/ServiceCard'
 import StatsSection from '@/components/StatsSection'
 import BlogPreview from '@/components/BlogPreview'
 import EmailCapture from '@/components/EmailCapture'
+import TestimonialSection from '@/components/TestimonialSection'
 import AboutSnippet from '@/components/AboutSnippet'
 import CTASection from '@/components/CTASection'
 import { FAQ_ITEMS } from '@/lib/constants'
@@ -34,6 +35,7 @@ export default function Home() {
       <StatsSection />
       <BlogPreview />
       <EmailCapture />
+      <TestimonialSection />
       <AboutSnippet />
       <CTASection />
     </>

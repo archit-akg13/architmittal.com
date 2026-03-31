@@ -7,6 +7,8 @@ image: "/og-default.jpg"
 canonicalUrl: "https://architmittal.com/blog/how-i-saved-client-85k-on-ai-api-costs"
 ---
 
+> **TL;DR:** I reduced a client's AI API bill from ₹95K/month to ₹10K/month (97.5% reduction) using semantic caching, model switching, batch processing, and prompt optimization. Caching alone cut costs by more than half.
+
 ## The ₹95K Wake-Up Call
 
 A few months ago, a mid-sized e-commerce client came to me with a problem that made my jaw drop. They were spending ₹95,000 per month on OpenAI API calls — and climbing. Their product description generator, customer support chatbot, and review summarizer were all making raw API calls with zero optimization. Every single user interaction was a fresh, expensive hit to GPT-4.
@@ -92,6 +94,10 @@ That 75% reduction in prompt tokens compounded across thousands of daily calls. 
 | **Total** | **₹85,000** |
 
 The new monthly bill: approximately ₹10,000. The client was thrilled, and the system actually performed better because we had reduced latency through caching and right-sized the models for each task.
+
+
+
+If you're evaluating automation tools, check out my [n8n vs Zapier comparison](/blog/n8n-vs-zapier-real-cost-comparison). For AI agent infrastructure, read about [MCP Protocol — the USB port for AI](/blog/what-is-mcp-protocol-usb-for-ai-agents). And if you want to see the tool I use daily for building these optimizations, here's my [honest Claude Code review](/blog/claude-code-honest-developer-review).
 
 ## Key Takeaways
 

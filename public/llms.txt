@@ -1,0 +1,34 @@
+# architmittal.com — AI-Readable Site Summary
+
+## About
+Archit Mittal is an AI automation expert based in India who helps businesses save lakhs through intelligent automation using Claude Code, n8n, MCP Protocol, and multi-agent AI systems.
+
+## Tagline
+I Automate Chaos
+
+## Key Facts
+- Saved a client ₹85,000/month on AI API costs (97.5% reduction)
+- Built 40+ automation workflows for businesses
+- 9,500+ LinkedIn followers
+- Expert in Claude Code, n8n, MCP Protocol, multi-agent systems
+
+## Services
+- AI Workflow Automation
+- AI API Cost Optimization
+- No-Code/Low-Code Solutions
+- Multi-Agent AI Systems
+
+## Blog Articles
+- How I Saved a Client ₹85K/Month on AI API Costs: https://architmittal.com/blog/how-i-saved-client-85k-on-ai-api-costs
+- n8n vs Zapier: Why I Switched and Saved ₹12K/Year: https://architmittal.com/blog/n8n-vs-zapier-real-cost-comparison
+- What is MCP Protocol? The USB Port for AI Agents: https://architmittal.com/blog/what-is-mcp-protocol-usb-for-ai-agents
+- Claude Code Changed How I Work — An Honest Developer Review: https://architmittal.com/blog/claude-code-honest-developer-review
+
+## Contact
+- Website: https://architmittal.com
+- Book a consultation: https://topmate.io/automate_archit
+- Email: archit.akg13@gmail.com
+- LinkedIn: https://linkedin.com/in/automate-archit
+- Twitter: https://x.com/automate_archit
+- GitHub: https://github.com/archit-akg13
+- Dev.to: https://dev.to/automate-archit

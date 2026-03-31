@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import FloatingCTA from '@/components/FloatingCTA'
 import AnalyticsTracker from '@/components/AnalyticsTracker'
+import ExitIntentPopup from '@/components/ExitIntentPopup'
+import ReadingProgress from '@/components/ReadingProgress'
 import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 
 const poppins = Poppins({
@@ -106,6 +108,8 @@ export default function RootLayout({
         <Footer />
         <FloatingCTA />
         <AnalyticsTracker />
+        <ExitIntentPopup />
+        <ReadingProgress />
       </body>
     </html>
   )
