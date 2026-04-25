@@ -1,0 +1,5 @@
+# Dependencies for AI agent examples
+# Install: pip install -r requirements.txt
+
+anthropic>=0.40.0
+python-dotenv>=1.0.0
