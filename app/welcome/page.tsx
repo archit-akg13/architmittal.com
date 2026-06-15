@@ -38,7 +38,7 @@ export default function WelcomePage() {
           rel="noopener noreferrer"
           className="bg-lime hover:bg-lime-dark text-white px-6 py-3 rounded-lg font-heading font-semibold transition-colors"
         >
-          Book a Free 1:1 Call
+          Book a 1:1 Call
         </a>
         <Link
           href="/blog"
