@@ -19,10 +19,21 @@ const CASE_STUDIES = [
     ],
   },
   {
+    title: 'Custom Trading Backtesting Engine',
+    client: 'Algo Trading Firm',
+    problem: 'Manual backtesting taking days per strategy. No systematic way to evaluate, compare, or iterate on trading algorithms.',
+    solution: 'Built a custom backtesting pipeline with automated data ingestion, strategy parameterization, walk-forward analysis, and visual performance reports.',
+    results: [
+      { metric: '100x', label: 'Faster backtests' },
+      { metric: '50+', label: 'Strategies tested' },
+      { metric: '₹0', label: 'Manual analysis cost' },
+    ],
+  },
+  {
     title: '40+ Workflows Automated',
     client: 'Digital Agency',
     problem: 'Team spending 60+ hours/week on repetitive tasks — data entry, report generation, client communications.',
-    solution: 'Built a comprehensive n8n automation suite covering CRM sync, invoice generation, weekly reporting, and Slack notifications.',
+    solution: 'Built a comprehensive automation suite covering CRM sync, invoice generation, weekly reporting, and Slack notifications. All custom-built, zero per-task pricing.',
     results: [
       { metric: '40+', label: 'Workflows automated' },
       { metric: '50hrs/wk', label: 'Time saved' },
@@ -30,14 +41,14 @@ const CASE_STUDIES = [
     ],
   },
   {
-    title: 'Multi-Agent Content Pipeline',
-    client: 'Content Marketing Team',
-    problem: 'Content creation bottleneck — 1 article per week, manual research, no cross-platform distribution.',
-    solution: 'Built a multi-agent system using Claude + MCP protocol for research, writing, editing, and auto-publishing to 5 platforms.',
+    title: 'Multi-Agent AI Client Onboarding',
+    client: 'Fintech Startup',
+    problem: 'Manual client onboarding taking 3 days per client. Document verification, KYC checks, and account setup all done by hand.',
+    solution: 'Built a multi-agent AI system using MCP protocol — one agent handles document extraction, another runs verification, a third creates accounts and sends personalized welcome flows.',
     results: [
-      { metric: '10x', label: 'Content output' },
-      { metric: '5', label: 'Platforms automated' },
-      { metric: '2hrs', label: 'Per article (was 8hrs)' },
+      { metric: '3hrs', label: 'Onboarding (was 3 days)' },
+      { metric: '95%', label: 'Automation rate' },
+      { metric: '₹1.5L/mo', label: 'Headcount saved' },
     ],
   },
 ]
@@ -87,7 +98,7 @@ export default function CaseStudiesPage() {
           rel="noopener noreferrer"
           className="inline-block bg-lime hover:bg-lime-dark text-white px-8 py-3 rounded-lg font-heading font-bold transition-colors"
         >
-          Book a Free Consultation
+          Book a Consultation
         </a>
       </div>
     </div>
