@@ -20,9 +20,9 @@ export default function AboutSnippet() {
             Hi, I&apos;m Archit Mittal
           </h2>
           <p className="font-body text-body leading-relaxed mb-4">
-            I&apos;m an AI automation expert who helps businesses replace repetitive work with intelligent systems.
-            From saving a client ₹85K/month on AI API costs to building 40+ automation workflows,
-            I turn operational chaos into streamlined processes using tools like Claude Code, n8n, and multi-agent AI systems.
+            I&apos;m an AI &amp; automation consultant who builds custom algo trading systems, AI agents, and business automation.
+            As a registered market professional (AMFI ARN holder &amp; Authorized Person) and AI engineer,
+            I bring a rare combination — I understand both the technology and the domain. From saving a client ₹85K/month on AI API costs to building 40+ automation systems, I turn operational chaos into competitive advantage.
           </p>
           <Link href="/about" className="text-lime hover:text-lime-dark font-heading font-semibold text-sm transition-colors">
             Learn More &rarr;
