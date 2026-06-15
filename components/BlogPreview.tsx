@@ -10,11 +10,11 @@ const PLACEHOLDER_POSTS = [
     readingTime: '7 min read',
   },
   {
-    slug: 'n8n-vs-zapier-real-cost-comparison',
-    title: 'n8n vs Zapier: Why I Switched and Saved ₹12K/Year',
-    description: 'A real cost comparison between n8n and Zapier, with migration tips for Indian businesses.',
+    slug: 'claude-code-honest-developer-review',
+    title: 'Claude Code: An Honest Developer Review',
+    description: 'A hands-on review of Claude Code from someone who uses it daily to build automation systems and AI agents.',
     date: '2026-03-10',
-    readingTime: '6 min read',
+    readingTime: '10 min read',
   },
   {
     slug: 'what-is-mcp-protocol-usb-for-ai-agents',
