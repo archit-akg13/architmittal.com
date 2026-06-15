@@ -3,27 +3,33 @@ import SocialIcon from '@/components/SocialIcon'
 
 export const metadata: Metadata = {
   title: 'Tools',
-  description: 'Open source automation tools and templates by Archit Mittal. GitHub repos, n8n workflows, and more.',
+  description: 'Open source AI and automation tools by Archit Mittal. Trading analysis, AI agents, Claude API templates, and more.',
 }
 
 const TOOLS = [
   {
     name: 'AI API Cost Optimizer',
-    description: 'Toolkit for reducing LLM API costs with smart caching, model switching, and request batching.',
+    description: 'Toolkit for reducing LLM API costs with smart caching, model switching, and request batching. Saved one client 97.5% on their monthly bill.',
     url: 'https://github.com/archit-akg13',
     tags: ['Python', 'LLM', 'Cost Optimization'],
   },
   {
-    name: 'n8n Workflow Templates',
-    description: 'Ready-to-use n8n workflow templates for common business automation scenarios.',
-    url: 'https://github.com/archit-akg13',
-    tags: ['n8n', 'Automation', 'No-Code'],
+    name: 'Claude API Templates',
+    description: 'Ready-to-use Claude API integration scripts — structured outputs, streaming, tool use, batch processing, and embeddings.',
+    url: 'https://github.com/archit-akg13/claude-api-templates',
+    tags: ['Claude', 'API', 'TypeScript'],
   },
   {
     name: 'MCP Server Toolkit',
-    description: 'Tools and utilities for building MCP protocol servers for AI agent integration.',
+    description: 'Tools and utilities for building MCP protocol servers for AI agent integration. The foundation for multi-agent systems.',
     url: 'https://github.com/archit-akg13',
     tags: ['MCP', 'AI Agents', 'TypeScript'],
+  },
+  {
+    name: 'Automation Scripts Collection',
+    description: 'Python automation scripts — file organizer, PDF merger, email sender, web scraper, and more. Built for productivity.',
+    url: 'https://github.com/archit-akg13/automation-scripts',
+    tags: ['Python', 'Automation', 'Scripts'],
   },
 ]
 
