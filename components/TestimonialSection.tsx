@@ -6,14 +6,14 @@ export default function TestimonialSection() {
       role: 'E-commerce Platform',
     },
     {
-      quote: 'We automated 40+ workflows in our agency. The team saves 50+ hours every week on repetitive tasks.',
-      name: 'Digital Agency Director',
-      role: 'Marketing Agency',
+      quote: 'The custom trading system Archit built handles our entire backtesting and signal pipeline. What used to take our quant team a full day now runs in minutes.',
+      name: 'Prop Trading Desk Lead',
+      role: 'Algorithmic Trading Firm',
     },
     {
-      quote: 'The multi-agent content pipeline Archit built produces 10x more content with half the effort. Game changer.',
-      name: 'Content Marketing Lead',
-      role: 'B2B SaaS Company',
+      quote: 'We needed an AI agent that actually understood our business logic, not just a chatbot wrapper. Archit delivered a multi-agent system that automates our entire client onboarding.',
+      name: 'Fintech CTO',
+      role: 'Series A Startup',
     },
   ]
 
