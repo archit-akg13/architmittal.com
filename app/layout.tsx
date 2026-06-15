@@ -75,9 +75,9 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Archit Mittal',
-  jobTitle: 'AI Automation Expert',
-  description: 'I Automate Chaos — helping businesses save lakhs through intelligent automation using Claude Code, n8n, and AI agents',
-  knowsAbout: ['Business Automation', 'AI Agents', 'Claude Code', 'MCP Protocol', 'n8n', 'Workflow Automation', 'AI API Cost Optimization'],
+  jobTitle: 'AI & Automation Consultant',
+  description: 'I Automate Chaos — AI & Automation Consultant building custom algo trading systems, AI agents, and business automation for founders and trading firms.',
+  knowsAbout: ['Algorithmic Trading', 'AI Agents', 'Business Automation', 'MCP Protocol', 'Workflow Automation', 'AI API Cost Optimization', 'Financial Markets', 'Multi-Agent Systems'],
   url: SITE_URL,
   image: `${SITE_URL}/archit-photo.jpg`,
   sameAs: [
