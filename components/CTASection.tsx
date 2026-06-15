@@ -8,7 +8,7 @@ export default function CTASection() {
           Ready to automate your chaos?
         </h2>
         <p className="font-body text-white/80 mb-8 text-lg">
-          Book a free consultation and let&apos;s find out how much time and money you can save with intelligent automation.
+          Let&apos;s talk about your project — algo trading, AI agents, or business automation. I only take on projects where I can deliver measurable ROI.
         </p>
         <a
           href={TOPMATE_URL}
@@ -16,7 +16,7 @@ export default function CTASection() {
           rel="noopener noreferrer"
           className="inline-block bg-white text-lime hover:bg-gray-100 px-8 py-3 rounded-lg font-heading font-bold transition-colors"
         >
-          Book Now — It&apos;s Free
+          Book a Consultation
         </a>
       </div>
     </section>
