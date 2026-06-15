@@ -15,7 +15,7 @@ export default function Hero() {
           <div className="flex-shrink-0">
             <Image
               src="/images/archit-headshot-800.jpg"
-              alt="Archit Mittal - The Automation Expert"
+              alt="Archit Mittal - AI & Automation Consultant"
               width={300}
               height={300}
               priority
@@ -27,8 +27,11 @@ export default function Hero() {
             <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4">
               I Automate <span className="text-lime">Chaos</span>
             </h1>
-            <p className="font-body text-lg sm:text-xl text-gray-300 max-w-2xl mb-8 leading-relaxed">
-              AI Automation Expert — Helping businesses save ₹lakhs through intelligent automation with Claude Code, n8n &amp; AI agents
+            <p className="font-body text-lg sm:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
+              AI &amp; Automation Consultant — I build custom algo trading systems, AI agents, and business automation for founders and trading firms.
+            </p>
+            <p className="font-body text-sm text-gray-400 max-w-2xl mb-8 leading-relaxed">
+              Registered market professional (AMFI ARN holder) + AI engineer. The rare combo that builds systems which actually understand your domain.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
@@ -37,13 +40,13 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="bg-lime hover:bg-lime-dark text-white px-6 py-3 rounded-lg font-heading font-semibold text-center transition-colors"
               >
-                Book a Free Consultation
+                Book a Consultation
               </a>
               <Link
-                href="/blog"
+                href="/case-studies"
                 className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-heading font-semibold text-center transition-colors"
               >
-                Read the Blog
+                See My Work
               </Link>
             </div>
           </div>
