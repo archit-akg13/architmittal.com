@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/blog'
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Articles on AI automation, cost optimization, n8n, MCP protocol, Claude Code, and building intelligent workflows.',
+  description: 'Articles on AI automation, algo trading, AI agents, cost optimization, MCP protocol, and building intelligent systems.',
 }
 
 export default function BlogPage() {
