@@ -5,7 +5,7 @@ import SocialIcon from '@/components/SocialIcon'
 
 export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch for automation consulting. Book a free consultation or send a detailed inquiry.',
+  description: 'Get in touch for AI & automation consulting — algo trading systems, custom AI agents, and business automation.',
 }
 
 export default function ContactPage() {
