@@ -16,8 +16,10 @@ jobs:
           username: root
           password: ${{ secrets.VPS_PASSWORD }}
           script: |
+            set -e
             cd /var/www/architmittal.com
-            git pull origin main
+            git fetch origin
+            git reset --hard origin/main
             npm ci
             npm run build
             cp -r public .next/standalone/public
