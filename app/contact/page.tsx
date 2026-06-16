@@ -27,7 +27,7 @@ export default function ContactPage() {
           <div className="bg-lime/5 border border-lime/20 rounded-xl p-6">
             <h3 className="font-heading font-semibold text-heading mb-2">Need urgent help?</h3>
             <p className="font-body text-body text-sm mb-3">
-              Book a free 1:1 consultation directly.
+              Book a 1:1 consultation directly.
             </p>
             <a
               href={TOPMATE_URL}
