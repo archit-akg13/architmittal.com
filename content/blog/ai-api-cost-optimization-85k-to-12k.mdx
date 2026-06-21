@@ -1,0 +1,58 @@
+---
+title: "How I Cut a Client's AI API Bill from ₹85K to ₹12K/Month — Without Losing Quality"
+description: "Learn how strategic AI API cost optimization reduced a client's monthly bill from ₹85,000 to ₹12,000. Practical tips on prompt caching, model routing, and batching."
+date: "2026-04-15"
+tags: ["AI", "Cost Optimization", "LLM", "API"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/ai-api-cost-optimization-85k-to-12k"
+---
+
+₹85,000 per month. That was the AI API bill sitting in my client's inbox when they called me in a mild panic last quarter. They run a mid-sized e-commerce operation in Pune — about 4,000 orders a day — and had integrated AI into customer support, product descriptions, and internal reporting. The AI was working beautifully. The invoice was not.
+
+"Archit bhai, AI toh kaam kar raha hai, lekin cost control se bahar ja raha hai." (The AI is working, but the costs are spiralling out of control.)
+
+Three weeks later, their monthly bill was ₹12,400. Same tasks. Same quality. No corners cut. Here's exactly what changed.
+
+## The Real Problem: Every Task Was Using the Most Expensive Model
+
+When I audited their setup, the issue was obvious within five minutes. Every single API call — whether it was classifying a customer complaint into one of 8 categories or generating a 2,000-word product description — was hitting the same premium model. It's the most common mistake I see with businesses adopting AI: they pick one model during the proof-of-concept phase and never revisit that decision as they scale.
+
+Think of it this way. You wouldn't hire a senior chartered accountant to do data entry. But that's essentially what was happening — a top-tier reasoning model was being used to answer "Is this complaint about shipping or billing?"
+
+## Fix #1: Model Routing — The Single Biggest Cost Lever
+
+Model routing is the practice of sending each task to the cheapest model that can handle it at acceptable quality. I categorized their ~47 distinct API call types into three tiers.
+
+The result? 68% of their API calls moved to the lightweight tier, 20% to mid-tier, and only 12% stayed on premium. That single change dropped the bill from ₹85K to roughly ₹38K. No quality degradation — we ran A/B tests on customer satisfaction scores for two weeks before fully switching.
+
+## Fix #2: Prompt Caching — Stop Paying for the Same Context Twice
+
+Their customer support bot sent the same 1,200-token system prompt with every single API call. That's company policies, tone guidelines, product catalog context — all identical across thousands of daily calls. Every call was paying full input token pricing for information the model had already processed moments ago.
+
+Prompt caching solves this. The first call processes the full system prompt, and subsequent calls within the cache window reference it at a fraction of the cost. For their volume — around 6,000 support interactions per day — this alone saved ₹8,000-10,000 monthly.
+
+## Fix #3: Batching Non-Urgent Requests
+
+Not everything needs a real-time response. Their internal reporting pipeline — daily sales summaries, inventory alerts, marketing performance digests — was making individual API calls as each data point came in. Sixty to eighty calls that could easily be batched into three or four.
+
+We restructured their reporting to collect data throughout the day and process it in batch windows — once at 6 AM, once at 2 PM, once at 10 PM. Batch API pricing is typically 50% cheaper than real-time, and for internal reports, a few hours of delay is completely acceptable.
+
+## Fix #4: Output Token Discipline
+
+This one is subtle but adds up fast. Their product description prompts asked the model to "write a detailed, comprehensive product description." The model happily obliged — averaging 800-1,000 tokens per response when the actual requirement was 200-300 tokens for their product cards.
+
+We rewrote prompts with explicit length constraints and structured output formats. Instead of open-ended generation, the model received exact specifications: "Write a product description in exactly 3 sentences. First sentence: what it is. Second: key benefit. Third: who it's for."
+
+Output tokens are more expensive than input tokens on most providers. Cutting average output length by 60% across thousands of daily calls compounded into real savings.
+
+## The Final Numbers
+
+That's an 85% reduction from ₹85,000 to ₹12,400. The AI does exactly the same work. The customer satisfaction score actually went up by 3% — likely because the lighter models respond faster, and customers prefer quicker replies over marginally more eloquent ones.
+
+## What Most People Get Wrong About AI Costs
+
+The instinct is to shop for a cheaper provider. Sometimes that helps, but the real leverage is architectural. I've seen businesses switch providers three times and still overpay because the fundamental pattern — one model for everything, no caching, verbose outputs — never changes.
+
+If your AI API bill is higher than you'd like, start with these questions: How many of your API calls actually need a premium model? Are you sending the same context repeatedly? Can any of your calls be batched? Are your prompts asking for more output than you use?
+
+The answers usually reveal that 60-80% of your bill is waste hiding in plain sight. You don't need to spend less on AI. You need to spend smarter.
