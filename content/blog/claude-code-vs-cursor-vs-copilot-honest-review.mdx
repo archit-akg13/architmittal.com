@@ -1,0 +1,112 @@
+---
+title: "Claude Code vs Cursor vs Copilot: An Honest Review After 40 Production Automations"
+description: "Claude Code vs Cursor vs Copilot: honest review after 40 production automations. Where each wins, where they break, and how to pick for real work."
+date: "2026-04-20"
+tags: ["AI", "Developer Tools", "Claude Code", "Productivity"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/claude-code-vs-cursor-vs-copilot-honest-review"
+---
+
+₹40,000 to ₹70,000 — that's the extra monthly capacity my consulting practice has picked up since switching my primary dev loop to Claude Code six months ago. Forty production automations shipped in that window: bank reconciliation pipelines, stock screeners, ITR-prep bots, expense categorizers, GST filing helpers, a couple of trading systems I still babysit.
+
+This post is the scorecard. What Claude Code gets right, where it still breaks, and how I decide when to reach for it versus Cursor versus plain GitHub Copilot. No sponsored angle, no affiliate link. I pay for all three out of pocket. What follows is what I'd tell a friend over chai.
+
+## The Context — Who This Review Is For
+
+I'm not a web app engineer. I build finance and trading automations in Python, glue them to broker APIs and Google Sheets, and ship scripts that run on cron jobs or Railway containers. If you build similar back-end, script-first work, this review will transfer cleanly. If you're writing React all day, your mileage will differ.
+
+The bar I measure against is brutal. A client automation has to work on day one against real production data, handle every edge case a CA firm can dream up, and be debuggable by me at 11 PM when a trade doesn't fire. No tolerance for "it worked on my machine."
+
+## What Claude Code Gets Right — The Four Wins That Actually Matter
+
+### 1. Multi-file reasoning at a level nothing else touches
+
+Most AI coding assistants play well inside a single file. Claude Code holds an entire repo in its head. I asked it to refactor a bank-reconciliation project that spans eleven modules and 2,300 lines — it traced every call site, flagged one circular import I'd never noticed, and proposed a clean split in a single turn. Cursor starts to struggle past six or seven files. Copilot gives up around two.
+
+### 2. It asks the right questions before writing code
+
+This surprised me. When I told Claude Code to "add retry logic to the Zerodha order function," it didn't just write it. It asked whether the retry should respect the broker's rate limits, what to do on partial fills, and whether idempotency keys were available. Those are the questions a senior engineer would ask. The answers shape whether the automation is safe for real money or a ticking time bomb.
+
+### 3. Long-running tasks stay coherent
+
+I regularly hand Claude Code a task that takes 20-40 minutes — "refactor the GST prep pipeline, add test coverage, run the suite, fix any regressions." It plans, executes, self-corrects, and comes back with a diff that's ready to review. The agentic loop is tight. No hallucinated file paths. No code that assumes packages that don't exist.
+
+### 4. It respects the code that's already there
+
+Copilot rewrites style aggressively. Claude Code reads the file, matches existing conventions, and produces diffs that don't feel foreign two weeks later. For a consulting practice where I hand off code to clients' in-house teams, that matters more than it sounds.
+
+## Where Claude Code Still Breaks
+
+Honest time. Three real failure modes I've hit.
+
+### 1. Indian fintech APIs are still weak ground
+
+Ask Claude Code about the Zerodha Kite Connect SDK and it gets 80% right. The last 20% — ticker formats for F&O, post-2024 margin changes, specific error codes — is where it hallucinates plausibly. I always double-check anything broker-specific against the official docs. For one client I caught it confidently using a parameter name that was deprecated nine months ago. The test suite caught it before production did. Barely.
+
+### 2. Long debug sessions can loop
+
+If the first three fixes don't resolve an issue, it sometimes cycles — tries approach A, moves to B, comes back to A wrapped in a helper. I've learned to stop the loop manually, paste the stack trace into a fresh context, and state the constraint explicitly ("do not change the signature of X"). The second attempt almost always lands.
+
+### 3. Cost at scale needs discipline
+
+Unconstrained, a single long agentic task can burn through tokens fast. For a big refactor I'll sometimes spend the equivalent of a cheap dinner in one session. That's still trivial against the time saved, but only if you're measuring. The techniques in [how I cut a client's AI API bill from ₹85K to ₹12K/month](/blog/ai-api-cost-optimization-85k-to-12k) apply here too — set bounded budgets, use smaller models for simple sub-tasks, and don't let agentic loops run without a ceiling.
+
+## Claude Code vs Cursor vs Copilot — When I Use Each
+
+Simple rule of thumb, from six months of real use:
+
+| Task Type | My Pick | Why |
+| --- | --- | --- |
+| New automation from scratch | Claude Code | Plans across files, asks clarifying questions |
+| Single-file editing at speed | Cursor | Faster inline completions, tight editor loop |
+| Boilerplate-heavy typing | Copilot | Cheapest, good at the obvious stuff |
+| Large refactor across 10+ files | Claude Code | Nothing else holds this much context |
+| Working in a legacy repo I don't know | Claude Code | Reads and understands before writing |
+| Pair-programming over screen-share | Cursor | Inline suggestions are less disruptive |
+
+All three stay installed. Picking the right one is like picking the right screwdriver — the mistake is treating one tool as the answer to every problem.
+
+## The Rupee Impact — What 40 Automations Looks Like in Numbers
+
+A summary from my consulting log since switching:
+
+> **Build time:** 38% lower than my pre-Claude baseline on average.
+> **Client revisions:** Down by roughly half — better first drafts mean fewer "can you also..." cycles.
+> **Debugging time:** Up slightly, because I now take on projects I wouldn't have before.
+> **Capacity:** ₹40,000-₹70,000 of extra billable capacity per month. Over six months, a real second income line without hiring anyone.
+
+The same tooling shift that helped me ship a [weekend Python script that saved a CA firm 209 hours during ITR season](/blog/weekend-python-script-ca-firm-209-hours-itr) is now the default for every new project — from the [stock screener that replaced a ₹47K/month advisory](/blog/stock-screener-automation-trader-replaced-47k-advisory-python) to the full [CFO playbook of five finance automations](/blog/cfos-ai-playbook-finance-automation-india-2026) I rolled out to two SMBs this quarter.
+
+## The Non-Obvious Tip Most Teams Miss
+
+The setting that changed my workflow most: **a CLAUDE.md file at the root of every project.** Claude Code reads it automatically. I put project context, naming conventions, the specific broker API version we're using, and our testing rules. It's the difference between getting a generic Python suggestion and getting a suggestion that knows we use Pandas 2.2, pytest, and a specific way of mocking Kite Connect.
+
+If you skip this step, you're using maybe 60% of the tool. I've seen teams adopt Claude Code, get indifferent results, and blame the model. Nine times out of ten, the CLAUDE.md was missing or empty.
+
+## Should You Switch?
+
+If you're already on Cursor and happy, don't rip it out. Layer Claude Code on top for planning and large refactors and see how the split feels for a month. If you're still on Copilot-only and doing anything more complex than boilerplate, the jump to Claude Code is the single highest-ROI tooling change I've made as an automation consultant this year.
+
+"Jo tool sahi kaam karta hai, wohi chuno." (Pick the tool that does the actual job.)
+
+Not everything should be automated, and [not every process should be shipped with an AI pair programmer either](/blog/over-automation-trap-when-not-to-automate). For production automations where quality and context matter more than keystroke speed, Claude Code is the best tool I've used. The ceiling is high. The floor is higher than any other assistant I've tried.
+
+Which AI coding tool are you reaching for most right now — and for what kind of work?
+
+## FAQ
+
+**Is Claude Code better than Cursor for most developers?**
+
+It depends on the task. For multi-file refactors, planning a new automation from scratch, and working in legacy code you don't know, Claude Code is stronger. For rapid single-file edits and inline completions during active typing, Cursor feels faster. Most serious developers benefit from keeping both and picking by task.
+
+**How much does Claude Code cost in real production use?**
+
+For a consulting workload of two to three hours of agentic coding per day, typical spend lands between ₹2,000 and ₹6,000 a month. A single large refactor session can consume ₹200-500 in tokens. Still tiny versus engineering hours saved, but it requires bounded budgets.
+
+**Does Claude Code work well with Indian fintech APIs like Zerodha Kite Connect?**
+
+About 80% of the time. For common Kite Connect patterns it's accurate. For edge cases like F&O ticker formats or post-2024 margin changes, it can hallucinate plausible but wrong parameters. Always validate broker-specific code against the official docs before shipping real trades.
+
+**What is the single most important setup step for getting value from Claude Code?**
+
+Write a CLAUDE.md file at the root of every project. It tells the model your conventions, library versions, test rules, and domain context. Skip it and you get generic suggestions. Write it well and the same tool produces project-specific code from the first prompt.
