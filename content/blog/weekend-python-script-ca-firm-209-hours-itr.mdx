@@ -1,0 +1,92 @@
+---
+title: "How a Weekend Python Script Saved a CA Firm 209 Hours During ITR Season"
+description: "A Chartered Accountant firm automated ITR filing with a Python script built in one weekend — saving 209 hours and ₹3.1L in seasonal hiring costs."
+date: "2026-04-03"
+tags: ["Python", "Automation", "Finance", "Tax"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/weekend-python-script-ca-firm-209-hours-itr"
+---
+
+₹3,12,000. That's what Rajesh Sharma's CA firm in Jaipur spent every ITR season hiring three temporary data entry operators for two months. They'd sit in a back room extracting numbers from Form 16 PDFs, cross-checking PAN details against the income tax portal, and pre-filling ITR forms — one cell at a time, one return at a time, 340 returns total.
+
+Last July, a single Python script replaced that entire process. Built in one weekend. Running cost: ₹0. Time saved across the season: 209 hours.
+
+This is not a theoretical tutorial. This is what actually happened, with real numbers, real friction, and the parts that almost went wrong.
+
+## The Problem: ITR Season Is a Two-Month Data Entry Marathon
+
+If you've never worked inside a CA firm during July-September, here's what it looks like. Clients send Form 16 PDFs over WhatsApp — sometimes as photos, sometimes as scanned copies with coffee stains. The firm's staff manually opens each PDF, types salary figures into a master Excel sheet, cross-references PAN numbers on the income tax portal, and fills in the ITR form fields one by one.
+
+Rajesh's firm handled 340 individual ITRs last year. Each return took an average of 38 minutes of pure data processing before a CA even looked at it for deductions and exemptions. That's 215 hours of someone staring at PDFs and typing numbers into boxes.
+
+The three temporary hires cost ₹1,04,000 each for the season — ₹3,12,000 total. And they still made errors. Rajesh's senior CA spent another 40+ hours catching and fixing data entry mistakes.
+
+> "Har saal yahi hota tha. Teen log hire karo, train karo, phir unki galtiyan dhundo. It felt like we were paying people to create problems we'd solve ourselves." (Every year the same thing. Hire three people, train them, then find their mistakes.)
+
+## The Script: What It Actually Does
+
+I didn't build Rajesh an AI platform. I didn't sell him a subscription. I built a Python script that does three things — and does them well.
+
+### Stage 1: PDF Text Extraction
+
+The script uses an open-source PDF library to read every Form 16 PDF in a folder. It extracts employer name, PAN, salary breakdowns (basic, HRA, special allowance), TDS deducted, and Section 80C/80D declarations. For scanned or photo PDFs — which made up about 30% of the documents — it falls back to OCR using Tesseract, another free tool.
+
+This stage alone eliminated about 70% of the manual typing.
+
+### Stage 2: Validation and Cross-Check
+
+Every extracted PAN is validated against a checksum algorithm (PAN numbers follow a specific format — the script catches typos instantly). Salary totals are cross-checked: does basic + HRA + special allowance + other components equal gross salary? If not, the return gets flagged for manual review instead of silently carrying an error forward.
+
+This is where the script outperformed humans consistently. The temporary hires caught about 60% of calculation mismatches. The script catches 100% — because it doesn't get tired at 4 PM on a Thursday.
+
+### Stage 3: Pre-Filled Output
+
+The script generates a structured spreadsheet with every field mapped to the ITR form layout. Rajesh's CAs open the sheet, review the numbers, apply their professional judgment on deductions and exemptions, and file. The 38-minute-per-return data processing step dropped to about 6 minutes of review.
+
+> **The Numbers:**
+> Before: 38 min/return x 340 returns = 215 hours of data processing
+> After: 6 min/return x 340 returns = 34 hours of CA review
+> Net saving: ~209 hours (after accounting for the 28 returns flagged for manual processing)
+> Cost saving: ₹3,12,000 in seasonal hiring — replaced by a script with ₹0 running cost
+
+## What Almost Went Wrong
+
+I'd be lying if I said the script worked perfectly from day one. Two things nearly derailed it.
+
+The first problem was PDF variety. Indian employers don't follow a standard Form 16 template. Some PDFs had salary components in tables, others in plain text paragraphs, and a few used formats I'd never seen — with Devanagari headers mixed into English content. The first version of the script handled about 75% of PDFs correctly. I spent the second day of that weekend writing fallback extraction logic for edge cases. By the end, it handled 92% automatically — the remaining 8% (28 returns) got flagged for manual processing.
+
+The second problem was trust. Rajesh didn't trust the script's output initially — and he shouldn't have. We ran a parallel test: his staff processed the first 50 returns manually while the script processed the same 50. We compared outputs line by line. The script matched human output on 47 returns and was actually *more accurate* on the other 3 (the staff had made small transcription errors).
+
+That parallel test took an extra day but bought something no amount of demos could: Rajesh's confidence that the numbers were right.
+
+> "Jab tak maine apni aankhon se comparison nahi dekha, mujhe yakeen nahi aaya. But the numbers don't lie." (Until I saw the comparison with my own eyes, I didn't believe it. But the numbers don't lie.)
+
+## Why This Matters Beyond One CA Firm
+
+India has over 3.5 lakh practising Chartered Accountants. The vast majority of small and mid-size firms still process ITRs the way Rajesh used to — manually, with seasonal hires, under deadline pressure that leads to errors and late nights.
+
+The automation here isn't complicated. It's not an AI model that needs training data or a cloud platform that costs ₹50,000/month. It's a Python script using free libraries, running on the same laptop the CA already owns. The total infrastructure cost is zero.
+
+What it requires is someone who understands both the accounting workflow and the code — or a CA willing to work with someone who does. That intersection is where the real value lives. Not in the technology itself, but in knowing which 80% of the process is pure data movement and which 20% genuinely needs a Chartered Accountant's brain.
+
+If you're a CA firm owner reading this: you don't need to learn Python. You need to find someone who can spend a weekend understanding your Form 16 processing workflow and write a script tailored to it. The ROI pays for itself before August.
+
+And if you're a developer looking for freelance projects: ITR season starts in July. CA firms start panicking in June. That's your window. The ones who've done it manually for 20 years are the ones most ready to try something different — they just need someone to show them it works.
+
+## FAQ
+
+**Can a Python script really automate ITR filing for a CA firm?**
+
+Yes. A Python script can automate the repetitive data extraction, validation, and pre-filling stages of ITR preparation. The CA still reviews and signs off on every return — the script handles the 80% of work that is pure data movement, not professional judgment.
+
+**How much time can automation save during ITR season?**
+
+In this case, a single script saved 209 hours across one ITR season by automating PDF extraction, data validation, and form pre-filling. The exact savings depend on your firm's volume and how manual your current process is.
+
+**Is it legal for CA firms to use automation scripts for ITR filing?**
+
+Absolutely. The automation handles data processing — extracting numbers from Form 16s, validating PAN details, and pre-filling fields. The Chartered Accountant still reviews every return, applies professional judgment, and digitally signs the final filing.
+
+**What does it cost to build an ITR automation script?**
+
+The script in this case study was built in a single weekend using free, open-source Python libraries. Total running cost: ₹0. No SaaS subscriptions, no API fees, no licensing.
