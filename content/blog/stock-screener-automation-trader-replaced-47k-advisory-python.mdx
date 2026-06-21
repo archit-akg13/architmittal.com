@@ -1,0 +1,101 @@
+---
+title: "Stock Screener Automation: How a Trader Replaced ₹47K/Month Advisory with a Python Script"
+description: "A retail trader automated his stock screening with a Python script and broker API — replacing a ₹47,000/month advisory service with a free, faster alternative."
+date: "2026-04-10"
+tags: ["Trading", "Python", "Automation", "Finance"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/stock-screener-automation-trader-replaced-47k-advisory-python"
+---
+
+₹47,000 every month. That's what my friend Rohit was paying a fund advisory service to tell him which stocks matched his criteria. Six filters — RSI below 40, volume spike above 200% of 20-day average, 200-DMA crossover, sector rotation signals, delivery percentage above 60%, and promoter holding changes in the last quarter. The advisory ran these filters on the same NSE data that's freely available to every broker account holder in India.
+
+One Sunday afternoon, a Python script, and a free broker API later — Rohit doesn't pay that ₹47,000 anymore. "Bhai, pehle 2 ghante screening mein jaate the. Ab chai peete peete list aa jaati hai." (Earlier 2 hours went into screening. Now the list arrives while I'm having chai.)
+
+This is the story of how a retail trader replaced an expensive advisory with a script that costs literally nothing to run — and why this pattern applies to far more than just stock screening.
+
+## The Problem: 2 Hours Every Morning, Staring at Screens
+
+Rohit is a swing trader based in Pune. He's been trading for seven years, and his edge has always been discipline — he never enters a trade without all six of his filters confirming. The problem was execution speed. Every morning before market open, he'd manually check 150+ stocks across three different screening tools, cross-reference the results, and build his watchlist.
+
+Two hours. Every single trading day. That's roughly 500 hours a year spent on a task that follows the exact same logic every time.
+
+The advisory service he subscribed to ran similar filters, but their shortlist arrived at 9:30 AM — 15 minutes after market open. By then, the best entry prices on momentum stocks were already gone. He was paying ₹47,000 a month for a list that arrived late.
+
+## The Solution: A Python Script That Runs Before You Wake Up
+
+Here's what we built over that weekend. I'm not going to dump code — if you want the technical template, it's in my [GitHub repo](https://github.com/archit-akg13/awesome-business-automation). Instead, let me walk you through the architecture so you understand what's actually happening.
+
+### The Flow
+
+The script connects to Rohit's broker API at 9:15 AM — one minute before market opens. It pulls the previous day's closing data for all NSE-listed stocks (roughly 2,000 symbols). Then it runs six filters in sequence: RSI calculation using a 14-day window, volume spike detection against the 20-day moving average, 200-DMA crossover check, sector rotation scoring based on relative strength, delivery percentage from NSE's Bhavcopy data, and promoter holding changes from the latest SAST filings.
+
+The entire filtering process takes about 12 seconds. By 9:16 AM, Rohit receives a WhatsApp message with a shortlist of 5-12 stocks that passed all six filters. He's looking at his curated watchlist before the market even opens for trading.
+
+> **The numbers that matter:** 2 hours/day reduced to 0 active time. ₹47,000/month advisory cancelled. The broker API costs a one-time ₹2,000 fee (Kite Connect). The WhatsApp Business API is free under 1,000 messages per month. Total recurring cost: ₹0.
+
+## Why This Works Better Than an Advisory Service
+
+The advisory service wasn't bad. Their analysts were competent, and their filters were reasonable. But they had three structural disadvantages that no amount of talent could fix.
+
+First, speed. An automated script delivers results in seconds. A team of analysts reviewing the same data and formatting a report takes 30-45 minutes after market data is available. In momentum trading, those minutes are the difference between a 2% gain and a missed entry.
+
+Second, customisation. Rohit's six filters are specific to his trading style. The advisory service used their own proprietary filters, which overlapped about 70% with what Rohit wanted. That remaining 30% mismatch meant he was still doing manual screening on top of the advisory's shortlist. With his own script, the filters match his strategy exactly — because he defined them.
+
+Third, adaptability. When Rohit wanted to add a seventh filter last month (institutional buying from bulk deal data), he messaged me on a Saturday morning. By Saturday evening, the filter was live. Try asking an advisory service to customise their screening methodology for one subscriber. It doesn't happen.
+
+## The Cost Breakdown: ₹5.64L/Year Saved
+
+| Item | Advisory Service | Python Script |
+| --- | --- | --- |
+| Monthly cost | ₹47,000 | ₹0 |
+| Annual cost | ₹5,64,000 | ₹2,000 (one-time API fee) |
+| Delivery time | 9:30 AM (15 min after open) | 9:16 AM (before open) |
+| Customisation | Fixed filters, no changes | Fully custom, instant updates |
+| Manual screening still needed | Yes (30% filter mismatch) | No |
+| Time spent daily | 45 min (reviewing + supplementing) | 0 min (WhatsApp alert) |
+
+The ROI here isn't subtle. Rohit saved ₹5.64 lakh in the first year and reclaimed 500+ hours of screen time. The script paid for itself on day one.
+
+## What You Actually Need to Build This
+
+You don't need to be a software engineer. Rohit isn't one — he's a commerce graduate who learned basic Python from YouTube tutorials. Here's what the stack looks like.
+
+You need Python 3.x with Pandas for data crunching, a broker API account (Kite Connect from Zerodha at ₹2,000 one-time, or Fyers API v3 which is completely free), a server or always-on machine to run the script on schedule (a ₹500/month DigitalOcean droplet works, or even an old laptop running Ubuntu), and the WhatsApp Business API for notifications (free under 1,000 messages/month).
+
+The conceptual approach is straightforward. You authenticate with your broker's API using OAuth tokens. You fetch historical OHLCV (Open, High, Low, Close, Volume) data for your universe of stocks. You calculate your technical indicators using Pandas and NumPy. You apply your filter logic — simple conditional statements. And you send the results via WhatsApp or Telegram using their respective APIs.
+
+If you've ever written an IF statement in Excel, you can understand the logic behind a stock screener script. The broker API handles the hard part — getting clean, real-time market data. Your script just applies the rules you already know.
+
+## The Bigger Lesson: Automation Is Cheapest Where Expertise Is Expensive
+
+Rohit's story isn't really about stock screening. It's about a pattern I see in every consulting engagement: the most expensive services are often the ones running the simplest logic on publicly available data.
+
+I've seen the same pattern in [CA firms spending lakhs on seasonal staff](/blog/weekend-python-script-ca-firm-209-hours-itr) to do repetitive ITR data entry. I've seen it in businesses paying for SaaS tools when [a ₹0 stack of free tools](/blog/zero-rupee-automation-stack-enterprise-workflows) does the same job. And I've seen it in the [opposite direction too](/blog/over-automation-trap-when-not-to-automate) — people automating things that should have stayed manual.
+
+The sweet spot for automation is repetitive tasks with clear rules and expensive human execution. Stock screening is a textbook case: the rules are explicit (RSI below X, volume above Y), the data is public, the task repeats daily, and the human alternative costs either time or money. "Jo kaam roz same tarike se hota hai, woh script ka kaam hai — insaan ka nahi." (Work that happens the same way every day is a script's job — not a human's.)
+
+Before you automate anything in your workflow, ask yourself these three questions. Is the logic explicit enough that you could explain it to a 10-year-old? Does the task repeat on a predictable schedule? Is the current cost of doing it manually more than the one-time cost of building the script? If all three answers are yes, you've found your next automation project.
+
+## What Happened After
+
+Six months into using the script, Rohit's trading performance improved — not because the script picked better stocks, but because it freed his morning for what actually matters: reading quarterly results, analysing management commentary, and making judgment calls on his filtered shortlist. The screening was never the value-add. His analysis was. The script just removed the busywork standing between him and the work that actually moves the needle.
+
+That's what good automation does. It doesn't replace your expertise. It removes the mechanical layer sitting on top of it so you can spend 100% of your time on the 20% of work that requires human judgment.
+
+## FAQ
+
+**Can I automate stock screening with a free broker API in India?**
+
+Yes. Brokers like Zerodha (via Kite Connect) and Fyers offer APIs that let you pull live market data and run custom filters programmatically. Kite Connect charges a one-time ₹2,000 fee but has no monthly cost. Fyers API v3 is completely free. Combined with Python libraries like Pandas, you can build a fully automated stock screener at near-zero recurring cost.
+
+**How much time does an automated stock screener save compared to manual screening?**
+
+In the case study described in this article, the trader went from 2 hours of manual screening every morning to zero active screening time. The script runs automatically at 9:16 AM and delivers a filtered shortlist of 5-12 stocks via WhatsApp within 30 seconds of market open.
+
+**Is it legal to use trading automation scripts in India?**
+
+Using scripts for stock screening, alerts, and analysis is perfectly legal. Automated order execution (algo trading) for retail investors requires broker approval and exchange registration under SEBI guidelines. The screener described here only filters and alerts — it does not place trades automatically.
+
+**What programming skills do I need to build a stock screener bot?**
+
+Basic Python knowledge is sufficient. You need familiarity with Pandas for data manipulation, the requests library for API calls, and a basic understanding of technical indicators like RSI, moving averages, and volume analysis. Most broker APIs have excellent documentation with code samples.
