@@ -1,3 +1,37 @@
+const fs = require('fs')
+const path = require('path')
+
+/**
+ * Reads KEY=VALUE pairs from an untracked secrets file.
+ *
+ * The Next.js standalone server does not load .env files (check
+ * .next/standalone/server.js — there is no loadEnvConfig call), so anything the
+ * server needs at runtime has to arrive through the pm2 env block. Secrets are
+ * kept out of this committed file and read from .env.server instead, which is
+ * gitignored and survives `git reset --hard` during deploys because it is
+ * untracked.
+ *
+ * Create it on the VPS:
+ *   printf 'NOTIFY_SECRET=%s\n' "$(openssl rand -hex 32)" > /var/www/architmittal.com/.env.server
+ *   chmod 600 /var/www/architmittal.com/.env.server
+ */
+function readEnvFile(filePath) {
+  const out = {}
+  try {
+    for (const line of fs.readFileSync(filePath, 'utf8').split('\n')) {
+      const trimmed = line.trim()
+      if (!trimmed || trimmed.startsWith('#') || !trimmed.includes('=')) continue
+      const [key, ...rest] = trimmed.split('=')
+      out[key.trim()] = rest.join('=').trim()
+    }
+  } catch {
+    // Missing file is not fatal — the app still boots, it just cannot notify.
+  }
+  return out
+}
+
+const secrets = readEnvFile(path.join(__dirname, '.env.server'))
+
 module.exports = {
   apps: [{
     name: 'architmittal-website',
@@ -7,6 +41,7 @@ module.exports = {
       NODE_ENV: 'production',
       PORT: 3002,
       HOSTNAME: '0.0.0.0',
+      NOTIFY_SECRET: secrets.NOTIFY_SECRET || '',
     },
     instances: 1,
     autorestart: true,

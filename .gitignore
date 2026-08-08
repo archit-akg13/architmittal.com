@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env.server
 *.env
 !bot/.env.example
 
@@ -47,6 +48,9 @@ data/inquiries.json
 
 # telegram bot env
 bot/.env
+
+# bot runtime logs (contain chat IDs of refused attempts)
+bot/*.log
 
 # local working design docs (not shipped)
 design_spec

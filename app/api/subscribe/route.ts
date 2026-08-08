@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs/promises'
 import path from 'path'
-import { TELEGRAM_NOTIFY_URL } from '@/lib/constants'
+import { notifyTelegram } from '@/lib/notify'
 
 const DATA_FILE = path.join(process.cwd(), 'data', 'subscribers.json')
 
@@ -32,13 +32,7 @@ export async function POST(request: NextRequest) {
     await fs.writeFile(DATA_FILE, JSON.stringify(subscribers, null, 2))
 
     // Telegram notification (fire and forget)
-    fetch(TELEGRAM_NOTIFY_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        message: `📧 New subscriber!\nName: ${name}\nEmail: ${email}`,
-      }),
-    }).catch(() => {})
+    notifyTelegram(`📧 New subscriber!\nName: ${name}\nEmail: ${email}`)
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully!' })
   } catch {
