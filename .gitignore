@@ -27,6 +27,12 @@ yarn-error.log*
 
 # local env files
 .env*.local
+*.env
+!bot/.env.example
+
+# credentials (never commit — see ~/.config/automation)
+.config/automation
+**/automation/*.env
 
 # vercel
 .vercel
@@ -41,3 +47,8 @@ data/inquiries.json
 
 # telegram bot env
 bot/.env
+
+# local working design docs (not shipped)
+design_spec
+edit_spec
+homepage_revamp_spec
