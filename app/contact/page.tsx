@@ -58,6 +58,19 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      <section className="mt-16 pt-8 border-t border-gray-200">
+        <h2 className="font-heading font-semibold text-lg text-heading mb-1">Contact Us</h2>
+        <p className="font-body text-subtle text-xs mb-5">Last updated on 22-04-2026 09:33:38</p>
+        <div className="font-body text-body text-sm space-y-2 max-w-2xl">
+          <p>You may contact us using the information below:</p>
+          <p><span className="font-semibold">Merchant Legal entity name:</span> AUTOMATE ALGOS PRIVATE LIMITED</p>
+          <p><span className="font-semibold">Registered Address:</span> 32D/328A/20D SUBHASH NAGAR KARMYOGI, ROAD, Agra, Agra, UP, IN - 282005, Agra, UP, PIN: 282005</p>
+          <p><span className="font-semibold">Operational Address:</span> 32D/328A/20D SUBHASH NAGAR KARMYOGI, ROAD, Agra, Agra, UP, IN - 282005, Agra, UP, PIN: 282005</p>
+          <p><span className="font-semibold">Telephone No:</span> <a href="tel:+919258755461" className="text-lime hover:text-lime-dark transition-colors">9258755461</a></p>
+          <p><span className="font-semibold">E-Mail ID:</span> <a href={`mailto:${SITE_EMAIL}`} className="text-lime hover:text-lime-dark transition-colors">{SITE_EMAIL}</a></p>
+        </div>
+      </section>
     </div>
   )
 }

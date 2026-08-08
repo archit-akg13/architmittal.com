@@ -114,8 +114,13 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-6 text-center text-subtle text-xs font-body">
-          &copy; {new Date().getFullYear()} {SITE_NAME} | {SITE_TAGLINE}
+        <div className="border-t border-white/10 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-subtle text-xs font-body">
+          <div>&copy; {new Date().getFullYear()} {SITE_NAME} | {SITE_TAGLINE}</div>
+          <div className="flex flex-wrap gap-x-4 gap-y-2 justify-center">
+            <Link href="/terms-and-conditions" className="hover:text-lime transition-colors">Terms &amp; Conditions</Link>
+            <Link href="/refund-policy" className="hover:text-lime transition-colors">Refund Policy</Link>
+            <Link href="/contact" className="hover:text-lime transition-colors">Contact Us</Link>
+          </div>
         </div>
       </div>
     </footer>

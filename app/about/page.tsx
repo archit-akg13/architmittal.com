@@ -59,7 +59,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-lime/5 border border-lime/20 rounded-xl p-8 text-center">
+      <section className="bg-lime/5 border border-lime/20 rounded-xl p-8 text-center mb-12">
         <h2 className="font-heading font-bold text-2xl text-heading mb-3">Work With Me</h2>
         <p className="font-body text-body mb-6 max-w-lg mx-auto">
           Have a project in mind? Let&apos;s talk — algo trading, AI agents, or business automation.
@@ -73,6 +73,12 @@ export default function AboutPage() {
         >
           Book a Consultation
         </a>
+      </section>
+
+      <section className="border-t border-gray-200 pt-8 text-center">
+        <p className="font-body text-subtle text-xs">
+          Operated by <span className="font-heading font-semibold text-body">AUTOMATE ALGOS PRIVATE LIMITED</span>
+        </p>
       </section>
     </div>
   )
