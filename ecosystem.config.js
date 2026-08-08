@@ -42,6 +42,12 @@ module.exports = {
       PORT: 3002,
       HOSTNAME: '0.0.0.0',
       NOTIFY_SECRET: secrets.NOTIFY_SECRET || '',
+
+      // Must be absolute and outside .next/. The standalone server chdir's to
+      // its own directory, and `next build` overwrites .next/standalone/data/
+      // from the repo copy — so a cwd-relative path silently lost every lead
+      // on each deploy. See lib/data-store.ts.
+      DATA_DIR: '/var/www/architmittal.com/data',
     },
     instances: 1,
     autorestart: true,
