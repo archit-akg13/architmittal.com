@@ -82,6 +82,13 @@ Find your chat IDs by messaging [@userinfobot](https://t.me/userinfobot).
 > The allowlist falls back to `TELEGRAM_CHAT_ID`, which is your **group** ID.
 > Your DMs use a different ID. Include both, or the bot will refuse you.
 
+**If Cowork drives deploys via `EXECUTE_TASK:`, its chat ID belongs here too.**
+If it posts into the group, the group ID already covers it. If it DMs the bot
+from its own account, that ID must be added or Cowork will be refused —
+*silently*, with no error reply, which is exactly what a working deploy looks
+like from Cowork's side. Its task string must also be exactly
+`EXECUTE_TASK: deploy`; the old free-form matching is gone (see Step 10).
+
 ---
 
 ## Step 3 — Preflight must pass before anything is pushed
@@ -209,6 +216,15 @@ From **your own** account:
 
 If these are silent, your DM chat ID is missing from
 `TELEGRAM_ALLOWED_CHAT_IDS` — it differs from the group ID.
+
+Then, **only if Cowork uses the `EXECUTE_TASK:` path**, confirm it still works:
+
+- [ ] From Cowork's own account/chat, `EXECUTE_TASK: deploy` → `📝 Running task: deploy`
+
+Silence here means Cowork's chat ID is not on the allowlist (Step 2). A
+`⚠️ Unknown task` reply means it is authorized but sending the wrong string —
+the task name must be an exact key, so `EXECUTE_TASK: please deploy` no longer
+matches the way it did before.
 
 ---
 
