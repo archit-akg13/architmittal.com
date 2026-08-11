@@ -1,0 +1,79 @@
+---
+title: "OpenMontage: what it does, and where it does not"
+description: "What OpenMontage actually does, how to install and run it, and the situations where reaching for this open source tool would be the wrong call."
+date: "2026-08-11"
+tags: ["Open Source", "AI Tools", "Python"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/openmontage-what-it-does-and-where-it-does-not"
+---
+OpenMontage is an open source project you can run yourself today. This is a look at what it does, how to get it going, and the situations where reaching for it would be a mistake.
+
+## What it actually does
+
+Turn your AI coding assistant into a full video production studio. Describe what you want in plain language — your agent handles research, scripting, asset generation, editing, and final composition.
+
+Important distinction: OpenMontage can make image-based videos, but it can also make a real video video for free/open-source workflows: the agent builds a corpus from free stock footage and open archives, retrieves actual motion clips, edits them into a timeline, and renders a finished piece. That is not the usual "animate a handful of stills and call it video" trick.
+
+"SIGNAL FROM TOMORROW" — a cinematic sci-fi trailer fully produced through OpenMontage: concept, script, scene plan, Veo-generated motion clips, soundtrack, and Remotion composition.
+
+## Running it
+
+The project documents this as the way in:
+
+```bash
+git clone https://github.com/calesthio/OpenMontage.git
+cd OpenMontage
+make setup
+```
+
+Run that in a throwaway directory first. Anything that touches credentials or writes outside its own folder is worth reading before you execute it, and that applies to every tool in this category, not only this one.
+
+Once it is installed, the documented next step is:
+
+```bash
+python -m backlot open                  # the library — every project on disk
+python -m backlot open <project-id>     # one production's live board
+python scripts/backlot_simulate_run.py  # no production yet? watch a simulated one live
+```
+
+## The details that matter
+
+"THE LAST BANANA" — a 60-second Pixar-style animated short about a lonely banana who finds friendship with a kiwi. 6 Kling v3-generated motion clips (via fal.ai), Google Chirp3-HD narration, royalty-free piano music, TikTok-style word-level captions, and Remotion composition. Total cost: $1.33.
+
+"VOID — Neural Interface" — a product ad produced with just one API key (OpenAI). 4 AI-generated images (gpt-image-1), TTS narration, auto-sourced royalty-free music, word-level subtitles via WhisperX, and Remotion data visualizations. Total cost: $0.69. Zero manual asset work.
+
+"Afternoon in Candyland" — a Ghibli-style anime animation. A little girl's whimsical afternoon adventure through candy gates, gumdrop rivers, and lollipop gardens. 12 FLUX-generated images with multi-image crossfade, cinematic camera motion (zoom, pan, Ken Burns), sparkle/petal/firefly particle overlays, and ambient music with auto-detected energy offset. Total cost: $0.15. No video generation, no manual editing.
+
+"Mori no Seishin" — a Ghibli-style anime animation of a forest spirit's journey through ancient woods. 12 FLUX-generated images with parallax crossfade, drift and pan camera motion, firefly and petal particles, cinematic vignette lighting, and ambient forest soundtrack. Total cost: $0.15. Still images brought to life through Remotion's animation engine.
+
+Subscribe to @OpenMontage on YouTube to see new videos as they ship — every video includes the full prompt, pipeline, tools used, and cost so you can reproduce it yourself.
+
+## What the documentation covers
+
+The README is organised around Start From A Video You Already Love, Watch It Happen — The Backlot Living Storyboard, Quick Start, Prerequisites and Install & Run. That structure tells you where the maintainers expect people to get stuck, which is usually a better guide to a project's rough edges than its feature list.
+
+## Before you run it
+
+This category of tool tends to want an API key on the first run, and a key handed to an unfamiliar binary is a key you have to assume is readable by that binary. A few habits make that cheaper to live with.
+
+Issue a scoped key that exists only for this experiment, so revoking it later costs nothing. Run the tool inside a container or a fresh directory rather than your main working tree, so anything it writes is easy to inspect and easier to throw away. Skim what the project does on start-up before you give it credentials — most well-maintained repositories are explicit about what leaves your machine, and the ones that are vague about it are telling you something.
+
+None of this is specific to OpenMontage. It is the baseline for running anything you did not write, and it is the difference between an afternoon of evaluation and an incident.
+
+## Where it is the wrong choice
+
+An open source tool you host yourself is not free. You own the upgrades, the breakages, and the hour you lose when something changes upstream. If a managed alternative costs less than the time you will spend maintaining this, buy the managed one — that arithmetic is unglamorous and it is usually right.
+
+Self-hosting earns its keep in three situations. When the data genuinely cannot leave your infrastructure, and a hosted product is therefore not an option regardless of price. When your volume makes per-seat or per-request pricing punitive, and the maintenance cost is the cheaper side of the trade. And when the hosted product simply does not do the specific thing you need, which is more common than vendor comparison pages suggest.
+
+Outside those three, the honest answer is usually to buy rather than run. That is worth saying plainly on a page that exists to tell you about a tool, because the interesting question is never whether something is impressive — it is whether it is the right thing to put in your stack.
+
+The other caveat is age. A young project moves quickly, interfaces change, and a setup that works this month may need revisiting next month. If you are going to depend on it, pin your versions and expect to read a changelog occasionally.
+
+## Worth your time?
+
+If the problem it solves is one you actually have, it costs an afternoon to find out — and an afternoon is a reasonable price for removing a recurring annoyance from your week.
+
+Judge it yourself rather than taking this page's word for it. Open the repository and look at three things: how recently it was pushed, whether the maintainers answer their issues, and whether the open issues are features or fundamentals. Those three signals tell you more about whether a project will still be there in six months than any write-up can, this one included.
+
+Source: [calesthio/OpenMontage](https://github.com/calesthio/OpenMontage)
