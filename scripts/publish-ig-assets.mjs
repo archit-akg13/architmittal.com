@@ -30,6 +30,7 @@ import {
   log,
   parseArgs,
   repoRoot,
+  waitForLiveJpegs,
 } from './_common.mjs'
 
 // Instagram portrait carousel. The Graph API rejects PNG, so everything becomes JPEG.
@@ -37,7 +38,35 @@ const WIDTH = 1080
 const HEIGHT = 1350
 const MIN_SLIDES = 2
 const MAX_SLIDES = 10
+const MIN_EDGE = 320 // Instagram's minimum image width
 const SOURCE_EXT = /\.(png|jpe?g|webp|tiff?|avif)$/i
+
+/**
+ * Pads a source image into the 1080x1350 canvas without cropping.
+ *
+ * This deliberately does NOT use fit:'cover'. Cover scales a 1080x1080 slide up
+ * to 1350x1350 and centre-crops it back to 1080 wide, silently cutting 135px off
+ * the left and right of every square slide — which is every one of the 128
+ * legacy slides. Padding preserves the full composition; the bands are filled
+ * with the slide's own corner colour so they read as part of the artwork.
+ */
+async function cornerColour(src) {
+  try {
+    const { data } = await sharp(src)
+      .extract({ left: 0, top: 0, width: 8, height: 8 })
+      .removeAlpha()
+      .raw()
+      .toBuffer({ resolveWithObject: true })
+    let r = 0, g = 0, b = 0
+    const px = data.length / 3
+    for (let i = 0; i < data.length; i += 3) {
+      r += data[i]; g += data[i + 1]; b += data[i + 2]
+    }
+    return { r: Math.round(r / px), g: Math.round(g / px), b: Math.round(b / px) }
+  } catch {
+    return { r: 247, g: 241, b: 230 } // paper #F7F1E6
+  }
+}
 
 const args = parseArgs(process.argv.slice(2))
 const dryRun = Boolean(args['dry-run'])
@@ -104,13 +133,25 @@ async function main() {
     return
   }
 
+  // Reject undersized sources before writing anything, rather than shipping a
+  // slide Instagram will refuse at container-creation time.
+  for (const src of sources) {
+    const { width, height } = await sharp(src).metadata()
+    if (!width || !height) die(`Cannot read image dimensions: ${src}`)
+    if (width < MIN_EDGE) {
+      die(`${path.basename(src)} is ${width}x${height}. Instagram needs a minimum width of ${MIN_EDGE}px.`)
+    }
+  }
+
   fs.mkdirSync(outDir, { recursive: true })
 
   for (const [i, src] of sources.entries()) {
     const dest = path.join(outDir, `${i + 1}.jpg`)
+    const pad = await cornerColour(src)
     await sharp(src)
-      .resize(WIDTH, HEIGHT, { fit: 'cover', position: 'centre' })
-      .flatten({ background: '#ffffff' }) // drop alpha; JPEG has no transparency
+      .resize(WIDTH, HEIGHT, { fit: 'contain', background: pad })
+      .flatten({ background: pad }) // drop alpha; JPEG has no transparency
+      .toColourspace('srgb')
       .jpeg({ quality: 90, chromaSubsampling: '4:4:4', mozjpeg: true })
       .toFile(dest)
     const kb = Math.round(fs.statSync(dest).size / 1024)
@@ -124,12 +165,24 @@ async function main() {
     dryRun: false,
   })
 
+  // A green push is not evidence the files are servable. The first publish
+  // attempt failed because an image existed on disk but was untracked in git,
+  // so it 404'd. Block here until every URL is genuinely fetchable as JPEG.
+  const { ok, results } = await waitForLiveJpegs(urls)
+  if (!ok) {
+    const bad = results.filter((r) => !r.live).map((r) => `  ${r.url}  status=${r.status} type=${r.contentType || 'n/a'}`)
+    die(
+      `Assets pushed but not servable. Do NOT publish — the Graph API would fail with error 9004.\n` +
+        bad.join('\n')
+    )
+  }
+
   log('')
-  log('Public URLs (wait for the Actions deploy to finish before posting):')
+  log('All slides verified live and served as image/jpeg:')
   urls.forEach((u) => log(`  ${u}`))
   log('')
-  log('Then post the carousel:')
-  log(`  python3 ~/automation_branding/setup/ig_publish.py --slug ${slug} --caption-file caption.txt --dry-run`)
+  log('Safe to publish:')
+  log(`  node scripts/ig-publish.mjs --slug ${slug} --caption-file caption.txt --dry-run`)
 }
 
 main().catch((err) => die(err?.stack || err?.message || String(err)))

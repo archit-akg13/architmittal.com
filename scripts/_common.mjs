@@ -174,6 +174,67 @@ export async function waitForLive(url, { timeoutMs = 300000, intervalMs = 15000 
   return false
 }
 
+/**
+ * Polls every URL until each returns 200 AND content-type: image/jpeg.
+ *
+ * A 200 alone is not evidence the Graph API can use the file. Next.js serves an
+ * HTML 200 for some not-found paths, and a PNG mistakenly named .jpg also 200s —
+ * both make Instagram fail later with error 9004 ("bad image URL"), which reads
+ * like a permissions problem and wastes an hour. The content-type check is what
+ * turns that into a clear local failure before any container is created.
+ *
+ * Returns { ok, results: [{ url, status, contentType, live }] }.
+ */
+export async function waitForLiveJpegs(urls, opts = {}) {
+  return waitForLiveAssets(urls, { ...opts, typePattern: /image\/jpe?g/i, label: 'JPEG' })
+}
+
+/** Same contract as waitForLiveJpegs, for any expected content-type. */
+export async function waitForLiveAssets(
+  urls,
+  { timeoutMs = 600000, intervalMs = 15000, typePattern = /image\/jpe?g/i, label = 'asset' } = {}
+) {
+  const deadline = Date.now() + timeoutMs
+  const pending = new Map(urls.map((u) => [u, { url: u, status: 0, contentType: '', live: false }]))
+
+  log(`Verifying ${urls.length} URL(s) are live and served as ${label} (up to ${Math.round(timeoutMs / 1000)}s)...`)
+
+  while (Date.now() < deadline) {
+    for (const state of pending.values()) {
+      if (state.live) continue
+      try {
+        const res = await fetch(state.url, { method: 'GET', redirect: 'follow' })
+        state.status = res.status
+        state.contentType = res.headers.get('content-type') || ''
+        // Drain the body so the socket is released rather than left dangling.
+        await res.arrayBuffer().catch(() => {})
+        if (res.status === 200 && typePattern.test(state.contentType)) {
+          state.live = true
+          log(`  LIVE  ${state.url}  (${state.contentType})`)
+        }
+      } catch (err) {
+        state.status = 0
+        state.contentType = redact(err.message)
+      }
+    }
+
+    const remaining = [...pending.values()].filter((s) => !s.live)
+    if (remaining.length === 0) {
+      log(`All ${urls.length} URL(s) verified as ${label}.`)
+      return { ok: true, results: [...pending.values()] }
+    }
+
+    log(`  ${remaining.length}/${urls.length} not ready — retrying in ${Math.round(intervalMs / 1000)}s...`)
+    await new Promise((r) => setTimeout(r, intervalMs))
+  }
+
+  for (const s of pending.values()) {
+    if (!s.live) log(`  NOT LIVE  ${s.url}  status=${s.status} type=${s.contentType || 'n/a'}`)
+  }
+  log(`Check the Actions run: https://github.com/${REPO_SLUG}/actions`)
+  return { ok: false, results: [...pending.values()] }
+}
+
 /** Minimal --flag / --flag=value parser. */
 export function parseArgs(argv) {
   const out = { _: [] }
