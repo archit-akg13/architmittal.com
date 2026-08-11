@@ -87,21 +87,29 @@ async function waitForContainer(containerId, token, { tries = 60, intervalMs = 1
 
 /** Reads the post back so success is proven, not inferred from a 200. */
 async function verifyPublished(mediaId, token, expect) {
+  // media_product_type is the field that distinguishes a reel from an ordinary
+  // video. The two are NOT symmetric with the container: a reel is CREATED with
+  // media_type=REELS but READS BACK as media_type=VIDEO, media_product_type=REELS.
+  // Asserting on media_type alone reported every successful reel as a mismatch.
   const media = await graphGet(mediaId, {
-    fields: 'id,media_type,media_url,permalink,timestamp,children{id}',
+    fields: 'id,media_type,media_product_type,media_url,permalink,timestamp,children{id}',
     access_token: token,
   })
   const childCount = media.children?.data?.length ?? 0
   metaLog('')
   metaLog('Readback from the API:')
-  metaLog(`  id          ${media.id}`)
-  metaLog(`  media_type  ${media.media_type}`)
-  metaLog(`  permalink   ${media.permalink}`)
-  metaLog(`  children    ${childCount}`)
+  metaLog(`  id            ${media.id}`)
+  metaLog(`  media_type    ${media.media_type}`)
+  metaLog(`  product_type  ${media.media_product_type ?? '-'}`)
+  metaLog(`  permalink     ${media.permalink}`)
+  metaLog(`  children      ${childCount}`)
 
   const problems = []
   if (expect.mediaType && media.media_type !== expect.mediaType) {
     problems.push(`expected media_type ${expect.mediaType}, got ${media.media_type}`)
+  }
+  if (expect.productType && media.media_product_type !== expect.productType) {
+    problems.push(`expected media_product_type ${expect.productType}, got ${media.media_product_type}`)
   }
   if (expect.childCount != null && childCount !== expect.childCount) {
     problems.push(`expected ${expect.childCount} children, got ${childCount}`)
@@ -160,7 +168,10 @@ async function main() {
     })
     metaLog(`Published media id: ${published.id}`)
 
-    const { media, problems } = await verifyPublished(published.id, token, { mediaType: 'REELS' })
+    const { media, problems } = await verifyPublished(published.id, token, {
+      mediaType: 'VIDEO',
+      productType: 'REELS',
+    })
     appendLog({
       kind: 'reel',
       slug: slug ?? null,

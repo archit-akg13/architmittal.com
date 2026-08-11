@@ -119,13 +119,20 @@ export function commitAndPush({ paths, message, token, dryRun }) {
 
   git(['add', '--', ...paths])
 
+  // Nothing staged means the bytes already match a commit. That is a normal
+  // outcome, not a failure: the renders are deterministic, so a re-run produces
+  // an identical file. Treating it as fatal used to abort exactly when a previous
+  // run had committed but failed to push — leaving the asset stranded locally
+  // with no way to retry short of editing it.
   const staged = git(['diff', '--cached', '--name-only'])
-  if (!staged) die('Nothing staged — the file matched what is already committed.')
-
-  // --only limits the commit to these paths, so unrelated working-tree edits are left alone.
-  // -m must precede the `--` separator, or the message is parsed as a pathspec.
-  git(['commit', '--only', '-m', message, '--', ...paths])
-  log(`Committed: ${git(['log', '--oneline', '-1'])}`)
+  if (staged) {
+    // --only limits the commit to these paths, so unrelated working-tree edits are left alone.
+    // -m must precede the `--` separator, or the message is parsed as a pathspec.
+    git(['commit', '--only', '-m', message, '--', ...paths])
+    log(`Committed: ${git(['log', '--oneline', '-1'])}`)
+  } else {
+    log('Already committed with identical content — continuing to push.')
+  }
 
   // Rebase onto any posts published from elsewhere since we last fetched.
   git(['fetch', 'origin', 'main'])
@@ -138,9 +145,20 @@ export function commitAndPush({ paths, message, token, dryRun }) {
   const authHeader = `Authorization: Basic ${Buffer.from(`x-access-token:${token}`).toString('base64')}`
   registerSecret(authHeader)
 
+  // postBuffer and HTTP/1.1 are required for the reel assets, not optional tuning.
+  //
+  // A push carrying a few MB of MP4 over HTTP/2 fails with "RPC failed; HTTP 400
+  // ... unexpected disconnect while reading sideband packet". It is not an auth
+  // or permission problem, which is what the message suggests and why it costs an
+  // hour to diagnose: the same token pushes text commits fine. Text-only pushes
+  // never hit it, so this only ever breaks once video enters the pipeline.
   git([
     '-c',
     `http.extraHeader=${authHeader}`,
+    '-c',
+    'http.postBuffer=524288000',
+    '-c',
+    'http.version=HTTP/1.1',
     'push',
     `https://github.com/${REPO_SLUG}.git`,
     'HEAD:main',
