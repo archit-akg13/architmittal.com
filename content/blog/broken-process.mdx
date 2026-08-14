@@ -1,0 +1,79 @@
+---
+title: "AI Won't Fix a Broken Process. Map It First, Then Automate"
+description: "A 20-minute audit that shows Indian founders which process to automate first, which to fix by hand, and which to leave alone entirely."
+date: "2026-08-14"
+tags: ["automation", "process", "operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/broken-process"
+---
+Automation copies your process. If the process is confused, you now have confusion running at speed, and nobody to blame in the room because the software did it. That is the failure mode I see most often in businesses between fifty lakh and fifty crore: not bad tools, not bad vendors, just a process that was never written down being handed to a machine that requires it to be.
+
+The fix is boring and it takes twenty minutes. Before you buy anything, before you book a demo, you map the process. Not a flowchart with swimlanes. A single sheet of paper and four questions.
+
+## Why the tool always looks like the answer
+
+The tool is easy to evaluate. It has a price, a website, a demo, a comparison table. Your process has none of those things. It lives in the heads of two people, one of whom is on leave, and it changes depending on which customer is asking.
+
+So when something hurts, the search that follows is "best software for X". That is the wrong search. The right question is why the pain exists, and the honest answer is usually one of three: nobody owns the step, the input arrives in an unusable form, or the step exists to compensate for an earlier step that was done badly. Software fixes none of those. It just makes the compensating step faster.
+
+I have built systems that got ripped out within a quarter, and every single one failed for the same reason. The process I automated was not the process the business ran. It was the process someone described to me in a meeting.
+
+## The twenty-minute audit
+
+Take one process. Not the business. One process, the one that is genuinely annoying you this month. Sit with the person who actually does it, not the person who manages the person who does it. That distinction matters more than anything else in this article.
+
+Then work through four questions, writing as you go.
+
+**One: what triggers this, and what ends it?** Be brutal about the boundaries. "Handling enquiries" is not a process. "A WhatsApp message arrives from an unknown number, and it ends when the enquiry is either quoted or dismissed" is a process. If you cannot state the trigger and the end state in one sentence each, you are looking at several processes stacked on top of each other, and you must split them before you go further.
+
+**Two: what are the steps, in order, with a name attached to each?** Every step gets a human name. Not a department, not "the team". A name. Where you cannot write a name, you have found something important: that step is either shared, which means it gets dropped, or unowned, which means it gets dropped less predictably.
+
+**Three: where does the work wait?** Mark every point where the work sits still. Waiting for approval. Waiting for someone to check their inbox. Waiting for the accountant to send the file. In most processes the waiting is the majority of the elapsed time, and the actual work is a small fraction of it. This is the question that changes people's minds most often, because owners tend to believe their process is slow due to effort when it is actually slow due to queueing.
+
+**Four: what breaks it?** Ask the person doing the work what the last five exceptions were. Not hypothetical exceptions. Actual ones from the last month. Write them down. Then ask what fraction of the volume those exceptions represent. If exceptions are rare, automate the main path and route exceptions to a human. If exceptions are the majority, you do not have a process yet, you have a series of judgement calls, and automating it will produce garbage at scale.
+
+That is the audit. Twenty minutes, one sheet, four questions.
+
+## A worked example: distributor orders on WhatsApp
+
+Here is one I have mapped several times, in different businesses, with almost identical results.
+
+A distribution business takes orders from retailers on WhatsApp. The owner wants a bot. The bot will read the messages, understand the order, push it into Tally, and confirm to the retailer. Vendors will happily quote for this.
+
+Run the audit. Trigger: a retailer sends a message. End state: the order is entered and a confirmation goes back. Steps: someone reads the message, works out which SKU is meant, checks whether the retailer has outstanding dues, checks stock, enters it, replies.
+
+Now question three, the waiting. The orders come in through the day. One person enters them in a batch in the evening. So an order placed at eleven in the morning waits until the evening, not because entry is slow but because entry happens once a day.
+
+And question four, the breakages. Retailers do not write SKU codes. They write "wo wala 5 peti bhej do". The person entering the order knows what that retailer usually means. That knowledge is not written anywhere. Half the messages need it.
+
+So what should this business automate? Not the understanding. That is the part that looks impressive in a demo and fails quietly in production, and when it fails it ships the wrong goods to a retailer who then stops ordering. What should be automated is the queueing: an acknowledgement the moment a message arrives, orders surfaced in a single list instead of a chat thread, a dues and stock flag next to each one so the person entering it is not switching between three screens. The human still reads the message and decides the SKU. The system removes the waiting and the screen-switching around that decision.
+
+That business got most of the benefit without touching the risky part. And the SKU understanding becomes automatable later, once there is a clean record of what each retailer's phrasing actually mapped to, because the new system is now recording exactly that.
+
+## Where the answer is: don't automate this
+
+Nobody in my line of work wants to say this, so I will say it plainly. Some things should stay manual, and knowing which is more valuable than any tool.
+
+**Low volume, high variance.** If a task happens a handful of times a month and looks different each time, automation costs more to build and maintain than it saves. Your GST filing is a good example of the opposite: it is monthly, structured, and identical in shape, which is exactly why reconciliation between your sales register and the portal data is worth automating. But your response to a supplier dispute is not.
+
+**Anything where being wrong is expensive and being slow is cheap.** Payment releases. Credit limits for a new retailer. Anything with a legal deadline where a silent failure is discovered late. Automate the preparation, keep the decision human, and make sure the system fails loudly rather than quietly.
+
+**A process you are about to change.** If you are hiring, restructuring, or moving to new accounting software this year, automating the current process is building on ground you are about to dig up.
+
+**Something you have not written down.** If the audit produces four questions you cannot answer, the answer this month is not a tool. It is running the process deliberately for a few weeks, writing down what actually happens, and then deciding.
+
+Refusing to automate is a legitimate outcome of the audit. It is, in fact, the outcome that saves the most money.
+
+## What the audit actually gives you
+
+You end up with a sheet showing where the work waits, who owns each step, and how often things break. From that, the priority order writes itself. Automate the longest wait with the lowest variance first. That is nearly always the highest return, because you are removing queueing rather than trying to replace judgement, and queueing is the cheapest thing in the world to remove.
+
+You also get a specification. When you do talk to a vendor, you are no longer asking what their product does. You are telling them what your process is and asking whether their product fits it. Those two conversations end in very different places, and the second one is much harder to oversell to.
+
+The other thing you get is the ability to tell whether it worked. If you measured the wait before, you can measure it after. Most automation projects fail this test not because they did nothing but because nobody wrote down the before.
+
+## Do this week
+
+Pick the one process that annoyed you most in the last fortnight. Book thirty minutes with the person who does it, not the person who manages it. Ask the four questions and write the answers on one sheet: trigger and end state, steps with names, where the work waits, and the last five exceptions.
+
+Then put the sheet away for a day and read it again. In my experience you will find at least one step that exists only because of a decision nobody has revisited in years, and removing that step will cost you nothing at all.
