@@ -1,0 +1,75 @@
+---
+title: "Your customers are on WhatsApp. Your automation is built for Slack."
+description: "Indian business runs on WhatsApp, but every automation tutorial assumes Slack and email. What to move, what breaks, and the DLT and consent bit nobody mentions."
+date: "2026-08-14"
+tags: ["whatsapp", "automation", "compliance"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/whatsapp-gap"
+---
+Almost every automation tutorial you will read was written by someone whose customers send email. So the pattern is always the same: a form fills a spreadsheet, a spreadsheet posts to Slack, Slack pings a human, the human replies by email. It is a clean loop and it has nothing to do with how an Indian business actually receives work.
+
+Your enquiries arrive as a WhatsApp message at 9.40pm. Your dealer sends the month's order as a voice note. Your client sends the purchase register as eleven photographs of a ledger. Your delivery boy confirms drop-off by sending a picture of the signed challan to a group with fourteen people in it. If your automation lives in email and Slack, it is automating a channel your business does not use.
+
+The gap is not technical. The tools exist. The gap is that nobody localises the pattern, so owners either bolt on a chatbot that annoys people or give up and keep three staff members answering the same question all day.
+
+## Start with what is actually happening on the number
+
+Before you buy anything, do the tally. Open your business WhatsApp and read the last two weeks of incoming messages. Put every single one into one of three buckets.
+
+Bucket one: questions with exactly one correct answer. Price list. Are you open. Where is my order. GST number. Do you deliver to Nashik. Share the catalogue.
+
+Bucket two: things that need a human to decide something. Discounts. Complaints. Anything where the customer is upset. Anything involving a first-time buyer above your usual ticket size.
+
+Bucket three: information you need to collect from them, repeatedly, in a fixed format. Documents, order quantities, addresses, payment proof.
+
+Bucket one and bucket three are where automation pays. Bucket two is where automation destroys trust faster than any amount of it saves. Most owners get this backwards because the demos they are shown are all about bucket two, since a bot handling a complaint looks more impressive in a video than a bot sending a catalogue.
+
+## What actually moves, and what it costs you
+
+Moving to the WhatsApp Business Platform is not the same as installing WhatsApp Business on a second phone. It is a different product with different rules, and those rules are where every first attempt breaks.
+
+The one that catches everyone: you cannot message a customer freely whenever you like. When a customer messages you, a service window opens and you can reply with anything you want for a limited period. Outside that window, you can only send a pre-approved template. Templates are categorised, roughly, as utility, authentication, or marketing, and they are approved by Meta, not by you. Marketing costs more than utility, and Meta decides which category your message falls into regardless of what you named it. A "your order is dispatched" message that ends with "also check out our new range" gets reclassified, and your costs move with it.
+
+The second one: a phone number can live in the consumer app or on the API, not both. The day you migrate your main business number, the app on your manager's phone stops working with it, and the chat history does not come along. Every business I have seen do this without planning for it spent the first week in quiet panic because the person who knew all the customers could no longer see any of them. Plan the shared inbox before you migrate, not after.
+
+The third one: quality rating. If people block or report your number, your ability to send messages gets restricted. This is the mechanism that punishes the "let us blast everyone in the database" instinct, and it punishes it at the account level, meaning the marketing blast can take down your order confirmations too.
+
+## The distributor order desk
+
+Here is the case I see most often, in some version, across building materials, pharma, FMCG, auto parts.
+
+A distributor takes orders from dealers on WhatsApp. Some send a typed list. Some send a voice note. Some send a photo of a handwritten page. One person at the distributor's office reads all of them, types them into Tally or the ERP, and sends back a confirmation. That person is also the person who knows which dealer is behind on payments and which one always over-orders in the last week of the month.
+
+The automation instinct is to build a bot that reads the order and pushes it into the ERP. That is the wrong first build, because the failure mode is expensive. A misread quantity ships wrong stock, and the dealer does not blame the system, they blame you.
+
+The build that works is smaller and duller. The system receives the message, transcribes the voice note or reads the photo, and produces a structured draft order which it sends straight back to the dealer as a formatted message: these items, these quantities, this total, reply YES to confirm or send corrections. The dealer confirms. Only a confirmed order goes to the ERP, and it goes with the dealer's own confirmation attached to it.
+
+You have not removed the human judgement. You have removed the typing, and you have moved the accuracy check to the only person who actually knows what they meant. When it goes wrong, and it will, the dealer catches it before stock moves. That is the difference between an automation you can leave running and one you have to babysit.
+
+The same shape works for a CA practice during ITR and GST season. The chase for documents is the single most draining part of the month, and it is bucket three: a fixed list, collected from many people, in a repeating cycle. A system that sends each client their outstanding list, accepts photos and PDFs back on WhatsApp, files them into the right client folder, and stops chasing the moment the list is complete will save more hours than anything clever you build for advisory work. Nobody needs an AI to interpret the documents. They need the chase to happen without a human remembering to do it.
+
+## The DLT and consent bit nobody mentions
+
+Two mistakes, in opposite directions.
+
+The first is assuming DLT covers you. DLT registration, with its headers and approved content templates, exists under TRAI's rules for commercial communication sent over the telecom network. That is SMS and voice. WhatsApp does not travel over that pipe, so your DLT registration does not authorise anything on it, and its absence does not block you either. What governs your WhatsApp messaging is Meta's own business messaging policy and template approval process. If you have an SMS fallback for OTPs or delivery alerts, that leg still needs DLT. Two channels, two regimes, and vendors selling you one will happily let you assume it covers both.
+
+The second mistake is assuming that because DLT does not apply, nothing does. India's data protection law is on the books and its obligations are being phased in, and it does not care which channel you used. If you are holding customer phone numbers and messaging them, you need to be able to show why you have the number, what you told the person when you took it, and how they can tell you to stop. "It was in an old Excel sheet from an exhibition" is not consent, and a database like that is exactly what tanks your quality rating in week one.
+
+Practically, this means one boring thing you should build before the fun parts: a consent field on every contact record that stores when the number was captured, through which form or conversation, and the exact wording they saw. Then honour opt-outs at the system level, so that a person who says stop is stopped everywhere and not just in the campaign they replied to. This takes an afternoon. Retrofitting it after you have sent a hundred thousand messages does not.
+
+## Where the answer is don't
+
+Do not automate first contact for anything expensive or emotional. If someone is enquiring about a large order, a service failure, or money they have already paid, a templated reply reads as contempt. Route those to a person and let the automation do nothing more than make sure a person sees it fast.
+
+Do not automate collections messaging on WhatsApp. It is the fastest route to being blocked and reported by exactly the people you most need to stay in touch with, and being blocked by a debtor is worse than being ignored by one.
+
+Do not put an open-ended AI agent on your main number and let it answer whatever comes in. The variance is the problem. On the day it invents a delivery date or a discount, you own that commitment in front of a customer holding a screenshot.
+
+And do not automate a process your staff are still arguing about. If two people in your office would answer the same enquiry differently, you do not have an automation problem, you have an undecided policy. Automating it just makes one of them permanently wrong at scale.
+
+## Do this one thing this week
+
+Do the tally described above, but write it down properly. Take the last two weeks of incoming WhatsApp messages on your main business number, and for every message, note the bucket and the answer that was given. Then find the single question that appeared most often in bucket one and count how many separate people typed a reply to it.
+
+That question, with that one answer, is your first automation. Not a chatbot. One template, one trigger, one message. Ship it, watch it for a fortnight, and only then look at the second one.
