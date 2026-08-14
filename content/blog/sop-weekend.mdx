@@ -1,0 +1,83 @@
+---
+title: "Forty Hours of SOPs in a Weekend, and Why Nobody Follows Them"
+description: "Loom to transcript to SOP takes a weekend with AI. The step that decides whether it works is adoption, and almost every owner skips it."
+date: "2026-08-14"
+tags: ["SOPs", "automation", "operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/sop-weekend"
+---
+You can document a whole business in a weekend now. Record your people doing their work on Loom, run the recordings through transcription, hand the transcripts to a language model with a decent prompt, and by Sunday night you have a folder of clean, formatted standard operating procedures covering every recurring process in the company.
+
+I have done this. It works. The documents are better than what most consultants deliver, and they cost a fraction.
+
+And in most companies, three months later, nobody is using them. The folder sits in Drive. New joiners are still trained by the person sitting next to them, badly. The senior accountant still holds the GST process in their head. The SOP project gets quietly filed under things we tried.
+
+The generation was never the hard part. It stopped being the hard part the moment good transcription and good language models became cheap. The hard part is, and always was, adoption. So let me give you the weekend method properly, and then spend the rest of this on the part that actually decides whether it worked.
+
+## The weekend method, plainly
+
+Pick the processes that break when a specific person is away. That is your list. Not everything the business does, just the work that lives in one head.
+
+Then, for each one, have the person who does it record themselves doing it. A real instance, not a demonstration. Real client file, real portal, real mess. Screen and voice, narrating as they go, including the parts where they hesitate.
+
+That hesitation is the entire point. When your accounts person pauses and says "this vendor always sends the invoice with the wrong GSTIN so I check the master sheet first", you have captured a piece of judgement that would never appear in a written SOP. Nobody writes down their own workarounds. They do not experience them as steps. They experience them as obvious.
+
+Transcribe the recordings. Then feed each transcript to the model with instructions to produce a document in a fixed structure: what triggers this process, what you need before starting, the steps in order, the decisions where a person has to judge something, the known failure points, and who to escalate to. Insist that anything ambiguous in the transcript is flagged as a question rather than smoothed over into confident prose. The flagged questions are more valuable than the clean sections.
+
+Send the draft back to the person who recorded it. They will correct roughly a fifth of it, and their corrections will be the important fifth.
+
+That is the weekend. It genuinely compresses months of documentation work. I am not going to pretend otherwise, and anyone telling you documentation must be slow to be good has not tried this.
+
+## Then Monday arrives
+
+Here is what happens next, and it happens almost every time.
+
+The owner shares the Drive folder in the company group. Says something about how this will help everyone. Two people open it. Work continues exactly as before, because work already had a way of continuing, and that way was asking Rajesh.
+
+Asking Rajesh is faster than opening a folder, finding the right document, and scrolling to the relevant section. It is faster and it is socially easier and it comes with a human who will confirm you did it right. Your SOP is competing against that, and on pure convenience it loses.
+
+This is the whole thing. An SOP does not fail because it was written badly. It fails because it is not the path of least resistance at the moment someone needs it.
+
+## What adoption actually requires
+
+Three things, and none of them involve writing more documentation.
+
+**The SOP must appear where the work happens.** Not in a folder. Inside the tool the person is already using. If your sales team lives in a WhatsApp Business inbox, the enquiry-handling SOP needs to reach them there. If your accounts team works off a shared sheet, the reconciliation steps belong as a column in that sheet or a linked note in the row they are working on. The distance between someone needing a step and having the step must be close to zero. Every extra click is a chance they ask Rajesh instead.
+
+**Somebody must own each SOP.** Not the owner of the business. The person who does the work. Put their name at the top of the document with the date it was last changed. Ownership creates the small, useful embarrassment of having your name on something that is out of date. Without a name, an SOP starts decaying the day it is written and nobody notices until it is actively wrong, which is worse than absent, because a wrong SOP gets followed once and then permanently distrusted.
+
+**It has to be used at least once under supervision.** The next time a new person joins, or someone covers a colleague's leave, they follow the document and someone watches. Not to check the person. To check the document. Every gap surfaces in that first supervised run, and the gaps are never where you expected.
+
+Notice that none of this is technology. The weekend produces the artefact. These three habits produce the system. Owners consistently invest in the first and skip the second, then conclude that documentation does not work in Indian companies. It works. It was just never finished.
+
+## A worked example: the GST filing that lives in one head
+
+Take a business filing GSTR-1 and GSTR-3B monthly, with a few hundred invoices, sales through a distributor and a couple of marketplaces, and one senior accounts person who has done it for years without a written process.
+
+Record two full cycles. Not one. The first recording gives you the happy path. The second gives you the month where a distributor sent a revised invoice after filing, or a credit note landed in the wrong period, or the 2B did not match the books and someone had to decide whether to chase the vendor or park the credit.
+
+From two cycles you get a document with a shape like this: the trigger is the closing of the month, the inputs are the sales register, purchase register and downloaded 2B, and the steps run through reconciliation, mismatch classification, vendor follow-up, and filing. The judgement points get marked explicitly. Mismatch under a threshold that the accounts person sets, park it and chase in the next cycle. Above it, escalate before filing. Vendor who has form for late uploads, chase early rather than waiting.
+
+Now the adoption part, which is the only part that matters. That document does not go in a folder. The reconciliation steps go into the sheet where reconciliation is already done, as a note attached to the mismatch column. The escalation rule gets a name and a threshold and is repeated in the monthly WhatsApp reminder that already goes out. The senior accounts person's name goes on the document. And the next time a junior handles a cycle, they run it off the SOP while the senior watches without intervening except to note where the document failed them.
+
+What you get is not just resilience if the accounts person leaves. It is the discovery, usually uncomfortable, that a couple of steps in the process exist because of a decision made years ago that nobody remembers or defends. Documentation exposes that. Most owners are not expecting it.
+
+## Where the answer is don't do this
+
+Some things should not be written down, and pretending otherwise is how you end up with a library nobody trusts.
+
+**Processes you are about to change.** If you are switching accounting software next quarter, do not document the current reconciliation flow in detail. You will document it, change it, and now you have a wrong SOP, which is worse than none. Wait.
+
+**Genuine judgement work.** Your pricing decisions for a large distributor. How you handle a client threatening to leave. Which candidate to hire. These have inputs and considerations, but there is no procedure, and writing one produces a document that is either uselessly vague or actively harmful when followed literally by someone without the context. Write down the questions to ask. Do not write down the answer.
+
+**Anything done a few times a year by one senior person who is not leaving.** The documentation cost is real, the maintenance cost is forever, and the benefit is a scenario that may not arrive. Annual ITR coordination with your CA, handled by a director who has done it for a decade, is often better left as it is. Be honest about which of your processes are genuinely fragile and which just feel undocumented.
+
+**And the strongest one: do not automate a process before you have documented it.** Automating an undocumented process encodes every workaround, every "we do it this way because of that one client in 2019", into software that cannot explain itself. The document is how you find the steps that exist for no reason and delete them. Automating first means paying to make the mess faster.
+
+## This week
+
+Pick one process. The one where you feel a small drop in your stomach when you imagine that person resigning.
+
+Ask them to record themselves doing it once, for real, this week. Not a polished walkthrough. One actual instance, mess included, thinking out loud.
+
+That is the whole task. One recording. Not the folder, not the library, not the weekend. Once you have watched a single one of these back, you will understand exactly what your business has been carrying in one person's head, and the rest of the method will be obvious.
