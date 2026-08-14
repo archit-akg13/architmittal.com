@@ -1,0 +1,81 @@
+---
+title: "Seven questions to ask before an MCP server stays in your config"
+description: "The audit I run on every MCP server before it stays connected: what it can write, whose credentials it uses, where your data goes, and how fast you can kill it."
+date: "2026-08-14"
+tags: ["MCP", "AI Agents", "Security"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/mcp-server-audit"
+---
+Installing an MCP server takes about forty seconds. You paste a block of JSON into a config file, restart the client, and your AI assistant can suddenly read your database, or your Drive, or your calendar. Nothing asks you whether that was a good idea.
+
+That asymmetry is the whole problem. The effort of connecting something is trivial and the effort of understanding what you connected is not, so almost nobody does the second part. I have watched people run agents against live business systems through servers they found in a list on a Tuesday.
+
+These are the seven questions I run against every server before it stays in my config. They take about fifteen minutes. Most servers fail at least one, and failing one is not automatically disqualifying. Not knowing the answer is.
+
+## 1. What can it write?
+
+Read the tool list, not the README. Every MCP server exposes a set of tools, and the names tell you what it can do: `search_files` is not `delete_file`, and `list_invoices` is not `create_invoice`.
+
+Sort them into two piles. Things that fetch, and things that change something. The second pile is your actual risk surface, and it is usually much smaller than people fear and much larger than the README implies. A server described as "read your project management data" often turns out to be able to close tickets.
+
+If a server offers write tools you do not need, that is not a reason to reject it. It is a reason to find out whether your client lets you disable individual tools, and to do that before the first run rather than after.
+
+## 2. Whose credentials is it using, and how wide are they?
+
+An MCP server does not have its own permissions. It borrows yours.
+
+So the question is never "is this server safe", it is "what did I hand it". If you generated an API key with full account access because that was the default and the scoped version needed reading, the server has full account access. The model on the other end will act with your authority and no sense of which actions are recoverable.
+
+The fix is boring and it works: make a separate credential for every server, scope it to the narrowest thing that does the job, and never reuse the one you already had lying around. When something goes wrong you want to revoke one key, not re-key your whole stack at eleven at night.
+
+## 3. Does it run on my machine or someone else's?
+
+Some MCP servers run locally as a process on your laptop. Some are remote and your requests, along with whatever they return, travel to a third party.
+
+Both are legitimate. They are not the same decision. A local server that reads your accounting exports keeps that data on your machine. A remote one has now seen your customer names, your outstanding balances and your margins, and that is a data-processing arrangement whether or not anyone called it one.
+
+For an Indian business this stopped being purely a matter of taste. If personal data belonging to your customers is going through a service, you need to be able to say where it went and on what basis, and DPDP expects you to have thought about it before rather than after. "The AI tool needed it" is not a purpose.
+
+## 4. Who maintains it, and what happens when they stop?
+
+Check when the repository was last touched. Check whether more than one person has ever committed to it. Check whether the issues are answered or just accumulating.
+
+This is not about code quality. It is about what happens in eight months when the upstream API changes and your workflow quietly breaks, or worse, quietly half-breaks. A server maintained by one enthusiastic person is fine for something you can do without. It is not fine for something in the path of your invoicing.
+
+## 5. What does it cost me every single session?
+
+This is the question nobody asks and everybody pays for. Every connected server loads its tool definitions into the model's context, on every request, whether you use it or not. Ten servers with a dozen tools each is a large block of text you are re-sending constantly.
+
+The visible cost is money if you are on an API plan. The invisible cost is worse: a model with sixty available tools chooses badly more often than a model with eight. It reaches for the wrong one, or it hesitates, or it invents a plausible call that does not exist.
+
+Connect what you are using this month. Disconnect the rest. You can always paste the JSON back in, and it will still take forty seconds.
+
+## 6. How does it behave when it fails?
+
+Run it against something that is missing or malformed and watch what comes back. You want an error. What you often get is an empty result, which is far more dangerous, because an empty result looks like an answer.
+
+An agent told "there are no pending invoices" by a server that actually failed to authenticate will report that your collections are clean. It is not lying. It was given nothing and nothing looked like zero.
+
+## 7. Can I turn it off in ten seconds?
+
+Know the exact edit and where the file lives, before you need it. If disabling a server means finding a config path you have never opened, in a directory you have to search for, at the moment something is going wrong, you do not have a kill switch. You have a hope.
+
+## Where the honest answer is "don't connect this at all"
+
+Split your systems into three buckets.
+
+Things where a wrong action costs you a few minutes: calendars, drafts, notes, internal search. Connect those and stop worrying.
+
+Things where a wrong action costs money but is reversible: CRM records, project tools, inventory counts. Connect those read-only for the first three months. You will learn more from watching what the agent tries to do than from any amount of planning.
+
+Things where a wrong action cannot be taken back: payments, payroll, GST filings, anything that sends a message to a customer under your name, anything that touches your Tally or your books of account. Do not connect these. Not with a careful prompt, not with a confirmation step, not with a promise to review everything.
+
+I want to be precise about why, because "it might make a mistake" is not the real argument. The real argument is that these systems have no meaningful undo, and the failure is not the model doing something insane. It is the model doing something reasonable with slightly wrong input, at three in the morning, at a scale a human error would never reach. A filing goes out with the wrong quarter. A payment reminder goes to a client who paid last week. You find out from them.
+
+Read access to your books so the agent can answer questions is fine and genuinely useful. Write access is a category error.
+
+## Do this one thing this week
+
+Open your MCP config and read it out loud. For each server, answer question one and question two only: what can it write, and whose credentials is it using.
+
+You will almost certainly find one server you forgot was connected, and one credential that is wider than the job needs. Fix the credential. Remove the server. That is the whole exercise, and it takes less time than reading this post.
