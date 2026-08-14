@@ -1,0 +1,105 @@
+---
+title: "Five Prompts That Shortlist a CV Stack, and Where You Take Over"
+description: "A working CV screening stack built on five prompts, what each one actually does to a pile of applications, and the exact point where a human has to read."
+date: "2026-08-14"
+tags: ["hiring", "automation", "ai-prompts"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/resume-filter"
+---
+A CV screen is not one decision. It is five, and only the first four can be handed to a machine. The fifth one, the one where you decide whether this person will actually survive your business, has to be made by someone who works there. Most owners get this backwards: they ask the AI to pick the best candidate, and then wonder why the shortlist reads like a list of people who write good CVs.
+
+What follows is the stack I would build, prompt by prompt, for an owner sitting on two hundred applications for an accounts executive role. It works because each prompt does one small, checkable thing, and because it stops at the right place.
+
+## The pile is worse than you think
+
+Post an accounts opening on Naukri or a jobs group and the applications arrive in every format a human being can produce. PDFs made in Word, PDFs made by photographing a printout, a Naukri-generated summary page with no dates on it, a WhatsApp forward of somebody's cousin's CV. Half of them have applied for every accounts role posted that week. A third of them will not answer the phone.
+
+Any screening system that assumes clean input dies in the first hour. So the first prompt is not a judgement prompt at all.
+
+## Prompt one: turn the pile into a table
+
+The job here is extraction, nothing more. You feed each CV in and get back the same fields every time.
+
+The prompt is boring on purpose:
+
+> Extract the following from this CV as JSON. If a field is not present, write null. Do not infer, do not guess, do not fill gaps. Fields: name, phone, email, current city, total years of experience, current employer, current designation, notice period if stated, last three employers with start and end months, education with year of completion, software named anywhere in the document.
+
+Two things matter here. First, `null` instead of guessing. Models love to be helpful, and helpfulness in an extraction step means a candidate with no Tally experience quietly acquires Tally experience because the CV says "accounting software". Say "do not infer" and say it twice.
+
+Second, the software field is deliberately loose. You want everything named, including the things you did not ask about, because a candidate who lists Zoho Books and Busy is telling you something a checkbox never would.
+
+Output goes into a sheet. One row per candidate. Now you have something you can sort.
+
+## Prompt two: the hard gates
+
+Some things are simply true or not true. Does the candidate live in a city you can hire in, or state they will relocate. Do they have the minimum years. Do they have the one non-negotiable skill.
+
+This is the prompt where most people go wrong, because they write it as a paragraph of preferences and get back a paragraph of opinions. Write it as a list of yes/no questions instead:
+
+> For each of the following, answer only YES, NO, or UNCLEAR, with the exact phrase from the CV that supports your answer. 1. Is the candidate currently based in or willing to relocate to Pune. 2. Does the CV show three or more years of accounting work. 3. Does the CV name Tally anywhere. 4. Does the CV show experience filing GST returns, not merely mentioning GST.
+
+That last one earns its place. Every accounts CV in India says GST. Very few of them distinguish between a person who has filed GSTR-1 and 3B every month for a client list, and a person who once sat next to someone who did. Forcing the model to quote the supporting phrase is what makes the difference visible to you. When the evidence column says "knowledge of GST, TDS, income tax", you know what you are looking at.
+
+UNCLEAR is a real answer and it is not a rejection. Send those to a separate pile.
+
+## Prompt three: the fit summary
+
+Now, and only now, does the model get to have an opinion, and it gets a very short leash.
+
+> In no more than four lines, describe what this candidate has actually done day to day, based only on the CV. Then state, in one line, the strongest reason this person might not fit a role that involves monthly GST filing for twelve group entities and coordination with an external CA. Do not score. Do not recommend.
+
+The forbidden words are the point. Ask for a score out of ten and you will get a plausible number with nothing behind it, and worse, you will start trusting it. Ask instead for the strongest objection and you get something useful: a compressed reason to look closer or move on. A human can read forty of these in twenty minutes. Nobody can read forty CVs in twenty minutes.
+
+"Do not recommend" is there because the moment the model says "strong fit, recommend for interview", you have stopped reading. I have watched this happen to owners who swore they would read everything.
+
+## Prompt four: the questions this CV raises
+
+This is the prompt almost nobody writes, and it is the one that pays for the whole system.
+
+> List up to three specific questions a hiring manager should ask this candidate on a phone call, based on gaps, jumps, or vague claims in this CV. Quote the part of the CV that prompts each question.
+
+An eleven-month gap between two jobs. Four employers in three years, all in the same industrial estate. "Handled complete accounting" with no mention of what complete meant, or for what turnover of business. A designation that went from Senior Accountant to Accounts Assistant without explanation.
+
+The model is good at spotting these because it does not get bored and does not want to like anybody. You get a call sheet: for each shortlisted candidate, three questions written before the call starts. That alone changes the quality of your phone screens more than any other part of this stack.
+
+## Prompt five: consistency, not judgement
+
+The last automated step checks the model against itself.
+
+> Here are the extracted fields and the gate answers for this candidate. Re-read the original CV. Flag any field that the CV does not support, and any gate answer you would now change. Say NO DISCREPANCIES if there are none.
+
+Run this and you will find errors. Dates read off the wrong line. A previous employer's client listed as an employer. A candidate marked NO on Tally who mentioned it once, in a training section, on page two. On a pile of two hundred, a handful of good candidates get wrongly binned by steps one and two, and this is the cheapest way to get them back.
+
+## Where the machine stops
+
+Here is the honest part.
+
+After prompt five you have a sorted table, a set of four-line summaries, a call sheet, and a discrepancy list. What you do not have, and cannot get from any prompt, is an answer to the actual question: will this person work out in your business.
+
+Do not automate the following.
+
+**Whether the objection matters.** The model flags four employers in three years. Whether that is a red flag or a person who worked for three small firms that ran out of money is not in the CV. It is in the phone call.
+
+**The final ranking.** The moment you let anything sort candidates best-to-worst, the ranking becomes the decision. Keep the shortlist unordered. Read them all.
+
+**Rejection messages.** Send those from a person, in their own words. Your candidate pool in a tier-two city is smaller than you think, and the accountant you reject badly this year is the one who will not pick up next year when you are desperate.
+
+**Culture, temperament, and whether they can handle your promoter.** Nothing in a CV predicts whether someone can work in an office where the owner walks in at 8pm with a change of plan. That is a conversation, and it takes twenty minutes, and there is no substitute.
+
+**Anything below a certain volume.** If you get fifteen applications, read fifteen CVs. Building this stack for a pile that small costs more attention than it saves. The stack earns its keep somewhere above a hundred, when the alternative is that nobody reads past the first thirty.
+
+## The failure I keep seeing
+
+The most common way this breaks is not a bad prompt. It is that the owner runs the stack, gets a clean shortlist of twelve, and then hands those twelve to the same person who was doing unstructured screening before. That person now has twelve CVs and a call sheet, and treats the shortlist as pre-vetted. They call, chat pleasantly, and pass everyone through. The stack removed the boring work and the judgement stayed exactly as weak as it was.
+
+The stack is only worth building if the time it frees goes into longer, sharper phone calls. If it just makes the same shallow process faster, you have automated your way to hiring the wrong person more efficiently.
+
+The second failure is subtler. Once you have written down the gates, you start believing the gates are the job. Someone brilliant who spent four years in a family business with no formal designation fails gate two and never reaches your eyes. Keep the UNCLEAR pile and the NO-on-one-gate-only pile, and skim them yourself. Twenty minutes, once, per role. That is where the interesting hires come from.
+
+## Do this week
+
+Take the last role you hired for, or the pile sitting in your inbox now. Run prompt one on ten CVs by hand, pasting them in one at a time. Do not build anything. Do not connect anything to anything.
+
+Then read the ten rows against the ten CVs yourself and count how many fields are wrong.
+
+If it is zero or one, the extraction step is trustworthy and you can build the rest on top of it. If it is three or more, your CVs are too messy for this and the fix is upstream: an application form with structured fields, not a smarter prompt. That single test, an hour of your time, tells you whether this stack is worth building for your business or whether you have a different problem entirely.
