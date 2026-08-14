@@ -1,0 +1,105 @@
+---
+title: "Five prompts I actually use to run sales and follow-up"
+description: "Copy-paste prompts for follow-ups, quotes, dead CRM leads, qualifying and lost deals. Each one says where it stops and a human has to take over."
+date: "2026-08-15"
+tags: ["Prompts", "Sales", "Automation"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/business-prompts"
+---
+Most prompt lists are written by people who do not run a business. They give you "act as a world-class sales expert" and leave you to discover, on your own customers, that the model will happily invent a delivery date.
+
+These five are the ones I actually keep. Each is written to be pasted as-is, each names the input it needs, and each ends with the line that matters most: where it stops and a person takes over. That last part is not caution for its own sake. It is the difference between a system that saves you an hour and one that costs you a client.
+
+## 1. The three-message follow-up
+
+The second follow-up is where most people quit, because they have run out of things to say. So they send "just checking in", which the customer reads as "I want something from you" and ignores. This prompt refuses to write that message.
+
+> You are drafting follow-up messages for a B2B sale in India. Here are my notes from the last conversation: [PASTE NOTES OR TRANSCRIPT].
+>
+> Write three separate WhatsApp messages, each under 60 words, in plain English a busy owner would actually read.
+>
+> Message 1 must contain one piece of genuinely new information — a price change, a similar client's outcome, a deadline, a constraint they did not know. If my notes contain nothing new, say "NO NEW INFORMATION — do not send" instead of writing message 1.
+> Message 2 must give a real reason to decide now. Do not invent urgency. If there is no real deadline, use the honest one: my capacity, their season, a price that changes.
+> Message 3 must close the loop gracefully: offer to close their file and stop following up, with no guilt and no final pitch.
+>
+> Do not use the phrases "just checking in", "circling back", "touching base", or "following up on my last message". Do not open with "Hope you're doing well".
+
+The refusal is the important instruction. A model told to write three follow-ups will always write three follow-ups, even when the honest answer is that you have nothing to say and should wait.
+
+**Where it stops:** you supply what changed. The model cannot know that the client's competitor just signed, or that your price moves next month. It writes the message; you bring the fact.
+
+## 2. The quote draft
+
+You lose deals to whoever quoted first, not to whoever quoted best. Most owners take a day to send a quote because the quote lives in their head and the head is busy.
+
+> Draft a quotation from these details: [PASTE THE ENQUIRY]. My rate card is: [PASTE RATES].
+>
+> Structure it as: what I understood they need, what is included, what is explicitly not included, price, and validity period.
+>
+> Rules. Use only prices from my rate card. If the enquiry does not contain enough detail to price it, do not guess — list exactly which questions I still need answered, and stop. Flag anything in the enquiry that suggests scope beyond my rate card. Keep it short enough to read on a phone without scrolling twice.
+
+**Where it stops:** the price. Never let a model calculate or negotiate a number that leaves your system as a commitment. It assembles the quote; you approve the figure.
+
+## 3. The dead-CRM triage
+
+Every CRM I have opened has a large tail of leads nobody has touched in months. They are not worthless. They are unsorted.
+
+> Here is a CSV export of old leads: [PASTE]. Columns are [LIST COLUMNS].
+>
+> Sort every row into exactly one of: REVIVE, PARK, DELETE.
+> REVIVE — there is a specific reason to contact them now.
+> PARK — real but not now; say what event would change that.
+> DELETE — wrong fit, wrong geography, bounced, or a competitor.
+>
+> Give a one-line reason for each. Do not invent details that are not in the data. If a row is too sparse to judge, mark it UNKNOWN rather than guessing.
+
+Then, for the REVIVE pile only, ask for the reactivation message:
+
+> For each REVIVE lead, write one WhatsApp message under 50 words that acknowledges the gap honestly, references what they originally wanted, and asks one question. Do not pretend we spoke recently.
+
+**Where it stops:** DELETE is a suggestion, not an instruction. Read the list before anything is removed.
+
+## 4. Qualifying before the call
+
+A discovery call that discovers the person cannot afford you is a wasted hour, and you will have two of them a week for as long as you allow it.
+
+Send four questions in chat before you book anything: what they want to happen, what they have tried, when they need it done, and what range they had in mind. Then:
+
+> Here are a prospect's replies to my four qualifying questions: [PASTE].
+>
+> Return one of: BOOK, NURTURE, DECLINE, with a one-sentence reason.
+> BOOK — the need, the timing and the range all fit.
+> NURTURE — real need, wrong timing. Say what to wait for.
+> DECLINE — say plainly what does not fit.
+>
+> Then write the message I should send in that case. For DECLINE, be warm, be brief, and recommend what they should do instead, even if it is not me.
+
+**Where it stops:** DECLINE. Read those before they send. Turning someone away badly costs more than the meeting would have.
+
+## 5. The lost-deal record
+
+Everyone tracks why they won. Almost nobody records why they lost, which is why the same objection keeps landing.
+
+> I lost this deal. Here is what happened: [PASTE].
+>
+> Extract: the stated reason for losing, the likely real reason if it differs, the stage where it actually turned, and what I would have needed to know earlier.
+>
+> Do not be reassuring. If the notes suggest I was too slow, too expensive for the value shown, or talking to the wrong person, say so plainly.
+
+Run this for a month and read the results together, not one at a time. One lost deal is an anecdote. Ten of them tell you whether you have a pricing problem, a speed problem or a targeting problem, and those need completely different fixes.
+
+**Where it stops:** nowhere, actually. This one is safe to automate fully. It never touches a customer.
+
+## The rule underneath all five
+
+Every one of these prompts drafts, and none of them send.
+
+That is not timidity. The failure mode with sales automation is never the model writing something insane, which you would catch instantly. It is the model writing something reasonable and slightly wrong — a date shifted by a week, a discount you did not offer, a confidence you have not earned — going out under your name, at three in the morning, to a client who believes it. You find out from them, and you spend far more time repairing it than the automation ever saved.
+
+Draft with AI. Send as yourself.
+
+## Do this one thing this week
+
+Take prompt 1 and run it against your three oldest open deals. For at least one of them, the honest output will be "NO NEW INFORMATION — do not send".
+
+That is the prompt working. Those are the deals where you have been sending "just checking in" for a month, and the reason there has been no reply is that there has been no message.
