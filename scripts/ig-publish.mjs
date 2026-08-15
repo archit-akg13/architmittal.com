@@ -255,6 +255,15 @@ async function main() {
     })
     metaLog(`Parent container: ${parent.id}`)
 
+    // Wait for the container to finish, exactly as the reel path does.
+    //
+    // This was missing here, and on 2026-08-15 the 10:30 carousel died on
+    // "code=9007 subcode=2207027 Media ID is not available" — Instagram's way of saying
+    // the container is still assembling. It reads like a permissions or expiry fault and
+    // is neither; it is a race. A carousel with several children takes longer to become
+    // publishable than a single image, so the more slides, the likelier the failure.
+    await waitForContainer(parent.id, token)
+
     const published = await graphPost('me/media_publish', {
       creation_id: parent.id,
       access_token: token,
