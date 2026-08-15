@@ -1,0 +1,81 @@
+---
+title: "My AI Agent Lost a Client: A Post-Mortem on Automation Without Guardrails"
+description: "An AI agent I built cost a client a customer relationship. What it did, why nobody noticed for days, and the single guardrail that would have stopped it."
+date: "2026-08-15"
+tags: ["automation", "ai-agents", "post-mortem"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/agent-postmortem"
+---
+An AI agent I built sent a series of chasing messages to a customer who had already paid. The customer was a long-standing account for my client, they had settled the invoice by NEFT, and the agent kept asking for money that was already in the bank. By the time anyone realised, the relationship had cooled to the point where the customer moved a chunk of their ordering elsewhere.
+
+I built the thing. Nobody else is to blame for it. What follows is what actually happened, why the failure survived long enough to do damage, and the specific guardrail I now put into every system of this kind.
+
+## What the system was supposed to do
+
+The client is a distributor. Orders come in through WhatsApp and email, invoices go out from Tally, and payments arrive by NEFT, cheque and occasionally UPI. Their real problem was not order taking. It was collections. Their accounts person spent a large part of every week manually working through an ageing report and sending polite reminders to buyers who had drifted past their credit period.
+
+The brief was narrow and sensible: read the ageing report, decide who needs chasing, draft a message in the right tone for each buyer, and send it on WhatsApp. Escalate the tone the longer the invoice sits. Stop chasing when the invoice is paid.
+
+That last clause is where everything went wrong.
+
+## What the agent actually did
+
+The system pulled outstanding invoices from an export of the ageing report. It classified each one into a bucket by days overdue, picked a message template, personalised it with the buyer's name, invoice number and amount, and pushed it out. It logged every send. It handled replies by routing them to a human if the reply contained anything that looked like a dispute.
+
+On paper, this is a well-behaved agent. It had a clear input, a bounded decision, and a human handoff for anything contested.
+
+The failure was in the input. The ageing export was generated on a schedule and dropped into a folder the agent read from. When the export job failed, which it did quietly on a day the accounting machine was restarted, the agent read the previous file. Not a blank file, not an error. A perfectly valid, perfectly formatted, slightly stale file.
+
+So the agent did exactly what it was told. It looked at invoices that were, as far as its data said, still unpaid. It escalated the tone according to the days-overdue figure, which kept climbing because the timestamps were being compared against the current date. And it sent a firm, then firmer, then quite cold message to a buyer who had paid on time and had a receipt to prove it.
+
+The buyer replied once, saying they had paid, with the UTR number. That reply contained the words "already paid", which the dispute classifier did not treat as a dispute because it was looking for words like "wrong", "incorrect", "not ordered". So the reply was logged and not escalated. The agent sent the next scheduled message two days later.
+
+## Why nobody caught it
+
+This is the part that matters more than the bug itself.
+
+The system was working. That was the problem. It had been running for weeks, doing a job that everyone was relieved to stop doing manually. The dashboard showed messages sent, replies received, invoices marked closed. Nothing on that dashboard turned red, because from the system's point of view nothing had gone wrong. A stale file is not an error. A reply that does not match a keyword list is not an error. An escalating tone on an invoice that the data says is ninety days old is not an error, it is the designed behaviour.
+
+The accounts person did not catch it because she had been moved off collections. That was the whole point of the project. She was not reading the outbound messages any more, and there was no reason for her to.
+
+The owner did not catch it because owners look at outcomes, and the collections numbers looked fine. Money was still coming in. One buyer going quiet does not show up in a weekly figure.
+
+The buyer did not escalate because Indian business relationships often do not work that way. They did not call and shout. They sent one message, got a machine-sounding reply, concluded that the relationship had changed, and started splitting their orders with a second distributor. Nobody found out until the sales person noticed the drop in reorder volume and asked why, at which point we went back through the WhatsApp log and read the whole exchange in a very quiet room.
+
+The lesson: the automation did not fail loudly. It failed politely, on schedule, in perfect formatting, for days. That is the most dangerous failure mode there is, and it is specific to automation. A human making the same mistake would have felt something was off by the second message.
+
+## The guardrail that would have stopped it
+
+One thing. Not an AI thing.
+
+**Freshness checks on every input the agent trusts.** The agent should have refused to run if the ageing file was older than the run interval. Six lines of logic: read the file's modification timestamp, compare it against the expected schedule, and if it is stale, do nothing and alert a human. No messages sent. No clever fallback. Just stop.
+
+This is unglamorous, and it is the thing that separates automation that survives contact with a real business from automation that demos well. Every agent has inputs it did not generate and cannot verify. The question you must answer for each one is: how would this system know if this input were wrong?
+
+There were two secondary guardrails I should also have had, and now do:
+
+**A confirmation step on escalation.** The moment a message's tone changes from reminder to demand, a human should see it before it goes. Not every message. Just the ones where the system is about to spend relationship capital. In this case that would have been perhaps a handful of messages a week landing in front of the accounts person, which is a trivial cost against what it protects.
+
+**Reply handling by intent, not keywords.** "Already paid", "payment done", "I sent it last Tuesday", "check karo, transfer ho gaya hai" all mean the same thing and share no keywords. This is genuinely a job for a language model, and I had one available in the system and did not use it at that point because keyword matching was cheaper and I did not think that path mattered. It mattered.
+
+## The part where I tell you not to automate something
+
+Collections should not be fully automated. I do not mean it needs better guardrails. I mean the send decision should stay with a person.
+
+Here is the distinction that took me an expensive lesson to arrive at. Automate the work that produces the decision. Do not automate the decision itself when the cost of being wrong is borne by a relationship rather than by a process.
+
+Filing GST returns is a process. If the automation makes a mistake, you find out from a mismatch report, you file a correction, and the counterparty is a system that does not hold a grudge. Automate that end to end, gladly.
+
+Chasing a buyer for money is a relationship. If the automation makes a mistake, you find out months later from a sales figure, and you cannot file a correction against how someone now feels about doing business with you. The right build is: the agent reads the ageing report, drafts every message, ranks them by urgency, and presents them to a person who spends a few minutes a day pressing send or not. That still removes the great majority of the labour. It just keeps a human at the exact point where judgement is worth something.
+
+The same rule applies to a few other things owners keep asking me to automate. Anything that says no to a customer. Anything that touches an employee's money or standing. Anything sent to a person who is already unhappy. The efficiency you gain is small and the failure cost is uncapped.
+
+The uncomfortable truth is that the automation industry, myself included at times, is incentivised to tell you the opposite. Full automation is a better story and an easier thing to sell. A system where a person still presses a button sounds like a half-measure. It is not. It is the design.
+
+## What I would tell you to do this week
+
+Take the automation you already have running, the one you have stopped watching because it works. Open its logs and read the last twenty things it actually sent or did. Not the summary, not the dashboard, the actual output.
+
+Then, for each input that system depends on, write down one line: how would this system know if this input were wrong or stale? If you cannot answer for an input, that is your next piece of work, and it will take a fraction of the time the original build did.
+
+If you only do one of those two, do the first. Read the output. Most bad automation failures are visible in the output long before they are visible in the numbers, and almost nobody looks, because looking feels like the thing you paid to stop doing.
