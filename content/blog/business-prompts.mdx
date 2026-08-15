@@ -1,6 +1,6 @@
 ---
-title: "Five prompts I actually use to run sales and follow-up"
-description: "Copy-paste prompts for follow-ups, quotes, dead CRM leads, qualifying and lost deals. Each one says where it stops and a human has to take over."
+title: "Ten prompts I actually use to run sales and operations"
+description: "Copy-paste prompts for follow-ups, quotes, dead leads, agent guardrails, report culls and decision logs. Each says where it stops and a human takes over."
 date: "2026-08-15"
 tags: ["Prompts", "Sales", "Automation"]
 image: "/og-default.jpg"
@@ -8,7 +8,7 @@ canonicalUrl: "https://architmittal.com/blog/business-prompts"
 ---
 Most prompt lists are written by people who do not run a business. They give you "act as a world-class sales expert" and leave you to discover, on your own customers, that the model will happily invent a delivery date.
 
-These five are the ones I actually keep. Each is written to be pasted as-is, each names the input it needs, and each ends with the line that matters most: where it stops and a person takes over. That last part is not caution for its own sake. It is the difference between a system that saves you an hour and one that costs you a client.
+These are the ones I actually keep. Each is written to be pasted as-is, each names the input it needs, and each ends with the line that matters most: where it stops and a person takes over. That last part is not caution for its own sake. It is the difference between a system that saves you an hour and one that costs you a client.
 
 ## 1. The three-message follow-up
 
@@ -90,9 +90,55 @@ Run this for a month and read the results together, not one at a time. One lost 
 
 **Where it stops:** nowhere, actually. This one is safe to automate fully. It never touches a customer.
 
-## The rule underneath all five
+## 6. The agent guardrail
 
-Every one of these prompts drafts, and none of them send.
+The single most useful line you can put above any retrieval agent. Without it, a model asked something outside its documents will answer anyway, fluently, and your customer cannot tell the difference.
+
+> Answer only from the documents provided. If the answer is not in them, reply exactly: "I don't have that — let me check and come back." Never infer, estimate, or fill a gap from general knowledge. Quote the line you used.
+
+**Where it stops:** it does not stop hallucination entirely. It converts most of it into a visible "I don't know", which is the difference between a bot that is wrong and a bot that is honest.
+
+## 7. The do-not-automate audit
+
+Run this before you build anything, not after.
+
+> Here is a list of decisions my team makes: [PASTE].
+>
+> For each, tell me: can it be undone within a day at no cost, is it reversible but expensive, or is it irreversible? Then say which bucket it belongs in — automate, automate with a human approving, or never automate.
+>
+> Treat anything touching money leaving the business, a filing, or a message sent under my name as never automate unless I have said otherwise. Explain each call in one line.
+
+## 8. The report cull
+
+Most recurring reports are read by nobody. Delete before you automate.
+
+> Here is every recurring report we produce: [PASTE, with who receives each].
+>
+> For each, ask: what decision changes because of this report? If you cannot name one, mark it DELETE. If the decision could be answered by a single number instead, mark it REPLACE and say what the number is. Otherwise KEEP.
+
+**Where it stops:** ask the recipients before deleting. A report nobody discusses may still be the thing someone checks silently.
+
+## 9. The customer-data cleanup
+
+Your data is not ready. It never is. This finds out how bad it is in one pass.
+
+> Here is an export of my customer list: [PASTE].
+>
+> List every distinct spelling, abbreviation and formatting variant of the same customer name. Do the same for phone numbers and city names. Return the groups you believe are one customer, with a confidence for each, and a separate list of rows you cannot judge.
+>
+> Do not merge anything. Only report.
+
+## 10. The decision log
+
+AI meeting notes without decisions are a transcript with extra steps.
+
+> Here is a meeting transcript: [PASTE].
+>
+> List only decisions that were actually made. For each: what was decided, who owns it, by when, and what was explicitly left open. Ignore discussion that did not resolve. If no decision was made, say so plainly rather than summarising the conversation.
+
+## The rule underneath all of them
+
+Every one of these prompts drafts, reports or sorts. None of them send.
 
 That is not timidity. The failure mode with sales automation is never the model writing something insane, which you would catch instantly. It is the model writing something reasonable and slightly wrong — a date shifted by a week, a discount you did not offer, a confidence you have not earned — going out under your name, at three in the morning, to a client who believes it. You find out from them, and you spend far more time repairing it than the automation ever saved.
 
