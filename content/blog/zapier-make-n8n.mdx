@@ -1,0 +1,98 @@
+---
+title: "Zapier vs Make vs n8n: your run volume decides, not the feature table"
+description: "A rupee-per-10,000-runs way to choose between Zapier, Make and n8n for an Indian SMB, including the workflows where the honest answer is don't automate."
+date: "2026-08-16"
+tags: ["automation", "tooling", "indian-smb"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/zapier-make-n8n"
+---
+The comparison table you have been reading is the wrong document. Zapier, Make and n8n all connect the same apps, all handle webhooks, all do branching and retries. Where they differ, and where the money actually goes, is in what each one counts as a billable unit. Get that wrong and you will pay three times more than you needed to for the identical workflow, or worse, you will build something that works beautifully in testing and then eats a month's quota in a single busy weekend.
+
+So the only comparison worth making is rupee per 10,000 runs. Not per month, not per seat. Per 10,000 times the thing actually happens.
+
+## The three tools bill for three different things
+
+This is the whole article, so read it slowly.
+
+**Zapier bills per task.** A task is an action step that executes. The trigger is not charged. A five-step Zap that fires once consumes roughly one task per action step that runs.
+
+**Make bills per operation.** An operation is more or less any module call, and the trigger counts. So does each pass of an iterator or aggregator. A scenario that loops over a list of items bills once per item, not once per run.
+
+**n8n Cloud bills per workflow execution.** One run of the workflow is one execution, whether it contains four nodes or forty. Self-hosted n8n on your own server has no per-run meter at all. You pay for the machine and for whoever keeps it alive.
+
+Three meters, three completely different shapes. Which is why the per-unit price on the pricing page tells you almost nothing on its own.
+
+## The multiplier is the whole game
+
+Write it as arithmetic:
+
+**Cost per 10,000 runs = 10,000 × (billable units per run) × (price per unit)**
+
+Every vendor advertises the third term. Nobody tells you the second, because the second depends entirely on how you built the workflow. And the second term varies far more between platforms than the third does. A job that is one execution on n8n can be five tasks on Zapier and twenty operations on Make. A cheaper unit price loses badly to a twenty-times multiplier.
+
+So before you compare plans, you have to count. Take one real workflow, draw it out, and count what each platform would charge for a single run of it.
+
+## A worked example: the distributor's WhatsApp enquiry
+
+Take a business that sells through dealers and takes enquiries on WhatsApp. The workflow everyone builds first:
+
+1. Message arrives on the business number
+2. Check whether this number already exists in the customer sheet
+3. Create or update the row
+4. Push the lead into the CRM
+5. Ping the assigned salesperson
+6. Wait two days, and if nothing has moved, send one follow-up
+
+On a per-task meter, that is a handful of billed actions per enquiry. On a per-operation meter, the trigger is billed too, the lookup is billed, and if step two searches and returns several matching rows, the modules after it bill once per row. That last detail is where people get hurt. A search that returns four matches quietly quadruples the back half of the scenario. On a per-execution meter, all six steps are one unit.
+
+Now multiply by your actual enquiry volume, not your good-month volume. A distributor doing steady business through the year has one number. The same distributor during a festive push has another number entirely, and it is the second one your bill is calculated on.
+
+Here is the part that decides the platform: if you add a step, the per-task and per-operation bills go up and the per-execution bill does not. Automations do not stay at six steps. They grow. Somebody wants the enquiry logged in a second sheet, somebody wants a Telugu template for southern leads, somebody wants the follow-up to skip Sundays. Two years in, that workflow is not six steps.
+
+## The spike problem, and why annual plans mislead
+
+Indian SMB volumes are not flat. They are lumpy in ways that are entirely predictable and almost never modelled.
+
+GST returns cluster around filing dates. Anything you automate around invoice reconciliation or vendor mismatch does most of its work in a few days each month, and then sits idle. ITR season does the same thing to anyone serving CAs or doing payroll support. Festive periods do it to retail and distribution. Quarter close does it to anyone selling B2B.
+
+Per-run billing does not care about your averages. If your reconciliation workflow processes a month of invoices in one overnight batch, that batch is thousands of billable units in a few hours. I have watched a perfectly sensible scenario chew through an entire monthly allowance over a weekend nobody was watching, and the failure mode is the ugly one: the automation stops mid-month, silently, and the team keeps assuming it is running.
+
+If your volume is spiky, look hard at what happens when you exceed the plan. Some platforms throttle, some auto-upgrade you, some just stop. Find out which before you build, not after.
+
+## Where n8n stops being free
+
+Self-hosted n8n removes the per-run meter, and people hear that as "free". It is not free, it is a different bill.
+
+You need a server. A small VPS at typical Indian market rates is cheap enough that it disappears into your monthly costs. What does not disappear is the maintenance: version upgrades, queue mode once you outgrow a single process, database backups, SSL renewal, monitoring so you find out about failures from an alert rather than from a customer. Someone has to own that. If that someone is you, and you are the owner of a company doing crores in revenue, your hourly cost makes this the most expensive option on the list by a wide margin.
+
+The honest break-even test: self-hosting wins when the subscription you would otherwise pay clearly exceeds the server cost plus the hours the maintenance will actually take, and when there is a named person other than the founder who owns those hours. If you cannot name that person, use the cloud version and stop calculating.
+
+Also worth knowing before you build a business on it: n8n's source-available terms permit internal use freely, but restrict reselling it as a hosted service. If your plan is to run automations for your own company, this is irrelevant. If your plan is to run them for clients, read the terms properly first.
+
+## Where the answer is don't automate this
+
+Nobody selling automation will tell you this, so here it is.
+
+**Do not automate anything that runs fewer than a few times a week and takes under ten minutes.** The build takes hours, the maintenance never ends, and the payback is measured in decades. Write an SOP instead.
+
+**Do not automate a process nobody has agreed on.** If two people describe the lead follow-up process differently, you do not have an automation problem, you have a process problem, and encoding the disagreement into a workflow makes it permanent and invisible.
+
+**Do not automate the final GST filing decision.** Automate the fetching, the matching, the flagging of mismatches, the reminder to the accountant. The submission itself should be a human clicking a button, because the cost of a wrong filing is not a wrong filing, it is a notice.
+
+**Do not automate anything that sends money out.** Payment approvals, vendor payouts, refunds above a threshold. Automate the preparation, keep the approval human.
+
+**Do not automate around a broken data source.** If the customer sheet has duplicate rows, three spellings of every city, and phone numbers with and without country codes, an automation will run enthusiastically on all of it and give you a mess at machine speed. Clean the data first.
+
+## The verdict
+
+- **Low volume, few steps, and you want it to work without you.** Zapier. You are buying the connector library and not thinking about it again. It is the expensive option and that is fine at low volume.
+- **Medium volume, and someone in the business enjoys building.** Make. The per-unit price rewards you, but only if you stay disciplined about module count and never let an iterator run unbounded.
+- **High volume, or heavy looping, or workflows that keep growing steps.** n8n. Per-execution billing means complexity stops being taxed. Cloud first, self-hosted only when you have someone to own the server.
+
+If your workflows loop over lists, the per-operation meter will punish you and the choice is close to made for you.
+
+## Do this one thing this week
+
+Take your single highest-volume automation, the one that fires most often. Count two things: how many times it ran last month, and how many billable units one run consumes on the platform you are on. Multiply. Then price the same run count on the other two, using each vendor's current published rate rather than any figure you read in an article, including this one, because all three change their pricing and a stale number is worse than none.
+
+One workflow, one spreadsheet, half an hour. That number will tell you more than every feature comparison you have read this year.
