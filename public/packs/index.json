@@ -1,0 +1,3263 @@
+{
+  "workflows": [
+    {
+      "id": "ai-web-researcher-for-sales",
+      "title": "AI web researcher for sales",
+      "pillar": "Lead Generation",
+      "nodes": 14,
+      "integrations": [
+        "agent",
+        "googleSheets",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "toolSerpApi",
+        "toolWorkflow"
+      ],
+      "file": "/packs/workflows/ai-web-researcher-for-sales.json"
+    },
+    {
+      "id": "social-media-analysis-and-automated-email-generation",
+      "title": "Social Media Analysis and Automated Email Generation",
+      "pillar": "Lead Generation",
+      "nodes": 13,
+      "integrations": [
+        "chainLlm",
+        "emailSend",
+        "googleSheets",
+        "googleSheetsTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/social-media-analysis-and-automated-email-generation.json"
+    },
+    {
+      "id": "enrich-company-data-from-google-sheet-with-openai-agent-and-scraper-tool",
+      "title": "Enrich Company Data from Google Sheet with OpenAI Agent and Scraper Tool",
+      "pillar": "Lead Generation",
+      "nodes": 12,
+      "integrations": [
+        "agent",
+        "executeWorkflowTrigger",
+        "googleSheets",
+        "lmChatOpenAi",
+        "markdown",
+        "outputParserStructured",
+        "toolWorkflow",
+        "webhook"
+      ],
+      "file": "/packs/workflows/enrich-company-data-from-google-sheet-with-openai-agent-and-scraper-to.json"
+    },
+    {
+      "id": "auto-generate-social-media-briefs-for-sales-meetings-using-ai-google-calendar",
+      "title": "Auto-Generate Social Media Briefs for Sales Meetings Using AI & Google Calendar",
+      "pillar": "Lead Generation",
+      "nodes": 18,
+      "integrations": [
+        "clearbit",
+        "gmail",
+        "googleCalendar",
+        "html",
+        "openAi",
+        "scheduleTrigger",
+        "splitOut",
+        "whatsApp"
+      ],
+      "file": "/packs/workflows/auto-generate-social-media-briefs-for-sales-meetings-using-ai-google-c.json"
+    },
+    {
+      "id": "auto-client-brief-analyzer",
+      "title": "Auto Client Brief Analyzer",
+      "pillar": "Lead Generation",
+      "nodes": 21,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmail",
+        "googleDocs",
+        "googleDriveTrigger",
+        "googleSheets",
+        "lmChatGroq",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/auto-client-brief-analyzer.json"
+    },
+    {
+      "id": "how-to-get-credentials",
+      "title": "How to Get Credentials",
+      "pillar": "Lead Generation",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "dataTable",
+        "formTrigger",
+        "gmail",
+        "lmChatOpenRouter",
+        "outputParserStructured",
+        "respondToWebhook",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/how-to-get-credentials.json"
+    },
+    {
+      "id": "interior-design-client-evaluation-template",
+      "title": "Interior Design Client Evaluation template",
+      "pillar": "Lead Generation",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "formTrigger",
+        "gmail",
+        "lmChatGoogleGemini",
+        "lmChatOpenAi",
+        "notion",
+        "outputParserStructured",
+        "telegram"
+      ],
+      "file": "/packs/workflows/interior-design-client-evaluation-template.json"
+    },
+    {
+      "id": "automate-ai-powered-b2b-outreach-from-apollo-to-gmail",
+      "title": "Automate AI-powered B2B outreach from Apollo to Gmail",
+      "pillar": "Lead Generation",
+      "nodes": 28,
+      "integrations": [
+        "chainLlm",
+        "gmail",
+        "googleDocs",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "openAi",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/automate-ai-powered-b2b-outreach-from-apollo-to-gmail.json"
+    },
+    {
+      "id": "template-ocr-business-card-reader-with-thai-support-enrich-save-contacts-to-crm-spreadsheet",
+      "title": "Template_OCR Business Card Reader with Thai Support – Enrich & Save Contacts to CRM Spreadsheet",
+      "pillar": "Lead Generation",
+      "nodes": 24,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "editImage",
+        "formTrigger",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenAi",
+        "toolSerpApi"
+      ],
+      "file": "/packs/workflows/template-ocr-business-card-reader-with-thai-support-enrich-save-contac.json"
+    },
+    {
+      "id": "cruchbase-email-outreach",
+      "title": "Cruchbase email outreach",
+      "pillar": "Lead Generation",
+      "nodes": 8,
+      "integrations": [
+        "agent",
+        "gmail",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/cruchbase-email-outreach.json"
+    },
+    {
+      "id": "automated-sales-proposal-summary-generator-using-gpt-4o-sheets-drive",
+      "title": "Automated Sales Proposal & Summary Generator using GPT-4o, Sheets & Drive",
+      "pillar": "Sales",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "manualTrigger"
+      ],
+      "file": "/packs/workflows/automated-sales-proposal-summary-generator-using-gpt-4o-sheets-drive.json"
+    },
+    {
+      "id": "jotform-to-zoho-lead-automation-submitted",
+      "title": "JotForm to Zoho Lead Automation (Submitted)",
+      "pillar": "Sales",
+      "nodes": 8,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheetsTool",
+        "jotFormTrigger",
+        "lmChatGoogleGemini",
+        "outputParserStructured",
+        "zohoCrm"
+      ],
+      "file": "/packs/workflows/jotform-to-zoho-lead-automation-submitted.json"
+    },
+    {
+      "id": "spare-parts-quote-generator",
+      "title": "Spare Parts Quote Generator",
+      "pillar": "Sales",
+      "nodes": 11,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheetsTool",
+        "lmChatGoogleGemini",
+        "scheduleTrigger",
+        "toolCalculator"
+      ],
+      "file": "/packs/workflows/spare-parts-quote-generator.json"
+    },
+    {
+      "id": "post-service-review-collector",
+      "title": "Post-Service Review Collector",
+      "pillar": "Sales",
+      "nodes": 12,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "highLevel",
+        "lmChatAzureOpenAi",
+        "manualTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/post-service-review-collector.json"
+    },
+    {
+      "id": "proposal-engine",
+      "title": "Proposal Engine",
+      "pillar": "Sales",
+      "nodes": 15,
+      "integrations": [
+        "formTrigger",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "googleSheetsTrigger",
+        "googleSlides",
+        "openAi"
+      ],
+      "file": "/packs/workflows/proposal-engine.json"
+    },
+    {
+      "id": "zoho-crm-ai-powered-lead-qualification",
+      "title": "ZOHO CRM - AI-POWERED LEAD QUALIFICATION",
+      "pillar": "Sales",
+      "nodes": 13,
+      "integrations": [
+        "chainLlm",
+        "gmail",
+        "lmChatGoogleGemini",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "zohoCrm"
+      ],
+      "file": "/packs/workflows/zoho-crm-ai-powered-lead-qualification.json"
+    },
+    {
+      "id": "zoho-crm-smart-meeting-scheduler",
+      "title": "Zoho CRM - Smart Meeting Scheduler",
+      "pillar": "Sales",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleCalendar",
+        "lmChatGoogleGemini",
+        "webhook",
+        "zohoCrm"
+      ],
+      "file": "/packs/workflows/zoho-crm-smart-meeting-scheduler.json"
+    },
+    {
+      "id": "proposal-generator-template-automates-proposal-creation-from-jotform-submissions",
+      "title": "⚙️ Proposal Generator Template (Automates proposal creation from JotForm submissions)",
+      "pillar": "Sales",
+      "nodes": 8,
+      "integrations": [
+        "gmail",
+        "googleDocs",
+        "googleDrive",
+        "jotFormTrigger",
+        "openAi"
+      ],
+      "file": "/packs/workflows/proposal-generator-template-automates-proposal-creation-from-jotform-s.json"
+    },
+    {
+      "id": "zoho-crm-competitive-battle-card-generator",
+      "title": "Zoho - CRM - COMPETITIVE BATTLE CARD GENERATOR",
+      "pillar": "Sales",
+      "nodes": 14,
+      "integrations": [
+        "chainLlm",
+        "cron",
+        "gmail",
+        "lmChatGoogleGemini",
+        "outputParserStructured",
+        "splitOut",
+        "zohoCrm"
+      ],
+      "file": "/packs/workflows/zoho-crm-competitive-battle-card-generator.json"
+    },
+    {
+      "id": "business-cards-to-qualified-connections-ai-powered-follow-up-automation",
+      "title": "Business Cards to Qualified Connections — AI-Powered Follow-up Automation",
+      "pillar": "Sales",
+      "nodes": 10,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenAi",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/business-cards-to-qualified-connections-ai-powered-follow-up-automatio.json"
+    },
+    {
+      "id": "amazon-ads-ai-optimization",
+      "title": "Amazon Ads AI Optimization",
+      "pillar": "Marketing",
+      "nodes": 15,
+      "integrations": [
+        "chainLlm",
+        "extractFromFile",
+        "gmail",
+        "googleDrive",
+        "lmChatOpenAi",
+        "manualTrigger"
+      ],
+      "file": "/packs/workflows/amazon-ads-ai-optimization.json"
+    },
+    {
+      "id": "ai-facebook-ad-spy-tool",
+      "title": "AI Facebook Ad Spy Tool",
+      "pillar": "Marketing",
+      "nodes": 24,
+      "integrations": [
+        "googleDrive",
+        "googleSheets",
+        "manualTrigger",
+        "openAi"
+      ],
+      "file": "/packs/workflows/ai-facebook-ad-spy-tool.json"
+    },
+    {
+      "id": "ai-driven-brand-reputation-monitoring-and-crisis-detection",
+      "title": "AI-Driven Brand Reputation Monitoring and Crisis Detection",
+      "pillar": "Marketing",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-driven-brand-reputation-monitoring-and-crisis-detection.json"
+    },
+    {
+      "id": "ai-powered-personalized-newsletter-generation-and-approval-system",
+      "title": "AI-Powered Personalized Newsletter Generation and Approval System",
+      "pillar": "Marketing",
+      "nodes": 10,
+      "integrations": [
+        "agent",
+        "formTrigger",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenAi",
+        "markdown",
+        "outputParserStructured",
+        "sendGrid"
+      ],
+      "file": "/packs/workflows/ai-powered-personalized-newsletter-generation-and-approval-system.json"
+    },
+    {
+      "id": "analyze-meta-ads-with-gemini-and-google-sheets",
+      "title": "Analyze Meta ads with Gemini and Google Sheets",
+      "pillar": "Marketing",
+      "nodes": 18,
+      "integrations": [
+        "chainLlm",
+        "errorTrigger",
+        "facebookGraphApi",
+        "gmail",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "outputParserStructured",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/analyze-meta-ads-with-gemini-and-google-sheets.json"
+    },
+    {
+      "id": "ai-powered-cross-platform-audience-sentiment-trend-analyzer",
+      "title": "AI-Powered Cross-Platform Audience Sentiment & Trend Analyzer",
+      "pillar": "Marketing",
+      "nodes": 13,
+      "integrations": [
+        "agent",
+        "facebookGraphApi",
+        "gmail",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "manualTrigger"
+      ],
+      "file": "/packs/workflows/ai-powered-cross-platform-audience-sentiment-trend-analyzer.json"
+    },
+    {
+      "id": "gpt5-pro-powered-smart-customer-journey-routing-and-real-time-data-sync",
+      "title": "GPT5-Pro-Powered Smart Customer Journey Routing and Real-Time Data Sync",
+      "pillar": "Marketing",
+      "nodes": 24,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleAds",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "twilio",
+        "webhook"
+      ],
+      "file": "/packs/workflows/gpt5-pro-powered-smart-customer-journey-routing-and-real-time-data-syn.json"
+    },
+    {
+      "id": "ads-analysis",
+      "title": "Ads Analysis",
+      "pillar": "Marketing",
+      "nodes": 21,
+      "integrations": [
+        "agent",
+        "facebookGraphApi",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "openAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/ads-analysis.json"
+    },
+    {
+      "id": "newsletter-automation",
+      "title": "Newsletter Automation",
+      "pillar": "Marketing",
+      "nodes": 12,
+      "integrations": [
+        "emailSend",
+        "gmail",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "memoryBufferWindow",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/newsletter-automation.json"
+    },
+    {
+      "id": "find-the-content-gaps-in-your-competitors-discourse-for-market-research-and-seo",
+      "title": "Find the Content Gaps in Your Competitors' Discourse for Market Research and SEO",
+      "pillar": "Marketing",
+      "nodes": 23,
+      "integrations": [
+        "formTrigger",
+        "googleDocs",
+        "googleSheets",
+        "htmlExtract",
+        "manualTrigger",
+        "openAi",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/find-the-content-gaps-in-your-competitors-discourse-for-market-researc.json"
+    },
+    {
+      "id": "crypto-news-sentiment",
+      "title": "Crypto News & Sentiment",
+      "pillar": "Operations",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "lmChatOpenAi",
+        "openAi",
+        "rssFeedRead",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/crypto-news-sentiment.json"
+    },
+    {
+      "id": "automate-tool-assessment-using-ai-apify-telegram-integration",
+      "title": "Automate Tool Assessment Using AI, Apify & Telegram Integration",
+      "pillar": "Operations",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenRouter",
+        "outputParserStructured",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/automate-tool-assessment-using-ai-apify-telegram-integration.json"
+    },
+    {
+      "id": "automatic-meeting-records-sent-from-telegram-to-airtable-slack-and-gmail",
+      "title": "Automatic meeting records sent from Telegram to Airtable, Slack and Gmail",
+      "pillar": "Operations",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "airtable",
+        "gmail",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "slack",
+        "telegram"
+      ],
+      "file": "/packs/workflows/automatic-meeting-records-sent-from-telegram-to-airtable-slack-and-gma.json"
+    },
+    {
+      "id": "n8n-graphic-design-team",
+      "title": "n8n Graphic Design Team",
+      "pillar": "Operations",
+      "nodes": 30,
+      "integrations": [
+        "chainLlm",
+        "convertToFile",
+        "formTrigger",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "manualTrigger"
+      ],
+      "file": "/packs/workflows/n8n-graphic-design-team.json"
+    },
+    {
+      "id": "ai-powered-patient-pre-op-reminder-nurse-alert-system",
+      "title": "AI-Powered Patient Pre-Op Reminder & Nurse Alert System",
+      "pillar": "Operations",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleCalendar",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-powered-patient-pre-op-reminder-nurse-alert-system.json"
+    },
+    {
+      "id": "automate-inventory-reordering-from-airtable-using-gpt-4o-slack-email",
+      "title": "Automate Inventory Reordering from Airtable using GPT-4o, Slack & Email",
+      "pillar": "Operations",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "airtable",
+        "asana",
+        "errorTrigger",
+        "gmail",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "manualTrigger"
+      ],
+      "file": "/packs/workflows/automate-inventory-reordering-from-airtable-using-gpt-4o-slack-email.json"
+    },
+    {
+      "id": "ai-powered-all-purpose-appointment-system-via-jotform",
+      "title": "AI Powered All Purpose Appointment System via JotForm",
+      "pillar": "Operations",
+      "nodes": 11,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "jotFormTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "telegram"
+      ],
+      "file": "/packs/workflows/ai-powered-all-purpose-appointment-system-via-jotform.json"
+    },
+    {
+      "id": "send-a-voice-note-on-telegram-to-generate-a-professional-email-with-chatgpt",
+      "title": "Send a voice note on Telegram to generate a professional email with ChatGPT",
+      "pillar": "Operations",
+      "nodes": 9,
+      "integrations": [
+        "agent",
+        "gmail",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/send-a-voice-note-on-telegram-to-generate-a-professional-email-with-ch.json"
+    },
+    {
+      "id": "generate-release-notes-using-clickup-gpt-4o-notion-slack",
+      "title": "Generate Release Notes Using ClickUp + GPT-4o + Notion + Slack",
+      "pillar": "Operations",
+      "nodes": 18,
+      "integrations": [
+        "agent",
+        "clickUp",
+        "gmail",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "notion",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/generate-release-notes-using-clickup-gpt-4o-notion-slack.json"
+    },
+    {
+      "id": "quick-start",
+      "title": "🚀 Quick Start",
+      "pillar": "Operations",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "googleGemini",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "outputParserAutofixing",
+        "outputParserStructured",
+        "splitOut",
+        "telegram"
+      ],
+      "file": "/packs/workflows/quick-start.json"
+    },
+    {
+      "id": "automated-research-report-generation-with-openai-wikipedia-google-search-and-gmail-telegram",
+      "title": "Automated Research Report Generation with OpenAI, Wikipedia, Google Search, and Gmail/Telegram",
+      "pillar": "Content & Social",
+      "nodes": 25,
+      "integrations": [
+        "agent",
+        "executeWorkflowTrigger",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "memoryBufferWindow"
+      ],
+      "file": "/packs/workflows/automated-research-report-generation-with-openai-wikipedia-google-sear.json"
+    },
+    {
+      "id": "combined-image-to-video-agent",
+      "title": "Combined Image-to-video Agent",
+      "pillar": "Content & Social",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "googleDrive",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/combined-image-to-video-agent.json"
+    },
+    {
+      "id": "up-video-project",
+      "title": "Up Video Project",
+      "pillar": "Content & Social",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "googleDrive",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatGoogleGemini",
+        "memoryBufferWindow",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/up-video-project.json"
+    },
+    {
+      "id": "speech-support-workflow",
+      "title": "Speech Support Workflow",
+      "pillar": "Content & Social",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "lmChatGoogleGemini",
+        "memoryBufferWindow",
+        "memoryManager",
+        "openAi",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/speech-support-workflow.json"
+    },
+    {
+      "id": "ai-generated-summary-block-for-wordpress-posts-with-openai-wordpress-google-sheets-slack",
+      "title": "AI-Generated Summary Block for WordPress Posts - with OpenAI, WordPress, Google Sheets & Slack",
+      "pillar": "Content & Social",
+      "nodes": 21,
+      "integrations": [
+        "dateTime",
+        "googleSheets",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "markdown",
+        "openAi",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-generated-summary-block-for-wordpress-posts-with-openai-wordpress-g.json"
+    },
+    {
+      "id": "ai-social-media-publisher-from-wordpress",
+      "title": "AI Social Media Publisher from WordPress",
+      "pillar": "Content & Social",
+      "nodes": 16,
+      "integrations": [
+        "chainLlm",
+        "facebookGraphApi",
+        "googleSheets",
+        "linkedIn",
+        "lmChatOpenRouter",
+        "manualTrigger",
+        "openAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/ai-social-media-publisher-from-wordpress.json"
+    },
+    {
+      "id": "easy-wordpress-content-creation-from-pdf-document-human-in-the-loop-with-gmail-approval",
+      "title": "📄✨ Easy Wordpress Content Creation from PDF Document + Human In The Loop with Gmail Approval",
+      "pillar": "Content & Social",
+      "nodes": 19,
+      "integrations": [
+        "chainLlm",
+        "extractFromFile",
+        "formTrigger",
+        "gmail",
+        "lmChatOpenAi",
+        "markdown",
+        "telegram",
+        "wordpress"
+      ],
+      "file": "/packs/workflows/easy-wordpress-content-creation-from-pdf-document-human-in-the-loop-wi.json"
+    },
+    {
+      "id": "youtube-video-comment-analysis-agent",
+      "title": "🎦🚀 YouTube Video Comment Analysis Agent",
+      "pillar": "Content & Social",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "executeWorkflowTrigger",
+        "gmail",
+        "googleDrive",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "markdown",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/youtube-video-comment-analysis-agent.json"
+    },
+    {
+      "id": "auto-tag-blog-posts-in-wordpress-with-ai",
+      "title": "Auto-Tag Blog Posts in WordPress with AI",
+      "pillar": "Content & Social",
+      "nodes": 22,
+      "integrations": [
+        "chainLlm",
+        "executeWorkflow",
+        "executeWorkflowTrigger",
+        "lmChatOpenAi",
+        "outputParserAutofixing",
+        "outputParserStructured",
+        "rssFeedReadTrigger",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/auto-tag-blog-posts-in-wordpress-with-ai.json"
+    },
+    {
+      "id": "advanced-youtube-rss-feed-buddy-for-your-favorite-channels",
+      "title": "🎦💌Advanced YouTube RSS Feed Buddy for Your Favorite Channels",
+      "pillar": "Content & Social",
+      "nodes": 29,
+      "integrations": [
+        "chainLlm",
+        "formTrigger",
+        "gmail",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "rssFeedRead",
+        "scheduleTrigger",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/advanced-youtube-rss-feed-buddy-for-your-favorite-channels.json"
+    },
+    {
+      "id": "smart-customer-support-ai-agent",
+      "title": "🤖 Smart Customer Support AI Agent",
+      "pillar": "AI Agents & RAG",
+      "nodes": 21,
+      "integrations": [
+        "agent",
+        "errorTrigger",
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow"
+      ],
+      "file": "/packs/workflows/smart-customer-support-ai-agent.json"
+    },
+    {
+      "id": "give-your-ai-agent-chatbot-long-term-memory-tools-router",
+      "title": "🧠 Give Your AI Agent Chatbot Long Term Memory Tools Router",
+      "pillar": "AI Agents & RAG",
+      "nodes": 22,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "chatTrigger",
+        "executeWorkflowTrigger",
+        "gmail",
+        "googleDocs",
+        "lmChatOpenAi",
+        "memoryBufferWindow"
+      ],
+      "file": "/packs/workflows/give-your-ai-agent-chatbot-long-term-memory-tools-router.json"
+    },
+    {
+      "id": "hr-it-helpdesk-chatbot-with-audio-transcription",
+      "title": "HR & IT Helpdesk Chatbot with Audio Transcription",
+      "pillar": "AI Agents & RAG",
+      "nodes": 21,
+      "integrations": [
+        "agent",
+        "documentDefaultDataLoader",
+        "embeddingsOpenAi",
+        "extractFromFile",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "memoryPostgresChat",
+        "openAi"
+      ],
+      "file": "/packs/workflows/hr-it-helpdesk-chatbot-with-audio-transcription.json"
+    },
+    {
+      "id": "rag-workflow-for-stock-earnings-report-analysis",
+      "title": "RAG Workflow For Stock Earnings Report Analysis",
+      "pillar": "AI Agents & RAG",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "documentDefaultDataLoader",
+        "embeddingsGoogleGemini",
+        "googleDocs",
+        "googleDrive",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "lmChatOpenAi"
+      ],
+      "file": "/packs/workflows/rag-workflow-for-stock-earnings-report-analysis.json"
+    },
+    {
+      "id": "deepseek-ai-agent-telegram-long-term-memory",
+      "title": "🐋🤖 DeepSeek AI Agent + Telegram + LONG TERM Memory 🧠",
+      "pillar": "AI Agents & RAG",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "chatTrigger",
+        "googleDocs",
+        "googleDocsTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "telegram",
+        "webhook"
+      ],
+      "file": "/packs/workflows/deepseek-ai-agent-telegram-long-term-memory.json"
+    },
+    {
+      "id": "upbit-ai-agent-v1-02",
+      "title": "Upbit AI Agent v1.02",
+      "pillar": "AI Agents & RAG",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "httpRequestTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "telegram",
+        "telegramTrigger",
+        "toolCalculator",
+        "toolThink"
+      ],
+      "file": "/packs/workflows/upbit-ai-agent-v1-02.json"
+    },
+    {
+      "id": "voice-rag-chatbot-with-elevenlabs-and-openai",
+      "title": "Voice RAG Chatbot with ElevenLabs and OpenAI",
+      "pillar": "AI Agents & RAG",
+      "nodes": 18,
+      "integrations": [
+        "agent",
+        "documentDefaultDataLoader",
+        "embeddingsOpenAi",
+        "googleDrive",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "memoryBufferWindow",
+        "respondToWebhook"
+      ],
+      "file": "/packs/workflows/voice-rag-chatbot-with-elevenlabs-and-openai.json"
+    },
+    {
+      "id": "automated-financial-reporting-using-google-vision-ocr-telegram-google-sheets",
+      "title": "Automated Financial Reporting Using Google Vision OCR, Telegram & Google Sheets",
+      "pillar": "AI Agents & RAG",
+      "nodes": 23,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenRouter",
+        "memoryBufferWindow",
+        "outputParserStructured",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/automated-financial-reporting-using-google-vision-ocr-telegram-google.json"
+    },
+    {
+      "id": "mw-ai-customer-support-assistant-cloud-version",
+      "title": "[MW] AI Customer Support Assistant - Cloud Version",
+      "pillar": "AI Agents & RAG",
+      "nodes": 15,
+      "integrations": [
+        "chainLlm",
+        "chatTrigger",
+        "extractFromFile",
+        "gmail",
+        "gmailTrigger",
+        "googleDrive",
+        "googleSheets",
+        "informationExtractor"
+      ],
+      "file": "/packs/workflows/mw-ai-customer-support-assistant-cloud-version.json"
+    },
+    {
+      "id": "ai-powered-customer-support-email-knowledge-base-human-escalation-automation",
+      "title": "AI-Powered Customer Support: Email, Knowledge Base & Human Escalation Automation",
+      "pillar": "AI Agents & RAG",
+      "nodes": 23,
+      "integrations": [
+        "agent",
+        "documentDefaultDataLoader",
+        "embeddingsOpenAi",
+        "gmail",
+        "gmailTrigger",
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleSheets"
+      ],
+      "file": "/packs/workflows/ai-powered-customer-support-email-knowledge-base-human-escalation-auto.json"
+    },
+    {
+      "id": "automate-product-data-collection-customer-support-via-whatsapp-gpt-4-google-sheets",
+      "title": "Automate Product Data Collection & Customer Support via WhatsApp + GPT-4 + Google Sheets",
+      "pillar": "Customer Support",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "whatsApp",
+        "whatsAppTrigger"
+      ],
+      "file": "/packs/workflows/automate-product-data-collection-customer-support-via-whatsapp-gpt-4-g.json"
+    },
+    {
+      "id": "support-inbox-to-faq-backfill-gmail-outlook",
+      "title": "Support Inbox-to-FAQ Backfill (Gmail/Outlook)",
+      "pillar": "Customer Support",
+      "nodes": 14,
+      "integrations": [
+        "agent",
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "notion",
+        "slack"
+      ],
+      "file": "/packs/workflows/support-inbox-to-faq-backfill-gmail-outlook.json"
+    },
+    {
+      "id": "auto-respond-and-classify-whatsapp-leads-with-ai-and-log-to-google-sheets",
+      "title": "Auto-respond and classify WhatsApp leads with AI and log to Google Sheets",
+      "pillar": "Customer Support",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "googleCalendar",
+        "googleSheets",
+        "lmChatOllama",
+        "memoryBufferWindow",
+        "whatsApp",
+        "whatsAppTrigger"
+      ],
+      "file": "/packs/workflows/auto-respond-and-classify-whatsapp-leads-with-ai-and-log-to-google-she.json"
+    },
+    {
+      "id": "it-voice-support-automation-bot-telegram-voice-message-to-jira-ticket-with-openai-whisper",
+      "title": "🎧 IT Voice Support Automation Bot – Telegram voice message to JIRA ticket with OpenAI Whisper",
+      "pillar": "Customer Support",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "googleDrive",
+        "jira",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "slack",
+        "telegram"
+      ],
+      "file": "/packs/workflows/it-voice-support-automation-bot-telegram-voice-message-to-jira-ticket.json"
+    },
+    {
+      "id": "ai-powered-whatsapp-chatbot-for-text-voice-images-pdfs",
+      "title": "AI-Powered WhatsApp Chatbot for Text, Voice, Images & PDFs",
+      "pillar": "Customer Support",
+      "nodes": 26,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "openAi",
+        "whatsApp",
+        "whatsAppTrigger"
+      ],
+      "file": "/packs/workflows/ai-powered-whatsapp-chatbot-for-text-voice-images-pdfs.json"
+    },
+    {
+      "id": "ai-powered-chatbase-support-escalation-zendesk-ticket-automation",
+      "title": "AI-Powered Chatbase Support Escalation & Zendesk Ticket Automation",
+      "pillar": "Customer Support",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "errorTrigger",
+        "gmail",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatAzureOpenAi",
+        "outputParserStructured",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-powered-chatbase-support-escalation-zendesk-ticket-automation.json"
+    },
+    {
+      "id": "whatsapp-customer-service-bot-with-faq-and-appointment-scheduling",
+      "title": "WhatsApp customer service bot with FAQ and appointment scheduling",
+      "pillar": "Customer Support",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "googleCalendarTool",
+        "googleSheetsTool",
+        "lmChatGoogleGemini",
+        "memoryBufferWindow",
+        "openAi",
+        "whatsApp",
+        "whatsAppTrigger"
+      ],
+      "file": "/packs/workflows/whatsapp-customer-service-bot-with-faq-and-appointment-scheduling.json"
+    },
+    {
+      "id": "ai-powered-whatsapp-customer-support-for-shopify-brands",
+      "title": "🚀 AI-Powered WhatsApp Customer Support for Shopify Brands",
+      "pillar": "Customer Support",
+      "nodes": 22,
+      "integrations": [
+        "agent",
+        "httpRequestTool",
+        "lmChatOpenAi",
+        "lmChatOpenRouter",
+        "memoryBufferWindow",
+        "outputParserStructured",
+        "slack",
+        "whatsApp"
+      ],
+      "file": "/packs/workflows/ai-powered-whatsapp-customer-support-for-shopify-brands.json"
+    },
+    {
+      "id": "ai-powered-concert-ticket-validation-and-fan-experience-orchestration",
+      "title": "AI-powered concert ticket validation and fan experience orchestration",
+      "pillar": "Customer Support",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/ai-powered-concert-ticket-validation-and-fan-experience-orchestration.json"
+    },
+    {
+      "id": "my-smart-calendar-agent",
+      "title": "My Smart Calendar Agent",
+      "pillar": "Customer Support",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "googleCalendarTool",
+        "googleSheetsTool",
+        "lmChatGoogleGemini",
+        "textClassifier",
+        "whatsApp",
+        "whatsAppTrigger"
+      ],
+      "file": "/packs/workflows/my-smart-calendar-agent.json"
+    },
+    {
+      "id": "automated-resume-review-system-using-openai-google-sheets",
+      "title": "Automated Resume Review System Using OpenAI + Google Sheets",
+      "pillar": "HR & Recruiting",
+      "nodes": 12,
+      "integrations": [
+        "chainLlm",
+        "chainSummarization",
+        "extractFromFile",
+        "formTrigger",
+        "googleDrive",
+        "googleSheets",
+        "informationExtractor",
+        "lmChatOpenAi"
+      ],
+      "file": "/packs/workflows/automated-resume-review-system-using-openai-google-sheets.json"
+    },
+    {
+      "id": "ai-agent-cv-resume-automated-screening-sorting-rating-and-tracker-system",
+      "title": "AI Agent - Cv Resume - Automated Screening , Sorting , Rating and Tracker System",
+      "pillar": "HR & Recruiting",
+      "nodes": 11,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmailTool",
+        "googleDocs",
+        "googleDrive",
+        "googleDriveTool",
+        "googleDriveTrigger",
+        "googleSheetsTool"
+      ],
+      "file": "/packs/workflows/ai-agent-cv-resume-automated-screening-sorting-rating-and-tracker-syst.json"
+    },
+    {
+      "id": "automated-hiring-assistant",
+      "title": "Automated Hiring Assistant",
+      "pillar": "HR & Recruiting",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "airtable",
+        "extractFromFile",
+        "gmail",
+        "gmailTrigger",
+        "googleCalendar",
+        "googleCalendarTool",
+        "googleDrive"
+      ],
+      "file": "/packs/workflows/automated-hiring-assistant.json"
+    },
+    {
+      "id": "automate-candidate-screening-and-communication-from-gmail-to-google-sheets-with-gpt-4-and-slack",
+      "title": "Automate Candidate Screening and Communication from Gmail to Google Sheets with GPT-4 and Slack",
+      "pillar": "HR & Recruiting",
+      "nodes": 19,
+      "integrations": [
+        "agent",
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/automate-candidate-screening-and-communication-from-gmail-to-google-sh.json"
+    },
+    {
+      "id": "building-an-ai-powered-chatbot-for-candidate-evaluation-on-slack",
+      "title": "Building an AI-Powered Chatbot for Candidate Evaluation on Slack",
+      "pillar": "HR & Recruiting",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "extractFromFile",
+        "googleDrive",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/building-an-ai-powered-chatbot-for-candidate-evaluation-on-slack.json"
+    },
+    {
+      "id": "ai-powered-hiring-resume-screening-candidate-routing-using-jotform",
+      "title": "AI-Powered Hiring: Resume Screening & Candidate Routing using Jotform",
+      "pillar": "HR & Recruiting",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "jotFormTrigger",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-powered-hiring-resume-screening-candidate-routing-using-jotform.json"
+    },
+    {
+      "id": "hn-who-is-hiring-scrape",
+      "title": "HN Who is Hiring Scrape",
+      "pillar": "HR & Recruiting",
+      "nodes": 15,
+      "integrations": [
+        "airtable",
+        "chainLlm",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "outputParserStructured",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/hn-who-is-hiring-scrape.json"
+    },
+    {
+      "id": "resume-screening-behavioral-interviews-with-gemini-elevenlabs-notion-ats-copy",
+      "title": "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy",
+      "pillar": "HR & Recruiting",
+      "nodes": 33,
+      "integrations": [
+        "agent",
+        "chainLlm",
+        "chainSummarization",
+        "extractFromFile",
+        "formTrigger",
+        "googleDrive",
+        "googleSheets",
+        "informationExtractor"
+      ],
+      "file": "/packs/workflows/resume-screening-behavioral-interviews-with-gemini-elevenlabs-notion-a.json"
+    },
+    {
+      "id": "ai-resume-screening-candidate-pipeline",
+      "title": "🎯 AI Resume Screening & Candidate Pipeline",
+      "pillar": "HR & Recruiting",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmailTrigger",
+        "googleDrive",
+        "googleSheets",
+        "informationExtractor",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/ai-resume-screening-candidate-pipeline.json"
+    },
+    {
+      "id": "invoice-workflow",
+      "title": "Invoice Workflow",
+      "pillar": "Finance & Accounting",
+      "nodes": 10,
+      "integrations": [
+        "chainLlm",
+        "extractFromFile",
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleSheets",
+        "informationExtractor",
+        "lmChatAnthropic",
+        "lmChatOpenAi"
+      ],
+      "file": "/packs/workflows/invoice-workflow.json"
+    },
+    {
+      "id": "gpt-4-1-mini-powered-invoice-processing-from-gmail-to-google-sheets-with-slack-approval",
+      "title": "GPT-4.1-mini Powered Invoice Processing from Gmail to Google Sheets with Slack Approval",
+      "pillar": "Finance & Accounting",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "slack"
+      ],
+      "file": "/packs/workflows/gpt-4-1-mini-powered-invoice-processing-from-gmail-to-google-sheets-wi.json"
+    },
+    {
+      "id": "expense-tracker-workflow-template",
+      "title": "Expense Tracker Workflow Template",
+      "pillar": "Finance & Accounting",
+      "nodes": 16,
+      "integrations": [
+        "chainLlm",
+        "googleSheets",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "splitOut",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/expense-tracker-workflow-template.json"
+    },
+    {
+      "id": "automated-invoice-collection-data-extraction-using-vision-api-and-llm",
+      "title": "Automated Invoice Collection & Data Extraction Using Vision API and LLM",
+      "pillar": "Finance & Accounting",
+      "nodes": 12,
+      "integrations": [
+        "chainLlm",
+        "formTrigger",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenRouter",
+        "outputParserStructured",
+        "telegram"
+      ],
+      "file": "/packs/workflows/automated-invoice-collection-data-extraction-using-vision-api-and-llm.json"
+    },
+    {
+      "id": "send-invoice-to-clients-automatically",
+      "title": "Send Invoice to clients automatically",
+      "pillar": "Finance & Accounting",
+      "nodes": 18,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/send-invoice-to-clients-automatically.json"
+    },
+    {
+      "id": "telegram-expense-tracker-to-google-sheets-with-gpt-4-1",
+      "title": "Telegram Expense Tracker to Google Sheets with GPT-4.1",
+      "pillar": "Finance & Accounting",
+      "nodes": 11,
+      "integrations": [
+        "agent",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/telegram-expense-tracker-to-google-sheets-with-gpt-4-1.json"
+    },
+    {
+      "id": "analyze-invoices-from-google-drive-and-store-structured-data-in-google-sheets",
+      "title": "Analyze invoices from Google Drive and store structured data in Google Sheets",
+      "pillar": "Finance & Accounting",
+      "nodes": 19,
+      "integrations": [
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleGemini",
+        "googleSheets",
+        "openAi",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/analyze-invoices-from-google-drive-and-store-structured-data-in-google.json"
+    },
+    {
+      "id": "automated-employee-trip-expense-reporting-parsing-with-jotform-openai",
+      "title": "Automated Employee Trip Expense Reporting/Parsing with Jotform, OpenAI",
+      "pillar": "Finance & Accounting",
+      "nodes": 12,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "jotFormTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/automated-employee-trip-expense-reporting-parsing-with-jotform-openai.json"
+    },
+    {
+      "id": "automated-trip-expense-reporting-workflow-with-gpt-4-1-mini",
+      "title": "Automated Trip Expense Reporting Workflow With gpt-4.1-mini",
+      "pillar": "Finance & Accounting",
+      "nodes": 12,
+      "integrations": [
+        "agent",
+        "emailSend",
+        "extractFromFile",
+        "formTrigger",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/automated-trip-expense-reporting-workflow-with-gpt-4-1-mini.json"
+    },
+    {
+      "id": "ai-deepseek-r1t-conference-travel-approval-expense-authorization-request",
+      "title": "AI-Deepseek-R1t Conference Travel Approval & Expense Authorization Request",
+      "pillar": "Finance & Accounting",
+      "nodes": 20,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "lmChatOpenRouter",
+        "manualTrigger",
+        "toolCalculator",
+        "toolCode"
+      ],
+      "file": "/packs/workflows/ai-deepseek-r1t-conference-travel-approval-expense-authorization-reque.json"
+    },
+    {
+      "id": "gpt-4o-powered-vendor-intelligence-contract-management-platform",
+      "title": "GPT-4o-Powered Vendor Intelligence & Contract Management Platform",
+      "pillar": "Legal & Compliance",
+      "nodes": 19,
+      "integrations": [
+        "agent",
+        "airtable",
+        "airtableTool",
+        "gmail",
+        "gmailTool",
+        "googleSheets",
+        "googleSheetsTool",
+        "httpRequestTool"
+      ],
+      "file": "/packs/workflows/gpt-4o-powered-vendor-intelligence-contract-management-platform.json"
+    },
+    {
+      "id": "ai-driven-consent-dispute-reporting-response-workflow",
+      "title": "AI-Driven Consent Dispute Reporting & Response Workflow",
+      "pillar": "Legal & Compliance",
+      "nodes": 12,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/ai-driven-consent-dispute-reporting-response-workflow.json"
+    },
+    {
+      "id": "intelligent-seller-governance-enforcement-and-compliance-automation",
+      "title": "Intelligent seller governance enforcement and compliance automation",
+      "pillar": "Legal & Compliance",
+      "nodes": 24,
+      "integrations": [
+        "agent",
+        "agentTool",
+        "dataTable",
+        "gmail",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "outputParserStructured",
+        "slack"
+      ],
+      "file": "/packs/workflows/intelligent-seller-governance-enforcement-and-compliance-automation.json"
+    },
+    {
+      "id": "gpt-4-1-mini-contract-extraction-risk-analysis-compliance-audit-automation",
+      "title": "GPT 4.1-Mini Contract Extraction, Risk Analysis & Compliance Audit Automation",
+      "pillar": "Legal & Compliance",
+      "nodes": 23,
+      "integrations": [
+        "agent",
+        "documentDefaultDataLoader",
+        "embeddingsOpenAi",
+        "extractFromFile",
+        "gmailTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "postgres"
+      ],
+      "file": "/packs/workflows/gpt-4-1-mini-contract-extraction-risk-analysis-compliance-audit-automa.json"
+    },
+    {
+      "id": "ai-driven-legislative-policy-analysis-and-governance-compliance-orchestration",
+      "title": "AI-driven legislative policy analysis and governance compliance orchestration",
+      "pillar": "Legal & Compliance",
+      "nodes": 25,
+      "integrations": [
+        "agent",
+        "agentTool",
+        "extractFromFile",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/ai-driven-legislative-policy-analysis-and-governance-compliance-orches.json"
+    },
+    {
+      "id": "ai-qwen-max-investor-portfolio-risk-compliance-dashboard",
+      "title": "AI Qwen-Max Investor Portfolio Risk & Compliance Dashboard",
+      "pillar": "Legal & Compliance",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "gmail",
+        "lmChatOpenRouter",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-qwen-max-investor-portfolio-risk-compliance-dashboard.json"
+    },
+    {
+      "id": "automated-compliance-and-audit-framework-with-ai-powered-violation-detection",
+      "title": "Automated Compliance and Audit Framework with AI-Powered Violation Detection",
+      "pillar": "Legal & Compliance",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "gmail",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/automated-compliance-and-audit-framework-with-ai-powered-violation-det.json"
+    },
+    {
+      "id": "ai-contract-summary-bot",
+      "title": "AI Contract Summary Bot",
+      "pillar": "Legal & Compliance",
+      "nodes": 11,
+      "integrations": [
+        "gmail",
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleSheets",
+        "openAi"
+      ],
+      "file": "/packs/workflows/ai-contract-summary-bot.json"
+    },
+    {
+      "id": "clinical-trial-data-integration-and-regulatory-compliance-automation",
+      "title": "Clinical Trial Data Integration and Regulatory Compliance Automation",
+      "pillar": "Legal & Compliance",
+      "nodes": 22,
+      "integrations": [
+        "agent",
+        "emailSend",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "postgres",
+        "scheduleTrigger",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/clinical-trial-data-integration-and-regulatory-compliance-automation.json"
+    },
+    {
+      "id": "intelligent-policy-validation-and-compliance-orchestration-with-oversight",
+      "title": "Intelligent Policy Validation and Compliance Orchestration with Oversight",
+      "pillar": "Legal & Compliance",
+      "nodes": 19,
+      "integrations": [
+        "agent",
+        "dataTable",
+        "emailSend",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/intelligent-policy-validation-and-compliance-orchestration-with-oversi.json"
+    },
+    {
+      "id": "n8n-financial-tracker-telegram-invoices-to-notion-with-ai-summaries-reports",
+      "title": "N8N Financial Tracker Telegram Invoices to Notion with AI Summaries & Reports",
+      "pillar": "Data & Reporting",
+      "nodes": 15,
+      "integrations": [
+        "chainLlm",
+        "editImage",
+        "lmChatGoogleGemini",
+        "notion",
+        "outputParserStructured",
+        "quickChart",
+        "scheduleTrigger",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/n8n-financial-tracker-telegram-invoices-to-notion-with-ai-summaries-re.json"
+    },
+    {
+      "id": "ai-powered-information-monitoring-with-openai-google-sheets-jina-ai-and-slack",
+      "title": "AI-Powered Information Monitoring with OpenAI, Google Sheets, Jina AI and Slack",
+      "pillar": "Data & Reporting",
+      "nodes": 18,
+      "integrations": [
+        "chainLlm",
+        "googleSheets",
+        "lmChatOpenAi",
+        "rssFeedRead",
+        "scheduleTrigger",
+        "slack",
+        "textClassifier"
+      ],
+      "file": "/packs/workflows/ai-powered-information-monitoring-with-openai-google-sheets-jina-ai-an.json"
+    },
+    {
+      "id": "intelligent-web-query-and-semantic-re-ranking-flow",
+      "title": "Intelligent Web Query and Semantic Re-Ranking Flow",
+      "pillar": "Data & Reporting",
+      "nodes": 16,
+      "integrations": [
+        "chainLlm",
+        "dateTime",
+        "lmChatAnthropic",
+        "lmChatGoogleGemini",
+        "lmChatOpenAi",
+        "outputParserAutofixing",
+        "outputParserStructured",
+        "respondToWebhook"
+      ],
+      "file": "/packs/workflows/intelligent-web-query-and-semantic-re-ranking-flow.json"
+    },
+    {
+      "id": "ai-powered-academic-assignment-generator",
+      "title": "AI-Powered Academic Assignment Generator",
+      "pillar": "Data & Reporting",
+      "nodes": 16,
+      "integrations": [
+        "agent",
+        "googleDrive",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "outputParserStructured",
+        "telegram",
+        "telegramTrigger"
+      ],
+      "file": "/packs/workflows/ai-powered-academic-assignment-generator.json"
+    },
+    {
+      "id": "automate-sales-forecasts-visual-report-and-q-a-on-whatsapp-using-openai-agent",
+      "title": "Automate sales forecasts visual report and Q&A on WhatsApp using OpenAI Agent",
+      "pillar": "Data & Reporting",
+      "nodes": 23,
+      "integrations": [
+        "agent",
+        "dataTable",
+        "googleSheets",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "whatsApp"
+      ],
+      "file": "/packs/workflows/automate-sales-forecasts-visual-report-and-q-a-on-whatsapp-using-opena.json"
+    },
+    {
+      "id": "automate-menstrual-cycle-tracking-with-ai-health-insights",
+      "title": "Automate menstrual cycle tracking with AI health insights",
+      "pillar": "Data & Reporting",
+      "nodes": 10,
+      "integrations": [
+        "gmail",
+        "googleCalendar",
+        "googleSheets",
+        "openAi",
+        "scheduleTrigger",
+        "telegram"
+      ],
+      "file": "/packs/workflows/automate-menstrual-cycle-tracking-with-ai-health-insights.json"
+    },
+    {
+      "id": "automate-jira-backlog-hygiene-and-reporting-with-slack-gmail-and-ai",
+      "title": "Automate Jira Backlog Hygiene and Reporting with Slack ,Gmail and AI",
+      "pillar": "Data & Reporting",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "jira",
+        "lmChatAzureOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/automate-jira-backlog-hygiene-and-reporting-with-slack-gmail-and-ai.json"
+    },
+    {
+      "id": "aave-portfolio-professional-ai-agent",
+      "title": "AAVE Portfolio Professional AI Agent",
+      "pillar": "Data & Reporting",
+      "nodes": 11,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleSheets",
+        "httpRequestTool",
+        "lmChatOpenAi",
+        "scheduleTrigger",
+        "telegram"
+      ],
+      "file": "/packs/workflows/aave-portfolio-professional-ai-agent.json"
+    },
+    {
+      "id": "post-event-survey-analyzer",
+      "title": "Post-Event Survey Analyzer",
+      "pillar": "Data & Reporting",
+      "nodes": 18,
+      "integrations": [
+        "googleDocs",
+        "googleSheets",
+        "googleSheetsTrigger",
+        "informationExtractor",
+        "lmChatOpenAi",
+        "slack",
+        "webhook"
+      ],
+      "file": "/packs/workflows/post-event-survey-analyzer.json"
+    },
+    {
+      "id": "sample-sheet",
+      "title": "Sample Sheet",
+      "pillar": "Data & Reporting",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "gmail",
+        "googleDrive",
+        "googleSheets",
+        "googleSheetsTool",
+        "googleSheetsTrigger",
+        "lmChatOpenAi"
+      ],
+      "file": "/packs/workflows/sample-sheet.json"
+    },
+    {
+      "id": "ai-product-writer-seo-titles-description-for-shopify-google-merchant-center",
+      "title": "Ai Product Writer (SEO Titles & Description) for Shopify, Google Merchant Center)",
+      "pillar": "E-commerce",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "editImage",
+        "googleSheets",
+        "googleSheetsTrigger",
+        "lmChatOpenAi",
+        "openAi",
+        "outputParserStructured",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/ai-product-writer-seo-titles-description-for-shopify-google-merchant-c.json"
+    },
+    {
+      "id": "generate-responses-for-google-play-store-reviews-using-anthropic-claude-google-drive-and-google-play-store-api",
+      "title": "Generate responses for Google Play Store reviews using Anthropic Claude, Google Drive and Google Play Store API",
+      "pillar": "E-commerce",
+      "nodes": 25,
+      "integrations": [
+        "chainLlm",
+        "convertToFile",
+        "dataTable",
+        "extractFromFile",
+        "googleDrive",
+        "lmChatAnthropic",
+        "outputParserStructured",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/generate-responses-for-google-play-store-reviews-using-anthropic-claud.json"
+    },
+    {
+      "id": "shopify-product-to-blog-automation-with-ai-google-sheets",
+      "title": "Shopify Product-to-Blog Automation with AI & Google Sheets",
+      "pillar": "E-commerce",
+      "nodes": 18,
+      "integrations": [
+        "agent",
+        "googleSheets",
+        "lmChatGoogleGemini",
+        "manualTrigger",
+        "outputParserStructured",
+        "shopify"
+      ],
+      "file": "/packs/workflows/shopify-product-to-blog-automation-with-ai-google-sheets.json"
+    },
+    {
+      "id": "expired-listing-revival-agent",
+      "title": "Expired Listing Revival Agent",
+      "pillar": "E-commerce",
+      "nodes": 5,
+      "integrations": [
+        "gmail",
+        "googleSheets",
+        "openAi",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/expired-listing-revival-agent.json"
+    },
+    {
+      "id": "digital-art-to-shopify-automation",
+      "title": "Digital Art to Shopify Automation",
+      "pillar": "E-commerce",
+      "nodes": 29,
+      "integrations": [
+        "airtable",
+        "chainLlm",
+        "googleDrive",
+        "lmChatGoogleGemini",
+        "manualTrigger",
+        "openAi",
+        "outputParserAutofixing",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/digital-art-to-shopify-automation.json"
+    },
+    {
+      "id": "product-description-generator",
+      "title": "Product Description Generator",
+      "pillar": "E-commerce",
+      "nodes": 8,
+      "integrations": [
+        "chainLlm",
+        "formTrigger",
+        "gmail",
+        "googleSheets",
+        "lmChatGoogleGemini"
+      ],
+      "file": "/packs/workflows/product-description-generator.json"
+    },
+    {
+      "id": "create-and-publish-merchandise-to-shopify",
+      "title": "Create and publish merchandise to Shopify",
+      "pillar": "E-commerce",
+      "nodes": 15,
+      "integrations": [
+        "googleDriveTrigger",
+        "openAi",
+        "shopify",
+        "slack"
+      ],
+      "file": "/packs/workflows/create-and-publish-merchandise-to-shopify.json"
+    },
+    {
+      "id": "compare-shipping-rates-with-fedex-dhl-bluedart-delhivery-and-claude-ai",
+      "title": "Compare shipping rates with FedEx, DHL, BlueDart, Delhivery and Claude AI",
+      "pillar": "E-commerce",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "lmChatAnthropic",
+        "respondToWebhook",
+        "webhook"
+      ],
+      "file": "/packs/workflows/compare-shipping-rates-with-fedex-dhl-bluedart-delhivery-and-claude-ai.json"
+    },
+    {
+      "id": "weekly-shopify-sales-analysis-with-gemini-ai",
+      "title": "Weekly Shopify sales analysis with Gemini AI",
+      "pillar": "E-commerce",
+      "nodes": 10,
+      "integrations": [
+        "gmail",
+        "googleSheets",
+        "scheduleTrigger",
+        "shopify",
+        "slack"
+      ],
+      "file": "/packs/workflows/weekly-shopify-sales-analysis-with-gemini-ai.json"
+    },
+    {
+      "id": "retail-price-change-sync",
+      "title": "(Retail) Price Change Sync",
+      "pillar": "E-commerce",
+      "nodes": 17,
+      "integrations": [
+        "gmail",
+        "googleSheets",
+        "shopify",
+        "shopifyTrigger",
+        "wooCommerce",
+        "wooCommerceTrigger"
+      ],
+      "file": "/packs/workflows/retail-price-change-sync.json"
+    },
+    {
+      "id": "mails2notion-v2",
+      "title": "mails2notion V2",
+      "pillar": "Email & Communication",
+      "nodes": 25,
+      "integrations": [
+        "agent",
+        "airtable",
+        "gmail",
+        "gmailTrigger",
+        "lmChatOpenAi",
+        "manualTrigger",
+        "outputParserStructured",
+        "toolCalculator"
+      ],
+      "file": "/packs/workflows/mails2notion-v2.json"
+    },
+    {
+      "id": "colombian-invoices-processing",
+      "title": "Colombian Invoices Processing",
+      "pillar": "Email & Communication",
+      "nodes": 22,
+      "integrations": [
+        "agent",
+        "compression",
+        "extractFromFile",
+        "gmailTrigger",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/colombian-invoices-processing.json"
+    },
+    {
+      "id": "advanced-ai-powered-document-parsing-text-extraction-with-llama-parse",
+      "title": "✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse",
+      "pillar": "Email & Communication",
+      "nodes": 36,
+      "integrations": [
+        "chainLlm",
+        "gmail",
+        "gmailTrigger",
+        "googleDrive",
+        "googleSheets",
+        "lmChatOpenAi",
+        "telegram",
+        "textClassifier"
+      ],
+      "file": "/packs/workflows/advanced-ai-powered-document-parsing-text-extraction-with-llama-parse.json"
+    },
+    {
+      "id": "automate-feedback-to-backlog",
+      "title": "Automate Feedback-to-Backlog",
+      "pillar": "Email & Communication",
+      "nodes": 24,
+      "integrations": [
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "googleSheetsTrigger",
+        "jira",
+        "notion",
+        "openAi",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/automate-feedback-to-backlog.json"
+    },
+    {
+      "id": "setup-required",
+      "title": "SETUP REQUIRED",
+      "pillar": "Email & Communication",
+      "nodes": 14,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "formTrigger",
+        "gmail",
+        "gmailTrigger",
+        "googleDrive",
+        "googleDriveTrigger",
+        "googleSheets"
+      ],
+      "file": "/packs/workflows/setup-required.json"
+    },
+    {
+      "id": "ai-lead-qualifier-auto-draft-reply-ai-agent",
+      "title": "AI Lead Qualifier & Auto Draft Reply AI Agent",
+      "pillar": "Email & Communication",
+      "nodes": 14,
+      "integrations": [
+        "agent",
+        "airtable",
+        "chainLlm",
+        "formTrigger",
+        "gmail",
+        "gmailTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/ai-lead-qualifier-auto-draft-reply-ai-agent.json"
+    },
+    {
+      "id": "ai-powered-inbound-email-assistant-with-smart-classification-auto-response",
+      "title": "AI-Powered Inbound Email Assistant with Smart Classification & Auto-Response",
+      "pillar": "Email & Communication",
+      "nodes": 19,
+      "integrations": [
+        "gmail",
+        "gmailTrigger",
+        "googleCalendar",
+        "googleSheets",
+        "openAi",
+        "telegram"
+      ],
+      "file": "/packs/workflows/ai-powered-inbound-email-assistant-with-smart-classification-auto-resp.json"
+    },
+    {
+      "id": "ai-email-reply-assistant-with-telegram-approval",
+      "title": "AI Email Reply Assistant with Telegram Approval",
+      "pillar": "Email & Communication",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "gmail",
+        "gmailTrigger",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "telegram"
+      ],
+      "file": "/packs/workflows/ai-email-reply-assistant-with-telegram-approval.json"
+    },
+    {
+      "id": "ai-generated-zoom-summary",
+      "title": "AI Generated Zoom Summary",
+      "pillar": "Email & Communication",
+      "nodes": 13,
+      "integrations": [
+        "agent",
+        "gmail",
+        "gmailTool",
+        "gmailTrigger",
+        "googleDocs",
+        "lmChatOpenAi",
+        "markdown",
+        "openAi"
+      ],
+      "file": "/packs/workflows/ai-generated-zoom-summary.json"
+    },
+    {
+      "id": "classify-gmail-with-ai-auto-labeler",
+      "title": "Classify Gmail with AI Auto-Labeler",
+      "pillar": "Email & Communication",
+      "nodes": 21,
+      "integrations": [
+        "agent",
+        "gmail",
+        "gmailTrigger",
+        "googleSheets",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "slack"
+      ],
+      "file": "/packs/workflows/classify-gmail-with-ai-auto-labeler.json"
+    },
+    {
+      "id": "autonomous-disaster-response-and-property-damage-prediction-system",
+      "title": "Autonomous Disaster Response and Property Damage Prediction System",
+      "pillar": "IT & DevOps",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "gmail",
+        "googleCalendar",
+        "googleSheets",
+        "lmChatOpenAi",
+        "rssFeedRead",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/autonomous-disaster-response-and-property-damage-prediction-system.json"
+    },
+    {
+      "id": "workday-journaling",
+      "title": "Workday Journaling",
+      "pillar": "IT & DevOps",
+      "nodes": 24,
+      "integrations": [
+        "cron",
+        "github",
+        "gmail",
+        "googleCalendar",
+        "googleSheets",
+        "openAi",
+        "splitOut"
+      ],
+      "file": "/packs/workflows/workday-journaling.json"
+    },
+    {
+      "id": "claude-sonnet-4-5-knowledge-sync-assistant-for-multi-platform-documentation",
+      "title": "Claude Sonnet 4.5 Knowledge Sync Assistant for Multi-Platform Documentation",
+      "pillar": "IT & DevOps",
+      "nodes": 17,
+      "integrations": [
+        "agent",
+        "github",
+        "gmail",
+        "lmChatAnthropic",
+        "microsoftTeams",
+        "notion",
+        "outputParserStructured",
+        "scheduleTrigger"
+      ],
+      "file": "/packs/workflows/claude-sonnet-4-5-knowledge-sync-assistant-for-multi-platform-document.json"
+    },
+    {
+      "id": "build-time-hotspot-tracker-gradle-cocoapods-analyzer-f",
+      "title": "Build Time Hotspot Tracker - Gradle/CocoaPods Analyzer-f",
+      "pillar": "IT & DevOps",
+      "nodes": 15,
+      "integrations": [
+        "agent",
+        "airtable",
+        "compareDatasets",
+        "github",
+        "gmail",
+        "httpRequestTool",
+        "lmChatOpenAi",
+        "memoryBufferWindow"
+      ],
+      "file": "/packs/workflows/build-time-hotspot-tracker-gradle-cocoapods-analyzer-f.json"
+    },
+    {
+      "id": "validate-github-configurations-with-ai-and-log-issues-to-sheets-and-slack",
+      "title": "Validate GitHub Configurations with AI and Log Issues to Sheets and Slack",
+      "pillar": "IT & DevOps",
+      "nodes": 13,
+      "integrations": [
+        "agent",
+        "extractFromFile",
+        "github",
+        "githubTrigger",
+        "googleSheets",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/validate-github-configurations-with-ai-and-log-issues-to-sheets-and-sl.json"
+    },
+    {
+      "id": "build-ai-powered-api-error-catalog-from-github-to-airtable-notion-slack",
+      "title": "Build AI-Powered API Error Catalog from GitHub to Airtable, Notion & Slack",
+      "pillar": "IT & DevOps",
+      "nodes": 22,
+      "integrations": [
+        "agent",
+        "airtable",
+        "errorTrigger",
+        "githubTrigger",
+        "lmChatOpenAi",
+        "memoryBufferWindow",
+        "notion",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/build-ai-powered-api-error-catalog-from-github-to-airtable-notion-slac.json"
+    },
+    {
+      "id": "ai-powered-cybersecurity-incident-detection-response-system",
+      "title": "AI-powered cybersecurity incident detection & response system",
+      "pillar": "IT & DevOps",
+      "nodes": 26,
+      "integrations": [
+        "agent",
+        "emailSend",
+        "googleSheets",
+        "googleSheetsTool",
+        "lmChatOpenAi",
+        "outputParserStructured",
+        "scheduleTrigger",
+        "slack"
+      ],
+      "file": "/packs/workflows/ai-powered-cybersecurity-incident-detection-response-system.json"
+    },
+    {
+      "id": "gitlab-mr-auto-review-risk-assessment",
+      "title": "GitLab MR Auto-Review & Risk Assessment",
+      "pillar": "IT & DevOps",
+      "nodes": 14,
+      "integrations": [
+        "agent",
+        "gitlabTrigger",
+        "gmail",
+        "lmChatAnthropic",
+        "outputParserAutofixing",
+        "outputParserStructured"
+      ],
+      "file": "/packs/workflows/gitlab-mr-auto-review-risk-assessment.json"
+    },
+    {
+      "id": "code-comment-to-faq-sync-github",
+      "title": "Code Comment-to-FAQ Sync (GitHub)",
+      "pillar": "IT & DevOps",
+      "nodes": 9,
+      "integrations": [
+        "agent",
+        "githubTrigger",
+        "googleSheets",
+        "lmChatAzureOpenAi",
+        "notion",
+        "slack"
+      ],
+      "file": "/packs/workflows/code-comment-to-faq-sync-github.json"
+    },
+    {
+      "id": "ai-multi-language-pwa-website-generator-with-seo-optimization",
+      "title": "AI Multi-Language PWA Website Generator with SEO Optimization",
+      "pillar": "IT & DevOps",
+      "nodes": 12,
+      "integrations": [
+        "awsS3",
+        "chainLlm",
+        "formTrigger",
+        "gmail",
+        "lmChatGoogleGemini",
+        "moveBinaryData"
+      ],
+      "file": "/packs/workflows/ai-multi-language-pwa-website-generator-with-seo-optimization.json"
+    }
+  ],
+  "skills": [
+    {
+      "id": "azure-ai-openai-dotnet",
+      "title": "azure-ai-openai-dotnet",
+      "pillar": "AI Agents & RAG",
+      "description": "Azure OpenAI SDK for .NET. Client library for Azure OpenAI and OpenAI services. Use for chat completions, embeddings, image generation, audio transcription, and assistants.",
+      "file": "/packs/skills/azure-ai-openai-dotnet.md"
+    },
+    {
+      "id": "memory-systems",
+      "title": "memory-systems",
+      "pillar": "AI Agents & RAG",
+      "description": "Design short-term, long-term, and graph-based memory architectures. Use when building agents that must persist across sessions, needing to maintain entity consistency across conversations, or implementing reasoning over ",
+      "file": "/packs/skills/memory-systems.md"
+    },
+    {
+      "id": "azure-search-documents-dotnet",
+      "title": "azure-search-documents-dotnet",
+      "pillar": "AI Agents & RAG",
+      "description": "Azure AI Search SDK for .NET (Azure.Search.Documents). Use for building search applications with full-text, vector, semantic, and hybrid search.",
+      "file": "/packs/skills/azure-search-documents-dotnet.md"
+    },
+    {
+      "id": "n8n-mcp-tools-expert",
+      "title": "n8n-mcp-tools-expert",
+      "pillar": "AI Agents & RAG",
+      "description": "Expert guide for using n8n-mcp MCP tools effectively. Use when searching for nodes, validating configurations, accessing templates, managing workflows, or using any n8n-mcp tool. Provides tool selection guidance, paramet",
+      "file": "/packs/skills/n8n-mcp-tools-expert.md"
+    },
+    {
+      "id": "spline-3d-integration",
+      "title": "spline-3d-integration",
+      "pillar": "AI Agents & RAG",
+      "description": "Use when adding interactive 3D scenes from Spline.design to web projects, including React embedding and runtime control API.",
+      "file": "/packs/skills/spline-3d-integration.md"
+    },
+    {
+      "id": "vector-index-tuning",
+      "title": "vector-index-tuning",
+      "pillar": "AI Agents & RAG",
+      "description": "Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure.",
+      "file": "/packs/skills/vector-index-tuning.md"
+    },
+    {
+      "id": "python-performance-optimization",
+      "title": "python-performance-optimization",
+      "pillar": "AI Agents & RAG",
+      "description": "Profile and optimize Python code using cProfile, memory profilers, and performance best practices. Use when debugging slow Python code, optimizing bottlenecks, or improving application performance.",
+      "file": "/packs/skills/python-performance-optimization.md"
+    },
+    {
+      "id": "hybrid-search-implementation",
+      "title": "hybrid-search-implementation",
+      "pillar": "AI Agents & RAG",
+      "description": "Combine vector and keyword search for improved retrieval. Use when implementing RAG systems, building search engines, or when neither approach alone provides sufficient recall.",
+      "file": "/packs/skills/hybrid-search-implementation.md"
+    },
+    {
+      "id": "similarity-search-patterns",
+      "title": "similarity-search-patterns",
+      "pillar": "AI Agents & RAG",
+      "description": "Implement efficient similarity search with vector databases. Use when building semantic search, implementing nearest neighbor queries, or optimizing retrieval performance.",
+      "file": "/packs/skills/similarity-search-patterns.md"
+    },
+    {
+      "id": "exa-search",
+      "title": "exa-search",
+      "pillar": "AI Agents & RAG",
+      "description": "Semantic search, similar content discovery, and structured research using Exa API. Use when you need semantic/embeddings-based search, finding similar content, or searching by category (company, people, research papers, ",
+      "file": "/packs/skills/exa-search.md"
+    },
+    {
+      "id": "screenshots",
+      "title": "screenshots",
+      "pillar": "Content & Social",
+      "description": "Generate marketing screenshots of your app using Playwright. Use when the user wants to create screenshots for Product Hunt, social media, landing pages, or documentation.",
+      "file": "/packs/skills/screenshots.md"
+    },
+    {
+      "id": "youtube-thumbnail",
+      "title": "youtube-thumbnail",
+      "pillar": "Content & Social",
+      "description": "Generates three YouTube thumbnail options optimized for click-through rate using Canva, applying high-contrast colors, emotional expressions, and concise text overlays. Use when a user needs a thumbnail for a YouTube vid",
+      "file": "/packs/skills/youtube-thumbnail.md"
+    },
+    {
+      "id": "blog-post",
+      "title": "blog-post",
+      "pillar": "Content & Social",
+      "description": "Writes SEO-optimized long-form blog posts with outline approval, meta descriptions, internal link suggestions, featured image briefs, and a pre-publish SEO checklist. Use when a user needs a blog article for their websit",
+      "file": "/packs/skills/blog-post.md"
+    },
+    {
+      "id": "about-page",
+      "title": "about-page",
+      "pillar": "Content & Social",
+      "description": "Writes compelling about pages, founder bios, and team introductions that build trust and convert visitors using storytelling frameworks and social proof. Use when a user needs an about page for their website, wants to wr",
+      "file": "/packs/skills/about-page.md"
+    },
+    {
+      "id": "video-script",
+      "title": "video-script",
+      "pillar": "Content & Social",
+      "description": "Writes ready-to-film video scripts with hooks, segment breakdowns, B-roll cues, text overlay notes, timing estimates, and shot lists. Use when a user needs a script for YouTube, TikTok, Instagram Reels, course content, o",
+      "file": "/packs/skills/video-script.md"
+    },
+    {
+      "id": "faq-generator",
+      "title": "faq-generator",
+      "pillar": "Content & Social",
+      "description": "Generates comprehensive FAQ sections organized by category with clear, concise answers optimized for websites, sales pages, and help centers. Use when a user needs an FAQ section for their website, wants to preempt commo",
+      "file": "/packs/skills/faq-generator.md"
+    },
+    {
+      "id": "content-calendar",
+      "title": "content-calendar",
+      "pillar": "Content & Social",
+      "description": "Generates a 30-day content calendar as a Notion database with posts mapped to content pillars, platforms, and dates, plus starter graphic templates in Canva for each content pillar. Use when a user needs to plan their co",
+      "file": "/packs/skills/content-calendar.md"
+    },
+    {
+      "id": "product-description",
+      "title": "product-description",
+      "pillar": "Content & Social",
+      "description": "Writes conversion-optimized product descriptions for e-commerce platforms with benefit-driven copy, SEO keywords, and platform-specific formatting for Shopify, Amazon, Etsy, and WooCommerce. Use when a user needs product",
+      "file": "/packs/skills/product-description.md"
+    },
+    {
+      "id": "press-release",
+      "title": "press-release",
+      "pillar": "Content & Social",
+      "description": "Writes professional press releases following AP style with headline, dateline, lead paragraph, body, boilerplate, and media contact sections. Use when a user is launching a product, announcing a milestone, making a hire,",
+      "file": "/packs/skills/press-release.md"
+    },
+    {
+      "id": "newsletter-builder",
+      "title": "newsletter-builder",
+      "pillar": "Content & Social",
+      "description": "Creates complete newsletters from editorial brief to final visual layout, planning content in Notion and generating the designed version in Canva. Use when a user needs to produce a recurring newsletter issue, build a ne",
+      "file": "/packs/skills/newsletter-builder.md"
+    },
+    {
+      "id": "native-data-fetching",
+      "title": "native-data-fetching",
+      "pillar": "Customer Support",
+      "description": "Use when implementing or debugging ANY network request, API call, or data fetching. Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router data loaders (useLoaderData).",
+      "file": "/packs/skills/native-data-fetching.md"
+    },
+    {
+      "id": "progressive-web-app",
+      "title": "progressive-web-app",
+      "pillar": "Customer Support",
+      "description": "Build Progressive Web Apps (PWAs) with offline support, installability, and caching strategies. Trigger whenever the user mentions PWA, service workers, web app manifests, Workbox, 'add to home screen', or wants their we",
+      "file": "/packs/skills/progressive-web-app.md"
+    },
+    {
+      "id": "chat-widget",
+      "title": "chat-widget",
+      "pillar": "Customer Support",
+      "description": "Build a real-time support chat system with a floating widget for users and an admin dashboard for support staff. Use when the user wants live chat, customer support chat, real-time messaging, or in-app support.",
+      "file": "/packs/skills/chat-widget.md"
+    },
+    {
+      "id": "platform-help-center",
+      "title": "platform-help-center",
+      "pillar": "Customer Support",
+      "description": "Structures platform help centers with separate buyer/seller sections, video tutorials, and contact escalation. Use when building self-serve support for marketplace platforms.",
+      "file": "/packs/skills/platform-help-center.md"
+    },
+    {
+      "id": "active-directory-attacks",
+      "title": "active-directory-attacks",
+      "pillar": "Customer Support",
+      "description": "Provide comprehensive techniques for attacking Microsoft Active Directory environments. Covers reconnaissance, credential harvesting, Kerberos attacks, lateral movement, privilege escalation, and domain dominance for red",
+      "file": "/packs/skills/active-directory-attacks.md"
+    },
+    {
+      "id": "wellally-tech",
+      "title": "wellally-tech",
+      "pillar": "Customer Support",
+      "description": "Integrate multiple digital health data sources, connect to [WellAlly.tech](https://www.wellally.tech/) knowledge base, providing data import and knowledge reference for personal health management systems.",
+      "file": "/packs/skills/wellally-tech.md"
+    },
+    {
+      "id": "pydantic-ai",
+      "title": "pydantic-ai",
+      "pillar": "Customer Support",
+      "description": "Build production-ready AI agents with PydanticAI — type-safe tool use, structured outputs, dependency injection, and multi-model support.",
+      "file": "/packs/skills/pydantic-ai.md"
+    },
+    {
+      "id": "hugging-face-datasets",
+      "title": "hugging-face-datasets",
+      "pillar": "Customer Support",
+      "description": "Create and manage datasets on Hugging Face Hub. Supports initializing repos, defining configs/system prompts, streaming row updates, and SQL-based dataset querying/transformation. Designed to work alongside HF MCP server",
+      "file": "/packs/skills/hugging-face-datasets.md"
+    },
+    {
+      "id": "windows-privilege-escalation",
+      "title": "windows-privilege-escalation",
+      "pillar": "Customer Support",
+      "description": "Provide systematic methodologies for discovering and exploiting privilege escalation vulnerabilities on Windows systems during penetration testing engagements.",
+      "file": "/packs/skills/windows-privilege-escalation.md"
+    },
+    {
+      "id": "freshdesk-automation",
+      "title": "freshdesk-automation",
+      "pillar": "Customer Support",
+      "description": "Automate Freshdesk helpdesk operations including tickets, contacts, companies, notes, and replies via Rube MCP (Composio). Always search tools first for current schemas.",
+      "file": "/packs/skills/freshdesk-automation.md"
+    },
+    {
+      "id": "obsidian-bases",
+      "title": "obsidian-bases",
+      "pillar": "Data & Reporting",
+      "description": "Create and edit Obsidian Bases (.base files) with views, filters, formulas, and summaries. Use when working with .base files, creating database-like views of notes, or when the user mentions Bases, table views, card view",
+      "file": "/packs/skills/obsidian-bases.md"
+    },
+    {
+      "id": "pubmed-database",
+      "title": "pubmed-database",
+      "pillar": "Data & Reporting",
+      "description": "Direct REST API access to PubMed. Advanced Boolean/MeSH queries, E-utilities API, batch processing, citation management. For Python workflows, prefer biopython (Bio.Entrez). Use this for direct HTTP/REST work or custom A",
+      "file": "/packs/skills/pubmed-database.md"
+    },
+    {
+      "id": "azure-ai-anomalydetector-java",
+      "title": "azure-ai-anomalydetector-java",
+      "pillar": "Data & Reporting",
+      "description": "Build anomaly detection applications with Azure AI Anomaly Detector SDK for Java. Use when implementing univariate/multivariate anomaly detection, time-series analysis, or AI-powered monitoring.",
+      "file": "/packs/skills/azure-ai-anomalydetector-java.md"
+    },
+    {
+      "id": "marketplace-metrics",
+      "title": "marketplace-metrics",
+      "pillar": "Data & Reporting",
+      "description": "Defines and tracks marketplace health metrics including liquidity, take rate, GMV, and supply/demand balance. Use when measuring and optimizing marketplace performance.",
+      "file": "/packs/skills/marketplace-metrics.md"
+    },
+    {
+      "id": "prompt-library",
+      "title": "prompt-library",
+      "pillar": "Data & Reporting",
+      "description": "Organizes and documents reusable prompt libraries with categories, variables, and quality scoring. Use when building a structured collection of AI prompts for your business.",
+      "file": "/packs/skills/prompt-library.md"
+    },
+    {
+      "id": "marketplace-fee-structure",
+      "title": "marketplace-fee-structure",
+      "pillar": "Data & Reporting",
+      "description": "Designs marketplace fee structures with commission models, premium tiers, and competitive analysis. Use when setting or restructuring pricing for a platform business.",
+      "file": "/packs/skills/marketplace-fee-structure.md"
+    },
+    {
+      "id": "plotly",
+      "title": "plotly",
+      "pillar": "Data & Reporting",
+      "description": "Interactive visualization library. Use when you need hover info, zoom, pan, or web-embeddable charts. Best for dashboards, exploratory analysis, and presentations. For static publication figures use matplotlib or scienti",
+      "file": "/packs/skills/plotly.md"
+    },
+    {
+      "id": "uniprot-database",
+      "title": "uniprot-database",
+      "pillar": "Data & Reporting",
+      "description": "Direct REST API access to UniProt. Protein searches, FASTA retrieval, ID mapping, Swiss-Prot/TrEMBL. For Python workflows with multiple databases, prefer bioservices (unified interface to 40+ services). Use this for dire",
+      "file": "/packs/skills/uniprot-database.md"
+    },
+    {
+      "id": "azure-ai-textanalytics-py",
+      "title": "azure-ai-textanalytics-py",
+      "pillar": "Data & Reporting",
+      "description": "Azure AI Text Analytics SDK for sentiment analysis, entity recognition, key phrases, language detection, PII, and healthcare NLP. Use for natural language processing on text.",
+      "file": "/packs/skills/azure-ai-textanalytics-py.md"
+    },
+    {
+      "id": "saas-metrics-dashboard",
+      "title": "saas-metrics-dashboard",
+      "pillar": "Data & Reporting",
+      "description": "Sets up SaaS metrics dashboards tracking MRR, churn, LTV, CAC, expansion revenue, and cohort retention. Use when building or improving subscription business analytics.",
+      "file": "/packs/skills/saas-metrics-dashboard.md"
+    },
+    {
+      "id": "claude-in-chrome-troubleshooting",
+      "title": "claude-in-chrome-troubleshooting",
+      "pillar": "E-commerce",
+      "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues. Use when mcp__claude-in-chrome__* tools fail, return \"Browser extension is not connected\", or behave erratically.",
+      "file": "/packs/skills/claude-in-chrome-troubleshooting.md"
+    },
+    {
+      "id": "food-delivery-strategy",
+      "title": "food-delivery-strategy",
+      "pillar": "E-commerce",
+      "description": "Plans food delivery operations with platform selection, packaging, pricing, and quality control procedures. Use when launching or optimizing restaurant delivery service.",
+      "file": "/packs/skills/food-delivery-strategy.md"
+    },
+    {
+      "id": "food-truck-business-plan",
+      "title": "food-truck-business-plan",
+      "pillar": "E-commerce",
+      "description": "Creates food truck business plans with menu strategy, location planning, permits checklist, and revenue projections. Use when launching or scaling a food truck business.",
+      "file": "/packs/skills/food-truck-business-plan.md"
+    },
+    {
+      "id": "seller-onboarding",
+      "title": "seller-onboarding",
+      "pillar": "E-commerce",
+      "description": "Creates seller onboarding programs for marketplaces with verification, listing guides, and success milestones. Use when building seller activation flows for platform businesses.",
+      "file": "/packs/skills/seller-onboarding.md"
+    },
+    {
+      "id": "exchange-policy",
+      "title": "exchange-policy",
+      "pillar": "E-commerce",
+      "description": "Writes exchange policies with eligibility criteria, process steps, customer communication templates, and exception handling. Use when establishing or improving your exchange process.",
+      "file": "/packs/skills/exchange-policy.md"
+    },
+    {
+      "id": "product-sourcing-brief",
+      "title": "product-sourcing-brief",
+      "pillar": "E-commerce",
+      "description": "Writes product sourcing briefs with specifications, quality requirements, MOQs, supplier evaluation criteria, and negotiation guidelines. Use when finding manufacturers for a product.",
+      "file": "/packs/skills/product-sourcing-brief.md"
+    },
+    {
+      "id": "store-launch-plan",
+      "title": "store-launch-plan",
+      "pillar": "E-commerce",
+      "description": "Plans e-commerce store launches with pre-launch checklist, marketing calendar, launch day playbook, and post-launch optimization priorities. Use when opening an online store.",
+      "file": "/packs/skills/store-launch-plan.md"
+    },
+    {
+      "id": "dropshipping-supplier-brief",
+      "title": "dropshipping-supplier-brief",
+      "pillar": "E-commerce",
+      "description": "Creates supplier evaluation and communication templates for dropshipping businesses with quality standards, SLAs, and order management workflows. Use when vetting dropshipping partners.",
+      "file": "/packs/skills/dropshipping-supplier-brief.md"
+    },
+    {
+      "id": "azure-storage-blob-py",
+      "title": "azure-storage-blob-py",
+      "pillar": "E-commerce",
+      "description": "Azure Blob Storage SDK for Python. Use for uploading, downloading, listing blobs, managing containers, and blob lifecycle.",
+      "file": "/packs/skills/azure-storage-blob-py.md"
+    },
+    {
+      "id": "size-guide",
+      "title": "size-guide",
+      "pillar": "E-commerce",
+      "description": "Creates product size guides with measurement instructions, comparison charts, fit recommendations, and international conversions. Use when reducing size-related returns.",
+      "file": "/packs/skills/size-guide.md"
+    },
+    {
+      "id": "azure-communication-sms-java",
+      "title": "azure-communication-sms-java",
+      "pillar": "Email & Communication",
+      "description": "Send SMS messages with Azure Communication Services SMS Java SDK. Use when implementing SMS notifications, alerts, OTP delivery, bulk messaging, or delivery reports.",
+      "file": "/packs/skills/azure-communication-sms-java.md"
+    },
+    {
+      "id": "gh-review-requests",
+      "title": "gh-review-requests",
+      "pillar": "Email & Communication",
+      "description": "Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to \"find PRs I need to review\", \"show my review requests\", \"what needs my review\",",
+      "file": "/packs/skills/gh-review-requests.md"
+    },
+    {
+      "id": "twilio-communications",
+      "title": "twilio-communications",
+      "pillar": "Email & Communication",
+      "description": "Build communication features with Twilio: SMS messaging, voice calls, WhatsApp Business API, and user verification (2FA). Covers the full spectrum from simple notifications to complex IVR systems and multi-channel authen",
+      "file": "/packs/skills/twilio-communications.md"
+    },
+    {
+      "id": "invoice-template",
+      "title": "invoice-template",
+      "pillar": "Finance & Accounting",
+      "description": "Generates professional invoice documents with line items, tax calculations, payment terms, and late payment policies, plus a reusable template for future invoices. Use when a user needs to create an invoice, set up a bil",
+      "file": "/packs/skills/invoice-template.md"
+    },
+    {
+      "id": "expense-tracker",
+      "title": "expense-tracker",
+      "pillar": "Finance & Accounting",
+      "description": "Creates an expense tracking and categorization system in Notion with transaction records, category breakdowns, monthly summaries, and tax-deduction flagging for freelancers and small businesses. Use when a user needs to ",
+      "file": "/packs/skills/expense-tracker.md"
+    },
+    {
+      "id": "churn-prevention",
+      "title": "churn-prevention",
+      "pillar": "Finance & Accounting",
+      "description": "Reduce voluntary and involuntary churn with cancel flows, save offers, dunning, win-back tactics, and retention strategy. Use when users are cancelling, failed payments are rising, or subscription retention needs improve",
+      "file": "/packs/skills/churn-prevention.md"
+    },
+    {
+      "id": "bookkeeping-setup",
+      "title": "bookkeeping-setup",
+      "pillar": "Finance & Accounting",
+      "description": "Sets up bookkeeping systems with chart of accounts, transaction categories, and reconciliation procedures. Use when establishing or organizing business bookkeeping.",
+      "file": "/packs/skills/bookkeeping-setup.md"
+    },
+    {
+      "id": "tax-prep-checklist",
+      "title": "tax-prep-checklist",
+      "pillar": "Finance & Accounting",
+      "description": "Creates tax preparation checklists organized by entity type with document gathering and deadline tracking. Use when preparing for business tax filing season.",
+      "file": "/packs/skills/tax-prep-checklist.md"
+    },
+    {
+      "id": "grant-application",
+      "title": "grant-application",
+      "pillar": "Finance & Accounting",
+      "description": "Writes small business grant applications with narrative sections, budget justification, and impact statements. Use when applying for business grants or funding.",
+      "file": "/packs/skills/grant-application.md"
+    },
+    {
+      "id": "financial-model",
+      "title": "financial-model",
+      "pillar": "Finance & Accounting",
+      "description": "Builds financial models for startups with revenue drivers, cost assumptions, and sensitivity analysis. Use when creating detailed financial models for fundraising or planning.",
+      "file": "/packs/skills/financial-model.md"
+    },
+    {
+      "id": "unit-economics",
+      "title": "unit-economics",
+      "pillar": "Finance & Accounting",
+      "description": "Calculates unit economics for products and services with contribution margin, payback period, and LTV:CAC ratios. Use when evaluating the profitability of each customer or unit.",
+      "file": "/packs/skills/unit-economics.md"
+    },
+    {
+      "id": "cash-flow-forecast",
+      "title": "cash-flow-forecast",
+      "pillar": "Finance & Accounting",
+      "description": "Projects monthly cash flow for 3-12 months from revenue and expense inputs with scenario modeling and runway calculations. Use when a user needs to plan spending, evaluate whether they can afford a hire or investment, or",
+      "file": "/packs/skills/cash-flow-forecast.md"
+    },
+    {
+      "id": "commission-structure",
+      "title": "commission-structure",
+      "pillar": "Finance & Accounting",
+      "description": "Designs sales commission structures with tiers, accelerators, clawback provisions, and payout schedules. Use when creating or revising compensation plans for sales roles.",
+      "file": "/packs/skills/commission-structure.md"
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "title": "ui-ux-pro-max",
+      "pillar": "General Business",
+      "description": "Comprehensive design guide for web and mobile applications. Use when designing new UI components or pages, choosing color palettes and typography, or reviewing code for UX issues.",
+      "file": "/packs/skills/ui-ux-pro-max.md"
+    },
+    {
+      "id": "full-stack-orchestration-full-stack-feature",
+      "title": "full-stack-orchestration-full-stack-feature",
+      "pillar": "General Business",
+      "description": "Use when working with full stack orchestration full stack feature",
+      "file": "/packs/skills/full-stack-orchestration-full-stack-feature.md"
+    },
+    {
+      "id": "site-architecture",
+      "title": "site-architecture",
+      "pillar": "General Business",
+      "description": "Plan or restructure website hierarchy, navigation, URL patterns, breadcrumbs, and internal linking. Use when mapping pages, sections, and site structure, but not for XML sitemap auditing or schema markup.",
+      "file": "/packs/skills/site-architecture.md"
+    },
+    {
+      "id": "azure-security-keyvault-keys-java",
+      "title": "azure-security-keyvault-keys-java",
+      "pillar": "General Business",
+      "description": "Azure Key Vault Keys Java SDK for cryptographic key management. Use when creating, managing, or using RSA/EC keys, performing encrypt/decrypt/sign/verify operations, or working with HSM-backed keys.",
+      "file": "/packs/skills/azure-security-keyvault-keys-java.md"
+    },
+    {
+      "id": "systematic-debugging",
+      "title": "systematic-debugging",
+      "pillar": "General Business",
+      "description": "Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes",
+      "file": "/packs/skills/systematic-debugging.md"
+    },
+    {
+      "id": "threejs-shaders",
+      "title": "threejs-shaders",
+      "pillar": "General Business",
+      "description": "Three.js shaders - GLSL, ShaderMaterial, uniforms, custom effects. Use when creating custom visual effects, modifying vertices, writing fragment shaders, or extending built-in materials.",
+      "file": "/packs/skills/threejs-shaders.md"
+    },
+    {
+      "id": "threejs-lighting",
+      "title": "threejs-lighting",
+      "pillar": "General Business",
+      "description": "Three.js lighting - light types, shadows, environment lighting. Use when adding lights, configuring shadows, setting up IBL, or optimizing lighting performance.",
+      "file": "/packs/skills/threejs-lighting.md"
+    },
+    {
+      "id": "threejs-interaction",
+      "title": "threejs-interaction",
+      "pillar": "General Business",
+      "description": "Three.js interaction - raycasting, controls, mouse/touch input, object selection. Use when handling user input, implementing click detection, adding camera controls, or creating interactive 3D experiences.",
+      "file": "/packs/skills/threejs-interaction.md"
+    },
+    {
+      "id": "n8n-node-configuration",
+      "title": "n8n-node-configuration",
+      "pillar": "General Business",
+      "description": "Operation-aware node configuration guidance. Use when configuring nodes, understanding property dependencies, determining required fields, choosing between get_node detail levels, or learning common configuration pattern",
+      "file": "/packs/skills/n8n-node-configuration.md"
+    },
+    {
+      "id": "stitch-design-taste",
+      "title": "stitch-design-taste",
+      "pillar": "General Business",
+      "description": "Use when generating Google Stitch DESIGN.md systems for premium typography, color, layout, motion intent, and anti-generic UI rules.",
+      "file": "/packs/skills/stitch-design-taste.md"
+    },
+    {
+      "id": "employee-handbook",
+      "title": "employee-handbook",
+      "pillar": "HR & Recruiting",
+      "description": "Creates employee or contractor handbooks with company policies, expectations, benefits, communication guidelines, and operational procedures in a professional yet approachable tone. Use when a user is hiring their first ",
+      "file": "/packs/skills/employee-handbook.md"
+    },
+    {
+      "id": "job-posting",
+      "title": "job-posting",
+      "pillar": "HR & Recruiting",
+      "description": "Writes compelling job descriptions and hiring ads with role summaries, responsibilities, requirements, benefits, and application instructions optimized for job boards and social media. Use when a user needs to hire emplo",
+      "file": "/packs/skills/job-posting.md"
+    },
+    {
+      "id": "annual-review",
+      "title": "annual-review",
+      "pillar": "HR & Recruiting",
+      "description": "Compiles annual business reviews with year-over-year metrics, milestone highlights, lessons learned, and strategic goals for the upcoming year. Use when a user needs to reflect on their business year, wants to create a y",
+      "file": "/packs/skills/annual-review.md"
+    },
+    {
+      "id": "affiliate-program",
+      "title": "affiliate-program",
+      "pillar": "HR & Recruiting",
+      "description": "Sets up affiliate and referral program structures with commission tiers, terms and conditions, affiliate onboarding materials, and promotional asset guidelines. Use when a user wants to launch an affiliate program, needs",
+      "file": "/packs/skills/affiliate-program.md"
+    },
+    {
+      "id": "skill-router",
+      "title": "skill-router",
+      "pillar": "HR & Recruiting",
+      "description": "Use when the user is unsure which skill to use or where to start. Interviews the user with targeted questions and recommends the best skill(s) from the installed library for their goal.",
+      "file": "/packs/skills/skill-router.md"
+    },
+    {
+      "id": "diversity-policy",
+      "title": "diversity-policy",
+      "pillar": "HR & Recruiting",
+      "description": "Writes diversity, equity, and inclusion policies with commitments, programs, accountability measures, and implementation timelines. Use when building or updating your company DEI framework.",
+      "file": "/packs/skills/diversity-policy.md"
+    },
+    {
+      "id": "team-building-plan",
+      "title": "team-building-plan",
+      "pillar": "HR & Recruiting",
+      "description": "Plans team building activities and events with objectives, activity options, budget considerations, logistics, and follow-up evaluation. Use when organizing team bonding, offsites, or morale-boosting events.",
+      "file": "/packs/skills/team-building-plan.md"
+    },
+    {
+      "id": "exit-interview-template",
+      "title": "exit-interview-template",
+      "pillar": "HR & Recruiting",
+      "description": "Creates exit interview question templates with themed categories for identifying retention issues, improvement areas, and actionable insights. Use when an employee is departing.",
+      "file": "/packs/skills/exit-interview-template.md"
+    },
+    {
+      "id": "employee-survey",
+      "title": "employee-survey",
+      "pillar": "HR & Recruiting",
+      "description": "Creates employee engagement surveys with anonymous feedback mechanisms, question categories, rating scales, and action planning frameworks. Use when measuring team satisfaction or culture.",
+      "file": "/packs/skills/employee-survey.md"
+    },
+    {
+      "id": "freelancer-management",
+      "title": "freelancer-management",
+      "pillar": "HR & Recruiting",
+      "description": "Creates systems for managing multiple freelancers with briefing templates, feedback processes, payment workflows, and quality control. Use when scaling with contract talent.",
+      "file": "/packs/skills/freelancer-management.md"
+    },
+    {
+      "id": "agentphone",
+      "title": "agentphone",
+      "pillar": "IT & DevOps",
+      "description": "Build AI phone agents with AgentPhone API. Use when the user wants to make phone calls, send/receive SMS, manage phone numbers, create voice agents, set up webhooks, or check usage — anything related to telephony, phone ",
+      "file": "/packs/skills/agentphone.md"
+    },
+    {
+      "id": "threejs-geometry",
+      "title": "threejs-geometry",
+      "pillar": "IT & DevOps",
+      "description": "Three.js geometry creation - built-in shapes, BufferGeometry, custom geometry, instancing. Use when creating 3D shapes, working with vertices, building custom meshes, or optimizing with instanced rendering.",
+      "file": "/packs/skills/threejs-geometry.md"
+    },
+    {
+      "id": "azure-eventhub-java",
+      "title": "azure-eventhub-java",
+      "pillar": "IT & DevOps",
+      "description": "Build real-time streaming applications with Azure Event Hubs SDK for Java. Use when implementing event streaming, high-throughput data ingestion, or building event-driven architectures.",
+      "file": "/packs/skills/azure-eventhub-java.md"
+    },
+    {
+      "id": "agents-v2-py",
+      "title": "agents-v2-py",
+      "pillar": "IT & DevOps",
+      "description": "Build container-based Foundry Agents with Azure AI Projects SDK (ImageBasedHostedAgentDefinition). Use when creating hosted agents with custom container images in Azure AI Foundry.",
+      "file": "/packs/skills/agents-v2-py.md"
+    },
+    {
+      "id": "event-store-design",
+      "title": "event-store-design",
+      "pillar": "IT & DevOps",
+      "description": "Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns.",
+      "file": "/packs/skills/event-store-design.md"
+    },
+    {
+      "id": "shellcheck-configuration",
+      "title": "shellcheck-configuration",
+      "pillar": "IT & DevOps",
+      "description": "Master ShellCheck static analysis configuration and usage for shell script quality. Use when setting up linting infrastructure, fixing code issues, or ensuring script portability.",
+      "file": "/packs/skills/shellcheck-configuration.md"
+    },
+    {
+      "id": "design-taste-frontend",
+      "title": "design-taste-frontend",
+      "pillar": "IT & DevOps",
+      "description": "Use when building high-agency frontend interfaces with strict design taste, calibrated color, responsive layout, and motion rules.",
+      "file": "/packs/skills/design-taste-frontend.md"
+    },
+    {
+      "id": "evaluation",
+      "title": "evaluation",
+      "pillar": "IT & DevOps",
+      "description": "Build evaluation frameworks for agent systems. Use when testing agent performance systematically, validating context engineering choices, or measuring improvements over time.",
+      "file": "/packs/skills/evaluation.md"
+    },
+    {
+      "id": "makepad-deployment",
+      "title": "makepad-deployment",
+      "pillar": "IT & DevOps",
+      "description": "| CRITICAL: Use for Makepad packaging and deployment. Triggers on: deploy, package, APK, IPA, 打包, 部署, cargo-packager, cargo-makepad, WASM, Android, iOS, distribution, installer, .deb, .dmg, .nsis, GitHub Actions, CI, act",
+      "file": "/packs/skills/makepad-deployment.md"
+    },
+    {
+      "id": "tool-design",
+      "title": "tool-design",
+      "pillar": "IT & DevOps",
+      "description": "Build tools that agents can use effectively, including architectural reduction patterns. Use when creating new tools for agent systems, debugging tool-related failures or misuse, or optimizing existing tool sets for bett",
+      "file": "/packs/skills/tool-design.md"
+    },
+    {
+      "id": "cold-email",
+      "title": "cold-email",
+      "pillar": "Lead Generation",
+      "description": "Write B2B cold emails and follow-up sequences that earn replies. Use when creating outbound prospecting emails, SDR outreach, personalized opening lines, subject lines, CTAs, and multi-touch follow-up sequences.",
+      "file": "/packs/skills/cold-email.md"
+    },
+    {
+      "id": "tripwire-offer",
+      "title": "tripwire-offer",
+      "pillar": "Lead Generation",
+      "description": "Creates low-ticket tripwire offers with pricing strategy, delivery mechanism, and upsell path. Use when you need to convert leads into buyers with a small first purchase.",
+      "file": "/packs/skills/tripwire-offer.md"
+    },
+    {
+      "id": "firecrawl-scraper",
+      "title": "firecrawl-scraper",
+      "pillar": "Lead Generation",
+      "description": "Deep web scraping, screenshots, PDF parsing, and website crawling using Firecrawl API. Use when you need deep content extraction from web pages, page interaction is required (clicking, scrolling, etc.), or you want scree",
+      "file": "/packs/skills/firecrawl-scraper.md"
+    },
+    {
+      "id": "daily-news-report",
+      "title": "daily-news-report",
+      "pillar": "Lead Generation",
+      "description": "Scrapes content based on a preset URL list, filters high-quality technical information, and generates daily Markdown reports.",
+      "file": "/packs/skills/daily-news-report.md"
+    },
+    {
+      "id": "web-scraper",
+      "title": "web-scraper",
+      "pillar": "Lead Generation",
+      "description": "Web scraping inteligente multi-estrategia. Extrai dados estruturados de paginas web (tabelas, listas, precos). Paginacao, monitoramento e export CSV/JSON.",
+      "file": "/packs/skills/web-scraper.md"
+    },
+    {
+      "id": "go-rod-master",
+      "title": "go-rod-master",
+      "pillar": "Lead Generation",
+      "description": "Comprehensive guide for browser automation and web scraping with go-rod (Chrome DevTools Protocol) including stealth anti-bot-detection patterns.",
+      "file": "/packs/skills/go-rod-master.md"
+    },
+    {
+      "id": "form-cro",
+      "title": "form-cro",
+      "pillar": "Lead Generation",
+      "description": "Optimize any form that is NOT signup or account registration — including lead capture, contact, demo request, application, survey, quote, and checkout forms.",
+      "file": "/packs/skills/form-cro.md"
+    },
+    {
+      "id": "x-twitter-scraper",
+      "title": "x-twitter-scraper",
+      "pillar": "Lead Generation",
+      "description": "X/Twitter automation skill for tweet search, follower export, posting, DMs, webhooks, MCP, SDKs, Hermes Tweet, and TweetClaw.",
+      "file": "/packs/skills/x-twitter-scraper.md"
+    },
+    {
+      "id": "apify-lead-generation",
+      "title": "apify-lead-generation",
+      "pillar": "Lead Generation",
+      "description": "Scrape leads from multiple platforms using Apify Actors.",
+      "file": "/packs/skills/apify-lead-generation.md"
+    },
+    {
+      "id": "junta-leiloeiros",
+      "title": "junta-leiloeiros",
+      "pillar": "Lead Generation",
+      "description": "Coleta e consulta dados de leiloeiros oficiais de todas as 27 Juntas Comerciais do Brasil. Scraper multi-UF, banco SQLite, API FastAPI e exportacao CSV/JSON.",
+      "file": "/packs/skills/junta-leiloeiros.md"
+    },
+    {
+      "id": "contract-writer",
+      "title": "contract-writer",
+      "pillar": "Legal & Compliance",
+      "description": "Drafts service agreements, freelance contracts, and partnership agreements with standard clauses and plain-language annotations explaining each section. Use when a user needs a professional contract template, wants to fo",
+      "file": "/packs/skills/contract-writer.md"
+    },
+    {
+      "id": "privacy-policy",
+      "title": "privacy-policy",
+      "pillar": "Legal & Compliance",
+      "description": "Writes GDPR and CCPA-compliant privacy policies for websites, apps, and online businesses with plain-language annotations explaining each section. Use when a user is launching a website, setting up e-commerce, collecting",
+      "file": "/packs/skills/privacy-policy.md"
+    },
+    {
+      "id": "gdpr-compliance-checklist",
+      "title": "gdpr-compliance-checklist",
+      "pillar": "Legal & Compliance",
+      "description": "Creates GDPR compliance checklists with data mapping, consent mechanisms, and breach response procedures. Use when ensuring your business complies with GDPR requirements.",
+      "file": "/packs/skills/gdpr-compliance-checklist.md"
+    },
+    {
+      "id": "return-policy",
+      "title": "return-policy",
+      "pillar": "Legal & Compliance",
+      "description": "Writes clear, customer-friendly return and refund policies for e-commerce stores, digital products, and service businesses with plain-language clauses and platform-specific formatting. Use when a user needs a return poli",
+      "file": "/packs/skills/return-policy.md"
+    },
+    {
+      "id": "saas-agreement",
+      "title": "saas-agreement",
+      "pillar": "Legal & Compliance",
+      "description": "Drafts SaaS subscription agreements with service levels, data ownership, and termination provisions. Use when creating terms for a software-as-a-service product.",
+      "file": "/packs/skills/saas-agreement.md"
+    },
+    {
+      "id": "terms-of-use-app",
+      "title": "terms-of-use-app",
+      "pillar": "Legal & Compliance",
+      "description": "Creates terms of use specifically for mobile apps with license grants, restrictions, and app store compliance. Use when launching or updating a mobile application.",
+      "file": "/packs/skills/terms-of-use-app.md"
+    },
+    {
+      "id": "client-agreement",
+      "title": "client-agreement",
+      "pillar": "Legal & Compliance",
+      "description": "Drafts client service agreements with scope, deliverables, timelines, revisions, and payment terms. Use when creating contracts for client engagements.",
+      "file": "/packs/skills/client-agreement.md"
+    },
+    {
+      "id": "defi-protocol-templates",
+      "title": "defi-protocol-templates",
+      "pillar": "Legal & Compliance",
+      "description": "Implement DeFi protocols with production-ready templates for staking, AMMs, governance, and lending systems. Use when building decentralized finance applications or smart contract protocols.",
+      "file": "/packs/skills/defi-protocol-templates.md"
+    },
+    {
+      "id": "compliance-checklist",
+      "title": "compliance-checklist",
+      "pillar": "Legal & Compliance",
+      "description": "Creates industry-specific regulatory compliance checklists with documentation requirements and audit preparation. Use when ensuring your business meets regulatory obligations.",
+      "file": "/packs/skills/compliance-checklist.md"
+    },
+    {
+      "id": "non-compete-agreement",
+      "title": "non-compete-agreement",
+      "pillar": "Legal & Compliance",
+      "description": "Creates non-compete agreements with reasonable scope, duration, geographic limits, and enforceability notes. Use when protecting business interests from competition.",
+      "file": "/packs/skills/non-compete-agreement.md"
+    },
+    {
+      "id": "customer-support-kb",
+      "title": "customer-support-kb",
+      "pillar": "Marketing",
+      "description": "Builds a complete customer support knowledge base with tiered FAQs, canned response templates, troubleshooting decision trees, and escalation protocols. Use when a user needs to systematize customer support, reduce respo",
+      "file": "/packs/skills/customer-support-kb.md"
+    },
+    {
+      "id": "brand-refresh",
+      "title": "brand-refresh",
+      "pillar": "Marketing",
+      "description": "Batch updates text and imagery across existing Canva designs when brand elements change, searching for affected designs and applying find-and-replace operations across all confirmed files. Use when a user has updated the",
+      "file": "/packs/skills/brand-refresh.md"
+    },
+    {
+      "id": "brand-voice-guide",
+      "title": "brand-voice-guide",
+      "pillar": "Marketing",
+      "description": "Creates a comprehensive brand voice guide with tone attributes, vocabulary lists, do's and don'ts, and platform-specific adaptations. Use when a user needs to document their brand voice for consistency, is onboarding wri",
+      "file": "/packs/skills/brand-voice-guide.md"
+    },
+    {
+      "id": "ad-copy",
+      "title": "ad-copy",
+      "pillar": "Marketing",
+      "description": "Writes high-converting ad copy for Facebook, Google, and LinkedIn with multiple creative variations, audience targeting suggestions, and optional ad graphics via Canva. Use when a user needs paid advertising copy, wants ",
+      "file": "/packs/skills/ad-copy.md"
+    },
+    {
+      "id": "email-deliverability-audit",
+      "title": "email-deliverability-audit",
+      "pillar": "Marketing",
+      "description": "Audits email practices for deliverability issues including sender reputation, authentication, and list hygiene. Use when emails are landing in spam or engagement rates are dropping.",
+      "file": "/packs/skills/email-deliverability-audit.md"
+    },
+    {
+      "id": "ambassador-program",
+      "title": "ambassador-program",
+      "pillar": "Marketing",
+      "description": "Designs brand ambassador programs with tiers, perks, responsibilities, content requirements, and tracking systems. Use when building a community of advocates who promote your brand.",
+      "file": "/packs/skills/ambassador-program.md"
+    },
+    {
+      "id": "social-proof-collector",
+      "title": "social-proof-collector",
+      "pillar": "Marketing",
+      "description": "Creates systems for collecting and displaying social proof: screenshots, reviews, UGC, and metrics badges. Use when building a process to gather testimonials and credibility signals.",
+      "file": "/packs/skills/social-proof-collector.md"
+    },
+    {
+      "id": "win-back-campaign",
+      "title": "win-back-campaign",
+      "pillar": "Marketing",
+      "description": "Builds re-engagement email and message sequences to win back churned subscribers, lapsed customers, or inactive users with personalized triggers, incentive strategies, and graceful exit paths. Use when a user has inactiv",
+      "file": "/packs/skills/win-back-campaign.md"
+    },
+    {
+      "id": "cold-outreach",
+      "title": "cold-outreach",
+      "pillar": "Marketing",
+      "description": "Builds personalized cold email and DM outreach sequences with research-backed personalization, multi-touch follow-up cadence, subject line formulas, and response-handling scripts for every outcome. Use when an entreprene",
+      "file": "/packs/skills/cold-outreach.md"
+    },
+    {
+      "id": "upsell-sequence",
+      "title": "upsell-sequence",
+      "pillar": "Marketing",
+      "description": "Builds post-purchase upsell and cross-sell email sequences that increase average order value through complementary offers, upgrades, and bundles timed to the customer journey. Use when a user wants to increase revenue fr",
+      "file": "/packs/skills/upsell-sequence.md"
+    },
+    {
+      "id": "client-crm",
+      "title": "client-crm",
+      "pillar": "Operations",
+      "description": "Creates a complete client relationship management system in Notion with pipeline stages, contact records, deal values, and follow-up tracking. Use when a user wants to replace spreadsheet-based client tracking, set up a ",
+      "file": "/packs/skills/client-crm.md"
+    },
+    {
+      "id": "delegation-framework",
+      "title": "delegation-framework",
+      "pillar": "Operations",
+      "description": "Builds task delegation systems with responsibility matrices, handoff templates, accountability tracking, and escalation protocols. Use when a solopreneur is hiring their first VA, a team lead is struggling with delegatio",
+      "file": "/packs/skills/delegation-framework.md"
+    },
+    {
+      "id": "retrospective",
+      "title": "retrospective",
+      "pillar": "Operations",
+      "description": "Facilitates project and sprint retrospectives using structured frameworks like Start/Stop/Continue, 4Ls, and Sailboat, producing actionable improvement plans with owners and deadlines. Use when a user wants to learn from",
+      "file": "/packs/skills/retrospective.md"
+    },
+    {
+      "id": "workflow-mapper",
+      "title": "workflow-mapper",
+      "pillar": "Operations",
+      "description": "Maps business processes into text-based flowcharts with decision points, handoffs, and timing estimates, then identifies bottlenecks and automation opportunities. Use when a user wants to document how their business actu",
+      "file": "/packs/skills/workflow-mapper.md"
+    },
+    {
+      "id": "time-audit",
+      "title": "time-audit",
+      "pillar": "Operations",
+      "description": "Analyzes time allocation across activities and recommends optimization strategies with categorization, value scoring, and reallocation plans. Use when a freelancer or solopreneur feels busy but unproductive, wants to fin",
+      "file": "/packs/skills/time-audit.md"
+    },
+    {
+      "id": "project-tracker",
+      "title": "project-tracker",
+      "pillar": "Operations",
+      "description": "Creates a project management database in Notion with tasks, statuses, owners, due dates, and priorities, pre-populated from a project brief or scope document. Use when a user needs to set up project tracking for a new en",
+      "file": "/packs/skills/project-tracker.md"
+    },
+    {
+      "id": "restaurant-sop",
+      "title": "restaurant-sop",
+      "pillar": "Operations",
+      "description": "Builds restaurant SOPs for kitchen operations, front-of-house service, food safety, and opening/closing procedures. Use when standardizing restaurant operations.",
+      "file": "/packs/skills/restaurant-sop.md"
+    },
+    {
+      "id": "escalation-procedure",
+      "title": "escalation-procedure",
+      "pillar": "Operations",
+      "description": "Defines escalation procedures with trigger criteria, escalation levels, response time requirements, and resolution tracking for support issues.",
+      "file": "/packs/skills/escalation-procedure.md"
+    },
+    {
+      "id": "morning-routine-builder",
+      "title": "morning-routine-builder",
+      "pillar": "Operations",
+      "description": "Designs personalized morning routines for entrepreneurs with time blocks, habits, and productivity triggers tailored to energy levels and business goals.",
+      "file": "/packs/skills/morning-routine-builder.md"
+    },
+    {
+      "id": "azure-mgmt-apicenter-py",
+      "title": "azure-mgmt-apicenter-py",
+      "pillar": "Operations",
+      "description": "Azure API Center Management SDK for Python. Use for managing API inventory, metadata, and governance across your organization.",
+      "file": "/packs/skills/azure-mgmt-apicenter-py.md"
+    },
+    {
+      "id": "sales-page",
+      "title": "sales-page",
+      "pillar": "Sales",
+      "description": "Writes high-converting long-form sales pages using the Problem-Agitate-Solution framework with benefit stacking, objection handling, social proof sections, and urgency elements. Use when a user needs a sales page for a d",
+      "file": "/packs/skills/sales-page.md"
+    },
+    {
+      "id": "spark-optimization",
+      "title": "spark-optimization",
+      "pillar": "Sales",
+      "description": "Optimize Apache Spark jobs with partitioning, caching, shuffle optimization, and memory tuning. Use when improving Spark performance, debugging slow jobs, or scaling data processing pipelines.",
+      "file": "/packs/skills/spark-optimization.md"
+    },
+    {
+      "id": "salesforce-development",
+      "title": "salesforce-development",
+      "pillar": "Sales",
+      "description": "Expert patterns for Salesforce platform development including Lightning Web Components (LWC), Apex triggers and classes, REST/Bulk APIs, Connected Apps, and Salesforce DX with scratch orgs and 2nd generation packages (2G",
+      "file": "/packs/skills/salesforce-development.md"
+    },
+    {
+      "id": "linkedin-cli",
+      "title": "linkedin-cli",
+      "pillar": "Sales",
+      "description": "Use when automating LinkedIn via CLI: fetch profiles, search people/companies, send messages, manage connections, create posts, and Sales Navigator.",
+      "file": "/packs/skills/linkedin-cli.md"
+    },
+    {
+      "id": "survey-builder",
+      "title": "survey-builder",
+      "pillar": "Sales",
+      "description": "Creates customer feedback surveys with strategically ordered questions, response scales, and analysis frameworks for measuring satisfaction, gathering product feedback, or validating new ideas. Use when a user needs to c",
+      "file": "/packs/skills/survey-builder.md"
+    },
+    {
+      "id": "agency-onboarding",
+      "title": "agency-onboarding",
+      "pillar": "Sales",
+      "description": "Creates a complete client onboarding system for agencies and service providers, including welcome email sequence, intake questionnaire, kickoff meeting checklist, and communication guidelines. Use when a user runs an age",
+      "file": "/packs/skills/agency-onboarding.md"
+    },
+    {
+      "id": "sales-enablement",
+      "title": "sales-enablement",
+      "pillar": "Sales",
+      "description": "Create sales collateral such as decks, one-pagers, objection docs, demo scripts, playbooks, and proposal templates. Use when a sales team needs assets that help reps move deals forward and close.",
+      "file": "/packs/skills/sales-enablement.md"
+    },
+    {
+      "id": "revops",
+      "title": "revops",
+      "pillar": "Sales",
+      "description": "Design and improve revenue operations, lead lifecycle rules, scoring, routing, handoffs, and CRM process automation. Use when marketing, sales, and customer success workflows need clearer operational structure.",
+      "file": "/packs/skills/revops.md"
+    },
+    {
+      "id": "coaching-framework",
+      "title": "coaching-framework",
+      "pillar": "Sales",
+      "description": "Builds systematized coaching session structures with intake forms, session agendas, progress tracking frameworks, and client communication templates. Use when a coach, consultant, or service provider wants to systematize",
+      "file": "/packs/skills/coaching-framework.md"
+    },
+    {
+      "id": "pitch-deck",
+      "title": "pitch-deck",
+      "pillar": "Sales",
+      "description": "Creates professional investor or client pitch decks in Canva from a conversational brief about the business, product, or service. Use when a user needs a presentation for fundraising, client proposals, partnership pitche",
+      "file": "/packs/skills/pitch-deck.md"
+    }
+  ]
+}
