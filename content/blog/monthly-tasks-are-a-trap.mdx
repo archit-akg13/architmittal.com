@@ -1,0 +1,59 @@
+---
+title: "Never Automate a Monthly Task First: Why Frequency Beats Pain"
+description: "Owners automate the monthly task that hurts most and ignore the daily one that costs more. Frequency, not pain, decides what gets automated first."
+date: "2026-08-18"
+tags: ["automation", "small-business", "operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/monthly-tasks-are-a-trap"
+---
+Frequency decides what you should automate first. Pain decides what owners actually automate first. These two almost never point at the same task, and picking by pain is the single most common way automation projects die in businesses between fifty lakh and fifty crore.
+
+Here is the pattern I see on nearly every first call. The owner has one task in mind before we have said hello. It is almost always a monthly task. GST reconciliation. The month-end stock count. Chasing distributors for outstanding payments before closing the books. It takes two or three hours, it is genuinely miserable, and they have been dreading it for the last week. So that becomes the automation project.
+
+Meanwhile, somebody in the same office is answering the same fifteen WhatsApp enquiries every single day, typing out the price list by hand, and nobody mentions it. It does not hurt enough to remember.
+
+## The arithmetic owners skip
+
+Take the two tasks side by side. A monthly task that takes two hours costs you two hours a month. A daily task that takes ten minutes costs you roughly five hours a month, and it never takes a holiday. The invisible task is more than twice the size of the dreaded one, before you even count the interruptions, because a ten-minute task that arrives at random breaks whatever the person was doing on either side of it.
+
+This is not a subtle difference that shows up after careful analysis. It is simple multiplication, and yet almost nobody does it, because pain and cost feel like the same thing. They are not. Pain is concentrated. Cost is spread out. A monthly task concentrates its pain into one bad afternoon, so it gets remembered, complained about, and budgeted for. A daily task dissolves its cost into the workday, so it gets classified as "just work" and never makes it onto anyone's list.
+
+If you want a rule you can apply without a consultant: multiply the minutes by the monthly frequency before you decide anything. The task with the biggest product wins. It will almost never be the one you walked in wanting to fix.
+
+## Why monthly automations rot
+
+The payback argument alone should settle it, but there is a second problem with monthly automations that only shows up after you have built a few and watched them fail. They rot in the dark.
+
+An automation that runs every day gets tested every day. When the format of an incoming message changes, when a supplier renames a column in their price sheet, when an API starts behaving differently, a daily automation breaks within twenty-four hours, someone notices, and it gets fixed while the context is still fresh. The system hardens because it is constantly exposed to reality.
+
+An automation that runs once a month gets twelve chances a year to prove itself, and eleven months a year to silently drift out of date. The bank changes its statement format in the second week of the month; your reconciliation script does not find out until month-end, at the exact moment you need it most, which is also the moment nobody has time to debug it. So someone does the task by hand "just this once", and then again the next month, and within a quarter you have a dead automation and a task that is done manually anyway. I have built these. I have watched exactly this happen, more than once, and the failure had nothing to do with the quality of the build. Low frequency starves an automation of the feedback it needs to stay alive.
+
+Monthly tasks also tend to be different every month in small ways. This month there is a credit note to adjust. Next month a vendor invoiced twice. The month after, an e-way bill mismatch. Each edge case is rare enough that you never coded for it, so the automation handles the easy ninety per cent and dumps the hard ten per cent back on a human, who now has to reconstruct the full context anyway. Daily tasks are the opposite: boring, repetitive, and nearly identical every time, which is precisely the shape of work software is good at.
+
+## A worked example: GST versus WhatsApp
+
+A trading business, the kind doing a few crore a year with a small office team, comes in wanting the GST workflow automated. Every month, someone spends an afternoon matching purchase invoices against the GSTR-2B, chasing suppliers whose invoices have not appeared, and getting everything to the CA before the filing deadline. It is the most hated afternoon of the month, so it is the obvious candidate.
+
+Sit in that office for a day, though, and you see the real leak. WhatsApp enquiries arrive all day: price of this item, availability of that one, where is my order, send the catalogue again. Each one takes a few minutes. Each one interrupts whoever picks it up. The same five questions account for most of the volume. Nobody proposed automating this because nobody experiences it as a problem. It is simply what the day is made of.
+
+The right first build here is the WhatsApp side: an automated first response that answers the common questions, sends the current price list, and hands anything unusual to a human. It runs hundreds of times a month, it fails loudly and early if something is wrong, and the team feels the relief within the first week, which buys you the trust to automate the next thing.
+
+And the GST afternoon? The honest answer is: do not automate it. Not first, and possibly not ever at this size. The judgment calls in reconciliation, deciding whether a mismatch is a supplier delay or a genuine error, deciding what to do about a vendor who has not filed, are exactly the parts software handles worst, and they are different every month. A CA or a competent accounts person, with a tight checklist and a fixed day of the month, handles it better than any workflow I could build you, and I say that as the person who would be paid to build it. The same logic applies with more force to anything annual. Nobody should be writing software for ITR season. It happens once a year. Pay a professional and keep your receipts organised.
+
+## The frequency ladder
+
+When I am deciding what to build for a client, the ordering is close to mechanical:
+
+- **Daily, multiple times a day:** automate first. This is where the payback lives and where the automation stays healthy.
+- **Daily, once a day:** automate next. Still frequent enough to matter and to self-test.
+- **Weekly:** automate selectively, and only after the daily layer is stable. The payback is slower and the rot risk is real.
+- **Monthly:** default to no. A checklist, a fixed calendar slot, and a named owner will beat an automation here far more often than owners want to believe. Automate only the dumb mechanical fragments inside the task, such as pulling the same report from the same portal, never the judgment.
+- **Quarterly or annually:** no. Document the process so it survives staff attrition, and pay a human.
+
+Notice that this ladder is the exact inverse of the pain ranking. The tasks that hurt most sit at the bottom, and the tasks nobody remembers sit at the top. That inversion is why owners consistently pick wrong, and why an automation consultant who agrees to build whatever the owner walked in asking for is doing them a disservice. The most valuable sentence in my line of work is often "we should not automate that".
+
+## What to do this week
+
+One action. Put a notepad, physical or a WhatsApp group with yourself, next to whoever handles your daily operations, and for five working days write down every task that gets done more than once a day, with a rough minute count. Do not filter, do not judge, just log.
+
+At the end of the week, multiply minutes by frequency and read the list from the top. The first automation worth paying for is sitting in the top three lines. It will look boring. It will be something nobody has ever complained about. That is exactly how you know it is the right one.
