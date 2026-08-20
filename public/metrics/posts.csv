@@ -7,7 +7,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 14 Aug '26 (Fri),19:05 IST,reel,hyperframes,published,https://www.instagram.com/reel/DcBbt9AiV5D/,,,,,,,14,0,0,0,,,,,underperformed — the hook likely did not stop the scroll
 14 Aug '26 (Fri),22:53 IST,carousel,subscription-cull,published,https://www.instagram.com/p/DcB13OrmE6T/,,,,,,,22,0,1,0,,,,,underperformed — the hook likely did not stop the scroll
 15 Aug '26 (Sat),14:04 IST,reel,whatsapp-gap,published,https://www.instagram.com/reel/DcDeBBVnT6e/,,,,,,,28,0,0,0,,,,,underperformed — the hook likely did not stop the scroll
-15 Aug '26 (Sat),19:58 IST,carousel,the-third-follow-up-message,published,https://www.instagram.com/p/DcEGoLmmoMn/,,,,,,,119,0,1,0,,,,,steady
+15 Aug '26 (Sat),19:58 IST,carousel,the-third-follow-up-message,published,https://www.instagram.com/p/DcEGoLmmoMn/,,,,,,,120,0,1,0,,,,,steady
 16 Aug '26 (Sun),10:34 IST,carousel,agent-postmortem,published,https://www.instagram.com/p/DcFq0twGslQ/,,,,,,,7,0,1,0,,,,,underperformed — the hook likely did not stop the scroll
 17 Aug '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,missing 1 carousel · carousel: ERROR: public/ig/c-whatsapp-gap already exists. Pass --force to overwrite.,
 18 Aug '26 (Tue),10:34 IST,carousel,tool-nanobot,published,https://www.instagram.com/p/DcK0fdZGf4o/,,,,,11,0,18,0,2,0,,,64,,underperformed — the hook likely did not stop the scroll
@@ -15,7 +15,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 18 Aug '26 (Tue),19:04 IST,reel,tr-chrome-devtools-mcp,published,https://www.instagram.com/reel/DcLuxmkDf6_/,,,,,119,0,119,0,0,1,,,0,,steady; 1 save(s)
 19 Aug '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,missing 1 carousel · carousel: ERROR: public/ig/c-workflow-ai-web-researcher-for-sales already exists. Pass --force to overwrite.,
 19 Aug '26 (Wed),14:04 IST,reel,tr-claude-plugins-official,published,https://www.instagram.com/reel/DcNxKd7Ckbe/,11,0,75,0,109,0,109,0,1,0,582,45,0,,steady
-19 Aug '26 (Wed),19:04 IST,reel,tr-ai-agent-book,published,https://www.instagram.com/reel/DcOTh7_D9Pr/,0,0,6,0,10,0,10,0,0,0,,67,0,,early days (20h in)
+19 Aug '26 (Wed),19:04 IST,reel,tr-ai-agent-book,published,https://www.instagram.com/reel/DcOTh7_D9Pr/,0,0,6,0,10,0,10,0,0,0,,67,0,,early days (21h in)
 20 Aug '26 (Thu),19:00 IST,reel,tr-awesome-claude-code,scheduled,,,,,,,,,,,,,,,,repo reserved: hidden until posted
 21 Aug '26 (Fri),10:30 IST,carousel,workflow-ai-web-researcher-for-sales,scheduled,,,,,,,,,,,,,,,,
 21 Aug '26 (Fri),14:00 IST,reel,tr-voxcpm,scheduled,,,,,,,,,,,,,,,,repo reserved: hidden until posted
