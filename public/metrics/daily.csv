@@ -2,7 +2,7 @@ date,published_carousels,published_reels,views_total_now,comments_total_now,view
 12 Aug '26 (Wed),0,4,456,1,,,,OK,
 14 Aug '26 (Fri),1,1,36,0,-92,-100,,OK,
 15 Aug '26 (Sat),1,1,148,0,311,,,OK,
-16 Aug '26 (Sun),1,0,3,0,-98,,,OK,
-18 Aug '26 (Tue),1,2,273,0,9000,,,OK,
+16 Aug '26 (Sun),1,0,4,0,-97,,,OK,
+18 Aug '26 (Tue),1,2,273,0,6725,,,OK,
 19 Aug '26 (Wed),0,2,121,0,-56,,,MISS — missing 1 carousel · carousel: ERROR: public/ig/c-workflow-ai-web-researcher-for-sales already exists. Pass --force to overwrite.,"The tool-discovery reel (Claude plugins) pulled 77 views versus 5 for the AI-agent-book reel, confirming the tool lane works while book-style content is dead weight, but zero comments and saves on both means neither hook earned engagement. Tomorrow, post only tool-discovery reels and end each with an explicit comment-trigger CTA tied to the DM funnel."
 20 Aug '26 (Thu),0,1,2,0,-98,,18,MISS — missing 1 carousel · carousel: ERROR: public/ig/c-workflow-ai-web-researcher-for-sales already exists. Pass --force to overwrite. · business reel: null · tool reel: null,"Nothing worked today: the ""nanobot"" reel reached 1 view with zero comments and saves, versus 77 views for Tuesday's Claude-plugins reel, so the topic failed distribution — obscure tool names give viewers no reason to stop. Tomorrow, lead with one widely recognized tool (Claude, n8n, ChatGPT) in the hook's first three words."
