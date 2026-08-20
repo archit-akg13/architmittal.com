@@ -1,0 +1,63 @@
+---
+title: "Your AI agent was free. The checking wasn't. That is the real cost"
+description: "The honest cost of an AI workflow is the human minutes spent verifying its output. A task that needs full review has saved you nothing."
+date: "2026-08-20"
+tags: ["ai-automation", "business-operations", "cost-of-automation"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/review-time-is-the-real-cost"
+---
+The real cost of an AI workflow is not the subscription. It is the human minutes spent checking what the AI produced. If a task still needs a full line-by-line review before anyone can act on it, the automation has saved you nothing. You have not removed the work. You have converted it from doing into checking, and checking someone else's work is often slower, more boring, and more error-prone than doing it yourself.
+
+This is the accounting almost nobody does. The tool is cheap or free, so the workflow feels free. But your accountant's hour is not free. Your operations manager's afternoon is not free. Your own attention, the scarcest thing in a business between fifty lakh and fifty crore, is definitely not free. Until you count review time as a cost, you cannot tell a good automation from a decorative one.
+
+## The GST example
+
+Here is the version of this I have watched play out in real businesses.
+
+An owner sets up an AI workflow to prepare GST filings. The agent reads purchase invoices, extracts vendor GSTINs, invoice numbers, taxable values and tax amounts, and drafts the return data. On demo day it looks like magic. Forty invoices processed in the time it takes to make tea.
+
+Then the accountant sits down with the output. She knows that a wrong ITC claim does not produce a polite error message. It produces a mismatch with GSTR-2B, a notice months later, interest, and hours of reconciliation. So what does she do? She opens every invoice and checks every extracted line against the original.
+
+Now do the honest arithmetic. Before the AI, she read the invoice and typed the entry. After the AI, she reads the invoice and compares it to the AI's entry. The reading has not gone away. A comparison of two things is not obviously faster than a transcription of one. And she has gained a new failure mode that did not exist before: the AI is confidently wrong in ways a tired human never is. It will read a GSTIN with two digits swapped and present it in a clean, plausible format. A human typo looks like a typo. An AI error looks like the truth.
+
+The agent was free. The checking wasn't. Net saving on this task: roughly zero, sometimes negative.
+
+## The question that actually matters
+
+Before automating anything, ask one question: after the AI does this, how much of the output will a human still need to verify?
+
+There are only three honest answers, and they define three categories.
+
+**Checking is much cheaper than doing.** A human can glance at the output and know it is right, or wrongness is cheap. Drafting a reply to a routine WhatsApp enquiry is like this. The owner reads the draft in five seconds; writing it would have taken two minutes. Summarising a long email thread is like this. So is generating a first draft of a job description. Here automation genuinely pays, because verification is a glance and the cost of a miss is small.
+
+**Checking costs about the same as doing.** Data entry from unstructured documents into systems where errors matter. Extraction of figures that feed a filing. Translation of a contract clause. Here the review is a full re-derivation of the answer, so the AI has merely added a step. This is the category owners most often mistake for the first one, because the demo only shows the doing, never the checking.
+
+**Checking costs more than doing, or a miss is unaffordable.** Anything where an error is expensive, hard to detect, or lands on you legally. Final GST and TDS figures. Price quotes sent to customers. Payroll. Regulatory correspondence. Bank transfers. Here, if you are honest, the review must be total, by someone senior, and the AI's fluency actively works against the reviewer because fluent output disarms suspicion.
+
+## Where the answer is: don't automate this
+
+For that third category, my advice is the one thing an automation consultant is not supposed to say. Do not automate it. Not yet, and possibly not ever with the current generation of tools.
+
+Do not let an AI compute the final figures in a statutory filing. Do not let it send prices to customers unsupervised. Do not let it reply to a legal notice. Do not let it approve payments. The failure mode is not that it will be wrong often. It is that it will be wrong rarely, invisibly, and with a straight face, on the one line that costs you a client or brings a notice from the department. A workflow that is right most of the time but must be trusted all of the time is not an asset. It is a liability with a monthly subscription.
+
+Every vendor pitch you will hear this year says the opposite, because the vendor is paid on the subscription, not on your review hours or your penalty interest. The people selling you the agent do not sit with your accountant in filing week.
+
+## What actually works: automate the checking, not the judgement
+
+The workflows that have held up in businesses I have built systems for share a pattern. The AI does the tedious part, and the design shrinks the review instead of pretending it away.
+
+Structure the work so verification is a comparison the machine can do. In the GST case, the winning system was not "AI prepares the return". It was "AI extracts invoice data, then a plain script reconciles it against GSTR-2B automatically, and a human looks only at the mismatches". The human review shrank from every line to the exception list, and the exceptions were exactly where human judgement was needed anyway.
+
+The same shape works for distributor orders arriving on WhatsApp. Let the AI parse the message into a draft order, then have the system check every parsed item against your actual price list and stock, and flag anything that does not match. The staff member confirms flagged lines only. The AI never invents a price, because prices come from your master data, not from the model.
+
+Two design rules fall out of this. First, never let the AI be the source of truth for anything numeric; let it route, draft, extract and flag, while numbers come from systems that cannot hallucinate. Second, build the workflow so the default human action is reviewing exceptions, not reviewing everything. If you cannot define what an exception looks like, you are not ready to automate the task.
+
+## Fluency is not accuracy
+
+One more thing owners consistently underweight. Review quality decays. In week one, your accountant checks every line the AI produces. By week six, the AI has been right so often that she skims. By week twelve she approves without reading, and the workflow has silently become unsupervised on exactly the tasks you decided needed supervision. The polish of AI output accelerates this decay, because well-formatted, confident text reads as correct. Any workflow whose safety depends on a human staying vigilant against a mostly-correct machine will fail; the only durable protections are the mechanical ones described above.
+
+## What to do this week
+
+Pick the one AI workflow you already run that you are proudest of. For the next ten outputs it produces, have whoever reviews them note two timings: minutes spent reviewing, and their guess at minutes the task would have taken by hand. Ten outputs, two numbers each, one page.
+
+If review time is a small fraction of doing time, you have a real automation. Scale it. If the two numbers are close, you have a decorative one, and the honest choices are to redesign it around exception-checking or to switch it off. Either way, you will know something about your business that the vendor demo was built to hide: what the free agent actually costs.
