@@ -27,6 +27,7 @@ import {
   parseArgs,
   repoRoot,
   waitForLiveAssets,
+  syncDirToVps,
 } from './_common.mjs'
 
 const MAX_IG_MB = 1000 // Instagram's own ceiling
@@ -123,6 +124,7 @@ async function main() {
   fs.copyFileSync(file, dest)
   log(`  wrote ${path.relative(root, dest)}`)
 
+  syncDirToVps(outDir, `ig/${slug}`)
   commitAndPush({
     paths: [dest],
     message: `Add Instagram reel asset: ${slug}`,

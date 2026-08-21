@@ -31,6 +31,7 @@ import {
   parseArgs,
   repoRoot,
   waitForLiveJpegs,
+  syncDirToVps,
 } from './_common.mjs'
 
 // Instagram portrait carousel. The Graph API rejects PNG, so everything becomes JPEG.
@@ -158,6 +159,7 @@ async function main() {
     log(`  wrote ${path.relative(root, dest)}  (${kb} KB)`)
   }
 
+  syncDirToVps(outDir, `ig/${slug}`)
   commitAndPush({
     paths: [outDir],
     message: `Add Instagram carousel assets: ${slug}`,

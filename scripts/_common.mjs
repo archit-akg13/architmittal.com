@@ -274,3 +274,22 @@ export function parseArgs(argv) {
   }
   return out
 }
+
+/**
+ * Copy a public/ subtree straight to the VPS. nginx serves /ig/ and /metrics/ from disk,
+ * so the files are live in seconds and do not depend on the deploy finishing — the deploy
+ * collided with itself on 19–20 Aug and the publish windows were lost waiting on it.
+ */
+export function syncDirToVps(localDir, relUnderPublic) {
+  try {
+    execFileSync('ssh', ['-o', 'BatchMode=yes', '-o', 'ConnectTimeout=10', 'kuber-cockpit',
+      `mkdir -p /var/www/architmittal.com/public/${relUnderPublic}`], { stdio: 'ignore', timeout: 30e3 })
+    execFileSync('scp', ['-o', 'BatchMode=yes', '-q', '-r', `${localDir}/.`,
+      `kuber-cockpit:/var/www/architmittal.com/public/${relUnderPublic}/`], { stdio: 'ignore', timeout: 300e3 })
+    log(`synced to VPS: /${relUnderPublic}/`)
+    return true
+  } catch (err) {
+    log(`VPS sync failed (${err.message.split('\n')[0]}) — falling back to the deploy`)
+    return false
+  }
+}
