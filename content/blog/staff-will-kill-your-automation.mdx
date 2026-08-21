@@ -1,0 +1,67 @@
+---
+title: "Automations die because staff work around them, not because of bugs"
+description: "Automations rarely die from bugs. Staff quietly work around them until they stop mattering. Spot the signs of silent sabotage and fix how you introduce them."
+date: "2026-08-21"
+tags: ["automation", "team-adoption", "indian-smb"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/staff-will-kill-your-automation"
+---
+Most automations I have seen fail were still running on the day they were declared dead. The server was up. The workflow triggered on time. The logs were clean. What killed them was not a bug. It was a person in your office who decided, quietly and without any announcement, to stop feeding the system, and went back to the notebook, the WhatsApp group, or the Excel file they trusted before you arrived with your improvement.
+
+This is the failure mode nobody selling automation talks about, because it cannot be fixed with better software. Your automation does not have a technical problem. It has a political problem. And if you introduced it the way most owners do, that problem started on day one.
+
+## The distributor order system that nobody was using
+
+A pattern I have watched play out with distributor-led businesses goes like this. Orders used to come in on phone calls and WhatsApp messages to one senior sales coordinator. She kept everything in her head and in a register. So the owner gets an order-capture system built. Distributors get a link or a WhatsApp flow, orders land in a sheet, stock gets checked automatically, the dispatch team gets a clean list every morning.
+
+Three months later, the owner opens the dashboard and finds a fraction of the real order volume in it. The rest is still flowing through the coordinator's phone. When a distributor calls her directly, she does not tell him to use the link. She takes the order herself, and enters it into the system later, sometimes days later, sometimes never. Dispatch has learnt that the morning list is incomplete, so they call her anyway to confirm. Which means the list is now decorative, which means the automation is dead. It runs every day. It is dead.
+
+Nobody sabotaged anything in a way you could point to. The coordinator never refused. She simply kept doing her job the way that worked, and the system starved.
+
+## Why your best people are the ones who kill it
+
+Here is the uncomfortable part. The person working around your automation is usually not lazy or stupid. It is often your most capable employee, and their reasons are rational.
+
+First, the automation was aimed at them. The tasks worth automating are the ones someone currently controls: enquiry handling, order entry, follow-ups, report preparation. When you automate that, the person who owned it hears something you never said out loud: the thing that made you valuable is now a machine. You may see efficiency. They see a demotion, or a rehearsal for one.
+
+Second, the automation made their job worse before it made anything better. Every new system has a period where the person must do both, run the old way and feed the new way. If entering data into your system is extra work on top of the real work, and nobody reduced their load to make room for it, working around it is not sabotage. It is triage.
+
+Third, they carry the blame for its mistakes. When the automated WhatsApp reply quotes an outdated price, the customer does not shout at the workflow. He shouts at whoever picks up the phone. Staff learn very quickly that when the system is wrong, they get burnt, and when they quietly bypass the system, everything works. You would bypass it too.
+
+## The signs it is already happening
+
+You will not be told. You have to look. These are the signals I check for, and any two of them together mean the automation is on life support.
+
+**A parallel record exists.** There is a personal Excel file, a private WhatsApp group, or a physical register that holds the real data. The system holds a delayed, cleaned-up copy. Ask casually where someone would check a detail from last Tuesday. Watch where they actually look.
+
+**Data arrives in batches.** Entries appear in the system in clumps, ten at a time, late in the evening or just before your review meeting. That means nobody is working inside the system. Someone is backfilling it to keep you satisfied. The automation has become a reporting chore, not a workflow.
+
+**"The system was down."** Every workaround needs a socially acceptable excuse, and this is the universal one. If you hear it more than rarely, check the logs. When the logs say it was up, you have found not a technical issue but a permission structure: your team has agreed among themselves that this excuse is allowed.
+
+**One person has become the priest of the system.** Only she knows how to fix stuck entries, everyone routes through her, and when she is on leave the automation pauses. That is not adoption. That is the old single-point dependency wearing a new costume.
+
+**Exceptions grow instead of shrinking.** Every workflow starts with genuine special cases. In a healthy rollout, they get folded in and the exception list shortens. If "this one is different, I will handle it manually" covers more cases every month, the manual path is winning, and it will win completely.
+
+## What to change about how you introduce it
+
+The fix is almost never in the software. It is in the rollout, and most of it must happen before the first automated message is ever sent.
+
+**Name the person whose power it touches, and recruit them first.** Before building, sit with the person who currently owns the task. Not to inform them. To have them design the exception handling, because they are the only one who knows where the bodies are buried, which distributor always pays late, which customer must never get an automated reply. Make them the system's expert rather than its victim, and say plainly what their job becomes afterwards. If you cannot answer that question honestly, they will answer it for themselves, pessimistically, and act accordingly.
+
+**Remove the old path deliberately, or accept that it will win.** As long as calling the coordinator works better than using the link, the link loses. Adoption is not a motivation problem, it is a routing problem. Either the old channel formally redirects into the new one, with time allocated for that work, or you have built a second door next to an open one.
+
+**Let the automation take the blame in public.** The first time it sends a wrong price or misses an enquiry, how you react decides everything. If the operator gets scolded, everyone learns to bypass. If you say, in front of the team, that the system got it wrong and the system will be fixed, you have made it safe to keep using. You get perhaps two or three such moments. Do not waste them.
+
+**Never let the automation double as a surveillance tool by stealth.** If the same dashboard that routes enquiries also silently ranks staff response times, they will discover it, and they will manage the metric instead of the work. If you want to measure people, say so separately. Mixing the two poisons the tool.
+
+## And sometimes, do not automate it
+
+Some of the best advice I can give a client is to leave a process alone, and this is exactly where.
+
+If a process survives on one person's judgement, automate the drudgery around the judgement, never the judgement itself. Your accountant reconciling mismatched invoices before a GST filing is doing detective work; automate the data pull and the matching report, and leave the decision human. The senior salesperson's WhatsApp relationship with your twenty biggest buyers is an asset built over years; put an automated catalogue in her hands to send, but do not put a bot between her and them. And a process that changes every month, because the business itself is still finding its shape, should stay manual until it stops moving. Automating an unstable process just means rebuilding the automation every month, and each rebuild resets your team's trust to zero.
+
+An automation your team feels replaced by will die. An automation your team feels armed by gets defended, extended, and shown off to visitors.
+
+## This week
+
+Pick the one automation you have already paid for that feels underused. Do not open its dashboard. Instead, sit next to the person who is supposed to live in it and ask one question: "Where do you keep your own copy?" Then stay quiet. The notebook, sheet, or chat thread they show you is the real system, and everything it captures that your automation does not is your actual requirements document. Rebuild from that, with them, and this time the system will have a defender instead of an assassin.
