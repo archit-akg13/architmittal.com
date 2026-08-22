@@ -22,16 +22,20 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const { name, email } = await request.json()
+    const body = await request.json()
+    const email = body.email
+    // /packs asks for email only; a missing name is recorded, not rejected.
+    const name = body.name || 'packs'
+    const source = typeof body.source === 'string' ? body.source.slice(0, 40) : 'site'
 
-    if (!name || !email) {
-      return NextResponse.json({ error: 'Name and email are required' }, { status: 400 })
+    if (!email) {
+      return NextResponse.json({ error: 'Email is required' }, { status: 400 })
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: 'Invalid email format' }, { status: 400 })
     }
 
-    let subscribers: Array<{ name: string; email: string; subscribedAt: string }> = []
+    let subscribers: Array<{ name: string; email: string; source?: string; subscribedAt: string }> = []
     try {
       const data = await fs.readFile(DATA_FILE, 'utf-8')
       subscribers = JSON.parse(data)
@@ -43,7 +47,8 @@ export async function POST(request: NextRequest) {
     const cappedEmail = capped(email, FIELD_LIMITS.email)
 
     if (subscribers.some((s) => s.email === cappedEmail)) {
-      return NextResponse.json({ error: 'Already subscribed' }, { status: 409 })
+      // Already on the list is a success for the visitor — unlock, don't scold.
+      return NextResponse.json({ success: true, message: 'Already on the list — unlocked.' })
     }
 
     if (atCapacity(subscribers, MAX_SUBSCRIBERS)) {
@@ -60,13 +65,14 @@ export async function POST(request: NextRequest) {
     subscribers.push({
       name: cappedName,
       email: cappedEmail,
+      source,
       subscribedAt: new Date().toISOString(),
     })
     await fs.mkdir(DATA_DIR, { recursive: true })
     await fs.writeFile(DATA_FILE, JSON.stringify(subscribers, null, 2))
 
     // Telegram notification (fire and forget)
-    notifyTelegram(`📧 New subscriber!\nName: ${cappedName}\nEmail: ${cappedEmail}`)
+    notifyTelegram(`📧 New subscriber (${source})\nName: ${cappedName}\nEmail: ${cappedEmail}`)
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully!' })
   } catch {
