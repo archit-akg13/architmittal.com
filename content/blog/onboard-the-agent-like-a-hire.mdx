@@ -1,0 +1,101 @@
+---
+title: "Your AI agent drifts because nobody gave it a job description"
+description: "AI agents fail in small businesses for the same reason new hires do: no defined duties, no escalation path, no review date, no owner. Scope it like an employee."
+date: "2026-08-22"
+tags: ["ai-agents", "automation", "operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/onboard-the-agent-like-a-hire"
+---
+An AI agent that has no job description will invent one. That is the whole reason agents drift, and it is the reason most of the agents I have seen deployed inside Indian businesses are quietly switched off within a few months of going live.
+
+Nobody would hire a person, point them at the office, and say "handle things". Yet that is exactly how most owners deploy an agent. They connect it to WhatsApp or email or the accounts folder, give it a paragraph of instructions, and let it run. Then they are surprised when it starts answering questions it was never meant to answer, promising delivery dates it cannot know, or filing something that a human should have looked at first.
+
+The fix is not a better model. It is the same discipline you already use for people: defined duties, an escalation path, a probation period with a review date, and one named person who is accountable for it.
+
+## What drift actually looks like
+
+Drift is not a dramatic failure. It is a slow widening of scope that nobody approved.
+
+A distributor in the FMCG trade sets up an agent to acknowledge incoming orders on WhatsApp and log them into a sheet. Week one, it does that. Week three, a retailer asks "when will my stock reach?" and the agent, being helpful, answers with a guess. Week five, a retailer asks for a discount, and the agent, having seen discounts mentioned in earlier messages, offers one. None of this was in the brief. All of it followed naturally from "be helpful to customers", which is what the owner wrote because they did not know what else to write.
+
+By the time the owner notices, the agent has made commitments in writing to twenty retailers, and the sales team is cleaning up after it.
+
+The agent did not malfunction. It did what an unsupervised new employee does: it filled the vacuum with its own judgement. The mistake was upstream, at the moment of deployment.
+
+## The job description
+
+A job description for an agent is not a prompt. It is a one-page document the owner can read and sign off, written in plain language, and it answers four questions.
+
+**What does it do.** Listed as specific tasks, not outcomes. "Acknowledge every incoming order within the working day, extract product, quantity and delivery address, and append a row to the orders sheet" is a duty. "Handle customer orders" is a vacuum.
+
+**What does it not do.** This section is longer than the first, and most owners skip it entirely. The agent does not quote prices. It does not confirm delivery dates. It does not discuss credit terms. It does not respond to complaints. Every line here is a place where the agent would otherwise drift.
+
+**Who does it hand over to, and when.** If a message falls outside the duty list, the agent says one fixed sentence ("I'll have someone from the team get back to you today") and tags a named human. Not "the team". A person, by name, with a phone number, who has agreed to receive those handovers.
+
+**Who owns it.** One person in the business is answerable for the agent's behaviour, the same way a manager is answerable for a junior. If the agent says something wrong to a customer, the question "whose agent is this?" must have an immediate answer. In most of the businesses I work with, this ends up being the owner for the first few months, and that is correct. You would not hand a new hire to someone who has never managed before.
+
+If you cannot write this page, you are not ready to deploy. That is useful information, not a setback.
+
+## Probation, with a date in the calendar
+
+New staff get thirty, sixty or ninety days before they are confirmed. The agent should get the same, and the review should be as concrete as a staff review.
+
+During probation, every action the agent takes is logged somewhere a human reads. Not a dashboard nobody opens, but a daily or weekly digest that lands in front of the owner: what it handled, what it escalated, what it declined. The owner reads the ten worst exchanges each week. Not the best ones. The worst.
+
+The review date is set on day one and put in the calendar. On that date, the owner answers three questions:
+
+1. Did it stay inside its duty list, or did it drift?
+2. Of the things it escalated, how many should it have handled, and of the things it handled, how many should it have escalated?
+3. Has anyone in the business learned to distrust it, and why?
+
+The outcome is one of three: confirm it as is, narrow its duties, or retire it. Expanding its scope is a separate decision, taken later, with a fresh probation for the new duties.
+
+The third question is the one that matters most. Staff stop using a tool long before anyone formally decides it has failed. If your accounts person has quietly gone back to doing the reconciliation by hand because the agent got one thing wrong in May, the agent has already been retired. You just have not been told.
+
+## A worked example: the GST filing assistant
+
+A trading firm with a few dozen suppliers wants an agent to prepare the monthly GST return. The temptation is to give it access to the purchase invoices, the sales register and the portal login, and tell it to "handle GST".
+
+Here is the job description that actually holds up.
+
+**Duties.** Collect purchase invoices from the shared folder and the accounts inbox. Extract GSTIN, invoice number, date, taxable value and tax amounts into the reconciliation sheet. Match each purchase invoice against the supplier's filing as reflected in the auto-drafted input credit statement. Flag every mismatch, missing invoice and duplicate. Produce a summary for the accountant by the fifth of the month.
+
+**Not its job.** It does not file. It does not decide whether a mismatched credit should be claimed. It does not contact suppliers about missing invoices. It does not touch the portal at all.
+
+**Escalation.** Any invoice it cannot read with confidence goes into a separate list for the accountant. Any supplier whose invoices are missing from the credit statement for two consecutive months goes to the owner, because that is a commercial conversation, not a data entry one.
+
+**Owner.** The accountant, with the business owner reviewing the digest during probation.
+
+**Probation.** Three filing cycles. The accountant runs the old process in parallel for all three, because a GST error surfaces months later as a notice, and you do not want to discover it then.
+
+Notice what the agent is doing here: the tedious, repetitive, high-volume part. Notice what it is not doing: anything where a wrong answer costs money or invites a notice. That boundary is the job description, and it is the difference between an agent that survives and one that gets switched off after the first scare.
+
+## Where the honest answer is: do not automate this
+
+Some things should not get an agent at all, regardless of how well you scope it.
+
+**Anything where the agent's answer is a commitment.** Prices, delivery dates, credit terms, refund approvals. An agent can draft a reply for a human to send. It should not send it. The cost of one wrong commitment, made in writing on WhatsApp, exceeds the time saved on a thousand right ones.
+
+**Complaints and disputes.** A customer who is already angry does not want to discover they are talking to software. The agent can detect the complaint and route it. It should not respond.
+
+**Anything you cannot describe as a duty list.** If the honest description of the job is "use judgement", it is a human's job. This is why "handle my inbox" fails and "extract invoice details from the inbox" works. Judgement does not go on a duty list.
+
+**Any process your team does not understand well enough to check.** If nobody in the business can tell whether the agent's output is right, the agent is not saving work. It is moving the risk to a place where you cannot see it. Fix the process first, then consider the agent.
+
+**The thing that breaks during ITR season or year end.** Deploying a new agent in the weeks before a filing deadline is how you end up running two broken processes at once. Pilot in a quiet month.
+
+Most consultants will not tell you this, because they are paid to deploy. I am telling you because I have watched the alternative: an owner who lost a long-standing distributor over a discount the agent offered without authority, and who then, reasonably, stopped trusting automation altogether. The bad deployment cost them more than the years of good ones it prevented.
+
+## Why this is harder than hiring a person
+
+A new employee pushes back. They say "I'm not sure I should be answering this" and come and ask you. An agent does not. It answers confidently, every time, including when it should not. That is why the "not its job" section has to be written down rather than assumed. A person absorbs the unwritten rules of the office in a fortnight. An agent never will, unless you write them.
+
+It also means the owner's instinct to "let it learn on the job" is backwards. People learn from feedback. An agent learns from whoever rewrites its instructions, and if nobody is scheduled to do that, it does not learn at all. It just keeps doing whatever the vacuum in its brief allows.
+
+## This week
+
+Pick one agent you have running, or the one you are about to deploy. Sit down for half an hour and write its job description on a single page: duties, not-duties, escalation contact by name, owner by name, review date.
+
+Then put the review date in your calendar, and for the next seven days, read the ten worst things the agent did, not the ten best.
+
+If you cannot fill in the "not its job" section with at least as many lines as the duties, do not switch it on yet. That blank is where the drift is going to come from.
