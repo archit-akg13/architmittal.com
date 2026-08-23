@@ -1,0 +1,94 @@
+---
+title: "Automate the quotation, not the conversation"
+description: "The highest-value AI job in most Indian SMBs is turning a rough enquiry into a priced, formatted quote the same day. That beats any chatbot on the front end."
+date: "2026-08-23"
+tags: ["automation", "quotations", "indian-smb"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/quotations-not-chatbots"
+---
+The most valuable thing AI can do in most Indian businesses between fifty lakh and fifty crore is not talk to customers. It is to take a rough enquiry that arrived on WhatsApp at 11am and turn it into a priced, formatted, correct quotation that goes out before the customer leaves for the day. Everything else that gets sold as "AI for business" sits downstream of that, and most of it is worth less.
+
+I have built both kinds of system. The chatbots were more fun to demo. The quotation engines were the ones that were still running a year later.
+
+## Where the money actually leaks
+
+Walk through how an enquiry moves in a typical trading, manufacturing or services firm at this size.
+
+A distributor sends a WhatsApp message: "Need rate for 40 cartons of the 500ml, Pune delivery, urgent." The owner or a sales person reads it. They know the base rate is in a sheet somewhere. The freight to Pune depends on whether it goes by part-load or full truck. The distributor is on a slab that changes above a certain volume. GST is straightforward but someone still has to type it. The quotation format is a Word template that the last person who edited it broke.
+
+So the reply is "Will send by evening." Evening becomes tomorrow. Tomorrow the distributor has already bought from someone who answered in an hour.
+
+Nothing about this was a conversation problem. The customer communicated perfectly. The business failed at arithmetic, lookup and formatting, which is the most boring possible category of failure and also the one software is best at.
+
+## What a chatbot would have done here
+
+A front-end bot would have replied instantly: "Thank you for your enquiry. Please share your requirements and our team will get back to you." The distributor has already shared their requirements. The bot has added a message and removed nothing.
+
+The better bots can ask clarifying questions. In practice they ask the fourth question the customer has already answered, or ask it in English to someone who wrote in Hinglish, and the customer goes quiet. I have watched the transcripts. The customer's last message is usually a phone number and "call me", which is the customer opting out of the automation entirely.
+
+The conversation layer is where the customer is most sensitive to being handled by a machine, and where the machine has the least structured information to work with. That is the worst place to put AI and the place everyone puts it first, because it is visible.
+
+## What a quotation engine does instead
+
+Strip the problem down. An enquiry, in whatever form it arrives, contains a handful of facts: who is asking, what they want, how much, where, by when. The job is to extract those facts, fill in what is missing from what you already know about the customer, apply your own pricing rules, and produce a document.
+
+Built properly, the flow looks like this:
+
+1. The WhatsApp message, email or voice note lands in one inbox.
+2. A language model reads it and pulls out a structured enquiry: customer, items, quantities, location, urgency. Where it cannot read something, it says so rather than guessing.
+3. A plain rules layer, not the model, does the pricing. Rate card, customer slab, freight matrix, GST. This part is deterministic and auditable.
+4. A template renders the PDF with your letterhead, terms, validity and bank details.
+5. A human sees the draft, with the extracted facts and the computed lines side by side, and presses approve or edits.
+6. It goes out on the same channel the enquiry came in on.
+
+The model's only job is step two. Everything that touches money is ordinary code that a chartered accountant can read. This matters more than any model choice. I have seen a system where the model was allowed to "estimate" freight when the lookup failed, and it produced a confident, well-formatted quote with freight that was off by a city. The customer accepted it. The business honoured it. That lesson costs real money and it only has to be learnt once.
+
+## A worked example: the GST-season slowdown
+
+Here is the version of this I see most often. A firm doing job work or contract manufacturing has one person who "does the quotes". That person also does the GSTR-1 and GSTR-3B filings, handles the CA's queries, and chases the two customers who pay late.
+
+In the second and third week of every month, quotations slow down. Nobody decided this. The person is simply doing returns. Enquiries that arrive on the 12th get answered on the 19th. The owner experiences this as "business is slow in the middle of the month" and never connects it to the filing calendar.
+
+When you put the quotation engine in, the bottleneck moves. Enquiries get drafted within minutes regardless of what date it is. The same person still approves them, but approving a pre-filled draft is a two-minute job that fits between filing tasks, while building a quote from scratch is a forty-minute job that does not. The mid-month dip disappears and it looks like growth. It was always latent demand that was being sent elsewhere.
+
+Notice that the fix did not require the customer to do anything differently, learn a new channel or talk to a bot.
+
+## Where the answer is: do not automate this
+
+Some quotations should never be automated, and selling you otherwise is how these projects die.
+
+**Anything where the price is really a negotiation.** If your quote to a large buyer is an opening position and the real number gets settled on a call, a same-day formatted PDF helps nobody and can anchor you badly. Automate the cost build-up for your own use, but keep the customer-facing number human.
+
+**Custom engineering, custom fabrication, anything that needs a site visit.** The enquiry does not contain enough information to price. The model will extract what is there, and what is there is not enough. The honest output here is a structured set of questions for a human to ask, not a quote.
+
+**Businesses where the rate card does not actually exist.** If pricing lives in the owner's head and changes based on mood, cash position and who the customer's uncle is, there is nothing to encode. Do the uncomfortable work of writing the rules down first. Sometimes the act of writing them down is the whole value, and the software turns out to be optional.
+
+**Anything with fewer than a few enquiries a day.** Below a certain volume the approval step costs more attention than the original work. The tooling needs enough traffic to earn its keep.
+
+And the biggest one: **do not automate the conversation around the quote.** Follow-ups, objections, "can you do better", "my Surat supplier is cheaper". That is selling. A model doing it sounds like a model doing it, and in this market the customer will notice and will go to the competitor who picked up the phone.
+
+## What fails in practice
+
+A few things I have watched go wrong, so you can watch for them.
+
+The extraction is too confident. Early versions would read "40 ctn" as forty cartons when the customer meant forty pieces in cartons. The fix was not a smarter model. It was making the system show its reading back in the draft, in plain language, so the approver catches it in one glance.
+
+Rate cards drift. The sheet the engine reads from is not the sheet the sales team updated last Tuesday. If there are two sources of truth, the engine will quote from the wrong one with total confidence. One rate card, one owner, one place.
+
+The approval step gets skipped. Once the drafts are good for a month, someone turns on auto-send. The next bad extraction goes straight to a customer on your letterhead. Keep the human in the loop for anything that carries a price. The cost of the approval is seconds; the cost of a wrong quote is the relationship.
+
+Staff attrition exposes the tribal knowledge. The system works because Priya knows that this particular distributor always wants the quote addressed to their Mumbai office. Priya leaves. The engine keeps addressing it to Nagpur. Every one of these exceptions needs to live in the customer record, not in a person.
+
+## Why this beats the front-end experience
+
+The chatbot sells because the owner can see it. It lives on the website, it greets visitors, it looks like the future. The quotation engine is invisible to the customer. Nobody will ever compliment you on it.
+
+But the customer does not want a chat experience. The customer wants a number, on a document, today. Every hour you take off that cycle is an hour in which they did not buy from someone else. The conversation was never the bottleneck. The quote was.
+
+## One thing to do this week
+
+Take the last twenty enquiries your business received, in whatever form they came. For each one, write down two times: when it arrived and when a priced quotation actually went out. Put them in a sheet, one row per enquiry.
+
+Then look at the gap. Look especially at which day of the month the slow ones fell on, and who was supposed to send them.
+
+Do not build anything yet. Just measure it. If the gap is measured in minutes, you do not need this and you should close the tab. If it is measured in days, you have found the highest-value automation job in your business, and it has nothing to do with a chatbot.
