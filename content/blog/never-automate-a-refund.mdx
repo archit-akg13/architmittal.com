@@ -1,0 +1,83 @@
+---
+title: "Some decisions should never reach an agent, and you should write them down"
+description: "Why every business running AI automation needs a written do-not-automate list: refunds above a limit, pricing exceptions, terminations and credit decisions."
+date: "2026-08-24"
+tags: ["automation", "ai-agents", "business-operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/never-automate-a-refund"
+---
+Every business that runs AI agents needs a short, written list of decisions the agent is never allowed to make. Not "escalate if unsure". Not "use judgement". A list of named decisions that are structurally out of reach, enforced in code, reviewed by a human every single time.
+
+I build these systems for a living, and the list is the part clients push back on hardest. They have just watched an agent answer forty WhatsApp enquiries without error, and now I am telling them it must not approve a refund above a fixed amount. It feels like leaving money on the table. It is the opposite. The agent's failures in these four or five areas cost more than every hour it will ever save you elsewhere, and the maths on that is not close.
+
+## Why these decisions are different
+
+Most of what an agent does is cheap to get wrong. It mislabels an enquiry, a human relabels it. It drafts a slightly odd reply, someone edits it. The error is visible, reversible and contained.
+
+A small set of decisions have none of those properties. They share three features:
+
+- **They are irreversible or expensive to reverse.** Money that has left your account, a distributor who has been told their credit is cut, an employee who has received a termination message.
+- **They create precedent.** One refund above policy becomes the number every customer quotes next month. One pricing exception becomes the new floor for that account.
+- **They carry legal or relationship weight that the agent cannot see.** The agent sees a ticket. You see a customer who has been with you for eight years, or one whose brother handles your GST audit.
+
+An agent optimises what it can measure. It cannot measure precedent, relationship or liability, so it treats them as zero. That is not a bug in the model. It is a limit of what the model can know from inside a ticket queue.
+
+## The four that go on every list
+
+These are the categories I refuse to wire into an autonomous path, regardless of how good the agent is.
+
+**Refunds above a limit.** Below the limit, automate freely. A small refund issued instantly is good service and costs less than the argument. Above the limit, a human signs off. The limit is yours to set, but it must be a number, not a feeling.
+
+**Pricing exceptions.** Discounts, waived charges, extended payment terms, custom rates. The agent may present the standard price and the standard alternatives. It may not invent a third option because the customer sounded upset.
+
+**Terminations.** Of staff, of distributor agreements, of vendor contracts, of customer accounts. An agent can flag the pattern. It must never send the message.
+
+**Credit decisions.** Extending credit, raising a limit, releasing goods against an overdue account. This is where I have seen the most expensive failures, and the next section is one of them.
+
+You will add your own. A pharma distributor adds anything touching cold-chain rejection. A school adds anything that goes to a parent about a child. The four above are the floor, not the ceiling.
+
+## What it looks like when it fails
+
+A distributor-led business, the kind that sells through a few hundred stockists across two or three states, wired an agent into their order desk. Orders arrived on WhatsApp, the agent read them, checked stock, checked the account's outstanding balance, and released the order to dispatch if everything was clean. It worked well for months. Order-to-dispatch time fell, the sales coordinators stopped spending mornings typing orders into Tally, and everyone was pleased.
+
+Then a stockist with an overdue balance sent a message that read, roughly, "payment sent this morning, please release urgent order for festive stock". The agent had been given a reasonable-sounding rule: if the customer states payment has been made, release the order and flag for reconciliation. The payment had not been made. Three more orders went out the same way over the following ten days, because the stockist had learned that the sentence worked.
+
+Nobody on the human side noticed, because the flag went into a reconciliation queue that was reviewed monthly. By the time it was reviewed, the goods were sold, the stockist's outstanding had roughly doubled, and the festive season was over, which is the one time of year when that stockist had the cash to settle.
+
+Everything the agent did was locally sensible. Releasing on a stated payment is what a junior coordinator might do. But a junior coordinator would have mentioned it to someone by the second order, because humans gossip about anomalies and agents do not. The failure was not the model. It was that a credit decision had been allowed to reach the agent at all.
+
+The fix took an afternoon. Release against overdue balance became a hard stop that pages the owner. The agent still drafts the release, checks stock and prepares the dispatch note. A human taps approve. The savings on the other few hundred orders a month were untouched.
+
+## Why "escalate if unsure" does not work
+
+The instinct is to solve this with a prompt. Tell the agent to escalate refunds above the limit, escalate pricing exceptions, and so on. I have written those prompts. They fail in a specific way.
+
+The agent escalates when it is unsure. The dangerous cases are the ones where it is confident and wrong. The stockist's message did not look uncertain. It looked like a routine order with a routine note. Confidence is exactly the condition under which a prompt-level guard does not fire.
+
+The do-not-automate list must be enforced outside the model. The agent should not have the tool that issues a refund above the limit. The workflow should route any pricing change to a human step, not ask the agent whether it needs to. The termination template should not exist in the agent's reach. If the only thing standing between the agent and the action is an instruction, then eventually it will take the action.
+
+## Where the honest answer is "don't automate this"
+
+Some of these categories should not be assisted either, at least not yet.
+
+Terminations are the clearest case. I will build an agent that surfaces attrition risk from attendance and output data. I will not build one that drafts the exit conversation, because the moment a manager has a drafted message in front of them, the conversation becomes a delivery rather than a decision. If you are losing staff and want a system that helps, the useful automation is the one that tells you three weeks earlier, not the one that makes the last step faster.
+
+Credit decisions for your top accounts are the second. The agent can prepare the file. The decision on whether to extend a large distributor another month belongs in a conversation between two people who know each other, and no amount of tooling improves that conversation.
+
+If a vendor tells you their agent handles these end to end, ask them who pays when it handles one wrongly. The answer will tell you everything.
+
+## The economics, plainly
+
+Owners reach for the time saved and put it on one side of the scale. That is the wrong comparison. The right one is between the hours saved on the routine decisions, which are large and real, and the cost of the worst single decision the agent could make in a category where it cannot see the stakes.
+
+An hour saved on GST reconciliation is worth an hour. A distributor lost over a wrongly cut credit line, in a market where your competitor has been courting them for two years, is worth years of hours. You do not need to estimate the numbers precisely to see which way the scale tips. You only need to notice that the downside in these categories is unbounded and the upside is a few minutes per case.
+
+Automate the queue. Keep the exceptions.
+
+## What to do this week
+
+Open a document and write the heading "The agent never decides". Under it, list the specific decisions in your business that meet the three tests above: hard to reverse, sets precedent, carries weight the agent cannot see. Put a number next to any that need a limit, such as the refund amount above which a human signs. Aim for five to eight lines, not a policy manual.
+
+Then hand it to whoever builds or maintains your automation, whether that is a vendor, a freelancer or someone on your team, and ask one question: for each line, what physically stops the agent from doing this, other than an instruction in the prompt?
+
+If the answer to any line is "nothing", that is the work for next week.
