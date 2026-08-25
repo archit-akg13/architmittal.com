@@ -32,9 +32,9 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 24 Aug '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 24 Aug '26 (Mon),10:31 IST,reel,tr-playwright-mcp,published,https://www.instagram.com/reel/DcaQzreE40l/,19,1,81,1,113,1,113,1,2,1,0,3.1,326,40,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 24 Aug '26 (Mon),14:01 IST,reel,tr-pageindex,published,https://www.instagram.com/reel/DcaoyscEpw7/,46,1,119,1,228,1,241,1,2,5,0,3.3,159,92,6,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 241 views vs 113 median; 5 save(s)
-25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,262,1,262,1,2,2,0,4.1,331,110,0,18s · Claude · v4,,early days (12h in); 1 comment(s) — the DM funnel fired; top performer: 262 views vs 113 median; 2 save(s)
-25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,151,1,151,1,4,1,0,4.2,3025,21,0,34s · Cursor · v4,,early days (9h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,83,1,83,1,83,1,2,2,0,3.2,1086,0,0,18s · ChatGPT · v4,,early days (3h in); 1 comment(s) — the DM funnel fired; 2 save(s)
+25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,266,1,266,1,2,2,0,4.0,331,113,0,18s · Claude · v4,,early days (13h in); 1 comment(s) — the DM funnel fired; top performer: 266 views vs 113 median; 2 save(s)
+25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,153,1,153,1,4,1,0,4.2,3025,22,0,34s · Cursor · v4,,early days (10h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,100,1,100,1,100,1,2,2,0,3.2,1329,0,0,18s · ChatGPT · v4,,early days (4h in); 1 comment(s) — the DM funnel fired; 2 save(s)
 26 Aug '26 (Wed),10:30 IST,carousel,tool-vibe-trading,scheduled,,,,,,,,,,,,,,,,,,,
 26 Aug '26 (Wed),14:00 IST,reel,tr-github-mcp-server,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 26 Aug '26 (Wed),19:00 IST,reel,tr-500-ai-agents-projects,scheduled,,,,,,,,,,,,,,,,,18s · ChatGPT · v4,,repo reserved: hidden until posted
