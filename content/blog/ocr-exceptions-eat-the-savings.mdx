@@ -1,0 +1,69 @@
+---
+title: "OCR reads the invoice. The exception queue decides if it pays"
+description: "Invoice and PO extraction only pays off if you cost the exception queue. The documents the tool gets wrong take longer to fix than to have typed."
+date: "2026-08-25"
+tags: ["invoice automation", "OCR", "business process automation"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/ocr-exceptions-eat-the-savings"
+---
+Invoice extraction does not fail on the invoices it reads correctly. It fails on the ones it reads almost correctly, because those are the ones that come back to bite you three weeks later, inside your GST return or your supplier ledger, wearing the disguise of clean data. If you are evaluating an OCR or document-extraction tool for invoices and purchase orders, the demo will show you the happy path. The number that decides whether the project pays for itself is a different one: what happens to the documents the tool gets wrong, who fixes them, and how long that takes compared to just typing the thing in the first place.
+
+I have built these pipelines. The extraction part is genuinely good now. Modern tools read a printed tax invoice with a GSTIN, an HSN table and a clear total better than a tired data-entry operator at six in the evening. That is not the argument. The argument is that the economics of the whole system are set by the tail, not the average, and almost nobody costs the tail before signing up.
+
+## The demo maths and the real maths
+
+The pitch you will hear goes like this: your team types invoices into Tally or your ERP, each one takes a few minutes, the tool does it in seconds, multiply by your monthly volume, look at the saving. Every vendor in this space, Indian or foreign, sells on that multiplication.
+
+The real maths has more terms in it. For every invoice, one of three things happens.
+
+First, the tool reads it correctly and everyone moves on. This is most of your volume, and it is where the demo lives.
+
+Second, the tool reads it wrongly and flags it. This goes into an exception queue. A person opens the original, compares it to the extraction field by field, corrects it, and approves it. Notice what that person is doing: they are reading the entire invoice anyway, plus operating a review interface, plus deciding which fields to trust. On a messy document, that routinely takes longer than typing the invoice from scratch. Typing is one pass. Verification is two passes with a decision attached to every field.
+
+Third, and this is the expensive one, the tool reads it wrongly and does not flag it. A 1 that became a 7 in an invoice number. Two digits swapped in a GSTIN. A quantity read off the wrong line of a handwritten distributor order. This error does not surface in any queue. It surfaces when your GSTR-2B reconciliation will not match, when a supplier calls about a short payment, or when stock in the system disagrees with stock in the godown. The cost of finding and unwinding one of these is not minutes. It is a person spending part of a day tracing where a wrong number went.
+
+So the honest evaluation is not "how accurate is the tool". It is: what fraction of my documents land in queues two and three, and what does each of those actually cost me in staff time and downstream cleanup. If nobody in the sales conversation can help you answer that for your document mix, you are buying the average and inheriting the tail.
+
+## Why your document mix is the whole question
+
+Accuracy claims are made on clean documents. Your inflow is not clean documents. It is whatever your suppliers and dealers actually send.
+
+A GST-registered supplier's computer-printed tax invoice, PDF, consistent format month after month: extraction works beautifully. If most of your volume looks like this, automation is a good bet and you should pursue it.
+
+But walk through what else arrives in a typical trading or manufacturing business between fifty lakh and fifty crore. Photographs of invoices taken on a phone in bad light, sent on WhatsApp. Handwritten challans from transporters. Kachha bills from small unregistered vendors. Distributor orders where the quantity is scribbled in the margin next to a crossed-out earlier figure. Invoices in Hindi or a regional language, or worse, a mix. Formats that change because your supplier changed their billing software. Each of these categories has a dramatically worse error rate than the demo document, and each one lands in the exception queue.
+
+Here is the trap in concrete form. Say a distributor sends orders on WhatsApp as photos of a handwritten order pad, and you automate the reading of them. The tool misreads one quantity on one order. Nothing flags it, because the misread number is a perfectly plausible number. The wrong quantity gets picked, packed and dispatched. Now you are paying for return freight, a credit note, a GST adjustment on that credit note, and a phone call from a distributor who trusts your despatch a little less than he did last month. The typing you saved on that order was worth a few minutes. The unwind cost you most of a day and a small piece of a relationship. One incident like this a month can quietly consume everything the tool saved on the other hundreds of documents.
+
+This is why "the tool is right most of the time" is not a business case. The savings are linear and small per document. The failures are lumpy and large per incident.
+
+## How to cost the exception queue before you buy
+
+You do not need a consultant for this. You need one week and a stopwatch.
+
+Take one full week of real inbound documents, exactly as they arrive, WhatsApp photos and all. Sort them into two piles: clean printed documents in a stable format, and everything else. Just counting these two piles tells you more than any vendor deck, because the second pile is your exception queue in waiting.
+
+Then, for a sample of the messy pile, time two things honestly. How long it takes your person to type one in. And how long it takes them to check someone else's version of it against the original, field by field, which is what exception handling actually is. Most owners are surprised to find the second number is bigger. Reading to verify is slower than reading to type, because verification means comparing two sources instead of consuming one.
+
+Now you can do the real sum. Automation saves you the typing time on the clean pile. It costs you verification time on the flagged pile, plus the occasional silent-error incident from the unflagged misreads, plus the tool's subscription, plus the setup and the staff training, plus somebody senior owning the queue so it does not rot. If the clean pile is the large majority of volume and the messy pile is a trickle, the sum works. If the piles are anywhere near even, it usually does not.
+
+One more term people forget: the exception queue needs an owner. An unowned queue does not stay small. It becomes a backlog nobody clears, and then one day someone bulk-approves it to make the red number go away, which converts your entire flagged queue into silent errors. I have watched this exact failure happen. The tool was fine. The system around it was not staffed.
+
+## Where the answer is: do not automate this
+
+Some of your document flow should simply stay manual, and any vendor or consultant who will not say so is selling you their invoice, not solving yours.
+
+Do not automate handwritten documents. Not challans, not order-pad photos, not kachha bills. The error rate is high, the errors are plausible-looking, and the verification cost exceeds the typing cost. A person types these. That is the correct system, not a failure to modernise.
+
+Do not automate low volumes. If your team handles a modest number of invoices a day, the total typing time is small, and no subscription plus setup plus queue-ownership overhead beats a person who finishes the pile before lunch and, crucially, notices when something looks odd. That noticing is worth more than the typing.
+
+Do not automate anything where a silent error is catastrophic and unbounded, unless a human verifies every output anyway, at which point ask what the tool is for. Bank details on vendor master records are the obvious example. An OCR misread that changes an account number is not a data-quality issue, it is money leaving.
+
+And do not automate a process you have not first standardised. The cheapest fix for messy inbound documents is often not software on your side but a request on theirs: ask your regular suppliers for PDF invoices instead of photos, give your top distributors a fixed order format, even a shared sheet. Every document you standardise at the source moves from the messy pile to the clean pile, where automation actually works. Boring, free, and it improves the economics of any tool you buy later.
+
+The good news inside all this: a split system is a perfectly respectable answer. Automate the clean, high-volume, stable-format flow, keep humans on the messy tail, and revisit the split every six months as your document mix improves. That is what a well-built system looks like. It is rarely what gets pitched, because "automate 60 percent of it and leave the rest alone" is a harder sales line than "eliminate data entry".
+
+## What to do this week
+
+One action. Take this week's inbound invoices and orders, every one of them, and sort them into the two piles: clean printed and stable, versus everything else. Count both piles and time your person typing three documents from each.
+
+Those few numbers, which cost you an hour to collect, are the entire business case. Bring them to any vendor demo and ask one question: show me, live, what happens to a document from my second pile. Watch the exception screen, not the success screen. The success screen was never where the money was.
