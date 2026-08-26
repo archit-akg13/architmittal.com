@@ -1,0 +1,64 @@
+---
+title: "AI meeting notes without a decision log are just expensive noise"
+description: "Transcript summaries pile up unread. The only meeting output worth automating is a decision-and-owner log routed to the person who must act."
+date: "2026-08-26"
+tags: ["ai-tools", "meetings", "business-automation"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/meeting-notes-need-a-decision-log"
+---
+Your AI meeting notes tool is producing documents nobody reads. Not because the summaries are bad, but because a summary of a conversation is not what anyone in your business actually needs. What they need is much smaller and much harder to extract: what was decided, who owns it, and by when. If your tool does not produce that, and route it to the person who must act, you have automated the creation of noise.
+
+I have set these tools up for owners, watched the initial enthusiasm, and then watched what happens three weeks later. The pattern is the same every time. Week one, everyone opens the summaries. Week two, the summaries go to a folder. Week three, the folder is where information goes to die, and the same items get re-discussed in the next meeting because nobody can remember what was agreed. The transcript exists. The summary exists. The decision has still evaporated.
+
+## Why summaries fail in a running business
+
+A meeting summary is written for a reader who does not exist: someone with the time and motivation to read a neutral account of a conversation they either attended or did not care about. Your sales head attended the meeting; she does not need the recap. Your accountant did not attend; he needs one line from it, not eleven paragraphs.
+
+The summary also flattens the one distinction that matters. In any working meeting there are three kinds of content: discussion, information, and decisions. Discussion is disposable the moment the meeting ends. Information is occasionally useful and easily found again. Decisions are the only output with consequences, because a decision that nobody executes is indistinguishable from no decision at all. A summary treats all three with equal weight, which means the decision is buried in the middle of paragraph four, phrased as "the team discussed moving the dispatch cutoff and it was felt that an earlier time may be preferable". Was that decided? Who moves it? By when? The summary does not know, because the summariser was never asked to know.
+
+## The GST meeting that happens twice
+
+Here is the version of this I have seen most often. It is the last week of the month, and the owner of a trading business sits down with the accounts person and the operations manager before GSTR-1 filing. Three things come out of that meeting: two distributor invoices were raised with the wrong GSTIN and need credit notes before filing; the transporter has not sent e-way bill copies for four consignments; and going forward, no invoice above a certain threshold gets dispatched without the accounts person checking the GSTIN first.
+
+The AI notes tool captures all of this faithfully. It produces a tidy summary titled "Monthly compliance sync" and files it in a workspace nobody visits.
+
+Now trace what actually needs to happen. The credit notes are the accountant's job, with a hard deadline of the filing date. Chasing the transporter is the operations manager's job, this week. The new invoice check is a process change that has to reach the billing clerk, who was not even in the meeting. Three actions, three different owners, one owner who never saw the notes at all.
+
+Next month, the same meeting happens again. The credit notes were done, because the accountant was going to do those anyway. The transporter was never chased. The billing clerk never heard about the new rule, so two more invoices went out with unverified GSTINs. The summary recorded everything and changed nothing. The owner concludes the tool is useless, and the owner is nearly right.
+
+## What the useful output actually looks like
+
+The output worth having from that meeting is four lines:
+
+- **Decided:** credit notes for the two wrong-GSTIN invoices, owner: accounts, due: before GSTR-1 filing.
+- **Decided:** chase transporter for pending e-way bill copies, owner: operations, due: this week.
+- **Decided:** invoices above the agreed threshold get a GSTIN check before dispatch, owner: billing clerk, effective immediately.
+- **Not decided:** whether to switch transporters. Parked for next month.
+
+Notice the last line. Recording what was explicitly not decided is half the value, because it is what stops the same argument being reopened from scratch every month.
+
+Then the routing, which is the part every off-the-shelf tool skips. The accountant's line goes to the accountant, on WhatsApp, because that is where your business actually runs, not in a workspace they log into twice a year. The billing clerk's line goes to the billing clerk, who was not in the meeting and will otherwise find out about the new rule when someone shouts at them. And the open items come back to the owner the day before the next meeting, as a list of what was agreed last time, so the meeting starts with "the transporter still has not sent the copies" instead of a fresh discussion of the same problem.
+
+This is not sophisticated. A transcript, a prompt that extracts decisions with owners and dates and refuses to invent them where none were stated, and a routing step that sends each line to its owner. The intelligence needed is modest. The discipline of the format is everything.
+
+## The part you should not automate
+
+Here is the honest bit, and it is the part no tool vendor will tell you: do not automate the extraction of the decision itself. Automate the transcription. Automate the drafting of the decision log. Automate the routing and the follow-up nags. But the step where the draft log is confirmed, that stays human, and specifically it stays with whoever ran the meeting.
+
+Two reasons. First, models are still mediocre at telling a decision from a strongly worded opinion, and in Indian business meetings, which slide between Hindi, English and the regional language mid-sentence, with three people talking over each other, "theek hai, dekh lenge" can mean yes, no, or stop asking. A model will confidently log one of those as a commitment. Send that to a distributor's account manager as "you agreed to lift the pending order this week" and you have created a problem the meeting never had.
+
+Second, and more importantly: the thirty seconds it takes to confirm the draft is not overhead, it is the mechanism. When the meeting owner has to read "decided: X, owner: Y, due: Z" and press send, disagreements surface immediately, while everyone still remembers the conversation, instead of three weeks later when the deadline passes. Fully automated decision logs get ignored exactly the way summaries do, because nobody committed to them. A log the boss visibly confirmed and sent is a different object. People act on it.
+
+So the working system is: machine drafts, human confirms, machine routes and chases. If a vendor tells you the confirmation step can be removed, they are optimising for a demo, not for your business.
+
+## What most owners should do with the tool they already bought
+
+If you are already paying for a notes tool, do not cancel it; the transcript is genuinely useful raw material. But stop treating the summary as the product. The summary is exhaust. Add the missing layer yourself: after each meeting that matters, take the transcript, extract the decision log in the four-line format above, confirm it, and send each line to its owner where they actually read messages.
+
+And if a meeting produces no extractable decisions at all, meeting after meeting, the tool has surfaced something more valuable than notes: that meeting is a status broadcast wearing a meeting's clothes, and it should probably become a message.
+
+## This week
+
+Pick your one recurring meeting where the same topics keep coming back. Weekly ops review, monthly compliance sync, whichever one makes you feel you have had this conversation before. For that meeting only, end it five minutes early and write the decision log by hand: decided what, owner who, due when, plus what was explicitly parked. Send each line to its owner before you stand up from the table.
+
+Do it manually for two weeks before you automate anything. If the handwritten version changes what happens between meetings, it will survive automation and the tooling is a solved problem. If even the handwritten version changes nothing, no software was ever going to fix that meeting, and now you know it before spending a rupee.
