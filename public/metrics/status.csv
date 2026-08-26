@@ -1,9 +1,9 @@
 SYSTEM COMMENTARY
-Updated 2026-08-26 20:17 IST. Collector runs hourly; sheet re-imports on Google's cycle.
+Updated 2026-08-26 21:18 IST. Collector runs hourly; sheet re-imports on Google's cycle.
 "Runway: 6 carousel(s) and 13 reel(s) built, QA-passed and scheduled — about 4 days at 3 reels a day."
 "Last 7 days: 5 missed slot(s): carousel on 2026-08-19, carousel on 2026-08-20, carousel on 2026-08-23, carousel on 2026-08-24, carousel on 2026-08-25."
 Followers: 21 (was 18 a week ago).
 "Top post so far: tr-goose — 816 views, 8 comments (https://www.instagram.com/reel/DcZ8O0pDTXh/)."
-"Latest day analysis (2026-08-25): UI-TARS won decisively (273 views, 2 saves) because desktop AI-agent tools out-pull niche utilities, while opendataloader-pdf underperformed (119 views) and comments stayed flat at 1 across all three, meaning the comment-CTA isn't converting viewers. Tomorrow, post an agent/desktop-automation tool and sharpen the end-card CTA into a specific question rather than a generic ""Comment 1"" prompt."
+"Latest day analysis (2026-08-26): Views are consistent but low (40–63) with no breakout, and the comment-CTA end-card is working at a floor of exactly 1 comment per reel — likely just the funnel seed, with zero saves showing no genuine engagement. Tomorrow, lead one reel with a save-worthy payoff (a copyable prompt or repo list) instead of relying solely on the comment gate."
 "Optimizer (2026-08-25): WORKED: tr-goose (arm B, 07:30 slot) led with 674 views and 5.3s watch, and the 07:30 slot's median of 409 views is nearly 4x the 114-view reel median. DID NOT: tr-playwright-mcp (arm A, 10:30) managed 113 views and 3.1s watch; arm A's median of 113 views trails arm B's 228. CHANGE: holding — not enough data (no changes applied tonight; arm medians rest on only 3 posts each)."
 "Strategy now: reels 07:30/10:30/14:00 · length A/B 18s vs 34s · carousel every 7d · CTA ""Comment REPO"" · anchors Claude"
