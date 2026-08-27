@@ -52,31 +52,35 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
 
   const tabBtn = (t: Tab, label: string) => (
     <button key={t} role="tab" aria-selected={tab === t} onClick={() => { setTab(t); setPillar('All'); setQ('') }}
-      className={`flex-1 border-t-2 py-3 font-heading text-xs font-semibold uppercase tracking-wide transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/60 sm:text-sm ${tab === t ? 'border-heading text-heading' : 'border-transparent text-subtle hover:text-heading'}`}>
+      className={`-mt-px flex items-center gap-1 border-t px-8 py-3 text-xs font-semibold uppercase tracking-[0.08em] transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0095F6]/60 ${tab === t ? 'border-[#262626] text-[#262626]' : 'border-transparent text-[#8e8e8e] hover:text-[#262626]'}`}>
       {label}
     </button>
   )
 
   return (
-    <main className="bg-white text-body font-body">
+    <main className="bg-white text-[#262626]" style={{ fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" }}>
       <div className="mx-auto max-w-4xl px-3 sm:px-5">
 
         {/* ── Instagram-style profile header ─────────────────── */}
         <header className="flex items-center gap-4 pt-8 sm:gap-8 sm:pt-12">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/packs/avatar.png" alt="Archit Mittal" width={96} height={96}
-            className="h-20 w-20 shrink-0 rounded-full border border-subtle/40 bg-lime/10 object-cover object-top sm:h-24 sm:w-24" />
+          <span className="shrink-0 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] p-[3px]">
+            <span className="block rounded-full bg-white p-[2px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/packs/avatar.png" alt="Archit Mittal" width={96} height={96}
+                className="h-20 w-20 rounded-full object-cover sm:h-24 sm:w-24" />
+            </span>
+          </span>
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-3">
-              <h1 className="font-heading text-xl font-bold text-heading">learnaiwitharchit</h1>
+              <h1 className="text-xl font-semibold">learnaiwitharchit</h1>
               <a href="https://www.instagram.com/learnaiwitharchit/" target="_blank" rel="noopener noreferrer"
-                className="rounded-lg bg-lime px-4 py-1.5 font-heading text-sm font-semibold text-white transition-colors duration-150 hover:bg-lime-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/60 focus-visible:ring-offset-2">
+                className="rounded-lg bg-[#0095F6] px-5 py-1.5 text-sm font-semibold text-white transition-colors duration-150 hover:bg-[#1877F2] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0095F6]/60 focus-visible:ring-offset-2">
                 Follow
               </a>
             </div>
-            <ul className="mt-2 flex gap-5 text-sm">
-              <li><span className="font-heading font-bold tabular-nums text-heading">{feed.length}</span> posts</li>
-              <li><span className="font-heading font-bold tabular-nums text-heading">{total}</span> free files</li>
+            <ul className="mt-3 flex gap-6 text-sm">
+              <li><span className="font-semibold tabular-nums">{feed.length}</span> posts</li>
+              <li><span className="font-semibold tabular-nums">{total}</span> free resources</li>
             </ul>
             <p className="mt-2 hidden text-sm sm:block">Every tool from my reels — the name I hid in the post is one tap away here.</p>
           </div>
@@ -85,15 +89,15 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
 
         {/* ── Gate: one email unlocks every button ───────────── */}
         {!unlocked ? (
-          <form ref={formRef} onSubmit={submit} noValidate className="mt-6 rounded-xl border border-subtle/40 bg-lime/5 p-4">
-            <label htmlFor="packs-email" className="block font-heading text-sm font-semibold text-heading">One email unlocks all {total} resources</label>
+          <form ref={formRef} onSubmit={submit} noValidate className="mt-6 rounded-xl border border-[#dbdbdb] bg-[#fafafa] p-4">
+            <label htmlFor="packs-email" className="block text-sm font-semibold">One email unlocks all {total} resources</label>
             <div className="mt-2 flex flex-col gap-2 sm:flex-row">
               <input id="packs-email" type="email" inputMode="email" autoComplete="email" required
                 value={email} onChange={(e) => { setEmail(e.target.value); if (status === 'error') setStatus('idle') }}
                 placeholder="you@company.in" aria-invalid={status === 'error'} aria-describedby="packs-email-help"
-                className={`h-12 min-h-[3rem] min-w-0 flex-1 rounded-lg border bg-white px-4 text-base text-heading placeholder:text-subtle outline-none transition-[border-color,box-shadow] duration-150 focus-visible:border-lime focus-visible:ring-2 focus-visible:ring-lime/40 ${status === 'error' ? 'border-red-500' : 'border-subtle/60 hover:border-heading/60'}`} />
+                className={`h-12 min-h-[3rem] min-w-0 flex-1 rounded-lg border bg-white px-4 text-base text-heading placeholder:text-subtle outline-none transition-[border-color,box-shadow] duration-150 focus-visible:border-[#0095F6] focus-visible:ring-2 focus-visible:ring-[#0095F6]/40 ${status === 'error' ? 'border-red-500' : 'border-subtle/60 hover:border-heading/60'}`} />
               <button type="submit" disabled={status === 'loading'}
-                className="h-12 shrink-0 rounded-lg border-2 border-heading px-5 font-heading text-base font-semibold text-heading transition-[background-color,color,transform] duration-150 hover:bg-heading hover:text-white active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-lime/60 focus-visible:ring-offset-2 disabled:cursor-progress disabled:opacity-60">
+                className="h-12 shrink-0 rounded-lg bg-[#0095F6] px-6 text-base font-semibold text-white transition-[background-color,transform] duration-150 hover:bg-[#1877F2] active:translate-y-px focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0095F6]/60 focus-visible:ring-offset-2 disabled:cursor-progress disabled:opacity-60">
                 {status === 'loading' ? 'Unlocking…' : 'Unlock'}
               </button>
             </div>
@@ -102,16 +106,14 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
             </p>
           </form>
         ) : (
-          <p className="mt-6 inline-flex items-center gap-2 rounded-lg bg-lime/10 px-4 py-2 font-heading text-sm font-semibold text-lime-dark" role="status">
+          <p className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#0095F6]/10 px-4 py-2 text-sm font-semibold text-[#0095F6]" role="status">
             <span aria-hidden>✓</span> Unlocked — every resource below is one tap away.
           </p>
         )}
 
         {/* ── IG-style tab bar ───────────────────────────────── */}
-        <div role="tablist" aria-label="Sections" className="mt-6 flex border-t border-subtle/40">
-          {tabBtn('feed', `⊞ Posts`)}
-          {tabBtn('workflows', `n8n · ${workflows.length}`)}
-          {tabBtn('skills', `Skills · ${skills.length}`)}
+        <div role="tablist" aria-label="Sections" className="mt-6 flex justify-center border-t border-[#dbdbdb]">
+          {tabBtn('feed', `⊞ POSTS`)}
         </div>
 
         {/* ── Feed grid ──────────────────────────────────────── */}
