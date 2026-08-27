@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import fs from 'fs/promises'
 import path from 'node:path'
+import { DATA_DIR } from '@/lib/data-store'
 import { notifyTelegram } from '@/lib/notify'
 
 const CF_URL = process.env.CASHFREE_API_URL || 'https://api.cashfree.com/pg'
@@ -21,7 +22,7 @@ export async function GET(request: NextRequest) {
     const cf = await res.json()
     const paid = cf.order_status === 'PAID'
     if (paid) {
-      const f = path.join(process.cwd(), 'data', 'bookings.json')
+      const f = path.join(DATA_DIR, 'bookings.json')
       const all = JSON.parse(await fs.readFile(f, 'utf-8').catch(() => '[]'))
       const rec = all.find((b: { orderId: string }) => b.orderId === orderId)
       if (rec && rec.status !== 'paid') {

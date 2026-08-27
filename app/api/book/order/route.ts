@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'node:crypto'
 import fs from 'fs/promises'
 import path from 'node:path'
+import { DATA_DIR } from '@/lib/data-store'
 import { clientIp, rateLimit } from '@/lib/rate-limit'
 import { SITE_URL } from '@/lib/constants'
 
@@ -46,9 +47,8 @@ export async function POST(request: NextRequest) {
       console.error('[book/order] cashfree error:', JSON.stringify(cf).slice(0, 300))
       return NextResponse.json({ error: cf.message || 'Could not start the payment.' }, { status: 502 })
     }
-    const dir = path.join(process.cwd(), 'data')
-    await fs.mkdir(dir, { recursive: true })
-    const f = path.join(dir, 'bookings.json')
+    await fs.mkdir(DATA_DIR, { recursive: true })
+    const f = path.join(DATA_DIR, 'bookings.json')
     const all = JSON.parse(await fs.readFile(f, 'utf-8').catch(() => '[]'))
     all.push({ orderId, name, email, phone: ph, amount: AMOUNT_INR, src: String(src || 'direct').slice(0, 60), status: 'created', createdAt: new Date().toISOString() })
     await fs.writeFile(f, JSON.stringify(all, null, 2))
