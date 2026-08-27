@@ -9,10 +9,12 @@ import PackFeed, { type FeedItem } from './PackFeed'
 
 type Tab = 'feed' | 'workflows' | 'skills'
 const KEY = 'packs-unlocked'
+// Until 10k followers: no email gate — direct access (Archit, 27 Aug). Flip to false to restore.
+const FREE_MODE = true
 
 export default function PackLibrary({ workflows, skills, feed = [] }: { workflows: PackItem[]; skills: PackItem[]; feed?: FeedItem[] }) {
   const total = workflows.length + skills.length
-  const [unlocked, setUnlocked] = useState(false)
+  const [unlocked, setUnlocked] = useState(FREE_MODE)
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'error' | 'success'>('idle')
   const [error, setError] = useState('')
@@ -22,7 +24,7 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
   const formRef = useRef<HTMLFormElement>(null)
 
   useEffect(() => {
-    try { if (localStorage.getItem(KEY)) setUnlocked(true) } catch {}
+    try { if (!FREE_MODE && localStorage.getItem(KEY)) setUnlocked(true) } catch {}
   }, [])
 
   const items = tab === 'skills' ? skills : workflows
@@ -88,7 +90,7 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
         <p className="mt-3 text-sm sm:hidden">Every tool from my reels — the name I hid in the post is one tap away here.</p>
 
         {/* ── Gate: one email unlocks every button ───────────── */}
-        {!unlocked ? (
+        {FREE_MODE ? null : !unlocked ? (
           <form ref={formRef} onSubmit={submit} noValidate className="mt-6 rounded-xl border border-[#dbdbdb] bg-[#fafafa] p-4">
             <label htmlFor="packs-email" className="block text-sm font-semibold">One email unlocks all {total} resources</label>
             <div className="mt-2 flex flex-col gap-2 sm:flex-row">
@@ -108,6 +110,11 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
         ) : (
           <p className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#0095F6]/10 px-4 py-2 text-sm font-semibold text-[#0095F6]" role="status">
             <span aria-hidden>✓</span> Unlocked — every resource below is one tap away.
+          </p>
+        )}
+        {FREE_MODE && (
+          <p className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#0095F6]/10 px-4 py-2 text-sm font-semibold text-[#0095F6]" role="status">
+            <span aria-hidden>🎁</span> Everything here is free — tap any post and take the resource.
           </p>
         )}
 
