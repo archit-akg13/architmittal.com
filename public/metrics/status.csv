@@ -1,9 +1,9 @@
 SYSTEM COMMENTARY
-Updated 2026-08-27 20:21 IST. Collector runs hourly; sheet re-imports on Google's cycle.
+Updated 2026-08-27 21:23 IST. Collector runs hourly; sheet re-imports on Google's cycle.
 "Runway: 5 carousel(s) and 11 reel(s) built, QA-passed and scheduled — about 3 days at 3 reels a day."
 "Last 7 days: 5 missed slot(s): carousel on 2026-08-20, carousel on 2026-08-23, carousel on 2026-08-24, carousel on 2026-08-25, carousel on 2026-08-26."
 Followers: 21 (was 18 a week ago).
 "Top post so far: tr-goose — 817 views, 8 comments (https://www.instagram.com/reel/DcZ8O0pDTXh/)."
-"Latest day analysis (2026-08-26): Views are consistent but low (40–63) with no breakout, and the comment-CTA end-card is working at a floor of exactly 1 comment per reel — likely just the funnel seed, with zero saves showing no genuine engagement. Tomorrow, lead one reel with a save-worthy payoff (a copyable prompt or repo list) instead of relying solely on the comment gate."
+"Latest day analysis (2026-08-27): Reels held their lane — tr-lightrag led at 162 views with 3 saves, and every reel drew comments — while the carousel flopped at 8 views with zero saves, confirming reels carry all reach. Tomorrow, drop the carousel slot and post a third tool-discovery reel, leading with a lightrag-style ""underrated repo"" hook."
 "Optimizer (2026-08-26): WORKED: tr-ui-tars-desktop led the day at 278 views with 4.17s average watch, the strongest reel in the 07:30 slot. DID NOT: tr-prompt-optimizer managed only 42 views (2.77s watch), and tr-github-mcp-server also fell short at 76 views despite the 07:30 slot. CHANGE: switching reel length to arm B at 34s (median views 201 vs 144 for A) and weighting anchors towards Cursor, ChatGPT, then Claude."
 "Strategy now: reels 07:30/10:30/14:00 · length 34s · carousel every 7d · CTA ""Comment REPO"" · anchors Cursor, ChatGPT, Claude"
