@@ -1,0 +1,67 @@
+---
+title: "Your bot fails at Hinglish, and your customers will not switch"
+description: "Customer-facing AI agents in India break on mixed-script Hinglish and voice notes. Test with real customer messages, not clean English, before going live."
+date: "2026-08-27"
+tags: ["whatsapp-automation", "customer-support", "ai-agents"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/bot-fails-at-hinglish"
+---
+Your customers do not type the way your bot was tested. They type "bhaiya order kab tak aayega", they type "pmt ho gya h check karo", they send a forty-second voice note in Marathi with the fan running, and they switch script mid-sentence because their keyboard autocorrected "kitna" to English and they could not be bothered to fix it. The demo you approved was tested with "What is the status of my order?" Those are not the same product. The first one is the job. The second one is a stage trick.
+
+I have built WhatsApp agents for Indian businesses, and the pattern repeats every time: the bot performs beautifully in the pilot, then support tickets climb within the first week of real traffic. Not because the model is bad. Because nobody tested it against what customers actually send.
+
+## What real Indian customer messages look like
+
+Pull up the last hundred inbound messages on any Indian business's WhatsApp. You will find, roughly in order of frequency:
+
+- **Romanised Hindi.** "Ye wala size available hai kya" — Hindi words, Latin script, no punctuation. This is the default register of Indian commerce, and there is no standard spelling. "Kya", "kia", "kyaa" and "kua" all mean the same thing, typed by the same customer on different days.
+- **Mid-sentence script switching.** "Order placed कर दिया but payment page pe error आ रहा है." Devanagari and Latin in one line, because Gboard flipped languages halfway through.
+- **Heavy abbreviation.** "Pmt", "dlvry", "tmrw", "h" for "hai", "nhi" for "nahin". A customer typing with one thumb while doing three other things does not write for your NLU pipeline.
+- **Voice notes.** For a large share of customers, especially older ones and anyone typing in a second script, voice is not a fallback. It is the primary channel. And it arrives with traffic noise, code-switching, and regional accent.
+- **Photos instead of words.** A screenshot of a failed UPI payment. A photo of a damaged carton. A photo of a handwritten parts list from a distributor.
+
+Now look at the test plan your vendor showed you. Every test message is a complete English sentence with a question mark at the end. That test plan validates a customer who does not exist.
+
+## Why the failure is worse than a wrong answer
+
+When a bot mishandles clean English, it usually fails visibly: "Sorry, I didn't understand that." Annoying, but honest. When a bot mishandles Hinglish, it often fails confidently. "Pmt ho gya, order confirm karo" gets parsed as a new order enquiry, and the bot cheerfully sends the product catalogue to a customer who has already paid and is now furious. The customer does not think "the language model struggled with romanised Hindi". The customer thinks "this company is ignoring me", and calls. Now you are paying for the bot and the phone call, and the customer trusts you slightly less than before you automated anything.
+
+Here is the part most owners get wrong: **the customer will not adapt.** A polite English prompt saying "Please type your query in English" is read as "we built this for our convenience, not yours". People do not change how they text for a vendor. They change vendors, or they bypass the bot entirely and flood the owner's personal number, which is usually the exact problem the bot was bought to solve.
+
+## A worked example: the distributor order that became a complaint
+
+A building-materials trader I worked with takes distributor orders on WhatsApp. Typical inbound message: "Bhai 50 bag opc 43 aur 20 bag ppc bhejna site pe, wahi wala rate, gadi kal subah". One sentence carrying product, grade, quantity, delivery location, an implied price agreement and a delivery deadline, in romanised Hindi with zero punctuation.
+
+The first version of the intake agent, tested on tidy English orders, did the following with that message: it extracted "50" and "20" correctly, mapped "opc 43" to the right SKU, missed "ppc" entirely because the training examples spelt it "PPC cement", and treated "wahi wala rate" as a pricing enquiry, so it replied with the standard rate card. The distributor read that as the trader quietly revising an agreed price. That is not a chatbot bug. That is a commercial relationship taking damage.
+
+The fix was not a better model. The fix was rebuilding the test set from six months of real order messages, exported straight from WhatsApp, and refusing to ship until the agent handled the top patterns in that corpus: every observed spelling of every product, "wahi wala" and "purana rate" as references to an existing agreement rather than a price question, and a hard rule that any message containing a rate reference goes to a human before any reply is sent.
+
+## Voice notes deserve their own paragraph of pessimism
+
+Speech-to-text for Indian languages has improved a great deal, and on clean audio it is genuinely usable. But customer voice notes are not clean audio. They are recorded on a two-wheeler, in a shop with a grinder running, by someone switching between Hindi and their mother tongue inside one sentence. Transcription errors on names, amounts and product codes are exactly the errors that cause commercial damage, because a plausible-but-wrong transcript fails silently.
+
+If voice notes are a meaningful share of your inbound traffic, the honest architecture is transcribe, then classify, then route the risky ones to a person. The agent handles "delivery kab hogi" end to end. Anything the transcriber flags as low-confidence, and anything containing an amount, goes to a human with the transcript attached as a head start. That is still a large saving in handling time. It is just not the "zero-touch support" story you were sold.
+
+## Where the answer is: do not automate this
+
+Some categories should not have an agent answering at all, in any language:
+
+- **Complaints and anger.** A customer who is already upset, decoding a slightly-off Hinglish reply from a bot, becomes an ex-customer. Detect the sentiment, route to a person, have the bot say only "aapka message mil gaya, thodi der mein call aayega" and nothing else.
+- **Anything touching money.** Refunds, rate disputes, payment confirmations. A misread "pmt ho gya" is not a support failure, it is an accounting failure.
+- **Regulated or high-stakes replies.** If the answer could be quoted back at you in a dispute — GST invoice corrections, warranty commitments — a human writes it.
+
+Every vendor pitch says the opposite: full automation, all languages, day one. The businesses whose automation survives contact with real customers are the ones that drew this line before launch, not after the first blown-up complaint.
+
+## How to test properly before you switch anything on
+
+The method is unglamorous and it works:
+
+1. **Export real history.** Take the last few hundred inbound messages from your actual WhatsApp Business account. Not samples the vendor provides. Yours.
+2. **Build the test set from them, verbatim.** Spelling mistakes, half-Devanagari lines, voice notes and all. Strip customer names, keep everything else exactly as typed.
+3. **Run every one through the agent before launch.** Score three things per message: did it understand the intent, was the reply correct, and — most important — when it failed, did it fail loudly (escalate to a human) or quietly (confident nonsense)? Quiet failures are the ones that cost customers.
+4. **Set an escalation floor, not a ceiling.** Early on, the agent should be handing off more than feels efficient. You tighten the rules as the transcript log proves which patterns it genuinely handles.
+5. **Re-test monthly from fresh messages.** Your customers' typing shifts with seasons — ITR season brings different vocabulary than Diwali order rush — and an agent tested once in March degrades quietly by August.
+
+## The one thing to do this week
+
+Export the last two hundred inbound messages from your business WhatsApp and read fifty of them in one sitting. Count how many are clean English sentences. That single number tells you whether any bot demo you have seen — or any bot you are already running — was tested against your customers or against a fiction. If you are already live, paste twenty of those real messages into your bot today and watch what comes back. What you find will either be reassuring or extremely useful. Both are worth an hour.
