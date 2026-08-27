@@ -11,44 +11,25 @@ export default function BlogPage() {
   const posts = getAllPosts()
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 className="font-heading font-bold text-3xl sm:text-4xl text-heading mb-3">Blog</h1>
-      <p className="font-body text-body mb-10">
-        Practical guides on AI automation, cost optimization, and building intelligent workflows.
-      </p>
-
-      {posts.length === 0 ? (
-        <p className="text-body font-body">No posts yet. Check back soon!</p>
-      ) : (
-        <div className="space-y-6">
-          {posts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
-              className="block border border-gray-200 rounded-xl p-6 hover:border-lime transition-colors group"
-            >
-              <div className="text-subtle text-xs font-body mb-2">
-                {post.date} &middot; {post.readingTime}
-              </div>
-              <h2 className="font-heading font-semibold text-lg text-heading group-hover:text-lime transition-colors mb-2">
-                {post.title}
-              </h2>
-              <p className="font-body text-body text-sm leading-relaxed">
-                {post.description}
-              </p>
-              {post.tags && (
-                <div className="flex gap-2 mt-3">
-                  {post.tags.map((tag) => (
-                    <span key={tag} className="bg-gray-100 text-body text-xs px-2 py-1 rounded font-body">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </Link>
-          ))}
+    <main className="bg-[--paper] text-[--ink]">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-24">
+        <p className="eyebrow">The blog</p>
+        <h1 className="display mt-3 text-[--ink] text-[clamp(2.6rem,8vw,6rem)]">{posts.length} playbooks, free</h1>
+        <p className="mt-4 max-w-xl text-lg text-[--ink-dim]">Practical guides on AI automation, cost optimisation and building systems that hold up.</p>
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {posts.map((post, i) => {
+            const tile = ['bg-[#16130E] text-[#FFF3E2]', 'bg-[--gold-fill] text-[#16130E]', 'bg-[--red] text-white', 'bg-white text-[#16130E] border border-[--ink]/15'][i % 4]
+            return (
+              <Link key={post.slug} href={`/blog/${post.slug}`}
+                className={`group flex aspect-square flex-col justify-between overflow-hidden rounded-xl p-5 transition-transform duration-200 hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--red] ${tile}`}>
+                <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-60">{post.readingTime}</span>
+                <span className="display text-[clamp(1rem,2vw,1.4rem)] leading-[1.05] [overflow-wrap:anywhere]">{post.title}</span>
+                <span className="text-xs font-semibold opacity-70 transition-opacity group-hover:opacity-100">Read →</span>
+              </Link>
+            )
+          })}
         </div>
-      )}
-    </div>
+      </div>
+    </main>
   )
 }

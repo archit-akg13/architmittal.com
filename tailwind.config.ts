@@ -25,7 +25,8 @@ const config: Config = {
         subtle: '#AAAAAA',
       },
       fontFamily: {
-        heading: ['var(--font-anton)', 'sans-serif'],
+        // Anton is reserved for .display headlines; legacy font-heading = Geist bold
+        heading: ['var(--font-geist-sans)', 'sans-serif'],
         display: ['var(--font-anton)', 'sans-serif'],
         body: ['var(--font-geist-sans)', 'sans-serif'],
       },
