@@ -1,9 +1,9 @@
 /* n8n-style workflow diagram, animated: marching wires + pulsing nodes. Pure SVG/CSS. */
 const NODES = [
-  { x: 8, y: 24, label: 'Lead lands', icon: '⚡', c: '#F4BD45' },
+  { x: 8, y: 24, label: 'Lead in', icon: '⚡', c: '#F4BD45' },
   { x: 36, y: 8, label: 'AI agent', icon: '🤖', c: '#CF1134' },
-  { x: 36, y: 44, label: 'CRM update', icon: '📊', c: '#5B4BA6' },
-  { x: 66, y: 24, label: 'WhatsApp reply', icon: '💬', c: '#1F7A3D' },
+  { x: 36, y: 44, label: 'CRM', icon: '📊', c: '#5B4BA6' },
+  { x: 66, y: 24, label: 'WhatsApp', icon: '💬', c: '#1F7A3D' },
 ]
 const WIRES = [
   'M 22 28 C 30 28, 28 13, 36 13',
@@ -22,7 +22,7 @@ export default function WorkflowArt({ className = '' }: { className?: string }) 
         <g key={n.label} className="wf-node" style={{ animationDelay: `${i * 0.5}s` }}>
           <rect x={n.x} y={n.y} width="14" height="10" rx="2.2" fill="#fff" stroke={n.c} strokeWidth=".8" />
           <text x={n.x + 7} y={n.y + 4.6} textAnchor="middle" fontSize="3.6">{n.icon}</text>
-          <text x={n.x + 7} y={n.y + 8.2} textAnchor="middle" fontSize="2.1" fill="#16130E" fontFamily="system-ui" fontWeight="600">{n.label}</text>
+          <text x={n.x + 7} y={n.y + 8.2} textAnchor="middle" fontSize="1.9" fill="#16130E" fontFamily="system-ui" fontWeight="600">{n.label}</text>
         </g>
       ))}
     </svg>

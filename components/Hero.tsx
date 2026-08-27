@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import { CAL_URL } from '@/lib/constants'
 import WorkflowArt from './WorkflowArt'
+import HeroCollage from './HeroCollage'
 
 /* Hallmark · studied-DNA (Sprynt) · hero: giant Anton statement, red action, cream on near-black */
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-[--paper] text-[--ink]">
-      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.045]"
-        style={{ backgroundImage: 'linear-gradient(rgba(22,19,14,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(22,19,14,.5) 1px, transparent 1px)', backgroundSize: '72px 72px' }} />
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 pb-20 pt-20 sm:px-6 sm:pb-28 sm:pt-24 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.09]"
+        style={{ backgroundImage: 'linear-gradient(rgba(22,19,14,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(22,19,14,.5) 1px, transparent 1px)', backgroundSize: '54px 54px' }} />
+      <HeroCollage />
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 pb-20 pt-20 sm:px-6 sm:pb-20 sm:pt-24 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
         <div>
         <p className="eyebrow">AI &amp; automation consultant · India</p>
         <h1 className="display mt-5 text-[--ink] text-[clamp(3.4rem,11vw,9.5rem)]">
@@ -36,7 +38,7 @@ export default function Hero() {
             <Image src="/images/archit-headshot-800.jpg" alt="" width={420} height={420} priority className="w-full rounded-lg object-cover" />
             <p className="px-2 pb-1 pt-3 font-mono text-xs text-[--ink]/55">the person your workflows report to</p>
           </div>
-          <WorkflowArt className="mx-auto -mt-2 w-[88%] rotate-1" />
+          <WorkflowArt className="mx-auto mt-3 w-[74%] rotate-1" />
         </div>
       </div>
     </section>

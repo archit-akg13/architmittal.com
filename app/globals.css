@@ -74,3 +74,17 @@
 @keyframes wf-pulse { 0%,100% { opacity: 1 } 50% { opacity: .55 } }
 .wf-node { animation: wf-pulse 2.8s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .mq-row, .wf-wire, .wf-node { animation: none } }
+
+/* interactivity pass */
+.dcard:hover { rotate: -0.4deg; }
+.dcard img { transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.dcard:hover img { transform: scale(1.02); }
+a.inline-flex:active { transform: translateY(1px); }
+/* blog post body type */
+.prose { font-family: var(--font-geist-sans), sans-serif; }
+.prose h1, .prose h2, .prose h3 { font-family: var(--font-geist-sans), sans-serif; font-weight: 700; color: var(--ink); }
+/* hero collage drift */
+@keyframes drift-up { from { transform: translateY(0) } to { transform: translateY(-50%) } }
+.drift { animation: drift-up 60s linear infinite; }
+.drift-rev { animation-direction: reverse; animation-duration: 75s; }
+@media (prefers-reduced-motion: reduce) { .drift, .drift-rev { animation: none } }
