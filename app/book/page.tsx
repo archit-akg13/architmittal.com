@@ -42,7 +42,7 @@ export default function BookPage() {
         </div>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {[
-            { q: 'Archit reduced our AI API costs by 97.5%. What we were spending \u20b995K on now costs us \u20b910K.', a: 'SaaS Startup Founder' },
+            { q: 'Archit reduced our AI API costs by 85.9%. What we were spending \u20b995K on now costs us \u20b910K.', a: 'SaaS Startup Founder' },
             { q: 'What used to take our quant team a full day now runs in minutes.', a: 'Prop Trading Desk Lead' },
             { q: 'A multi-agent system that automates our entire client onboarding.', a: 'Fintech CTO' },
           ].map((t) => (

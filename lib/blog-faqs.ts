@@ -1,6 +1,6 @@
 export const BLOG_FAQS: Record<string, Array<{ question: string; answer: string }>> = {
   'how-i-saved-client-85k-on-ai-api-costs': [
-    { question: 'How much can you save on AI API costs?', answer: 'Most businesses can save 50-97.5% on AI API costs using semantic caching, model switching, and batch processing. The best case I achieved was a 97.5% reduction — from ₹95K/month to ₹10K/month.' },
+    { question: 'How much can you save on AI API costs?', answer: 'Most businesses can save 50-85.9% on AI API costs using semantic caching, model switching, and batch processing. The best case I achieved was a 85.9% reduction — from ₹85K/month to ₹12K/month.' },
     { question: 'What is semantic caching for AI APIs?', answer: 'Semantic caching stores AI responses and serves them for similar future queries using vector similarity matching. If a new query is 95%+ similar to a cached one, the cached response is served instantly — avoiding an expensive API call.' },
     { question: 'Should I always use GPT-4 for AI features?', answer: 'No. Many tasks like keyword extraction, formatting, and meta tag generation work identically with cheaper models like GPT-3.5-turbo. Use model routing to assign the cheapest capable model to each task type.' },
     { question: 'How long does AI API cost optimization take?', answer: 'A basic audit takes 2-3 days. Implementing caching, model switching, and batching typically takes 1-2 weeks. Most clients see 50%+ cost reduction within the first month.' },

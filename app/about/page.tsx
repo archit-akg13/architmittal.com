@@ -31,7 +31,7 @@ export default function AboutPage() {
           <p className="font-body text-[--ink-dim] leading-relaxed mb-4">
             I&apos;m an AI &amp; automation consultant based in India. I build custom algo trading systems,
             AI agents, and business automation for founders, trading firms, and startups globally.
-            From cutting AI API costs by 97.5% to building 40+ automation systems, I turn operational chaos
+            From cutting AI API costs by 85.9% to building 40+ automation systems, I turn operational chaos
             into competitive advantage.
           </p>
           <p className="font-body text-[--ink-dim] leading-relaxed">
@@ -48,7 +48,7 @@ export default function AboutPage() {
           {[
             { area: 'Algo Trading Systems', detail: 'Custom strategy development, backtesting, and live execution pipelines' },
             { area: 'Custom AI Agents', detail: 'Purpose-built AI agents using MCP protocol and multi-agent architectures' },
-            { area: 'AI API Cost Optimization', detail: 'Smart caching, model routing, and batching — up to 97.5% savings' },
+            { area: 'AI API Cost Optimization', detail: 'Smart caching, model routing, and batching — up to 85.9% savings' },
             { area: 'Business Automation', detail: 'End-to-end automation that replaces manual processes and saves headcount' },
             { area: 'Data Pipeline Automation', detail: 'ETL, data sync, and real-time processing workflows' },
             { area: 'AI Consultancy', detail: 'Architecture reviews, build-vs-buy decisions, and implementation roadmaps' },

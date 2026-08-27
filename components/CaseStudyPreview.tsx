@@ -1,6 +1,6 @@
 const PREVIEWS = [
   // Same case-study facts, annualised — the yearly number is the honest big one.
-  { title: 'AI API cost slashed 97.5%', client: 'SaaS startup', metric: '₹10L+/yr', label: 'saved on one API bill', accent: '#CF1134' },
+  { title: 'AI API cost slashed 85.9%', client: 'SaaS startup', metric: '₹10L+/yr', label: 'saved on one API bill', accent: '#CF1134' },
   { title: '40+ workflows automated', client: 'Digital agency', metric: '2,600+ hrs', label: 'returned to the team, every year', accent: '#5B4BA6' },
   { title: 'Options backtester rebuilt', client: 'Crypto derivatives', metric: '30×', label: 'faster — 300s to 9.9s', accent: '#B8611B' },
 ]

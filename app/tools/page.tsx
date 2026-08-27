@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const TOOLS = [
   {
     name: 'AI API Cost Optimizer',
-    description: 'Toolkit for reducing LLM API costs with smart caching, model switching, and request batching. Saved one client 97.5% on their monthly bill.',
+    description: 'Toolkit for reducing LLM API costs with smart caching, model switching, and request batching. Saved one client 85.9% on their monthly bill.',
     url: 'https://github.com/archit-akg13',
     tags: ['Python', 'LLM', 'Cost Optimization'],
   },

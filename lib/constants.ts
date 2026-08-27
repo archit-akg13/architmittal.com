@@ -51,12 +51,12 @@ export const STATS = [
   { value: '₹52L+/yr', label: 'Documented client savings across case studies' },
   { value: '10,000+', label: 'Traders & businesses automated' },
   { value: '2,600+ hrs', label: 'Returned to one team, every year' },
-  { value: '97.5%', label: 'Single biggest cost cut delivered' },
+  { value: '85.9%', label: 'Single biggest cost cut delivered' },
 ] as const
 
 export const RESULTS_TICKER = [
   '₹85K/month saved on AI API costs',
-  '97.5% cost reduction achieved',
+  '85.9% cost reduction achieved',
   '40+ automation systems built',
   '10,000+ LinkedIn followers and growing',
 ] as const
@@ -86,7 +86,7 @@ export const FAQ_ITEMS = [
   },
   {
     question: 'How much can I save with AI cost optimization?',
-    answer: 'Most clients see 50-97.5% reduction in AI API costs. My best case achieved a 97.5% reduction — from ₹95K/month to ₹10K/month — using semantic caching, model switching, and smart batching.',
+    answer: 'Most clients see 50-85.9% reduction in AI API costs. My best case achieved a 85.9% reduction — from ₹85K/month to ₹12K/month — using semantic caching, model switching, and smart batching.',
   },
   {
     question: 'What does a typical engagement look like?',

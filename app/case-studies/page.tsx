@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 const CASE_STUDIES = [
   {
-    title: 'AI API Cost Slashed by 97.5%',
+    title: 'AI API Cost Slashed by 85.9%',
     client: 'SaaS Startup',
-    problem: 'Spending ₹95K/month on AI API calls with no cost controls or optimization.',
+    problem: 'Spending ₹85K/month on AI API calls with no cost controls or optimization.',
     solution: 'Implemented smart caching, model tiering (GPT-4 for complex, GPT-3.5 for simple), request batching, and prompt optimization.',
     results: [
       { metric: '₹85K/mo', label: 'Monthly savings' },
-      { metric: '97.5%', label: 'Cost reduction' },
+      { metric: '85.9%', label: 'Cost reduction' },
       { metric: '3 days', label: 'Implementation time' },
     ],
   },
