@@ -2,8 +2,12 @@ import Image from 'next/image'
 
 /* Real receipts, Sprynt-collage style: tilted screenshots of the actual profiles. */
 const SHOTS = [
-  { src: '/images/proof/linkedin.jpg', alt: 'Archit Mittal on LinkedIn — 10,300 followers', label: 'linkedin.com/in/automate-archit', tilt: '-rotate-2', href: 'https://linkedin.com/in/automate-archit' },
-  { src: '/images/proof/github.jpg', alt: 'Open-source repositories on GitHub', label: 'github.com — the actual code', tilt: 'rotate-1', href: 'https://github.com/archit-akg13' },
+  { src: '/images/proof/btfull.jpg', alt: 'AM Backtesting — in-sample vs out-of-sample strategy results', label: 'btfull.architmittal.in — live backtesting platform, 498 strategies tested', tilt: '-rotate-2', href: 'https://btfull.architmittal.in' },
+  { src: '/images/proof/indicators.jpg', alt: 'Indicator store', label: 'indicators.architmittal.com — live store, real payments', tilt: 'rotate-1', href: 'https://indicators.architmittal.com' },
+  { src: '/images/proof/btadmin.jpg', alt: 'Strategy basket admin', label: 'btadmin.architmittal.in — 815 symbol-strategy combinations', tilt: 'rotate-2', href: 'https://btadmin.architmittal.in' },
+  { src: '/images/proof/packs.jpg', alt: 'Free automation packs library', label: 'architmittal.com/packs — 282 free resources', tilt: '-rotate-1', href: '/packs' },
+  { src: '/images/proof/linkedin.jpg', alt: 'Archit Mittal on LinkedIn — 10,300 followers', label: 'linkedin.com/in/automate-archit — 10,300 followers', tilt: 'rotate-1', href: 'https://linkedin.com/in/automate-archit' },
+  { src: '/images/proof/github.jpg', alt: 'Open-source repositories on GitHub', label: 'github.com — the actual code, public', tilt: '-rotate-2', href: 'https://github.com/archit-akg13' },
 ]
 
 export default function ProofCollage() {
@@ -11,7 +15,8 @@ export default function ProofCollage() {
     <section className="overflow-hidden bg-[--paper] py-16 text-[--ink] sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <p className="eyebrow">Public, verifiable</p>
-        <h2 className="display mt-3 text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">Everything here is on the record</h2>
+        <h2 className="display mt-3 text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">Live products, on the record</h2>
+        <p className="mt-4 max-w-xl text-lg text-[--ink-dim]">Not mockups — these are running systems you can click into right now.</p>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {SHOTS.map((s) => (
             <a key={s.src} href={s.href} target="_blank" rel="noopener noreferrer" data-reveal

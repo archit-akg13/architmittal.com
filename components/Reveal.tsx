@@ -32,7 +32,7 @@ export default function Reveal() {
           requestAnimationFrame(tick)
         })
       }
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.15 })
+    }, { rootMargin: '600px 0px 600px 0px', threshold: 0.01 })
     document.querySelectorAll('[data-reveal]').forEach((el, i) => {
       ;(el as HTMLElement).style.transitionDelay = `${Math.min(i % 6, 4) * 70}ms`
       io.observe(el)
