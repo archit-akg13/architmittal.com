@@ -10,10 +10,10 @@ export default function Hero() {
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.09]"
         style={{ backgroundImage: 'linear-gradient(rgba(22,19,14,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(22,19,14,.5) 1px, transparent 1px)', backgroundSize: '54px 54px' }} />
       <HeroCollage />
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 pb-20 pt-20 sm:px-6 sm:pb-20 sm:pt-24 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)] lg:items-center">
+      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 gap-10 px-4 pb-20 pt-20 sm:px-6 sm:pb-20 sm:pt-24 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-14 lg:items-center">
         <div>
         <p className="eyebrow">AI &amp; automation consultant · India</p>
-        <h1 className="display mt-5 text-[--ink] text-[clamp(3.4rem,11vw,9.5rem)]">
+        <h1 className="display mt-5 max-w-full text-[--ink] text-[clamp(3rem,9vw,8.5rem)] lg:text-[clamp(2.8rem,6.2vw,7rem)]">
           I&nbsp;automate<br /><span className="text-[--red]">chaos.</span>
         </h1>
         <div className="mt-8 flex max-w-2xl flex-col gap-8 sm:mt-10 sm:flex-row sm:items-end sm:justify-between sm:gap-12">

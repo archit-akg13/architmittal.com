@@ -1,7 +1,8 @@
 const PREVIEWS = [
-  { title: 'AI API cost slashed 97.5%', client: 'SaaS startup', metric: '₹85K/mo', label: 'saved', accent: '#CF1134' },
-  { title: 'Backtesting engine, 100× faster', client: 'Algo trading firm', metric: '100×', label: 'faster iterations', accent: '#B8611B' },
-  { title: '40+ workflows automated', client: 'Digital agency', metric: '50hrs/wk', label: 'returned to the team', accent: '#5B4BA6' },
+  // Same case-study facts, annualised — the yearly number is the honest big one.
+  { title: 'AI API cost slashed 97.5%', client: 'SaaS startup', metric: '₹10L+/yr', label: 'saved on one API bill', accent: '#CF1134' },
+  { title: '40+ workflows automated', client: 'Digital agency', metric: '2,600+ hrs', label: 'returned to the team, every year', accent: '#5B4BA6' },
+  { title: 'Options backtester rebuilt', client: 'Crypto derivatives', metric: '30×', label: 'faster — 300s to 9.9s', accent: '#B8611B' },
 ]
 
 export default function CaseStudyPreview() {
