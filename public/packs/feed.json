@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-27T07:12:44.607Z",
+  "builtAt": "2026-08-27T08:31:06.381Z",
   "items": [
+    {
+      "slug": "tr-ai-website-cloner-template",
+      "kind": "reel",
+      "hook": "Your Claude agents clone any website, OPEN SOURCE and yours",
+      "postedAt": "2026-08-27T08:31:03.112Z",
+      "permalink": "https://www.instagram.com/reel/DciXLOnDLXd/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-ai-website-cloner-template.jpg",
+      "resource": {
+        "name": "JCodesMore/ai-website-cloner-template",
+        "url": "https://github.com/JCodesMore/ai-website-cloner-template"
+      }
+    },
     {
       "slug": "tool-vibe-trading",
       "kind": "carousel",
