@@ -15,7 +15,8 @@ export default function BookForm() {
     if (status === 'loading') return
     setStatus('loading'); setError('')
     try {
-      const res = await fetch('/api/book/order', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(form) })
+      const src = new URLSearchParams(window.location.search).get('src') || document.referrer.replace(/^https?:\/\//, '').split('/')[0] || 'direct'
+      const res = await fetch('/api/book/order', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...form, src }) })
       const data = await res.json()
       if (!res.ok || !data.paymentSessionId) { setStatus('error'); setError(data.error || 'Could not start the payment.'); return }
       // Same flow as the live indicators store: Cashfree JS SDK v3 hosted checkout.

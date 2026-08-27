@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     const limit = rateLimit(`book:${clientIp(request)}`, 8, 60 * 60 * 1000)
     if (!limit.allowed) return NextResponse.json({ error: 'Too many attempts — try again later.' }, { status: 429 })
 
-    const { name, email, phone } = await request.json()
+    const { name, email, phone, src } = await request.json()
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return NextResponse.json({ error: 'A valid email is required.' }, { status: 400 })
     const id = process.env.CASHFREE_APP_ID, secret = process.env.CASHFREE_SECRET_KEY
     if (!id || !secret) return NextResponse.json({ error: 'Payments not configured yet.' }, { status: 503 })
@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
     await fs.mkdir(dir, { recursive: true })
     const f = path.join(dir, 'bookings.json')
     const all = JSON.parse(await fs.readFile(f, 'utf-8').catch(() => '[]'))
-    all.push({ orderId, name, email, phone: ph, amount: AMOUNT_INR, status: 'created', createdAt: new Date().toISOString() })
+    all.push({ orderId, name, email, phone: ph, amount: AMOUNT_INR, src: String(src || 'direct').slice(0, 60), status: 'created', createdAt: new Date().toISOString() })
     await fs.writeFile(f, JSON.stringify(all, null, 2))
     return NextResponse.json({ orderId, paymentSessionId: cf.payment_session_id, mode: 'production' })
   } catch (e) {

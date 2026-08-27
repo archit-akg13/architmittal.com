@@ -113,9 +113,23 @@ export default function PackLibrary({ workflows, skills, feed = [] }: { workflow
           </p>
         )}
         {FREE_MODE && (
-          <p className="mt-6 inline-flex items-center gap-2 rounded-lg bg-[#0095F6]/10 px-4 py-2 text-sm font-semibold text-[#0095F6]" role="status">
-            <span aria-hidden>🎁</span> Everything here is free — tap any post and take the resource.
-          </p>
+          <div className="mt-6">
+            <p className="inline-flex items-center gap-2 rounded-lg bg-[#0095F6]/10 px-4 py-2 text-sm font-semibold text-[#0095F6]" role="status">
+              <span aria-hidden>🎁</span> Everything here is free — tap any post and take the resource.
+            </p>
+            {status !== 'success' ? (
+              <form onSubmit={submit} noValidate className="mt-3 flex max-w-md flex-col gap-2 sm:flex-row">
+                <input id="packs-email" type="email" inputMode="email" autoComplete="email"
+                  value={email} onChange={(e) => { setEmail(e.target.value); if (status === 'error') setStatus('idle') }}
+                  placeholder="Email (optional) — new packs land here first"
+                  className="h-11 min-h-[2.75rem] min-w-0 flex-1 rounded-lg border border-[#dbdbdb] bg-white px-3 text-sm outline-none focus-visible:border-[#0095F6] focus-visible:ring-2 focus-visible:ring-[#0095F6]/40" />
+                <button type="submit" disabled={status === 'loading'}
+                  className="h-11 shrink-0 rounded-lg bg-[#0095F6] px-4 text-sm font-semibold text-white hover:bg-[#1877F2] disabled:opacity-60">
+                  {status === 'loading' ? '…' : 'Notify me'}
+                </button>
+              </form>
+            ) : <p className="mt-3 text-sm font-semibold text-[#0095F6]">✓ You&rsquo;re on the list.</p>}
+          </div>
         )}
 
         {/* ── IG-style tab bar ───────────────────────────────── */}
