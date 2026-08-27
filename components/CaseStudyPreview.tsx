@@ -12,7 +12,7 @@ export default function CaseStudyPreview() {
         <h2 className="display mt-3 max-w-3xl text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">Work that pays for itself</h2>
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
           {PREVIEWS.map((c) => (
-            <a key={c.title} href="/case-studies" className="dcard group relative block overflow-hidden p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
+            <a key={c.title} href="/case-studies" data-reveal className="dcard group relative block overflow-hidden p-7 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
               <span aria-hidden className="absolute inset-y-0 left-0 w-1" style={{ background: c.accent }} />
               <p className="text-xs uppercase tracking-[0.14em] text-[--ink]/50">{c.client}</p>
               <h3 className="mt-3 font-body text-lg font-semibold leading-snug">{c.title}</h3>

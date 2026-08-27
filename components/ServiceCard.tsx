@@ -8,7 +8,7 @@ export default function ServicesSection() {
         <h2 className="display mt-3 text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">Four ways in</h2>
         <ol className="mt-10 grid grid-cols-1 gap-x-10 border-t border-[--ink]/10 sm:grid-cols-2">
           {SERVICES.map((s, i) => (
-            <li key={s.title} className="border-b border-[--ink]/10 py-8">
+            <li key={s.title} data-reveal className="border-b border-[--ink]/10 py-8">
               <div className="flex items-baseline gap-4">
                 <span className="display text-2xl text-[--ink]/30">0{i + 1}</span>
                 <h3 className="font-body text-xl font-semibold">{s.title}</h3>

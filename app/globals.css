@@ -23,7 +23,7 @@
 
 @layer base {
   body {
-    @apply bg-white text-body font-body;
+    @apply text-body font-body; background: var(--paper); color: var(--ink);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -57,3 +57,7 @@
 .animate-checkmark {
   animation: checkmark 0.4s ease-out forwards;
 }
+
+/* Reveal: only when JS confirmed running; otherwise everything is simply visible. */
+.js-on [data-reveal] { opacity: 0; transform: translateY(14px); transition: opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1); }
+.js-on [data-reveal].is-in { opacity: 1; transform: none; }

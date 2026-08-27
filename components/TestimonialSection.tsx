@@ -10,7 +10,7 @@ export default function TestimonialSection() {
         <p className="eyebrow">In their words</p>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.map((t) => (
-            <figure key={t.name} className="dcard p-7">
+            <figure key={t.name} data-reveal className="dcard p-7">
               <blockquote className="text-[15px] leading-relaxed text-[--ink]/85">&ldquo;{t.quote}&rdquo;</blockquote>
               <figcaption className="mt-6 text-sm">
                 <span className="font-semibold">{t.name}</span>

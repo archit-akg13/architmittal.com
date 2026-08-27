@@ -8,6 +8,7 @@ import FloatingCTA from '@/components/FloatingCTA'
 import AnalyticsTracker from '@/components/AnalyticsTracker'
 import ExitIntentPopup from '@/components/ExitIntentPopup'
 import ReadingProgress from '@/components/ReadingProgress'
+import Reveal from '@/components/Reveal'
 import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 
 const anton = Anton({
@@ -106,6 +107,7 @@ export default function RootLayout({
         <AnalyticsTracker />
         <ExitIntentPopup />
         <ReadingProgress />
+        <Reveal />
       </body>
     </html>
   )

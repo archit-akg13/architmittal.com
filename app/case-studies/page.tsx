@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TOPMATE_URL } from '@/lib/constants'
+import { CAL_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
   title: 'Case Studies',
@@ -55,52 +55,50 @@ const CASE_STUDIES = [
 
 export default function CaseStudiesPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 className="font-heading font-bold text-3xl sm:text-4xl text-heading mb-3">Case Studies</h1>
-      <p className="font-body text-body mb-10">
-        Real results from real automation projects. Here&apos;s how I&apos;ve helped businesses save time and money.
-      </p>
+    <main className="bg-[--paper] text-[--ink]">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
+        <p className="eyebrow">Case studies</p>
+        <h1 className="display mt-3 text-[--ink] text-[clamp(2.6rem,8vw,6rem)]">Receipts, not promises</h1>
+        <p className="mt-5 max-w-xl text-lg text-[--ink-dim]">
+          Four real projects, with the numbers they produced. Every figure below was measured after delivery, not projected before it.
+        </p>
 
-      <div className="space-y-8">
-        {CASE_STUDIES.map((cs) => (
-          <div key={cs.title} className="border border-gray-200 rounded-xl overflow-hidden">
-            <div className="bg-dark p-6">
-              <span className="text-lime text-xs font-heading font-semibold uppercase tracking-wider">{cs.client}</span>
-              <h2 className="font-heading font-bold text-xl text-white mt-1">{cs.title}</h2>
-            </div>
-            <div className="p-6">
-              <div className="mb-4">
-                <h3 className="font-heading font-semibold text-sm text-heading mb-1">The Problem</h3>
-                <p className="font-body text-body text-sm">{cs.problem}</p>
+        <div className="mt-14 space-y-10">
+          {CASE_STUDIES.map((cs, i) => (
+            <article key={cs.title} data-reveal className="dcard overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
+                <div className="p-8 sm:p-10">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[--ink]/50">
+                    <span className="display mr-3 text-base text-[--ink]/30">0{i + 1}</span>{cs.client}
+                  </p>
+                  <h2 className="display mt-3 text-[--ink] text-[clamp(1.6rem,3.4vw,2.6rem)]">{cs.title}</h2>
+                  <h3 className="mt-7 text-sm font-semibold uppercase tracking-wide text-[--red]">The problem</h3>
+                  <p className="mt-2 leading-relaxed text-[--ink-dim]">{cs.problem}</p>
+                  <h3 className="mt-6 text-sm font-semibold uppercase tracking-wide text-[--gold]">What I built</h3>
+                  <p className="mt-2 leading-relaxed text-[--ink-dim]">{cs.solution}</p>
+                </div>
+                <div className="flex flex-col justify-center gap-8 border-t border-[--ink]/10 bg-[--paper3] p-8 sm:p-10 md:border-l md:border-t-0">
+                  {cs.results.map((r) => (
+                    <div key={r.label}>
+                      <div className="display tnum text-4xl text-[--red]">{r.metric}</div>
+                      <div className="mt-1 text-sm text-[--ink-dim]">{r.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="mb-4">
-                <h3 className="font-heading font-semibold text-sm text-heading mb-1">The Solution</h3>
-                <p className="font-body text-body text-sm">{cs.solution}</p>
-              </div>
-              <div className="grid grid-cols-3 gap-4 bg-gray-50 rounded-lg p-4">
-                {cs.results.map((r) => (
-                  <div key={r.label} className="text-center">
-                    <div className="font-heading font-bold text-xl text-lime">{r.metric}</div>
-                    <div className="font-body text-body text-xs">{r.label}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+            </article>
+          ))}
+        </div>
 
-      <div className="mt-12 text-center">
-        <p className="font-body text-body mb-4">Want results like these for your business?</p>
-        <a
-          href={TOPMATE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-lime hover:bg-lime-dark text-white px-8 py-3 rounded-lg font-heading font-bold transition-colors"
-        >
-          Book a Consultation
-        </a>
+        <div className="mt-20 border-t border-[--ink]/10 pt-14 text-center">
+          <h2 className="display text-[--ink] text-[clamp(2rem,5.5vw,3.6rem)]">Your process could be case study five</h2>
+          <a href={CAL_URL} target="_blank" rel="noopener noreferrer"
+            className="mt-8 inline-flex h-14 items-center rounded-md bg-[--red] px-10 font-body text-base font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
+            Book the paid 1:1 →
+          </a>
+          <p className="mt-4 text-sm text-[--ink]/55">One call, one process mapped for automation. The plan is yours either way.</p>
+        </div>
       </div>
-    </div>
+    </main>
   )
 }

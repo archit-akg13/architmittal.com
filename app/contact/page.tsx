@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TOPMATE_URL, SITE_EMAIL } from '@/lib/constants'
+import { CAL_URL, SITE_EMAIL } from '@/lib/constants'
 import ContactForm from '@/components/ContactForm'
 import SocialIcon from '@/components/SocialIcon'
 
@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 className="font-heading font-bold text-3xl sm:text-4xl text-heading mb-3">
+      <h1 className="display text-[--ink] text-[clamp(2.4rem,7vw,4.5rem)] mb-4">
         Let&apos;s Work Together
       </h1>
-      <p className="font-body text-body mb-10 max-w-2xl">
+      <p className="font-body text-[--ink-dim] mb-10 max-w-2xl">
         Tell me about your automation needs and I&apos;ll get back to you within 24 hours.
       </p>
 
@@ -24,24 +24,24 @@ export default function ContactPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="bg-lime/5 border border-lime/20 rounded-xl p-6">
-            <h3 className="font-heading font-semibold text-heading mb-2">Need urgent help?</h3>
-            <p className="font-body text-body text-sm mb-3">
+          <div className="dcard rounded-xl p-6">
+            <h3 className="font-heading font-semibold text-[--ink] mb-2">Need urgent help?</h3>
+            <p className="font-body text-[--ink-dim] text-sm mb-3">
               Book a 1:1 consultation directly.
             </p>
             <a
-              href={TOPMATE_URL}
+              href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-lime hover:bg-lime-dark text-white px-5 py-2 rounded-lg font-heading font-semibold text-sm transition-colors"
+              className="inline-block bg-[--red] hover:bg-[#a90d29] text-white px-5 py-2 rounded-lg font-heading font-semibold text-sm transition-colors"
             >
               Book on Topmate
             </a>
           </div>
 
           <div className="border border-gray-200 rounded-xl p-6">
-            <h3 className="font-heading font-semibold text-heading mb-3">Direct Contact</h3>
-            <p className="font-body text-body text-sm mb-4">
+            <h3 className="font-heading font-semibold text-[--ink] mb-3">Direct Contact</h3>
+            <p className="font-body text-[--ink-dim] text-sm mb-4">
               Email: <a href={`mailto:${SITE_EMAIL}`} className="text-lime hover:text-lime-dark transition-colors">{SITE_EMAIL}</a>
             </p>
             <div className="flex gap-3">
@@ -60,9 +60,9 @@ export default function ContactPage() {
       </div>
 
       <section className="mt-16 pt-8 border-t border-gray-200">
-        <h2 className="font-heading font-semibold text-lg text-heading mb-1">Contact Us</h2>
+        <h2 className="font-heading font-semibold text-lg text-[--ink] mb-1">Contact Us</h2>
         <p className="font-body text-subtle text-xs mb-5">Last updated on 22-04-2026 09:33:38</p>
-        <div className="font-body text-body text-sm space-y-2 max-w-2xl">
+        <div className="font-body text-[--ink-dim] text-sm space-y-2 max-w-2xl">
           <p>You may contact us using the information below:</p>
           <p><span className="font-semibold">Merchant Legal entity name:</span> AUTOMATE ALGOS PRIVATE LIMITED</p>
           <p><span className="font-semibold">Registered Address:</span> 32D/328A/20D SUBHASH NAGAR KARMYOGI, ROAD, Agra, Agra, UP, IN - 282005, Agra, UP, PIN: 282005</p>
