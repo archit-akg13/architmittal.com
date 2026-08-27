@@ -5,6 +5,7 @@ import CaseStudyPreview from '@/components/CaseStudyPreview'
 import CollageMarquee from '@/components/CollageMarquee'
 import LinkedInStrip from '@/components/LinkedInStrip'
 import ProofCollage from '@/components/ProofCollage'
+import WorkflowShowcase from '@/components/WorkflowShowcase'
 import BlogPreview from '@/components/BlogPreview'
 import EmailCapture from '@/components/EmailCapture'
 import TestimonialSection from '@/components/TestimonialSection'
@@ -36,6 +37,7 @@ export default function Home() {
       <CollageMarquee />
       <StatsSection />
       <CaseStudyPreview />
+      <WorkflowShowcase />
       <LinkedInStrip />
       <ServicesSection />
       <ProofCollage />
