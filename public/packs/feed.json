@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-08-27T07:10:45.524Z",
+  "builtAt": "2026-08-27T07:12:44.607Z",
   "items": [
     {
       "slug": "tool-vibe-trading",
@@ -8,7 +8,7 @@
       "postedAt": "2026-08-27T07:01:42.812Z",
       "permalink": "https://www.instagram.com/p/DciM_CXiQvg/",
       "trigger": "REPO",
-      "thumb": "/packs/feed/tool-vibe-trading.jpg",
+      "thumb": "/packs/feed/tool-vibe-trading-c.jpg",
       "resource": {
         "name": "HKUDS/Vibe-Trading",
         "url": "https://github.com/HKUDS/Vibe-Trading"
@@ -229,7 +229,7 @@
       "postedAt": "2026-08-22T05:01:31.505Z",
       "permalink": "https://www.instagram.com/p/DcVHQE2E23W/",
       "trigger": "WORKFLOW",
-      "thumb": "/packs/feed/workflow-ai-web-researcher-for-sales.jpg",
+      "thumb": "/packs/feed/workflow-ai-web-researcher-for-sales-c.jpg",
       "resource": {
         "name": "AI web researcher for sales",
         "url": "https://architmittal.com/packs/workflows/ai-web-researcher-for-sales.json"
@@ -268,7 +268,7 @@
       "postedAt": "2026-08-21T06:04:39.921Z",
       "permalink": "https://www.instagram.com/p/DcSpsCdEx_7/",
       "trigger": "SKILL",
-      "thumb": "/packs/feed/skill-product-description.jpg",
+      "thumb": "/packs/feed/skill-product-description-c.jpg",
       "resource": {
         "name": "product-description",
         "url": "https://architmittal.com/packs/skills/product-description.md"
@@ -353,7 +353,7 @@
       "postedAt": "2026-08-18T05:04:58.274Z",
       "permalink": "https://www.instagram.com/p/DcK0fdZGf4o/",
       "trigger": "REPO",
-      "thumb": "/packs/feed/tool-nanobot.jpg",
+      "thumb": "/packs/feed/tool-nanobot-c.jpg",
       "resource": {
         "name": "HKUDS/nanobot",
         "url": "https://github.com/HKUDS/nanobot"
@@ -380,6 +380,26 @@
       "resource": null
     },
     {
+      "slug": "agent-postmortem",
+      "kind": "carousel",
+      "hook": "My AI agent\n[[circle:lost me a client]]",
+      "postedAt": "2026-08-16T05:04:27.355Z",
+      "permalink": "https://www.instagram.com/p/DcFq0twGslQ/",
+      "trigger": "AUDIT",
+      "thumb": "/packs/feed/agent-postmortem-c.jpg",
+      "resource": null
+    },
+    {
+      "slug": "the-third-follow-up-message",
+      "kind": "carousel",
+      "hook": "Touch two dies\nbecause it sounds\nlike [[circle:touch one]]",
+      "postedAt": "2026-08-15T14:28:55.153Z",
+      "permalink": "https://www.instagram.com/p/DcEGoLmmoMn/",
+      "trigger": "PROMPTS",
+      "thumb": "/packs/feed/the-third-follow-up-message-c.jpg",
+      "resource": null
+    },
+    {
       "slug": "whatsapp-gap",
       "kind": "reel",
       "hook": "Your customers\nare on WhatsApp.\nYour automation [[circle:isn't]]",
@@ -387,6 +407,16 @@
       "permalink": "https://www.instagram.com/reel/DcDeBBVnT6e/",
       "trigger": "WHATSAPP",
       "thumb": "/packs/feed/whatsapp-gap.jpg",
+      "resource": null
+    },
+    {
+      "slug": "subscription-cull",
+      "kind": "carousel",
+      "hook": "You pay for eleven\nAI tools.\n[[circle:Kill four.]]",
+      "postedAt": "2026-08-14T17:23:47.468Z",
+      "permalink": "https://www.instagram.com/p/DcB13OrmE6T/",
+      "trigger": "STACK",
+      "thumb": "/packs/feed/subscription-cull-c.jpg",
       "resource": null
     },
     {
