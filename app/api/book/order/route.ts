@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     const all = JSON.parse(await fs.readFile(f, 'utf-8').catch(() => '[]'))
     all.push({ orderId, name, email, phone: ph, amount: AMOUNT_INR, status: 'created', createdAt: new Date().toISOString() })
     await fs.writeFile(f, JSON.stringify(all, null, 2))
-    return NextResponse.json({ orderId, paymentLink: `https://payments.cashfree.com/order/#${cf.payment_session_id}` })
+    return NextResponse.json({ orderId, paymentSessionId: cf.payment_session_id, mode: 'production' })
   } catch (e) {
     console.error('[book/order]', (e as Error).message)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
