@@ -24,6 +24,7 @@
 @layer base {
   body {
     @apply text-body font-body; background: var(--paper); color: var(--ink);
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -88,3 +89,5 @@ a.inline-flex:active { transform: translateY(1px); }
 .drift { animation: drift-up 60s linear infinite; }
 .drift-rev { animation-direction: reverse; animation-duration: 75s; }
 @media (prefers-reduced-motion: reduce) { .drift, .drift-rev { animation: none } }
+
+html { overflow-x: clip; }
