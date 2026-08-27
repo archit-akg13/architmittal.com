@@ -5,11 +5,13 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 12 Aug '26 (Wed),14:07 IST,reel,orca,published,https://www.instagram.com/reel/Db7v9b8jgOz/,,,,,,,152,1,1,1,1,4.8,,,,,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Aug '26 (Fri),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,seeded from ledgers,
 14 Aug '26 (Fri),19:05 IST,reel,hyperframes,published,https://www.instagram.com/reel/DcBbt9AiV5D/,,,,,,,14,0,0,0,0,2.8,,,,,,underperformed — the hook likely did not stop the scroll
-14 Aug '26 (Fri),22:53 IST,carousel,subscription-cull,published,https://www.instagram.com/p/DcB13OrmE6T/,,,,,,,22,0,1,0,0,9.2,,,,,,underperformed — the hook likely did not stop the scroll
+14 Aug '26 (Fri),22:53 IST,carousel,subscription-cull,published,https://www.instagram.com/p/DcB13OrmE6T/,,,,,,,26,0,1,0,0,,,,,,,underperformed — the hook likely did not stop the scroll
 15 Aug '26 (Sat),14:04 IST,reel,whatsapp-gap,published,https://www.instagram.com/reel/DcDeBBVnT6e/,,,,,,,28,0,0,0,0,3.3,,,,,,underperformed — the hook likely did not stop the scroll
-15 Aug '26 (Sat),19:58 IST,carousel,the-third-follow-up-message,published,https://www.instagram.com/p/DcEGoLmmoMn/,,,,,,,120,0,1,0,0,3.0,,,,,,steady
-16 Aug '26 (Sun),10:34 IST,carousel,agent-postmortem,published,https://www.instagram.com/p/DcFq0twGslQ/,,,,,,,8,0,1,0,0,3.0,,,,,,underperformed — the hook likely did not stop the scroll
+15 Aug '26 (Sat),19:58 IST,carousel,the-third-follow-up-message,published,https://www.instagram.com/p/DcEGoLmmoMn/,,,,,,,19,0,2,0,0,,,,,,,underperformed — the hook likely did not stop the scroll
+16 Aug '26 (Sun),10:34 IST,carousel,agent-postmortem,published,https://www.instagram.com/p/DcFq0twGslQ/,,,,,,,10,0,3,0,0,,,,,,,underperformed — the hook likely did not stop the scroll
+16 Aug '26 (Sun),14:01 IST,reel,subscription-cull,published,https://www.instagram.com/reel/DcGCerAlZNE/,,,,,,,22,0,1,0,0,9.2,,,,,,underperformed — the hook likely did not stop the scroll
 17 Aug '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: ERROR: public/ig/c-whatsapp-gap already exists. Pass --force to overwrite.,
+17 Aug '26 (Mon),14:04 IST,reel,the-third-follow-up-message,published,https://www.instagram.com/reel/DcInosSjhoM/,,,,,,,120,0,1,0,0,3.0,,,,,,steady
 18 Aug '26 (Tue),10:34 IST,carousel,tool-nanobot,published,https://www.instagram.com/p/DcK0fdZGf4o/,,,,,11,0,19,0,2,0,0,,,,73,,,underperformed — the hook likely did not stop the scroll
 18 Aug '26 (Tue),14:04 IST,reel,tr-nanoclaw,published,https://www.instagram.com/reel/DcLMdL6klxS/,,,,,136,0,136,0,1,3,1,4.2,,,0,v3,,steady; 3 save(s)
 18 Aug '26 (Tue),19:04 IST,reel,tr-chrome-devtools-mcp,published,https://www.instagram.com/reel/DcLuxmkDf6_/,,,,,119,0,119,0,0,1,1,3.1,,,0,v3,,steady; 1 save(s)
@@ -17,6 +19,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 19 Aug '26 (Wed),14:04 IST,reel,tr-claude-plugins-official,published,https://www.instagram.com/reel/DcNxKd7Ckbe/,11,0,75,0,109,0,111,0,1,0,0,2.0,582,45,2,v3,,steady
 19 Aug '26 (Wed),19:04 IST,reel,tr-ai-agent-book,published,https://www.instagram.com/reel/DcOTh7_D9Pr/,0,0,6,0,11,0,13,0,0,0,0,8.4,,83,18,v3,,underperformed — the hook likely did not stop the scroll
 20 Aug '26 (Thu),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: ERROR: public/ig/c-workflow-ai-web-researcher-for-sales already exists. Pass --force to overwrite. · business reel: null · tool reel: null,
+20 Aug '26 (Thu),21:04 IST,reel,agent-postmortem,published,https://www.instagram.com/reel/DcRGEa7ABln/,,,,,,,8,0,1,0,0,3.0,,,,,,underperformed — the hook likely did not stop the scroll
 20 Aug '26 (Thu),21:09 IST,reel,nanobot,published,https://www.instagram.com/reel/DcRGo0ZkRtE/,1,0,4,0,16,0,17,0,0,0,0,3.1,300,300,6,,,underperformed — the hook likely did not stop the scroll
 21 Aug '26 (Fri),11:34 IST,carousel,skill-product-description,published,https://www.instagram.com/p/DcSpsCdEx_7/,0,0,9,0,13,1,17,1,1,0,0,,,44,31,,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
 21 Aug '26 (Fri),14:00 IST,reel,tr-awesome-claude-code,published,https://www.instagram.com/reel/DcS6apAj0I-/,67,0,86,0,105,1,108,1,0,0,0,1.9,28,22,3,v3,,1 comment(s) — the DM funnel fired; steady
@@ -26,16 +29,16 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 22 Aug '26 (Sat),19:00 IST,reel,tr-langextract,published,https://www.instagram.com/reel/DcWBh2qjrg8/,24,1,108,1,117,1,128,1,0,0,0,3.0,350,8,9,v4,,1 comment(s) — the DM funnel fired; steady
 23 Aug '26 (Sun),07:31 IST,reel,tr-auto-claude-code-research-in-sleep,published,https://www.instagram.com/reel/DcXXXbpAYxn/,81,1,142,1,144,1,145,1,0,0,0,4.3,75,1,1,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 23 Aug '26 (Sun),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-23 Aug '26 (Sun),10:31 IST,reel,tr-page-agent,published,https://www.instagram.com/reel/DcXr9WWlVYD/,14,1,69,1,153,2,170,2,0,1,3,4.2,393,122,11,34s · Claude · v4,,2 comment(s) — the DM funnel fired; top performer: 170 views vs 113 median; 1 save(s)
+23 Aug '26 (Sun),10:31 IST,reel,tr-page-agent,published,https://www.instagram.com/reel/DcXr9WWlVYD/,14,1,69,1,153,2,170,2,0,1,3,4.2,393,122,11,34s · Claude · v4,,2 comment(s) — the DM funnel fired; top performer: 170 views vs 109 median; 1 save(s)
 23 Aug '26 (Sun),14:01 IST,reel,tr-voicestudio,published,https://www.instagram.com/reel/DcYEBAtgc8V/,45,1,86,1,109,1,109,1,0,0,1,1.6,91,27,0,18s · ElevenLabs · v4,,1 comment(s) — the DM funnel fired; steady
-24 Aug '26 (Mon),07:31 IST,reel,tr-goose,published,https://www.instagram.com/reel/DcZ8O0pDTXh/,49,1,144,1,658,5,817,8,2,12,1,5.4,194,357,24,34s · Cursor · v4,,8 comment(s) — the DM funnel fired; top performer: 817 views vs 113 median; 12 save(s)
+24 Aug '26 (Mon),07:31 IST,reel,tr-goose,published,https://www.instagram.com/reel/DcZ8O0pDTXh/,49,1,144,1,658,5,817,8,2,12,1,5.4,194,357,24,34s · Cursor · v4,,8 comment(s) — the DM funnel fired; top performer: 817 views vs 109 median; 12 save(s)
 24 Aug '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 24 Aug '26 (Mon),10:31 IST,reel,tr-playwright-mcp,published,https://www.instagram.com/reel/DcaQzreE40l/,19,1,81,1,113,1,113,1,2,1,0,3.1,326,40,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
-24 Aug '26 (Mon),14:01 IST,reel,tr-pageindex,published,https://www.instagram.com/reel/DcaoyscEpw7/,46,1,119,1,228,1,249,1,2,5,0,3.3,159,92,9,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 249 views vs 113 median; 5 save(s)
-25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,278,1,281,1,3,2,0,4.2,331,122,1,18s · Claude · v4,,1 comment(s) — the DM funnel fired; top performer: 281 views vs 113 median; 2 save(s)
+24 Aug '26 (Mon),14:01 IST,reel,tr-pageindex,published,https://www.instagram.com/reel/DcaoyscEpw7/,46,1,119,1,228,1,249,1,2,5,0,3.3,159,92,9,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 249 views vs 109 median; 5 save(s)
+25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,278,1,281,1,3,2,0,4.2,331,122,1,18s · Claude · v4,,1 comment(s) — the DM funnel fired; top performer: 281 views vs 109 median; 2 save(s)
 25 Aug '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,174,1,179,1,4,1,0,4.3,3025,39,3,34s · Cursor · v4,,1 comment(s) — the DM funnel fired; top performer: 179 views vs 113 median; 1 save(s)
-25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,119,1,150,1,165,1,6,5,1,3.5,1600,26,10,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 5 save(s)
+25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,174,1,179,1,4,1,0,4.3,3025,39,3,34s · Cursor · v4,,1 comment(s) — the DM funnel fired; top performer: 179 views vs 109 median; 1 save(s)
+25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,119,1,150,1,165,1,6,5,1,3.5,1600,26,10,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 165 views vs 109 median; 5 save(s)
 26 Aug '26 (Wed),07:31 IST,reel,tr-github-mcp-server,published,https://www.instagram.com/reel/DcfFwo7iLmk/,10,1,39,1,81,1,81,1,0,0,0,2.7,290,108,0,34s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 26 Aug '26 (Wed),10:30 IST,reel,tr-500-ai-agents-projects,published,https://www.instagram.com/reel/DcfaV7zlD8N/,23,1,31,1,97,1,105,1,1,2,0,2.7,35,213,8,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 26 Aug '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
