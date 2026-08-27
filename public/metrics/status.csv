@@ -1,5 +1,5 @@
 SYSTEM COMMENTARY
-Updated 2026-08-27 21:23 IST. Collector runs hourly; sheet re-imports on Google's cycle.
+Updated 2026-08-27 22:57 IST. Collector runs hourly; sheet re-imports on Google's cycle.
 "Runway: 5 carousel(s) and 11 reel(s) built, QA-passed and scheduled — about 3 days at 3 reels a day."
 "Last 7 days: 5 missed slot(s): carousel on 2026-08-20, carousel on 2026-08-23, carousel on 2026-08-24, carousel on 2026-08-25, carousel on 2026-08-26."
 Followers: 21 (was 18 a week ago).
@@ -7,3 +7,4 @@ Followers: 21 (was 18 a week ago).
 "Latest day analysis (2026-08-27): Reels held their lane — tr-lightrag led at 162 views with 3 saves, and every reel drew comments — while the carousel flopped at 8 views with zero saves, confirming reels carry all reach. Tomorrow, drop the carousel slot and post a third tool-discovery reel, leading with a lightrag-style ""underrated repo"" hook."
 "Optimizer (2026-08-26): WORKED: tr-ui-tars-desktop led the day at 278 views with 4.17s average watch, the strongest reel in the 07:30 slot. DID NOT: tr-prompt-optimizer managed only 42 views (2.77s watch), and tr-github-mcp-server also fell short at 76 views despite the 07:30 slot. CHANGE: switching reel length to arm B at 34s (median views 201 vs 144 for A) and weighting anchors towards Cursor, ChatGPT, then Claude."
 "Strategy now: reels 07:30/10:30/14:00 · length 34s · carousel every 7d · CTA ""Comment REPO"" · anchors Cursor, ChatGPT, Claude"
+"CALLS: 0 paid consult(s) all-time, 0 in the last 30 days, 0 booking attempt(s). Target: 5 by 10 Sep, 30/month by 25 Nov."
