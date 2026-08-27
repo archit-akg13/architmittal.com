@@ -26,9 +26,12 @@ export type PackItem = {
 }
 
 export default function PacksPage() {
-  const index = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public', 'packs', 'index.json'), 'utf8')) as {
+  const pub = (f: string) => path.join(process.cwd(), 'public', 'packs', f)
+  const index = JSON.parse(fs.readFileSync(pub('index.json'), 'utf8')) as {
     workflows: PackItem[]
     skills: PackItem[]
   }
-  return <PackLibrary workflows={index.workflows} skills={index.skills} />
+  let feed: { items: unknown[] } = { items: [] }
+  try { feed = JSON.parse(fs.readFileSync(pub('feed.json'), 'utf8')) } catch {}
+  return <PackLibrary workflows={index.workflows} skills={index.skills} feed={feed.items as never} />
 }
