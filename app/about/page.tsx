@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
+import CollageMarquee from '@/components/CollageMarquee'
 import { CAL_URL } from '@/lib/constants'
 
 export const metadata: Metadata = {
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
+    <>
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
       <div className="flex flex-col md:flex-row items-start gap-8 mb-12">
         <div className="w-[150px] h-[150px] flex-shrink-0">
@@ -81,5 +83,7 @@ export default function AboutPage() {
         </p>
       </section>
     </div>
+      <CollageMarquee />
+    </>
   )
 }

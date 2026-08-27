@@ -55,6 +55,7 @@ const CASE_STUDIES = [
 
 const FINANCE_CASES = [
   {
+    shot: { src: '/images/proof/btadmin.jpg', href: 'https://btadmin.architmittal.in', label: 'Strategy basket admin — btadmin.architmittal.in' },
     title: 'Options backtester made 30× faster',
     client: 'Crypto derivatives analytics',
     problem: 'Backtesting 40 symbols took 300 seconds per run — too slow to iterate on strategy ideas, and the grid optimizer multiplied that pain by thousands of runs.',
@@ -66,6 +67,7 @@ const FINANCE_CASES = [
     ],
   },
   {
+    shot: { src: '/images/proof/btfull.jpg', href: 'https://btfull.architmittal.in', label: 'The live platform — btfull.architmittal.in' },
     title: '64,320 backtests before one rupee at risk',
     client: 'Crypto signal advisory',
     problem: 'Picking strategies by eyeballing a handful of charts — no way to know if a "winner" was real edge or curve-fit luck.',
@@ -152,6 +154,13 @@ export default function CaseStudiesPage() {
                   <p className="mt-2 leading-relaxed text-[--ink-dim]">{cs.problem}</p>
                   <h4 className="mt-6 text-sm font-semibold uppercase tracking-wide text-[--gold]">What I built</h4>
                   <p className="mt-2 leading-relaxed text-[--ink-dim]">{cs.solution}</p>
+                  {'shot' in cs && cs.shot && (
+                    <a href={cs.shot.href} target="_blank" rel="noopener noreferrer" className="mt-6 block overflow-hidden rounded-lg border border-[--ink]/15 transition-transform duration-200 hover:-translate-y-1">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={cs.shot.src} alt={cs.shot.label} loading="lazy" className="w-full object-cover" />
+                      <span className="block bg-[--paper3] px-3 py-2 font-mono text-xs text-[--ink]/60">{cs.shot.label} ↗</span>
+                    </a>
+                  )}
                 </div>
                 <div className="flex flex-col justify-center gap-8 border-t border-[--ink]/10 bg-[--paper3] p-8 sm:p-10 md:border-l md:border-t-0">
                   {cs.results.map((r) => (
