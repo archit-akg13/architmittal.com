@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-27T07:01:27.951Z",
+  "builtAt": "2026-08-27T07:10:45.524Z",
   "items": [
+    {
+      "slug": "tool-vibe-trading",
+      "kind": "carousel",
+      "hook": "Run a hedge fund\nresearch desk on\nyour laptop FREE",
+      "postedAt": "2026-08-27T07:01:42.812Z",
+      "permalink": "https://www.instagram.com/p/DciM_CXiQvg/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tool-vibe-trading.jpg",
+      "resource": {
+        "name": "HKUDS/Vibe-Trading",
+        "url": "https://github.com/HKUDS/Vibe-Trading"
+      }
+    },
     {
       "slug": "tr-agentic-awesome-skills",
       "kind": "reel",
