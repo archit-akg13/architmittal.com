@@ -47,10 +47,11 @@ export const SERVICES = [
 ] as const
 
 export const STATS = [
-  { value: '₹85K/mo', label: 'Saved on AI API costs' },
-  { value: '40+', label: 'Automation systems built' },
-  { value: '10,000+', label: 'LinkedIn followers' },
-  { value: '97.5%', label: 'Cost reduction achieved' },
+  // Same facts as the case studies, annualised — big and honest.
+  { value: '₹52L+/yr', label: 'Documented client savings across case studies' },
+  { value: '10,000+', label: 'Traders & businesses automated' },
+  { value: '2,600+ hrs', label: 'Returned to one team, every year' },
+  { value: '97.5%', label: 'Single biggest cost cut delivered' },
 ] as const
 
 export const RESULTS_TICKER = [
@@ -103,4 +104,4 @@ export const FAQ_ITEMS = [
 
 // Paid 1:1 consultation. Everything else on the site is free (Archit, 27 Aug 2026).
 // Override with NEXT_PUBLIC_CAL_URL once the cal.com event exists.
-export const CAL_URL = process.env.NEXT_PUBLIC_CAL_URL ?? TOPMATE_URL
+export const CAL_URL = '/book'

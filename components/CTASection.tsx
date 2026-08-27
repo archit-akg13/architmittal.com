@@ -8,9 +8,9 @@ export default function CTASection() {
           One call.<br /><span className="text-[--red]">One process automated.</span>
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-lg text-[--ink-dim]">
-          A paid 1:1 where we pick the one manual process costing you the most and map exactly how to kill it. You leave with the plan either way.
+          \u20b92,999 for 45 minutes: we pick the one manual process costing you the most and map exactly how to kill it. Fully credited back on any done-for-you project — you leave with the plan either way.
         </p>
-        <a href={CAL_URL} target="_blank" rel="noopener noreferrer"
+        <a href={CAL_URL}
           className="mt-10 inline-flex h-14 items-center rounded-md bg-[--red] px-10 font-body text-base font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
           Book the 1:1 consultation →
         </a>

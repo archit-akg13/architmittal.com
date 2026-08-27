@@ -92,7 +92,7 @@ export default function CaseStudiesPage() {
 
         <div className="mt-20 border-t border-[--ink]/10 pt-14 text-center">
           <h2 className="display text-[--ink] text-[clamp(2rem,5.5vw,3.6rem)]">Your process could be case study five</h2>
-          <a href={CAL_URL} target="_blank" rel="noopener noreferrer"
+          <a href={CAL_URL}
             className="mt-8 inline-flex h-14 items-center rounded-md bg-[--red] px-10 font-body text-base font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
             Book the paid 1:1 →
           </a>

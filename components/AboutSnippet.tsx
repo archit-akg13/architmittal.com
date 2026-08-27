@@ -3,30 +3,21 @@ import Image from 'next/image'
 
 export default function AboutSnippet() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <div className="flex-shrink-0">
-          <Image
-            src="/images/archit-headshot-400.jpg"
-            alt="Archit Mittal"
-            width={200}
-            height={200}
-            loading="lazy"
-            className="rounded-full border-[3px] border-lime object-cover"
-          />
+    <section className="mx-auto max-w-6xl px-4 py-16 text-[--ink] sm:px-6 sm:py-20">
+      <div className="flex flex-col items-center gap-10 md:flex-row md:gap-14">
+        <div className="shrink-0">
+          <Image src="/images/archit-headshot-800.jpg" alt="Archit Mittal" width={300} height={300} loading="lazy"
+            className="h-56 w-56 rounded-2xl border-2 border-[--ink]/10 object-cover shadow-[0_18px_40px_rgba(22,19,14,.15)] sm:h-72 sm:w-72" />
         </div>
         <div>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-heading mb-3">
-            Hi, I&apos;m Archit Mittal
-          </h2>
-          <p className="font-body text-body leading-relaxed mb-4">
-            I&apos;m an AI &amp; automation consultant who builds custom algo trading systems, AI agents, and business automation.
-            As a registered market professional (AMFI ARN holder &amp; Authorized Person) and AI engineer,
-            I bring a rare combination — I understand both the technology and the domain. From saving a client ₹85K/month on AI API costs to building 40+ automation systems, I turn operational chaos into competitive advantage.
+          <h2 className="display text-[--ink] text-[clamp(1.9rem,5vw,3.2rem)]">Hi, I&rsquo;m Archit</h2>
+          <p className="mt-4 max-w-xl text-[17px] leading-relaxed text-[--ink-dim]">
+            Founder of Automate Algos and Coingreeks. I spent years on trading desks learning that the boring, reliable system beats the clever demo — then started building exactly those systems for founders and firms across India.
           </p>
-          <Link href="/about" className="text-lime hover:text-lime-dark font-heading font-semibold text-sm transition-colors">
-            Learn More &rarr;
-          </Link>
+          <p className="mt-3 max-w-xl text-[17px] leading-relaxed text-[--ink-dim]">
+            Everything I run — including the Instagram engine that publishes daily and the site you&rsquo;re reading — is automation I built myself. The case studies are the receipts.
+          </p>
+          <Link href="/about" className="mt-6 inline-block font-body text-sm font-semibold text-[--red] underline-offset-4 hover:underline">More about me →</Link>
         </div>
       </div>
     </section>

@@ -1,59 +1,32 @@
 import Link from 'next/link'
+import { getAllPosts } from '@/lib/blog'
 
-// Placeholder blog cards — will be replaced with real data from getAllPosts() in Task 6
-const PLACEHOLDER_POSTS = [
-  {
-    slug: 'how-i-saved-client-85k-on-ai-api-costs',
-    title: 'How I Saved a Client ₹85K/Month on AI API Costs',
-    description: 'A practical guide to reducing LLM API costs by 97.5% using caching, model switching, and smart batching.',
-    date: '2026-03-15',
-    readingTime: '7 min read',
-  },
-  {
-    slug: 'claude-code-honest-developer-review',
-    title: 'Claude Code: An Honest Developer Review',
-    description: 'A hands-on review of Claude Code from someone who uses it daily to build automation systems and AI agents.',
-    date: '2026-03-10',
-    readingTime: '10 min read',
-  },
-  {
-    slug: 'what-is-mcp-protocol-usb-for-ai-agents',
-    title: 'What is MCP Protocol? The USB Port for AI Agents',
-    description: 'MCP Protocol explained simply — what it is, why it matters, and how to use it with Claude.',
-    date: '2026-03-05',
-    readingTime: '8 min read',
-  },
-]
+/* Insta-tile blog wall: cover-style tiles in the carousel design language. */
+const TILE = ['bg-[#16130E] text-[#FFF3E2]', 'bg-[--gold-fill] text-[#16130E]', 'bg-[--red] text-white', 'bg-white text-[#16130E] border border-[--ink]/15']
 
 export default function BlogPreview() {
+  const posts = getAllPosts().slice(0, 8)
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-      <div className="flex items-center justify-between mb-10">
-        <h2 className="font-heading font-bold text-2xl sm:text-3xl text-heading">
-          Latest Blog Posts
-        </h2>
-        <Link href="/blog" className="text-lime hover:text-lime-dark font-heading font-semibold text-sm transition-colors">
-          View All Posts &rarr;
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {PLACEHOLDER_POSTS.map((post) => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className="border border-gray-200 rounded-xl p-6 hover:border-lime transition-colors group block"
-          >
-            <div className="text-subtle text-xs font-body mb-2">
-              {post.date} &middot; {post.readingTime}
-            </div>
-            <h3 className="font-heading font-semibold text-heading group-hover:text-lime transition-colors mb-2">
-              {post.title}
-            </h3>
-            <p className="font-body text-body text-sm leading-relaxed">
-              {post.description}
-            </p>
-          </Link>
-        ))}
+    <section className="bg-[--paper] py-16 text-[--ink] sm:py-24">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="flex items-end justify-between gap-4">
+          <div>
+            <p className="eyebrow">The blog</p>
+            <h2 className="display mt-3 text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">{getAllPosts().length} playbooks, free</h2>
+          </div>
+          <Link href="/blog" className="hidden shrink-0 font-body text-sm font-semibold text-[--ink]/60 underline-offset-4 hover:text-[--red] hover:underline sm:block">All posts →</Link>
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {posts.map((p, i) => (
+            <Link key={p.slug} href={`/blog/${p.slug}`} data-reveal
+              className={`group flex aspect-square flex-col justify-between overflow-hidden rounded-xl p-5 transition-transform duration-200 hover:-translate-y-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--red] ${TILE[i % 4]}`}>
+              <span className="font-mono text-[10px] uppercase tracking-[0.14em] opacity-60">{p.readingTime ?? 'Guide'}</span>
+              <span className="display text-[clamp(1rem,2.2vw,1.5rem)] leading-[1.05] [overflow-wrap:anywhere]">{p.title}</span>
+              <span className="text-xs font-semibold opacity-70 transition-opacity group-hover:opacity-100">Read →</span>
+            </Link>
+          ))}
+        </div>
+        <Link href="/blog" className="mt-8 block text-center font-body text-sm font-semibold text-[--ink]/60 underline-offset-4 hover:text-[--red] hover:underline sm:hidden">All posts →</Link>
       </div>
     </section>
   )

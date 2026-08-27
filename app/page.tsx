@@ -1,8 +1,10 @@
 import Hero from '@/components/Hero'
-import SocialProofBar from '@/components/SocialProofBar'
 import ServicesSection from '@/components/ServiceCard'
 import StatsSection from '@/components/StatsSection'
 import CaseStudyPreview from '@/components/CaseStudyPreview'
+import CollageMarquee from '@/components/CollageMarquee'
+import LinkedInStrip from '@/components/LinkedInStrip'
+import ProofCollage from '@/components/ProofCollage'
 import BlogPreview from '@/components/BlogPreview'
 import EmailCapture from '@/components/EmailCapture'
 import TestimonialSection from '@/components/TestimonialSection'
@@ -31,10 +33,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
-      <SocialProofBar />
+      <CollageMarquee />
       <StatsSection />
       <CaseStudyPreview />
+      <LinkedInStrip />
       <ServicesSection />
+      <ProofCollage />
       <BlogPreview />
       <EmailCapture />
       <TestimonialSection />
