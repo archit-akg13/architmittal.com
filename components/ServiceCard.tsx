@@ -1,28 +1,22 @@
-import Link from 'next/link'
 import { SERVICES } from '@/lib/constants'
 
 export default function ServicesSection() {
   return (
-    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
-      <h2 className="font-heading font-bold text-2xl sm:text-3xl text-heading text-center mb-10">
-        What I Do
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {SERVICES.map((service) => (
-          <Link
-            key={service.title}
-            href="/case-studies"
-            className="border border-gray-200 rounded-xl p-6 hover:border-lime transition-colors group block"
-          >
-            <span className="text-3xl mb-3 block">{service.icon}</span>
-            <h3 className="font-heading font-semibold text-lg text-heading mb-2 group-hover:text-lime transition-colors">
-              {service.title}
-            </h3>
-            <p className="font-body text-body text-sm leading-relaxed">
-              {service.description}
-            </p>
-          </Link>
-        ))}
+    <section className="border-t border-[--ink]/10 bg-[--paper] py-16 text-[--ink] sm:py-24" id="services">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <p className="eyebrow">What I build</p>
+        <h2 className="display mt-3 text-[--ink] text-[clamp(2.2rem,6vw,4.5rem)]">Four ways in</h2>
+        <ol className="mt-10 grid grid-cols-1 gap-x-10 border-t border-[--ink]/10 sm:grid-cols-2">
+          {SERVICES.map((s, i) => (
+            <li key={s.title} className="border-b border-[--ink]/10 py-8">
+              <div className="flex items-baseline gap-4">
+                <span className="display text-2xl text-[--ink]/30">0{i + 1}</span>
+                <h3 className="font-body text-xl font-semibold">{s.title}</h3>
+              </div>
+              <p className="mt-3 pl-12 text-[15px] leading-relaxed text-[--ink-dim]">{s.description}</p>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   )

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { Poppins, Lato } from 'next/font/google'
+import { Anton } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -9,19 +10,14 @@ import ExitIntentPopup from '@/components/ExitIntentPopup'
 import ReadingProgress from '@/components/ReadingProgress'
 import { SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, SITE_URL } from '@/lib/constants'
 
-const poppins = Poppins({
+const anton = Anton({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-poppins',
+  weight: '400',
+  variable: '--font-anton',
   display: 'swap',
 })
 
-const lato = Lato({
-  subsets: ['latin'],
-  weight: ['300', '400', '700'],
-  variable: '--font-lato',
-  display: 'swap',
-})
+
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -102,7 +98,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body className={`${poppins.variable} ${lato.variable} antialiased`}>
+      <body className={`${anton.variable} ${GeistSans.variable} antialiased`}>
         <Header />
         <main>{children}</main>
         <Footer />

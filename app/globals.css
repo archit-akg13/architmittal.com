@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hallmark · studied-DNA (source: local project social_media_agency / Sprynt tokens)
+ * macrostructure: Marquee Hero (long-scroll consultancy) · paper oklch(6% .005 60) · ink #FFF3E2
+ * accents: gold #F4BD45 · red #CF1134 · display Anton · body Geist */
+:root {
+  /* Light premium — the carousel brand system: warm paper, ink, red action, ochre details. */
+  --paper: #FBF7EF; --paper2: #FFFFFF; --paper3: #F3EDE0;
+  --ink: #16130E; --ink-dim: rgba(22,19,14,.60); --ink-faint: rgba(22,19,14,.12);
+  --gold: #A97B10; --gold-fill: #F4BD45; --red: #CF1134;
+}
+.display { font-family: var(--font-anton), sans-serif; text-transform: uppercase; letter-spacing: .01em; line-height: .92; font-weight: 400; }
+.eyebrow { font-size: .8125rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.dcard { background: var(--paper2); border: 1px solid rgba(22,19,14,.10); border-radius: 18px;
+  box-shadow: 0 1px 2px rgba(22,19,14,.05), 0 10px 28px rgba(22,19,14,.08);
+  transition: translate .25s cubic-bezier(.22,1,.36,1), box-shadow .25s cubic-bezier(.22,1,.36,1); }
+.dcard:hover { translate: 0 -6px; box-shadow: 0 2px 4px rgba(22,19,14,.06), 0 22px 44px rgba(22,19,14,.14); }
+.tnum { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { .dcard, .dcard:hover { transition: none; translate: none; } }
+
+
 @layer base {
   body {
     @apply bg-white text-body font-body;

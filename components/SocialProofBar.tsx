@@ -3,7 +3,7 @@ import SocialIcon from './SocialIcon'
 
 export default function SocialProofBar() {
   return (
-    <section className="border-b border-gray-100">
+    <section className="border-b border-[--ink]/10 bg-[--paper] text-[--ink]">
       {/* Platform links */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
@@ -13,7 +13,7 @@ export default function SocialProofBar() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-body hover:text-lime transition-colors group"
+              className="group flex items-center gap-2 text-[--ink-dim] transition-colors hover:text-[--red]"
             >
               <SocialIcon name={link.icon} className="w-5 h-5" />
               <span className="text-sm font-body">
@@ -28,7 +28,7 @@ export default function SocialProofBar() {
       </div>
 
       {/* Results ticker */}
-      <div className="bg-dark/5 py-3 overflow-hidden">
+      <div className="bg-[--paper2] py-3 overflow-hidden">
         <div className="animate-marquee flex whitespace-nowrap">
           {[...RESULTS_TICKER, ...RESULTS_TICKER].map((text, i) => (
             <span key={i} className="mx-8 text-sm font-body text-body flex items-center gap-2">

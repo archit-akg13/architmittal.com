@@ -9,16 +9,25 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        lime: '#4CAF1E',
-        'lime-dark': '#3d9518',
-        dark: '#0A0A0A',
+        // Sprynt-derived system (studied-DNA): warm near-black, cream ink, gold + red accents.
+        // 'lime' keys intentionally now GOLD so every legacy usage rethemes in one move.
+        lime: '#A97B10',
+        'lime-dark': '#8A6209',
+        gold: '#F4BD45',
+        crimson: '#CF1134',
+        paper: '#0B0908',
+        'paper-2': '#171310',
+        'paper-3': '#221D18',
+        cream: '#FFF3E2',
+        dark: '#0B0908',
         heading: '#1E1E1E',
         body: '#646464',
         subtle: '#AAAAAA',
       },
       fontFamily: {
-        heading: ['var(--font-poppins)', 'sans-serif'],
-        body: ['var(--font-lato)', 'sans-serif'],
+        heading: ['var(--font-anton)', 'sans-serif'],
+        display: ['var(--font-anton)', 'sans-serif'],
+        body: ['var(--font-geist-sans)', 'sans-serif'],
       },
     },
   },

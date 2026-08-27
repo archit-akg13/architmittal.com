@@ -1,56 +1,33 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import { TOPMATE_URL } from '@/lib/constants'
+import { CAL_URL } from '@/lib/constants'
 
+/* Hallmark · studied-DNA (Sprynt) · hero: giant Anton statement, red action, cream on near-black */
 export default function Hero() {
   return (
-    <section className="bg-dark text-white relative overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'linear-gradient(rgba(76,175,30,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(76,175,30,0.5) 1px, transparent 1px)',
-        backgroundSize: '60px 60px',
-      }} />
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 sm:py-28 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-10">
-          <div className="flex-shrink-0">
-            <Image
-              src="/images/archit-headshot-800.jpg"
-              alt="Archit Mittal - AI & Automation Consultant"
-              width={300}
-              height={300}
-              priority
-              className="rounded-full border-4 border-lime object-cover shadow-[0_0_20px_rgba(76,175,30,0.15)]"
-            />
-          </div>
-
-          <div>
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4">
-              I Automate <span className="text-lime">Chaos</span>
-            </h1>
-            <p className="font-body text-lg sm:text-xl text-gray-300 max-w-2xl mb-4 leading-relaxed">
-              AI &amp; Automation Consultant — I build custom algo trading systems, AI agents, and business automation for founders and trading firms.
-            </p>
-            <p className="font-body text-sm text-gray-400 max-w-2xl mb-8 leading-relaxed">
-              Registered market professional (AMFI ARN holder) + AI engineer. The rare combo that builds systems which actually understand your domain.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href={TOPMATE_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-lime hover:bg-lime-dark text-white px-6 py-3 rounded-lg font-heading font-semibold text-center transition-colors"
-              >
-                Book a Consultation
-              </a>
-              <Link
-                href="/case-studies"
-                className="border border-white/30 hover:border-white text-white px-6 py-3 rounded-lg font-heading font-semibold text-center transition-colors"
-              >
-                See My Work
-              </Link>
-            </div>
-          </div>
+    <section className="relative overflow-hidden bg-[--paper] text-[--ink]">
+      <div aria-hidden className="pointer-events-none absolute inset-0 opacity-[0.045]"
+        style={{ backgroundImage: 'linear-gradient(rgba(22,19,14,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(22,19,14,.5) 1px, transparent 1px)', backgroundSize: '72px 72px' }} />
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-24 sm:px-6 sm:pb-28 sm:pt-32">
+        <p className="eyebrow">AI &amp; automation consultant · India</p>
+        <h1 className="display mt-5 text-[--ink] text-[clamp(3.4rem,11vw,9.5rem)]">
+          I automate<br /><span className="text-[--red]">chaos.</span>
+        </h1>
+        <div className="mt-8 flex max-w-2xl flex-col gap-8 sm:mt-10 sm:flex-row sm:items-end sm:justify-between sm:gap-12">
+          <p className="max-w-md text-lg leading-relaxed text-[--ink-dim]">
+            Custom algo trading systems, AI agents and business automation —
+            built to cut real costs, measured in rupees and hours, not demos.
+          </p>
         </div>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <a href={CAL_URL} target="_blank" rel="noopener noreferrer"
+            className="inline-flex h-14 items-center rounded-md bg-[--red] px-8 font-body text-base font-semibold text-white transition-transform duration-150 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
+            Book a 1:1 consultation →
+          </a>
+          <a href="/case-studies"
+            className="inline-flex h-14 items-center rounded-md border-2 border-[--ink]/30 px-8 font-body text-base font-semibold text-[--ink] transition-colors duration-150 hover:border-[--ink] hover:bg-[--ink] hover:text-[--paper] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[--gold]">
+            See the numbers
+          </a>
+        </div>
+        <p className="mt-4 text-sm text-[--ink]/55">The 1:1 call is the only paid thing here — everything else on this site is free.</p>
       </div>
     </section>
   )

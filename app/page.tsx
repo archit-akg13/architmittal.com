@@ -2,6 +2,7 @@ import Hero from '@/components/Hero'
 import SocialProofBar from '@/components/SocialProofBar'
 import ServicesSection from '@/components/ServiceCard'
 import StatsSection from '@/components/StatsSection'
+import CaseStudyPreview from '@/components/CaseStudyPreview'
 import BlogPreview from '@/components/BlogPreview'
 import EmailCapture from '@/components/EmailCapture'
 import TestimonialSection from '@/components/TestimonialSection'
@@ -31,8 +32,9 @@ export default function Home() {
       />
       <Hero />
       <SocialProofBar />
-      <ServicesSection />
       <StatsSection />
+      <CaseStudyPreview />
+      <ServicesSection />
       <BlogPreview />
       <EmailCapture />
       <TestimonialSection />

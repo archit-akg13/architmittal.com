@@ -100,3 +100,7 @@ export const FAQ_ITEMS = [
     answer: 'I am a registered market professional (ARN + Authorized Person) who also builds AI systems. That rare combination means I understand both the technology and the domain — especially for trading and financial applications. I build what generic developers cannot.',
   },
 ] as const
+
+// Paid 1:1 consultation. Everything else on the site is free (Archit, 27 Aug 2026).
+// Override with NEXT_PUBLIC_CAL_URL once the cal.com event exists.
+export const CAL_URL = process.env.NEXT_PUBLIC_CAL_URL ?? TOPMATE_URL
