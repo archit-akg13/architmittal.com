@@ -59,8 +59,10 @@
 }
 
 /* Reveal: only when JS confirmed running; otherwise everything is simply visible. */
-.js-on [data-reveal] { opacity: 0; transform: translateY(10px); transition: opacity .4s cubic-bezier(.22,1,.36,1), transform .4s cubic-bezier(.22,1,.36,1); }
-.js-on [data-reveal].is-in { opacity: 1; transform: none; }
+/* Never hide content: fast flick-scrolls outran every opacity reveal (blank sections,
+   27 Aug). Motion is a settle-in slide only; worst case it's simply already settled. */
+.js-on [data-reveal] { opacity: 1; transform: translateY(12px); transition: transform .45s cubic-bezier(.22,1,.36,1); }
+.js-on [data-reveal].is-in { transform: none; }
 
 /* collage marquee + workflow wires */
 @keyframes mq { from { transform: translateX(0) } to { transform: translateX(-50%) } }
