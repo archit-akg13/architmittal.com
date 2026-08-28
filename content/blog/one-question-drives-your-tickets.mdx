@@ -1,0 +1,83 @@
+---
+title: "Most of Your Support Tickets Are One Question You Never Answered"
+description: "Repetitive support tickets are usually a product page, invoice or delivery message that failed. Fix the source before you automate the reply."
+date: "2026-08-28"
+tags: ["automation", "customer-support", "operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/one-question-drives-your-tickets"
+---
+Before you buy a support bot, sort last month's tickets by what the customer actually wanted. Almost every business I have done this exercise with finds the same shape: a small number of questions account for most of the volume, and the top one is usually a single failure somewhere upstream. A product page that does not state the pack size. An invoice that shows a number the customer cannot reconcile. A delivery message that arrives without a date on it.
+
+The industry answer to that pile is an agent, human or AI, who answers it faster. That is the wrong end of the pipe. You are paying, permanently, to explain something you could have said once, correctly, in the place the customer was already looking.
+
+## The question is a receipt for a broken message
+
+Support tickets are not requests for help. They are receipts. Each one records a moment where your own communication failed and the customer had to escalate to a human to get information you already had.
+
+I have watched this play out most clearly with delivery. A D2C brand I worked with had WhatsApp enquiries stacking up all day, and the owner was convinced he needed a bot to handle them. We tagged four weeks of messages by intent. The top bucket was not returns, not sizing, not payment. It was "where is my order" — customers who had received a shipping confirmation with a tracking link, clicked it, seen a courier page that said "in transit" with no date, and come back to WhatsApp to ask a human.
+
+The bot he wanted would have answered that question by looking up the same courier status and repeating "in transit". Same non-answer, delivered faster, at a monthly cost. What actually killed the queue was changing one line in the dispatch message to include the expected delivery window and the delivery partner's name, and sending a second message on the day of delivery. The question stopped being asked. Nothing was automated. Something was fixed.
+
+That is the pattern. When a question repeats across hundreds of unrelated customers, it is not a customer problem. Individuals are unpredictable; a crowd asking the same thing is a signal about you.
+
+## Do the tagging before you do anything else
+
+This does not need software. Export the last thirty to sixty days of whatever channel carries your support load — WhatsApp Business, a shared inbox, the phone log if someone maintains one — and tag each conversation with the underlying want, in the customer's words, not your category names. "Where is my order." "Is GST included in this price." "Which model fits my machine." "Why is this invoice different from the quote."
+
+Two rules make this useful rather than theatrical.
+
+First, tag the want, not the topic. "Billing" is a useless bucket. "The invoice total does not match what I was quoted" is a bucket you can act on, because it names the artefact that failed.
+
+Second, do it by hand for the first pass. Whoever answers these messages daily should sit for two hours and tag them. They already know the answer before they start, and the exercise is mostly about making the owner believe it. Automated intent classification on your ticket history sounds better and tells you less, because it will group by vocabulary rather than by root cause.
+
+At the end you will have a ranked list. The top two or three items will be most of your volume. That list is the actual work.
+
+## Where the fix usually lives
+
+In the businesses I see, the repeat question almost always traces back to one of four artefacts.
+
+**The product or service page.** Missing pack size, missing compatibility, missing whether the stated price includes GST. Indian buyers ask about tax inclusivity constantly because listings are genuinely inconsistent about it, and a single line stating "price inclusive of GST" removes an entire category of enquiry. If you sell B2B, the same applies to whether your quoted rate includes freight.
+
+**The invoice.** A distributor calls because the invoice shows a line-item structure that does not match the purchase order, or a scheme discount was applied in a way they cannot follow. Every one of those calls is a design flaw in the document. Adding the PO reference and showing the discount as a visible line rather than a silently reduced rate ends the call before it starts.
+
+**The delivery or fulfilment message.** No date, no partner, no next step, no reply path. This is the biggest single source of repeat contact in anything that ships.
+
+**The handover between two systems.** The customer paid on your website, but the payment confirmation comes from the gateway and looks like spam, so they message to ask whether the order went through. Nothing is broken technically. The customer just has no evidence that anything happened.
+
+None of those four are automation problems. They are copywriting and document-design problems that happen to be expensive.
+
+## What this looks like on a real repeat question
+
+Take a mid-sized distributor taking orders on WhatsApp from a few hundred retailers. The staff complaint is that they spend the morning answering "is this in stock" and "what is my outstanding". The proposed solution, every time, is a WhatsApp bot wired to the inventory and ledger.
+
+Look at the second question first. "What is my outstanding" repeats because the retailer has no copy of the ledger except what your team tells them on the phone. The fix is a monthly statement sent to every retailer on a fixed date, in a format they can read on a phone, with the ageing shown. That is a scheduled report out of your existing accounting software. It is automation, but of the boring, useful kind: it publishes information on a schedule rather than pretending to hold a conversation.
+
+Now the first question. "Is this in stock" is different, because the answer changes hourly and there is no artefact you can fix upstream. There is no message you could have sent yesterday that answers it today. This is the case where a lookup — a bot, a portal, a shared live sheet — earns its keep, because the value is in the freshness of the data, not in the phrasing of the reply.
+
+That is the test worth keeping. If the correct answer to a question is the same for every customer and stable over time, it belongs in a document, not a bot. If the answer is specific to one customer and changes over time, and you have a system that already knows it, then automate the lookup. Most repeat questions fall on the document side, which is why most support bots disappoint.
+
+## Where I tell people not to automate
+
+I will say this plainly, because it costs me work.
+
+**Do not automate anything you have not fixed at source.** Automating a bad message is how you lock it in. Once a bot is answering "where is my order" competently, nobody ever revisits the dispatch message, and you have converted a one-time copywriting job into a permanent subscription.
+
+**Do not automate the long tail.** After the top few buckets, ticket volume flattens into genuinely varied problems: a damaged consignment, a bad experience with a salesperson, a request for an exception on payment terms. These are low volume and high stakes. Automating them saves little and costs you the conversations where you actually learn something and occasionally save an account.
+
+**Do not automate complaints or cancellations.** An angry customer routed to a bot gets angrier, and the interaction becomes evidence they will show other people. Route these to a human immediately, every time.
+
+**Do not automate anything where being wrong is expensive.** Tax treatment, statutory compliance dates, dosage or safety guidance, contractual terms. A confidently wrong automated answer on GST treatment is worse than a slow human one, and you will find out the hard way.
+
+There is a smaller version of this that nobody sells: automate the routing, not the answer. Tagging incoming messages by intent and putting them in front of the right person, with the customer's history attached, is reliable, cheap and does not put words in your mouth.
+
+## What is actually left to automate
+
+After you have fixed the source of the top questions, the remaining automation is unglamorous and works.
+
+Scheduled outbound information — statements, dispatch updates, renewal reminders — replaces conversations before they start. Internal routing and tagging saves the team the sorting work. Lookups against systems that hold customer-specific, time-varying facts save real minutes. A well-maintained answers page, linked from your dispatch message and your invoice, absorbs whatever remains.
+
+What does not work is buying an agent and pointing it at an unfixed process. It produces a system that answers a bad question well, and quietly guarantees the question keeps being asked.
+
+## Do this week
+
+Export the last thirty days of your busiest support channel. Have the person who answers those messages tag every conversation by what the customer wanted, in the customer's own words, and count them. Take the single largest bucket, find the page, invoice or message that failed to answer it, and rewrite that one artefact. Then watch the count for two weeks before you spend anything on automation.
