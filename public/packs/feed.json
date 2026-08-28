@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-28T07:01:07.849Z",
+  "builtAt": "2026-08-28T21:16:17.893Z",
   "items": [
+    {
+      "slug": "tr-herdr",
+      "kind": "reel",
+      "hook": "Your Claude agents already have a FREE home",
+      "postedAt": "2026-08-28T21:16:12.946Z",
+      "permalink": "https://www.instagram.com/reel/DcmTiVED0KY/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-herdr.jpg",
+      "resource": {
+        "name": "herdrdev/herdr",
+        "url": "https://github.com/herdrdev/herdr"
+      }
+    },
     {
       "slug": "tr-codewhale",
       "kind": "reel",
