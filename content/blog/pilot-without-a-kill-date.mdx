@@ -1,0 +1,83 @@
+---
+title: "A Pilot Without a Kill Date Is Just a Subscription You Forgot to Cancel"
+description: "Most AI pilots never end because nobody wrote down the number that would end them. Here is exactly what to define before you spend the first rupee."
+date: "2026-08-28"
+tags: ["ai-adoption", "automation", "business-operations"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/pilot-without-a-kill-date"
+---
+A pilot that cannot fail is not a pilot. It is a subscription with a nicer name, and you will keep paying for it long after everyone involved has quietly stopped believing in it.
+
+I have watched this happen in enough businesses now that I can predict the shape of it. Month one, everybody is in the WhatsApp group and the demo looks sharp. Month three, one person is still using it and two have gone back to the spreadsheet. Month seven, nobody can tell you whether it worked, but the renewal invoice arrives and somebody approves it because cancelling would mean admitting the last seven months were wasted. Month fourteen, the tool appears in an audit as a recurring cost that nobody owns.
+
+The failure was not the tool. The failure was that nobody wrote down, in advance, the specific number that would let you say the words "this did not work, we are switching it off." Without that number, there is no way to end a pilot honestly. There is only drift.
+
+## Why pilots refuse to die
+
+A pilot has three natural endings. It works and you scale it. It does not work and you kill it. Or it half-works and you fix one specific thing and re-test. Only the first two are actually endings, and both require a threshold that was agreed before anyone had feelings invested.
+
+Once the pilot is running, three forces make that threshold impossible to set retroactively.
+
+The first is sunk cost, in its most human form. Someone championed this internally. They pushed it past a sceptical operations head. If it dies now, they were wrong in front of people whose opinion they care about. So the goalposts move: it was never really about the response time, it was about "building capability."
+
+The second is that vendor pricing is designed for exactly this. Per-seat monthly billing with an annual discount is not a pricing model, it is a retention model. The annual discount is bought with your option to quit. Most SaaS pricing in this market sits somewhere between a few hundred and a few thousand rupees per user per month, and at the low end nobody bothers to fight it. Small enough to renew without a meeting is small enough to run for years without a decision.
+
+The third, and the one I see most, is that nobody wrote down what the current process costs. If you never measured the manual baseline, you cannot measure the improvement, and any argument about whether the pilot worked collapses into whoever is more confident in the room.
+
+## The five things to write down before the first rupee
+
+Write these on one page. Not a deck. A page, dated, with names on it, saved somewhere both you and the person running the pilot can see.
+
+**1. The baseline number, measured before you start.** Not estimated. Measured, for at least two weeks, in the messiest ordinary conditions you have. If the pilot is about enquiry response time, someone sits with the actual inbox and logs actual timestamps. If it is about invoice entry, someone counts how many invoices were entered and how many were corrected later. You do this before the vendor's dashboard exists, because once it exists it will only measure what it is good at.
+
+**2. The single metric that decides it.** One. If you list four success criteria, you have listed zero, because a pilot that fails on two and passes on two will always be argued into a renewal. Pick the one thing you actually bought this for.
+
+**3. The threshold on that metric.** A specific number, with a direction. "Average first response to a WhatsApp enquiry drops below fifteen minutes during working hours." Not "response times improve." Improvement is not a threshold. Anything improves a little.
+
+**4. The date.** The date the pilot ends, chosen so it covers at least one full cycle of the thing you are automating, including its worst week. Automating anything touching compliance and testing it in a quiet month tells you nothing. If the process has a seasonal peak, the pilot must contain the peak or it is not a test.
+
+**5. The name of the person who executes the kill.** Not "we will review it." A named person, whose job on that date is to compare the number to the threshold and act. This sounds bureaucratic until you have watched a review meeting dissolve into "let us give it another quarter."
+
+If you cannot fill in all five, you are not ready to run a pilot. You are ready to run a demo, which is a different and much cheaper activity.
+
+## A worked example: the enquiry inbox
+
+Take a business doing a few crore a year, selling something considered — equipment, interiors, B2B services. Enquiries land on WhatsApp, on a form, on Instagram DMs, and on the personal number of whoever went to the last trade show. Two people handle them. The owner's instinct, correctly, is that leads are dying in the gaps.
+
+The tempting pilot is an AI agent that reads incoming messages and drafts replies. Here is what the one page looks like if you do it properly.
+
+Baseline: for two weeks, both people log the timestamp of every enquiry and the timestamp of the first human reply. No tooling required, a shared sheet is enough. You will find the average is worse than anyone believed and that the tail is horrifying, with some enquiries answered on Monday because they came in Friday evening.
+
+Metric: median time to first substantive reply. Substantive, meaning it answers a question or asks a qualifying one, not an auto-acknowledgement. Auto-acknowledgements are the classic way to make this metric look brilliant while changing nothing about the business.
+
+Threshold: median under fifteen minutes during working hours, with no increase in enquiries that go unanswered entirely. Two numbers, but the second is a guardrail, not a second success criterion. Guardrails are allowed. Second success criteria are not.
+
+Date: six weeks, and the six weeks must include your busiest fortnight, not August.
+
+Owner of the kill: the person who runs operations, not the person who found the tool.
+
+Now the useful part. At the end of six weeks, one of three things is true. The median dropped and enquiries did not go dark, in which case you scale and start measuring the next thing, which is conversion, not speed. Or the median did not drop, in which case you switch it off and you have lost six weeks and a small amount of money and gained a measured baseline that is worth more than the pilot. Or the median dropped but the guardrail broke, which usually means the tool answered fast and wrong and someone spent their day cleaning up after it. That last case is the one that gets renewed anyway, because the dashboard is green. Do not renew it.
+
+## Where the answer is "do not automate this"
+
+Some processes should not be piloted at all, and saying so is the whole of my usefulness to a client.
+
+**Anything you do fewer than a handful of times a month.** Annual filings. Board packs. The vendor negotiation that happens twice a year. The build cost and the maintenance cost do not amortise across that few runs, and the process will have changed by the next time you use it. Do it by hand and stop feeling guilty about it.
+
+**Anything where the process itself is undefined.** If two of your staff do the same task differently and both are right, automation will simply pick one of them and make the other person's judgement invisible. Fix the process on paper first. If you cannot write the rule down, a machine cannot follow it, and an LLM will guess convincingly.
+
+**Anything where the failure is expensive and silent.** Bank reconciliation, statutory filings, anything touching customer money. Not never, but not as a pilot, and never without a human check that is itself part of the measured process. The cost of a wrong invoice discovered in nine months is not the cost of the invoice.
+
+**Anything where the real bottleneck is a person.** If distributor orders are slow because one man approves every one of them and he is travelling, an ordering system does not fix that. It puts a faster queue in front of the same closed door. I have built the faster queue. It does not help. Change the approval rule, then automate.
+
+**Anything a spreadsheet and a recurring calendar reminder would solve.** More often than owners expect. The honest answer to "can we automate this" is sometimes "you can, and it will cost you fifty times what a shared sheet and a Tuesday morning habit would cost."
+
+## The uncomfortable part
+
+Setting a kill date changes who wants to run the pilot. Vendors dislike it, because their model depends on the first renewal being automatic. Internal champions dislike it, because it converts an open-ended initiative into a dated bet with their name on it. That discomfort is the point. A pilot nobody is willing to put a date on is a pilot nobody actually believes in.
+
+It also protects the projects that deserve to survive. When you kill the two that failed, the one that worked stops competing for attention with a graveyard of half-alive tools, and you can point at a measured number when you ask for budget to scale it. Owners who kill pilots cleanly end up automating more, not less, because each decision is cheap.
+
+## Do this week
+
+Open your accounting system, pull every recurring software payment from the last twelve months, and put them in a list. For each one, write the name of the person who would notice within a week if it stopped working. The ones with no name are your answer. Cancel the smallest one this week, and if nothing breaks in a fortnight, you have just learned what your pilots have been costing you for saying nothing at all.
