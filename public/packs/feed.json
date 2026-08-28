@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-28T05:01:26.827Z",
+  "builtAt": "2026-08-28T07:01:07.849Z",
   "items": [
+    {
+      "slug": "tr-codewhale",
+      "kind": "reel",
+      "hook": "Stop paying Cursor — your terminal agent is OPEN SOURCE",
+      "postedAt": "2026-08-28T07:01:02.671Z",
+      "permalink": "https://www.instagram.com/reel/DckxsAKDq-D/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-codewhale.jpg",
+      "resource": {
+        "name": "Hmbown/CodeWhale",
+        "url": "https://github.com/Hmbown/CodeWhale"
+      }
+    },
     {
       "slug": "tr-code-review-graph",
       "kind": "reel",
