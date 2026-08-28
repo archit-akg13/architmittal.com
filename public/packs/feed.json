@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-27T23:00:07.992Z",
+  "builtAt": "2026-08-28T02:01:05.116Z",
   "items": [
+    {
+      "slug": "tr-cli",
+      "kind": "reel",
+      "hook": "Your Google Workspace, now OPEN SOURCE from one terminal",
+      "postedAt": "2026-08-28T02:01:01.467Z",
+      "permalink": "https://www.instagram.com/reel/DckPWPqkrWs/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-cli.jpg",
+      "resource": {
+        "name": "googleworkspace/cli",
+        "url": "https://github.com/googleworkspace/cli"
+      }
+    },
     {
       "slug": "tr-ai-website-cloner-template",
       "kind": "reel",
