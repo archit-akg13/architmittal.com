@@ -1,0 +1,69 @@
+---
+title: "Don't Hire a Prompt Engineer. Hire Someone Who Owns the Process"
+description: "Why small businesses waste money on prompt engineers, and why the hire that makes AI actually work is someone who owns a process end to end."
+date: "2026-08-29"
+tags: ["hiring", "automation", "small business"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/hire-ops-not-prompt-engineer"
+---
+If you run a business and you are thinking about hiring a prompt engineer, stop. The skill you are trying to buy is not writing clever instructions to a chatbot. The skill you need is someone who can take one messy process in your business, own it end to end, and be answerable when it breaks. Prompting is about two weeks of that person's learning curve. The other eleven and a half months is process.
+
+I say this as someone who builds automation systems for a living. It would be convenient for me to tell you the opposite. But I have watched enough of these systems fail in real businesses to know exactly where they fail, and it is almost never in the prompt.
+
+## Where the job title came from, and why it does not fit you
+
+The prompt engineer role made sense inside large AI companies, where a full-time person squeezing a few per cent more accuracy out of a model was worth it because that model served millions of requests. That logic does not transfer to a business doing fifty lakh to fifty crore a year. You do not have millions of requests. You have a few hundred WhatsApp enquiries a month, a GST cycle, some distributor orders, and a founder doing three jobs.
+
+At your scale, the prompt is rarely the bottleneck. The bottleneck is that nobody in the business can write down, on one page, what actually happens between "customer sends a message" and "money arrives in the account". Until someone can, no prompt will save you.
+
+## A worked example: WhatsApp enquiries
+
+Take the most common request I get: "automate our WhatsApp enquiries with AI."
+
+A prompt engineer approaches this as a writing problem. They craft a beautiful system prompt: tone of voice, product knowledge, escalation phrases. In a demo, it is genuinely impressive. You approve it, it goes live, and within a month it is quietly making things worse. Here is why.
+
+A customer asks whether the product can be delivered to Indore before Tuesday. The model does not know your courier's actual cut-off times, so it guesses, politely and confidently. Another customer asks for a discount; the bot has no idea what your margins allow, so it either refuses good customers or agrees to things you never authorised. A third sends a photo of a damaged shipment; the flow has no path for complaints, so the bot cheerfully asks if they would like to see the catalogue. None of these are prompt failures. They are process failures: nobody decided what the courier cut-offs are, who can approve discounts, or where complaints go.
+
+Now watch what a process owner does with the same brief. Before touching any AI tool, they sit with whoever currently answers the phone and list every type of message received in the last month. They discover that a large share of enquiries are the same four questions: price, delivery time, stock, and payment terms. Those four get precise, owner-approved answers, and the AI's only job is to recognise which of the four is being asked and reply with the approved text. Everything else, including anything involving anger, money, or a photograph, gets routed to a human within minutes, with the bot saying honestly that a person will respond.
+
+That system is less impressive in a demo. It is enormously more valuable in production, because it fails safely. When it does not know, it hands over instead of improvising. The prompt inside it is almost embarrassingly simple. The process around it is where all the work went.
+
+## What each hire actually delivers in a month
+
+Strip away the titles and compare what lands in your business after thirty days.
+
+**The prompt engineer's month.** Week one: exploring your use cases, playing with tools. Weeks two and three: building prompts and demos, most of which look great on screen. Week four: the demos meet reality, and the gaps appear, because the gaps were never in the prompts. What you own at the end: a set of clever instructions that depend entirely on this person staying, some impressive screen recordings, and no change to how the business actually runs. The prompts themselves are also a depreciating asset. Models change every few months; what worked on this quarter's model needs rework on the next. You have bought a consumable and paid for it like an asset.
+
+**The process owner's month.** Week one: they map one process, on paper, by talking to the people who do it. This alone usually surfaces problems no software can see: the accountant re-enters the same data three times, two people both think the other one confirms distributor orders, half the delayed GST filings trace back to invoices sitting in one salesperson's phone gallery. Week two: they fix the parts that need no technology at all: a decision about who approves what, a shared folder instead of a phone gallery, a rule for when an order counts as confirmed. Week three: they automate the two or three steps that are genuinely mechanical, using AI where it helps and a plain spreadsheet rule where it does not. Week four: they write down how it works, so it survives them leaving, and they watch it run, because week-one automations always break in week four.
+
+What you own at the end: one process that runs measurably better, documentation, and a person who now understands your business one level deeper and can repeat the exercise on the next process. That compounds. The prompt engineer's output does not.
+
+The market has noticed, incidentally. Standalone prompt-engineering roles are already being folded into ordinary operations and engineering jobs, because prompting turned out to be a skill any capable person picks up in weeks, not a profession. Do not build a hire around a title the market is already dissolving.
+
+## The part nobody selling AI will tell you
+
+Some things in your business should not be automated, and a good process owner will tell you so. This is the clearest test of whether you have hired the right person: do they ever say no?
+
+Do not automate GST filing decisions. Software can prepare, reconcile, and flag; the decision to file, and the judgement calls on classification and input credit, belong with your accountant or CA, because they carry the consequences. An AI that confidently mis-classifies a transaction does not get the notice from the department. You do.
+
+Do not automate anything where the message *is* the relationship. If a distributor who has been with you for ten years sends a complaint, an instant, fluent, obviously automated reply is worse than a slow human one. He is not writing to get information. He is writing to be heard.
+
+Do not automate a process you have never run manually. Automation freezes a process in its current shape. If the process is broken, you now have a machine producing the broken outcome faster and with more confidence. Run it by hand, fix it, then automate the fixed version.
+
+And do not automate your way around a people problem. If staff keep leaving a role, the tempting move is to replace the role with AI. But attrition is usually a symptom, of pay, of a bad manager, of a job designed badly, and the AI replacement inherits the badly designed job. Fix the design first. Sometimes the fixed job is worth automating; often it stops being a problem at all.
+
+A prompt engineer has no standing to raise any of this. It is outside the job description. A process owner cannot avoid it, because they own the outcome, not the tool.
+
+## Who this person actually is
+
+You may not need to hire anyone new. In most businesses of this size, the right person already works for you: the operations manager who everyone goes to when something is stuck, the accounts person who built the spreadsheet the whole company secretly runs on. They already understand the processes. Teaching them to use AI tools is a matter of weeks. Teaching an outside prompt specialist your business is a matter of years, if it happens at all.
+
+If you do hire from outside, interview for process, not prompts. Ask them to describe a system they built that failed, and what broke. If every answer is about model behaviour and none is about people, handoffs, or exceptions, they have only ever worked in demos.
+
+## What to do this week
+
+Pick the one process that irritates you most, most likely your enquiry handling, your collections follow-up, or your order confirmation, and ask one person in your business to write down every step of it as it actually happens today, including the informal steps that live in someone's head. One page, plain language, real steps.
+
+Read that page. You will find at least one step that exists for no reason and at least one where nobody is sure who is responsible. Fix those two things by decision, not by software.
+
+Only then ask what AI can do for the rest. You will find the question has become much smaller, much cheaper, and finally answerable. That page, and the person who wrote it, are worth more than any prompt you will ever buy.
