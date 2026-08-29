@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-29T05:01:41.108Z",
+  "builtAt": "2026-08-29T07:02:22.064Z",
   "items": [
+    {
+      "slug": "tr-oh-my-claudecode",
+      "kind": "reel",
+      "hook": "Your Claude Code, running a whole team, OPEN SOURCE",
+      "postedAt": "2026-08-29T07:02:17.530Z",
+      "permalink": "https://www.instagram.com/reel/DcnWmzmAIR9/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-oh-my-claudecode.jpg",
+      "resource": {
+        "name": "Yeachan-Heo/oh-my-claudecode",
+        "url": "https://github.com/Yeachan-Heo/oh-my-claudecode"
+      }
+    },
     {
       "slug": "tr-obsidian-skills",
       "kind": "reel",
