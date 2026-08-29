@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-29T07:02:22.064Z",
+  "builtAt": "2026-08-29T21:07:18.167Z",
   "items": [
+    {
+      "slug": "tr-opencli",
+      "kind": "reel",
+      "hook": "Your Claude agents browse logged in, OPEN SOURCE and yours",
+      "postedAt": "2026-08-29T21:07:13.523Z",
+      "permalink": "https://www.instagram.com/reel/Dco3TbigIAu/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-opencli.jpg",
+      "resource": {
+        "name": "jackwener/OpenCLI",
+        "url": "https://github.com/jackwener/OpenCLI"
+      }
+    },
     {
       "slug": "tr-oh-my-claudecode",
       "kind": "reel",
