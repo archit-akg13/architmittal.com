@@ -29,42 +29,42 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 22 Aug '26 (Sat),19:00 IST,reel,tr-langextract,published,https://www.instagram.com/reel/DcWBh2qjrg8/,24,1,108,1,117,1,128,1,0,0,0,3.0,350,8,9,v4,,1 comment(s) — the DM funnel fired; steady
 23 Aug '26 (Sun),07:31 IST,reel,tr-auto-claude-code-research-in-sleep,published,https://www.instagram.com/reel/DcXXXbpAYxn/,81,1,142,1,144,1,145,1,0,0,0,4.3,75,1,1,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 23 Aug '26 (Sun),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-23 Aug '26 (Sun),10:31 IST,reel,tr-page-agent,published,https://www.instagram.com/reel/DcXr9WWlVYD/,14,1,69,1,153,2,170,2,0,1,3,4.2,393,122,11,34s · Claude · v4,,2 comment(s) — the DM funnel fired; top performer: 170 views vs 111 median; 1 save(s)
+23 Aug '26 (Sun),10:31 IST,reel,tr-page-agent,published,https://www.instagram.com/reel/DcXr9WWlVYD/,14,1,69,1,153,2,170,2,0,1,3,4.2,393,122,11,34s · Claude · v4,,2 comment(s) — the DM funnel fired; top performer: 170 views vs 109 median; 1 save(s)
 23 Aug '26 (Sun),14:01 IST,reel,tr-voicestudio,published,https://www.instagram.com/reel/DcYEBAtgc8V/,45,1,86,1,109,1,109,1,0,0,1,1.6,91,27,0,18s · ElevenLabs · v4,,1 comment(s) — the DM funnel fired; steady
-24 Aug '26 (Mon),07:31 IST,reel,tr-goose,published,https://www.instagram.com/reel/DcZ8O0pDTXh/,49,1,144,1,658,5,818,8,2,12,1,5.4,194,357,24,34s · Cursor · v4,,8 comment(s) — the DM funnel fired; top performer: 818 views vs 111 median; 12 save(s)
+24 Aug '26 (Mon),07:31 IST,reel,tr-goose,published,https://www.instagram.com/reel/DcZ8O0pDTXh/,49,1,144,1,658,5,818,8,2,12,1,5.4,194,357,24,34s · Cursor · v4,,8 comment(s) — the DM funnel fired; top performer: 818 views vs 109 median; 12 save(s)
 24 Aug '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 24 Aug '26 (Mon),10:31 IST,reel,tr-playwright-mcp,published,https://www.instagram.com/reel/DcaQzreE40l/,19,1,81,1,113,1,113,1,2,1,0,3.1,326,40,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
-24 Aug '26 (Mon),14:01 IST,reel,tr-pageindex,published,https://www.instagram.com/reel/DcaoyscEpw7/,46,1,119,1,228,1,249,1,2,5,0,3.3,159,92,9,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 249 views vs 111 median; 5 save(s)
-25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,278,1,284,1,3,2,0,4.2,331,122,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; top performer: 284 views vs 111 median; 2 save(s)
+24 Aug '26 (Mon),14:01 IST,reel,tr-pageindex,published,https://www.instagram.com/reel/DcaoyscEpw7/,46,1,119,1,228,1,249,1,2,5,0,3.3,159,92,9,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 249 views vs 109 median; 5 save(s)
+25 Aug '26 (Tue),07:31 IST,reel,tr-ui-tars-desktop,published,https://www.instagram.com/reel/Dccg9cJjE0B/,29,1,125,1,278,1,284,1,3,2,0,4.2,331,122,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; top performer: 284 views vs 109 median; 2 save(s)
 25 Aug '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,174,1,179,1,4,1,0,4.3,3025,39,3,34s · Cursor · v4,,1 comment(s) — the DM funnel fired; top performer: 179 views vs 111 median; 1 save(s)
-25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,119,1,150,1,172,1,6,5,1,3.5,1600,26,15,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 172 views vs 111 median; 5 save(s)
+25 Aug '26 (Tue),10:31 IST,reel,tr-qwen-code,published,https://www.instagram.com/reel/Dcc1oJOkZCD/,4,1,125,1,174,1,179,1,4,1,0,4.3,3025,39,3,34s · Cursor · v4,,1 comment(s) — the DM funnel fired; top performer: 179 views vs 109 median; 1 save(s)
+25 Aug '26 (Tue),16:31 IST,reel,tr-opendataloader-pdf,published,https://www.instagram.com/reel/Dcde2nSkSvH/,7,1,119,1,150,1,173,1,6,5,1,3.4,1600,26,15,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 173 views vs 109 median; 5 save(s)
 26 Aug '26 (Wed),07:31 IST,reel,tr-github-mcp-server,published,https://www.instagram.com/reel/DcfFwo7iLmk/,10,1,39,1,81,1,81,1,0,0,0,2.7,290,108,0,34s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 26 Aug '26 (Wed),10:30 IST,reel,tr-500-ai-agents-projects,published,https://www.instagram.com/reel/DcfaV7zlD8N/,23,1,31,1,97,1,105,1,1,2,0,2.7,35,213,8,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 26 Aug '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 26 Aug '26 (Wed),14:01 IST,reel,tr-prompt-optimizer,published,https://www.instagram.com/reel/DcfyYdGEy7-/,21,1,37,1,45,1,45,1,0,0,0,2.8,76,22,0,34s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
-27 Aug '26 (Thu),07:30 IST,reel,tr-lightrag,published,https://www.instagram.com/reel/DchqisFlKHC/,120,1,129,1,165,1,173,1,1,3,0,3.7,8,28,5,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 173 views vs 111 median; 3 save(s)
+27 Aug '26 (Thu),07:30 IST,reel,tr-lightrag,published,https://www.instagram.com/reel/DchqisFlKHC/,120,1,129,1,165,1,173,1,1,3,0,3.7,8,28,5,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; top performer: 173 views vs 109 median; 3 save(s)
 27 Aug '26 (Thu),10:31 IST,reel,tr-agentic-awesome-skills,published,https://www.instagram.com/reel/Dch_OyjgpUo/,111,2,113,2,113,2,113,2,0,1,0,3.8,2,0,0,34s · Claude · v4,,2 comment(s) — the DM funnel fired; steady; 1 save(s)
 27 Aug '26 (Thu),12:31 IST,carousel,tool-vibe-trading,published,https://www.instagram.com/p/DciM_CXiQvg/,3,1,8,1,10,1,13,1,0,0,0,,167,25,30,,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
 27 Aug '26 (Thu),14:01 IST,reel,tr-ai-website-cloner-template,published,https://www.instagram.com/reel/DciXLOnDLXd/,40,1,113,2,117,2,117,2,0,2,2,3.6,183,4,0,18s · Claude · v4,,2 comment(s) — the DM funnel fired; steady; 2 save(s)
 28 Aug '26 (Fri),07:31 IST,reel,tr-cli,published,https://www.instagram.com/reel/DckPWPqkrWs/,15,1,50,1,114,1,114,1,0,1,0,5.5,233,128,0,34s · Google · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 28 Aug '26 (Fri),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 28 Aug '26 (Fri),10:31 IST,reel,tr-code-review-graph,published,https://www.instagram.com/reel/Dckj-StCij2/,23,1,114,2,119,2,119,2,0,1,0,3.5,396,4,0,18s · Claude · v4,,2 comment(s) — the DM funnel fired; steady; 1 save(s)
-28 Aug '26 (Fri),12:31 IST,reel,tr-codewhale,published,https://www.instagram.com/reel/DckxsAKDq-D/,3,1,112,1,113,1,113,1,0,1,0,4.5,3633,1,0,34s · Cursor · v4,,early days (23h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-29 Aug '26 (Sat),02:46 IST,reel,tr-herdr,published,https://www.instagram.com/reel/DcmTiVED0KY/,3,1,35,1,82,1,82,1,0,1,0,3.9,1067,134,0,18s · Claude · v4,,early days (9h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-29 Aug '26 (Sat),07:31 IST,reel,tr-llmfit,published,https://www.instagram.com/reel/Dcm0InUAFWo/,3,1,102,1,102,1,102,1,0,0,0,3.2,3300,0,0,34s · ChatGPT · v4,,early days (4h in); 1 comment(s) — the DM funnel fired
-29 Aug '26 (Sat),10:31 IST,reel,tr-obsidian-skills,published,https://www.instagram.com/reel/DcnIzWfDoyi/,20,1,52,1,52,1,52,1,0,0,0,2.3,160,0,0,18s · Claude · v4,,early days (1h in); 1 comment(s) — the DM funnel fired
-29 Aug '26 (Sat),14:00 IST,reel,tr-oh-my-claudecode,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
-29 Aug '26 (Sat),19:00 IST,reel,tr-opencli,scheduled,,,,,,,,,,,,,,,,,18s · Claude · v4,,repo reserved: hidden until posted
+28 Aug '26 (Fri),12:31 IST,reel,tr-codewhale,published,https://www.instagram.com/reel/DckxsAKDq-D/,3,1,112,1,113,1,113,1,0,1,0,4.5,3633,1,0,34s · Cursor · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
+29 Aug '26 (Sat),02:46 IST,reel,tr-herdr,published,https://www.instagram.com/reel/DcmTiVED0KY/,3,1,35,1,89,1,89,1,0,1,0,3.9,1067,154,0,18s · Claude · v4,,early days (10h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+29 Aug '26 (Sat),07:31 IST,reel,tr-llmfit,published,https://www.instagram.com/reel/Dcm0InUAFWo/,3,1,109,1,109,1,109,1,0,0,0,3.3,3533,0,0,34s · ChatGPT · v4,,early days (5h in); 1 comment(s) — the DM funnel fired
+29 Aug '26 (Sat),10:31 IST,reel,tr-obsidian-skills,published,https://www.instagram.com/reel/DcnIzWfDoyi/,20,1,62,1,62,1,62,1,0,0,0,2.2,210,0,0,18s · Claude · v4,,early days (2h in); 1 comment(s) — the DM funnel fired
+29 Aug '26 (Sat),12:32 IST,reel,tr-oh-my-claudecode,published,https://www.instagram.com/reel/DcnWmzmAIR9/,13,1,13,1,13,1,13,1,0,0,0,2.5,0,0,0,34s · Claude · v4,,early days (0h in); 1 comment(s) — the DM funnel fired
+29 Aug '26 (Sat),14:00 IST,reel,tr-opencli,scheduled,,,,,,,,,,,,,,,,,18s · Claude · v4,,repo reserved: hidden until posted
+29 Aug '26 (Sat),19:00 IST,reel,tr-opencodex,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 30 Aug '26 (Sun),10:30 IST,carousel,tool-deeptutor,scheduled,,,,,,,,,,,,,,,,,,,
-30 Aug '26 (Sun),14:00 IST,reel,tr-opencodex,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
-30 Aug '26 (Sun),19:00 IST,reel,tr-qwenpaw,scheduled,,,,,,,,,,,,,,,,,18s · ChatGPT · v4,,repo reserved: hidden until posted
+30 Aug '26 (Sun),14:00 IST,reel,tr-qwenpaw,scheduled,,,,,,,,,,,,,,,,,18s · ChatGPT · v4,,repo reserved: hidden until posted
+30 Aug '26 (Sun),19:00 IST,reel,tr-omniroute,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 31 Aug '26 (Mon),10:30 IST,carousel,workflow-auto-client-brief-analyzer,scheduled,,,,,,,,,,,,,,,,,,,
-31 Aug '26 (Mon),14:00 IST,reel,tr-omniroute,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
-31 Aug '26 (Mon),19:00 IST,reel,tr-book-to-skill,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
+31 Aug '26 (Mon),14:00 IST,reel,tr-book-to-skill,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
+31 Aug '26 (Mon),19:00 IST,reel,tr-officecli,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 01 Sep '26 (Tue),10:30 IST,carousel,workflow-how-to-get-credentials,scheduled,,,,,,,,,,,,,,,,,,,
-01 Sep '26 (Tue),14:00 IST,reel,tr-officecli,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
-01 Sep '26 (Tue),19:00 IST,reel,tr-i-have-adhd,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
+01 Sep '26 (Tue),14:00 IST,reel,tr-i-have-adhd,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
+01 Sep '26 (Tue),19:00 IST,reel,tr-archify,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 02 Sep '26 (Wed),10:30 IST,carousel,workflow-interior-design-client-evaluation-template,scheduled,,,,,,,,,,,,,,,,,,,
-02 Sep '26 (Wed),14:00 IST,reel,tr-archify,scheduled,,,,,,,,,,,,,,,,,34s · Claude · v4,,repo reserved: hidden until posted
 03 Sep '26 (Thu),10:30 IST,carousel,skill-spline-3d-integration,scheduled,,,,,,,,,,,,,,,,,,,
