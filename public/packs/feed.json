@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-29T02:01:11.044Z",
+  "builtAt": "2026-08-29T05:01:41.108Z",
   "items": [
+    {
+      "slug": "tr-obsidian-skills",
+      "kind": "reel",
+      "hook": "Your Claude agent runs your Obsidian vault, FREE",
+      "postedAt": "2026-08-29T05:01:37.336Z",
+      "permalink": "https://www.instagram.com/reel/DcnIzWfDoyi/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-obsidian-skills.jpg",
+      "resource": {
+        "name": "kepano/obsidian-skills",
+        "url": "https://github.com/kepano/obsidian-skills"
+      }
+    },
     {
       "slug": "tr-llmfit",
       "kind": "reel",
