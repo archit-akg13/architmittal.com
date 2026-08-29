@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-28T23:00:09.263Z",
+  "builtAt": "2026-08-29T02:01:11.044Z",
   "items": [
+    {
+      "slug": "tr-llmfit",
+      "kind": "reel",
+      "hook": "Stop renting ChatGPT — run OPEN SOURCE models on your own laptop",
+      "postedAt": "2026-08-29T02:01:05.552Z",
+      "permalink": "https://www.instagram.com/reel/Dcm0InUAFWo/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-llmfit.jpg",
+      "resource": {
+        "name": "AlexsJones/llmfit",
+        "url": "https://github.com/AlexsJones/llmfit"
+      }
+    },
     {
       "slug": "tr-herdr",
       "kind": "reel",
