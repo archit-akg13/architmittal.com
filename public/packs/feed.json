@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-30T07:02:06.352Z",
+  "builtAt": "2026-08-30T21:11:30.321Z",
   "items": [
+    {
+      "slug": "tr-book-to-skill",
+      "kind": "reel",
+      "hook": "Claude never read your books — this fix is OPEN SOURCE",
+      "postedAt": "2026-08-30T21:11:25.037Z",
+      "permalink": "https://www.instagram.com/reel/DcrcludgA_J/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-book-to-skill.jpg",
+      "resource": {
+        "name": "virgiliojr94/book-to-skill",
+        "url": "https://github.com/virgiliojr94/book-to-skill"
+      }
+    },
     {
       "slug": "tr-omniroute",
       "kind": "reel",
