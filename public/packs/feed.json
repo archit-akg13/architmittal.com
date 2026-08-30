@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-30T05:01:03.954Z",
+  "builtAt": "2026-08-30T07:02:06.352Z",
   "items": [
+    {
+      "slug": "tr-omniroute",
+      "kind": "reel",
+      "hook": "Your Claude quota ends — this keeps you coding, FREE",
+      "postedAt": "2026-08-30T07:02:02.100Z",
+      "permalink": "https://www.instagram.com/reel/Dcp7XlnjhZB/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-omniroute.jpg",
+      "resource": {
+        "name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute"
+      }
+    },
     {
       "slug": "tr-qwenpaw",
       "kind": "reel",
