@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-30T02:01:07.906Z",
+  "builtAt": "2026-08-30T05:01:03.954Z",
   "items": [
+    {
+      "slug": "tr-qwenpaw",
+      "kind": "reel",
+      "hook": "ChatGPT on WhatsApp, but OPEN SOURCE and yours",
+      "postedAt": "2026-08-30T05:00:59.910Z",
+      "permalink": "https://www.instagram.com/reel/DcpthgKgLz4/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-qwenpaw.jpg",
+      "resource": {
+        "name": "agentscope-ai/QwenPaw",
+        "url": "https://github.com/agentscope-ai/QwenPaw"
+      }
+    },
     {
       "slug": "tr-opencodex",
       "kind": "reel",
