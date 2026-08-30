@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-29T23:00:09.852Z",
+  "builtAt": "2026-08-30T02:01:07.906Z",
   "items": [
+    {
+      "slug": "tr-opencodex",
+      "kind": "reel",
+      "hook": "Your Claude Code, running any model, OPEN SOURCE",
+      "postedAt": "2026-08-30T02:01:01.784Z",
+      "permalink": "https://www.instagram.com/reel/DcpY7-QgAFU/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-opencodex.jpg",
+      "resource": {
+        "name": "lidge-jun/opencodex",
+        "url": "https://github.com/lidge-jun/opencodex"
+      }
+    },
     {
       "slug": "tr-opencli",
       "kind": "reel",
