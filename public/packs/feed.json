@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-31T02:01:42.675Z",
+  "builtAt": "2026-08-31T05:01:08.936Z",
   "items": [
+    {
+      "slug": "tr-i-have-adhd",
+      "kind": "reel",
+      "hook": "Claude buries your answer — this ends that, FREE",
+      "postedAt": "2026-08-31T05:01:04.319Z",
+      "permalink": "https://www.instagram.com/reel/DcsSUl9jqVq/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-i-have-adhd.jpg",
+      "resource": {
+        "name": "ayghri/i-have-adhd",
+        "url": "https://github.com/ayghri/i-have-adhd"
+      }
+    },
     {
       "slug": "tr-officecli",
       "kind": "reel",
