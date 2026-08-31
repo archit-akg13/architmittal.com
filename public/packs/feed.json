@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-31T05:01:08.936Z",
+  "builtAt": "2026-08-31T07:01:08.194Z",
   "items": [
+    {
+      "slug": "tr-archify",
+      "kind": "reel",
+      "hook": "Claude quietly draws your architecture diagrams now, OPEN SOURCE",
+      "postedAt": "2026-08-31T07:01:03.540Z",
+      "permalink": "https://www.instagram.com/reel/DcsgDsggESh/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-archify.jpg",
+      "resource": {
+        "name": "tt-a1i/archify",
+        "url": "https://github.com/tt-a1i/archify"
+      }
+    },
     {
       "slug": "tr-i-have-adhd",
       "kind": "reel",
