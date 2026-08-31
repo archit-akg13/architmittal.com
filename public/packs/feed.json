@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-30T23:00:09.349Z",
+  "builtAt": "2026-08-31T02:01:42.675Z",
   "items": [
+    {
+      "slug": "tr-officecli",
+      "kind": "reel",
+      "hook": "Your Claude agents edit Excel — FREE, no Microsoft",
+      "postedAt": "2026-08-31T02:01:37.798Z",
+      "permalink": "https://www.instagram.com/reel/Dcr9yHckkYK/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-officecli.jpg",
+      "resource": {
+        "name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI"
+      }
+    },
     {
       "slug": "tr-book-to-skill",
       "kind": "reel",
