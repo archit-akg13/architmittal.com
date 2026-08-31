@@ -1,0 +1,81 @@
+---
+title: "The second follow-up fails because it says the same thing as the first"
+description: "Salespeople quit at follow-up two because it repeats touch one. A laddered sequence where each message carries new information, and what not to automate."
+date: "2026-08-31"
+tags: ["sales follow-up", "whatsapp automation", "small business india"]
+image: "/og-default.jpg"
+canonicalUrl: "https://architmittal.com/blog/the-third-follow-up-message"
+---
+Most sales follow-up does not fail because there are too few messages. It fails because the second and third messages are the first message wearing a different date. The prospect has already read your pitch once. Sending it again with "just following up" on top gives them nothing new to respond to, so they do not respond, and the salesperson takes the silence as a no. That is the point where most sequences quietly die: not at touch six, at touch two.
+
+I have built follow-up systems for distributors, agencies, coaching businesses and manufacturers, and I have watched the same pattern in every one of them. The tooling was fine. The cadence was fine. The content of touches two and three was the problem, and no amount of scheduling fixes content.
+
+## Why the second message is the hard one
+
+The first message is easy. You have a reason to write it: the enquiry came in, the meeting happened, the quotation went out. There is a natural subject.
+
+The second message has no natural subject. Nothing new has happened. So the salesperson reaches for the only thing available, which is to repeat the ask. "Did you get a chance to look at the proposal?" "Any update on this?" "Checking in on the quote I sent." Every one of these lines asks the prospect to do work (reopen the file, form an opinion, write back) while offering nothing in return.
+
+From the prospect's side, the calculation is simple. Replying costs effort. The message provides no new information that would change their decision. So they do the rational thing and leave it. It is not rejection. It is just an unbalanced trade.
+
+By touch three the salesperson feels awkward. They have now asked twice with no reply. The third message either gets softer ("no pressure, just checking") or does not go out at all. This is where I see pipelines leak the most, and it is almost never visible in the CRM, because the deal is still marked "proposal sent" for months.
+
+## The fix is a ladder, not a schedule
+
+A follow-up sequence works when each message could stand on its own as something worth reading, even if the prospect had never heard from you before. That means every message after the first must carry something the previous one did not. Not a new tone. New information.
+
+Here is the ladder I use as a base. The exact wording changes by business, but the job of each rung does not.
+
+**Touch one: the thing they asked for.** The quotation, the answer to their question, the meeting summary. This is the only message where the ask is the whole point.
+
+**Touch two: the constraint they have not considered.** Something about their situation that affects the decision and that you did not cover in touch one. For a distributor it might be a lead time that changes after a certain date. For a services business it might be a dependency on their side that needs to be in place before work can start. The message informs; the ask is implicit.
+
+**Touch three: a worked example of a similar case.** Not a testimonial with a number attached. A short, specific description of how someone in a comparable position went about the decision, what they worried about, and what they did first. This gives the prospect a template for thinking, which is the thing most stalled buyers are actually missing.
+
+**Touch four: a direct question with a small answer.** Not "any update?" but a question that can be answered in one word and that tells you which branch you are on. "Is this on hold for now, or still being compared?" Either answer is useful to you, and both are easy to give.
+
+**Touch five: the close-the-file message.** You state plainly that you will stop following up, leave the door open, and say what to do if they come back later. Written well, this message gets more replies than touches two and three combined, because it removes all pressure and makes silence an active choice.
+
+Notice that only touches one and five contain the word "proposal" or a direct request. The middle three are giving, not asking. That is the whole trick.
+
+## A worked example: distributor orders after GST filing week
+
+Take a packaging supplier selling to FMCG distributors. Their enquiries cluster in the last week of the month, when distributors are placing orders for the next cycle. The supplier sends a quote, and then the distributor goes silent because it is now the first week of the month and their accountant has taken over their attention with GST filings.
+
+The old sequence looked like this: quote on the 28th, "did you see the quote" on the 2nd, "following up on the quote" on the 6th, then nothing. The distributor was never saying no. They were doing GSTR-1 and had no bandwidth.
+
+The laddered version:
+
+- **28th:** quote, as before.
+- **4th:** a one-line note that the current rate holds until a specific date because of how the supplier buys raw material, and that orders after that will be quoted fresh. This is true, it is new, and it tells the distributor when they actually need to decide.
+- **9th:** a short description of how another distributor of a similar size handles the month-start crunch by placing a standing order for their two fastest-moving SKUs and quoting only the rest. No numbers, just the shape of the arrangement.
+- **13th:** "Is this parked until after filing, or are you comparing suppliers?" One word answers it.
+- **18th:** the close-the-file message, with a note that the first-of-month rate can be re-quoted in one message on WhatsApp whenever they are ready.
+
+The distributor is now receiving a sequence that respects the fact they are busy and gives them a reason to reply at each step. Whether they order is still up to them. But the sequence no longer dies at touch two because the salesperson felt awkward.
+
+## What to automate, and what to leave alone
+
+This is where I differ from most people selling automation. The ladder has parts that should be automated and parts that should not, and getting that split wrong is worse than not automating at all.
+
+**Automate the timing and the reminders.** A simple system that watches the CRM stage, counts days since the last outbound message, and puts a task in front of the salesperson each morning saying "touch three due for these four prospects" removes the single biggest cause of dropped sequences, which is forgetting. This can be built in most CRMs natively, or with a sheet and a scheduled script if you are not on a CRM yet.
+
+**Automate touches one and five.** Touch one is a template with the quote attached. Touch five is a template with one name field. Both are safe to send from a system, over WhatsApp Business API or email, because they do not pretend to be personal.
+
+**Do not automate touches two, three and four.** I have tried. Touch two requires knowing what constraint applies to this prospect, and a generic "prices may change" line reads as a pressure tactic and gets the message ignored or the sender blocked. Touch three requires choosing a genuinely comparable case, which a system cannot judge without more data than most small businesses hold. Touch four is a question, and questions from a bot get bot-level replies.
+
+What works instead is a middle path: the system drafts touch two and three from a short library the salesperson has written (three or four constraint notes, three or four case sketches), tags the most likely one based on the prospect's category, and holds it for a human to approve or swap before sending. Approval takes seconds. The message that goes out is still one a human chose.
+
+I have seen businesses fully automate the middle rungs because a vendor said they could. Reply rates went to nothing within a few weeks, and worse, the salespeople stopped reading the sequence because "the system handles it". You end up with the same dead pipeline you had before, now with a subscription attached.
+
+## The other place this goes wrong
+
+Even with a ladder, sequences fail when the library is thin. If a salesperson has one constraint note and one case sketch, every prospect gets the same touch two and touch three, and within a month the team hears back "you sent this to my partner as well". The library needs refreshing roughly as often as the product or the season changes, and someone has to own that. In a small business that is usually the founder, because nobody else knows enough cases to write them.
+
+The second failure is measuring the wrong thing. Counting touches sent tells you nothing. The number that matters is how many prospects reach touch four and give you a one-word answer, because that is the point where you learn something. If you are not tracking which rung a prospect is on, you cannot see where the sequence leaks.
+
+## One thing to do this week
+
+Open your CRM, or your WhatsApp Business chat list, and find every prospect marked "quote sent" or "proposal sent" where the last message went out more than ten days ago and there has been no reply. Do not send them another "following up". Instead, write touch two for each one by hand: one genuine constraint they have not been told about, in two or three lines, with no ask at the end.
+
+Send those. Then note, for each, whether the reply came. That list, and the responses to it, is the first draft of your library. Once you have it, the timing is the only part worth handing to a machine.
