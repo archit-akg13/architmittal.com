@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-31T07:01:08.194Z",
+  "builtAt": "2026-08-31T21:15:54.691Z",
   "items": [
+    {
+      "slug": "tr-anthropic-cybersecurity-skills",
+      "kind": "reel",
+      "hook": "Your Claude agents, security-trained and OPEN SOURCE",
+      "postedAt": "2026-08-31T21:15:50.430Z",
+      "permalink": "https://www.instagram.com/reel/DcuB5O5k6AH/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-anthropic-cybersecurity-skills.jpg",
+      "resource": {
+        "name": "mukul975/Anthropic-Cybersecurity-Skills",
+        "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+      }
+    },
     {
       "slug": "tr-archify",
       "kind": "reel",
