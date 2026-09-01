@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-08-31T23:00:09.839Z",
+  "builtAt": "2026-09-01T02:01:08.087Z",
   "items": [
+    {
+      "slug": "tr-cloakbrowser",
+      "kind": "reel",
+      "hook": "Your Claude agents browse unflagged on this OPEN SOURCE Chromium",
+      "postedAt": "2026-09-01T02:01:01.292Z",
+      "permalink": "https://www.instagram.com/reel/DcuihatgdC0/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-cloakbrowser.jpg",
+      "resource": {
+        "name": "CloakHQ/CloakBrowser",
+        "url": "https://github.com/CloakHQ/CloakBrowser"
+      }
+    },
     {
       "slug": "tr-anthropic-cybersecurity-skills",
       "kind": "reel",
