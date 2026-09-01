@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-01T14:01:44.166Z",
+  "builtAt": "2026-09-01T21:11:09.988Z",
   "items": [
+    {
+      "slug": "tr-openhuman",
+      "kind": "reel",
+      "hook": "ChatGPT memory, but OPEN SOURCE and lives on your machine",
+      "postedAt": "2026-09-01T21:11:05.448Z",
+      "permalink": "https://www.instagram.com/reel/DcwmIm_CDe0/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-openhuman.jpg",
+      "resource": {
+        "name": "tinyhumansai/openhuman",
+        "url": "https://github.com/tinyhumansai/openhuman"
+      }
+    },
     {
       "slug": "save-things-to-never-automate",
       "kind": "carousel",
