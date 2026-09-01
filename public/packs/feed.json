@@ -1,6 +1,26 @@
 {
-  "builtAt": "2026-09-01T02:01:08.087Z",
+  "builtAt": "2026-09-01T14:01:44.166Z",
   "items": [
+    {
+      "slug": "save-things-to-never-automate",
+      "kind": "carousel",
+      "hook": "5 things you\nshould never\n[[circle:automate]]",
+      "postedAt": "2026-09-01T14:01:39.550Z",
+      "permalink": "https://www.instagram.com/p/Dcv1BIhiT2r/",
+      "trigger": "",
+      "thumb": "/packs/feed/save-things-to-never-automate-c.jpg",
+      "resource": null
+    },
+    {
+      "slug": "archify",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-09-01T07:02:24.552Z",
+      "permalink": "https://www.instagram.com/reel/DcvFAqglELG/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/archify.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-cloakbrowser",
       "kind": "reel",
