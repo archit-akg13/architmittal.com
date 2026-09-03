@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-02T23:00:12.199Z",
+  "builtAt": "2026-09-03T07:01:41.436Z",
   "items": [
+    {
+      "slug": "tool-deeptutor",
+      "kind": "carousel",
+      "hook": "Own the tutor that\nremembers your\nmistakes. FREE",
+      "postedAt": "2026-09-03T07:01:36.524Z",
+      "permalink": "https://www.instagram.com/p/Dc0OiSMD41L/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tool-deeptutor-c.jpg",
+      "resource": {
+        "name": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor"
+      }
+    },
     {
       "slug": "save-5-n8n-workflows-every-founder",
       "kind": "carousel",
