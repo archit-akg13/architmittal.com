@@ -1,6 +1,36 @@
 {
-  "builtAt": "2026-09-03T07:01:41.436Z",
+  "builtAt": "2026-09-03T14:03:32.712Z",
   "items": [
+    {
+      "slug": "save-claude-prompts-that-replace-tools",
+      "kind": "carousel",
+      "hook": "4 Claude prompts\nthat replace a\n[[circle:paid tool]]",
+      "postedAt": "2026-09-03T14:03:25.809Z",
+      "permalink": "https://www.instagram.com/p/Dc0-z7Bj_JI/",
+      "trigger": "",
+      "thumb": "/packs/feed/save-claude-prompts-that-replace-tools-c.jpg",
+      "resource": null
+    },
+    {
+      "slug": "vibe-trading",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-09-03T11:13:53.542Z",
+      "permalink": "https://www.instagram.com/reel/Dc0rZBrD4or/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/vibe-trading.jpg",
+      "resource": null
+    },
+    {
+      "slug": "herdr",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-09-03T07:02:20.451Z",
+      "permalink": "https://www.instagram.com/reel/Dc0Ol_sD2BH/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/herdr.jpg",
+      "resource": null
+    },
     {
       "slug": "tool-deeptutor",
       "kind": "carousel",
