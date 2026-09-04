@@ -1,6 +1,36 @@
 {
-  "builtAt": "2026-09-03T23:00:12.973Z",
+  "builtAt": "2026-09-04T14:01:59.518Z",
   "items": [
+    {
+      "slug": "save-fix-slow-backtest",
+      "kind": "carousel",
+      "hook": "Your backtest\nis slow. Five fixes,\n[[circle:in order]]",
+      "postedAt": "2026-09-04T14:01:49.960Z",
+      "permalink": "https://www.instagram.com/p/Dc3ja0Uk7xM/",
+      "trigger": "",
+      "thumb": "/packs/feed/save-fix-slow-backtest-c.jpg",
+      "resource": null
+    },
+    {
+      "slug": "i-have-adhd",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-09-04T11:02:06.451Z",
+      "permalink": "https://www.instagram.com/reel/Dc3O0ihktP0/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/i-have-adhd.jpg",
+      "resource": null
+    },
+    {
+      "slug": "openhuman",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-09-04T07:02:26.192Z",
+      "permalink": "https://www.instagram.com/reel/Dc2zZgbDcLL/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/openhuman.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-oh-my-pi",
       "kind": "reel",
