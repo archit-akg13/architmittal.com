@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-04T14:01:59.518Z",
+  "builtAt": "2026-09-04T21:12:09.363Z",
   "items": [
+    {
+      "slug": "tr-agents",
+      "kind": "reel",
+      "hook": "Claude Code plugins you never knew existed, all FREE",
+      "postedAt": "2026-09-04T21:12:00.475Z",
+      "permalink": "https://www.instagram.com/reel/Dc4UndHDzFk/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-agents.jpg",
+      "resource": {
+        "name": "wshobson/agents",
+        "url": "https://github.com/wshobson/agents"
+      }
+    },
     {
       "slug": "save-fix-slow-backtest",
       "kind": "carousel",
