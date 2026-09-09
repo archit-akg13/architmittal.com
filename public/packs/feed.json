@@ -1,6 +1,16 @@
 {
-  "builtAt": "2026-09-08T23:00:10.027Z",
+  "builtAt": "2026-09-09T14:09:46.197Z",
   "items": [
+    {
+      "slug": "save-rag-that-actually-works",
+      "kind": "carousel",
+      "hook": "Build a RAG bot\nthat stops\n[[circle:making things up]]",
+      "postedAt": "2026-09-09T14:07:55.584Z",
+      "permalink": "https://www.instagram.com/p/DdEcFZnHwcU/",
+      "trigger": "",
+      "thumb": "/packs/feed/save-rag-that-actually-works-c.jpg",
+      "resource": null
+    },
     {
       "slug": "save-ai-stack-under-2000-month",
       "kind": "carousel",
