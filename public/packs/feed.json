@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-09T23:00:10.948Z",
+  "builtAt": "2026-09-10T07:01:33.995Z",
   "items": [
+    {
+      "slug": "workflow-auto-client-brief-analyzer",
+      "kind": "carousel",
+      "hook": "Steal the FREE robot\nthat reads client briefs\n[[circle:before you do]]",
+      "postedAt": "2026-09-10T07:01:28.300Z",
+      "permalink": "https://www.instagram.com/p/DdGQFopIMmM/",
+      "trigger": "WORKFLOW",
+      "thumb": "/packs/feed/workflow-auto-client-brief-analyzer-c.jpg",
+      "resource": {
+        "name": "Auto Client Brief Analyzer",
+        "url": "https://architmittal.com/packs/workflows/auto-client-brief-analyzer.json"
+      }
+    },
     {
       "slug": "save-rag-that-actually-works",
       "kind": "carousel",
