@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-11T01:13:41.579Z",
+  "builtAt": "2026-09-11T21:06:37.947Z",
   "items": [
+    {
+      "slug": "tr-ego-lite",
+      "kind": "reel",
+      "hook": "Claude Code now drives your logged-in browser, FREE",
+      "postedAt": "2026-09-11T21:06:32.009Z",
+      "permalink": "https://www.instagram.com/reel/DdKVk3cjo_v/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-ego-lite.jpg",
+      "resource": {
+        "name": "citrolabs/ego-lite",
+        "url": "https://github.com/citrolabs/ego-lite"
+      }
+    },
     {
       "slug": "workflow-auto-client-brief-analyzer",
       "kind": "carousel",
