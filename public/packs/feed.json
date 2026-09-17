@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-16T23:00:11.473Z",
+  "builtAt": "2026-09-17T07:01:26.692Z",
   "items": [
+    {
+      "slug": "workflow-how-to-get-credentials",
+      "kind": "carousel",
+      "hook": "Your leads get\nanswered while\nyou [[circle:sleep]]. FREE",
+      "postedAt": "2026-09-17T07:01:20.623Z",
+      "permalink": "https://www.instagram.com/p/DdYRo_pFJi5/",
+      "trigger": "WORKFLOW",
+      "thumb": "/packs/feed/workflow-how-to-get-credentials-c.jpg",
+      "resource": {
+        "name": "How to Get Credentials",
+        "url": "https://architmittal.com/packs/workflows/how-to-get-credentials.json"
+      }
+    },
     {
       "slug": "save-prompts-that-run-your-ops",
       "kind": "carousel",
