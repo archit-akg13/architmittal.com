@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-18T14:03:02.015Z",
+  "builtAt": "2026-09-18T21:14:48.185Z",
   "items": [
+    {
+      "slug": "tr-9router",
+      "kind": "reel",
+      "hook": "Your Claude Code, now running on FREE models",
+      "postedAt": "2026-09-18T21:14:42.077Z",
+      "permalink": "https://www.instagram.com/reel/DdcYC11is-1/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-9router.jpg",
+      "resource": {
+        "name": "decolua/9router",
+        "url": "https://github.com/decolua/9router"
+      }
+    },
     {
       "slug": "save-founder-morning-dashboard",
       "kind": "carousel",
