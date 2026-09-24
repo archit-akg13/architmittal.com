@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-23T23:00:11.254Z",
+  "builtAt": "2026-09-24T07:01:39.352Z",
   "items": [
+    {
+      "slug": "workflow-interior-design-client-evaluation-template",
+      "kind": "carousel",
+      "hook": "Your enquiry form now\n[[circle:vets clients]] for you\nFREE",
+      "postedAt": "2026-09-24T07:01:33.253Z",
+      "permalink": "https://www.instagram.com/p/DdqTOZYD_EQ/",
+      "trigger": "WORKFLOW",
+      "thumb": "/packs/feed/workflow-interior-design-client-evaluation-template-c.jpg",
+      "resource": {
+        "name": "Interior Design Client Evaluation template",
+        "url": "https://architmittal.com/packs/workflows/interior-design-client-evaluation-template.json"
+      }
+    },
     {
       "slug": "tr-9router",
       "kind": "reel",
