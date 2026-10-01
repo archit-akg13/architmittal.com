@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-09-30T23:00:07.687Z",
+  "builtAt": "2026-10-01T07:01:55.990Z",
   "items": [
+    {
+      "slug": "skill-spline-3d-integration",
+      "kind": "carousel",
+      "hook": "Your dream 3D\nhero is one FREE\n[[circle:embed away]]",
+      "postedAt": "2026-10-01T07:01:48.530Z",
+      "permalink": "https://www.instagram.com/p/Dd8Uz9pE80A/",
+      "trigger": "SKILL",
+      "thumb": "/packs/feed/skill-spline-3d-integration-c.jpg",
+      "resource": {
+        "name": "spline-3d-integration",
+        "url": "https://architmittal.com/packs/skills/spline-3d-integration.md"
+      }
+    },
     {
       "slug": "humanizer",
       "kind": "reel",
