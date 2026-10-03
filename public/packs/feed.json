@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-02T23:00:10.380Z",
+  "builtAt": "2026-10-03T21:03:00.238Z",
   "items": [
+    {
+      "slug": "tr-moli",
+      "kind": "reel",
+      "hook": "Your Claude agents need a browser. This one's OPEN SOURCE",
+      "postedAt": "2026-10-03T21:02:52.544Z",
+      "permalink": "https://www.instagram.com/reel/DeC-oGLjDDm/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-moli.jpg",
+      "resource": {
+        "name": "lexmount/moli",
+        "url": "https://github.com/lexmount/moli"
+      }
+    },
     {
       "slug": "skill-spline-3d-integration",
       "kind": "carousel",
