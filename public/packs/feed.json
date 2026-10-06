@@ -1,6 +1,16 @@
 {
-  "builtAt": "2026-10-05T23:00:18.656Z",
+  "builtAt": "2026-10-06T23:00:11.422Z",
   "items": [
+    {
+      "slug": "moli",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-06T11:01:50.565Z",
+      "permalink": "https://www.instagram.com/reel/DeJoO7ejjQy/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/moli.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-moli",
       "kind": "reel",
