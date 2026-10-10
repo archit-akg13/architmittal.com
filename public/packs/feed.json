@@ -1,6 +1,16 @@
 {
-  "builtAt": "2026-10-08T23:00:11.913Z",
+  "builtAt": "2026-10-10T03:53:10.648Z",
   "items": [
+    {
+      "slug": "rea",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-09T11:02:16.856Z",
+      "permalink": "https://www.instagram.com/reel/DeRWoBQmOZu/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/rea.jpg",
+      "resource": null
+    },
     {
       "slug": "marketingskills",
       "kind": "reel",
