@@ -199,6 +199,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 12 Oct '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-12T15:30:03.382Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.412Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.442Z] Batch schedule fully published. · tool reel: null,
 12 Oct '26 (Mon),14:00 IST,reel,(reel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-12T15:30:03.382Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.412Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.442Z] Batch schedule fully published. · tool reel: null,
 12 Oct '26 (Mon),19:00 IST,reel,(reel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-12T15:30:03.382Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.412Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.442Z] Batch schedule fully published. · tool reel: null,
-13 Oct '26 (Tue),12:31 IST,reel,obsidian-skills,published,https://www.instagram.com/reel/DebOTUcCcd2/,15,0,114,0,114,0,114,0,0,0,0,3.2,660,0,0,,,early days (11h in)
-13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,96,0,96,0,0,0,0,2.2,3100,0,0,,,early days (7h in)
-13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,13,0,13,0,13,0,0,0,0,2.8,550,0,0,,,early days (3h in)
+13 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
+13 Oct '26 (Tue),12:31 IST,reel,obsidian-skills,published,https://www.instagram.com/reel/DebOTUcCcd2/,15,0,114,0,115,0,115,0,0,0,0,3.2,660,1,0,,,early days (12h in)
+13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,96,0,96,0,0,0,0,2.2,3100,0,0,,,early days (8h in)
+13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,18,0,18,0,18,0,0,0,0,2.8,800,0,0,,,early days (4h in)
