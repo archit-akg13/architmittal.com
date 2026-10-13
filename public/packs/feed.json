@@ -1,6 +1,49 @@
 {
-  "builtAt": "2026-10-12T23:00:12.048Z",
+  "builtAt": "2026-10-13T21:05:58.054Z",
   "items": [
+    {
+      "slug": "tr-claude-skills",
+      "kind": "reel",
+      "hook": "Your Claude Code just got a whole team, FREE",
+      "postedAt": "2026-10-13T21:05:51.310Z",
+      "permalink": "https://www.instagram.com/reel/Decu7-7ACcm/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-claude-skills.jpg",
+      "resource": {
+        "name": "alirezarezvani/claude-skills",
+        "url": "https://github.com/alirezarezvani/claude-skills"
+      }
+    },
+    {
+      "slug": "llmfit",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-13T15:33:02.476Z",
+      "permalink": "https://www.instagram.com/reel/DecI2FDj8YH/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/llmfit.jpg",
+      "resource": null
+    },
+    {
+      "slug": "ai-website-cloner-template",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-13T11:02:20.449Z",
+      "permalink": "https://www.instagram.com/reel/Debp2z1gVGY/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/ai-website-cloner-template.jpg",
+      "resource": null
+    },
+    {
+      "slug": "obsidian-skills",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-13T07:01:35.716Z",
+      "permalink": "https://www.instagram.com/reel/DebOTUcCcd2/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/obsidian-skills.jpg",
+      "resource": null
+    },
     {
       "slug": "rea",
       "kind": "reel",
