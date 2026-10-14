@@ -79,7 +79,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 03 Sep '26 (Thu),12:32 IST,reel,herdr,published,https://www.instagram.com/reel/Dc0Ol_sD2BH/,50,0,89,0,108,0,110,0,3,1,1,3.2,78,21,2,,,steady; 1 save(s)
 03 Sep '26 (Thu),16:43 IST,reel,vibe-trading,published,https://www.instagram.com/reel/Dc0rZBrD4or/,0,0,2,0,2,0,5,0,0,1,0,1.4,,0,150,,,underperformed — the hook likely did not stop the scroll; 1 save(s)
 03 Sep '26 (Thu),19:33 IST,carousel,save-claude-prompts-that-replace-tools,published,https://www.instagram.com/p/Dc0-z7Bj_JI/,1,1,2,1,5,1,9,1,1,0,0,,100,150,80,,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
-03 Sep '26 (Thu),21:03 IST,reel,openclaude,published,https://www.instagram.com/reel/Dc1JEweAXpB/,0,0,13,0,45,0,47,0,0,0,1,,,246,4,,,underperformed — the hook likely did not stop the scroll
+03 Sep '26 (Thu),21:03 IST,reel,openclaude,published,https://www.instagram.com/reel/Dc1JEweAXpB/,0,0,13,0,45,0,47,0,0,0,1,3.7,,246,4,,,underperformed — the hook likely did not stop the scroll
 04 Sep '26 (Fri),02:37 IST,reel,tr-oh-my-pi,published,https://www.instagram.com/reel/Dc1vXABEUaI/,13,1,66,1,199,3,246,3,1,8,0,5.6,408,202,24,18s · Cursor · v4,,3 comment(s) — the DM funnel fired; top performer: 246 views vs 108 median; 8 save(s)
 04 Sep '26 (Fri),12:32 IST,reel,openhuman,published,https://www.instagram.com/reel/Dc2zZgbDcLL/,25,0,98,0,106,0,109,0,2,1,0,3.1,292,8,3,,,steady; 1 save(s)
 04 Sep '26 (Fri),16:32 IST,reel,i-have-adhd,published,https://www.instagram.com/reel/Dc3O0ihktP0/,0,0,1,0,6,0,10,0,0,0,1,4.5,,500,67,,,underperformed — the hook likely did not stop the scroll
@@ -201,8 +201,8 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 12 Oct '26 (Mon),19:00 IST,reel,(reel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-12T15:30:03.382Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.412Z] Batch schedule fully published. · batch reel: [2026-10-12T15:30:03.442Z] Batch schedule fully published. · tool reel: null,
 13 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
 13 Oct '26 (Tue),12:31 IST,reel,obsidian-skills,published,https://www.instagram.com/reel/DebOTUcCcd2/,15,0,114,0,115,0,115,0,0,0,0,3.2,660,1,0,,,steady
-13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,101,0,101,0,0,0,0,2.3,3100,5,0,,,early days (21h in)
-13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,21,0,34,0,34,0,0,0,0,3.1,950,62,0,,,early days (16h in)
-14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,111,1,111,1,0,1,0,2.6,79,29,0,18s · Claude · v4,,early days (11h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-14 Oct '26 (Wed),07:31 IST,reel,tr-weknora,published,https://www.instagram.com/reel/DedQwMZjnm0/,3,1,110,1,110,1,110,1,0,1,1,3.7,3567,0,0,18s · ChatGPT · v4,,early days (6h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,3,0,3,0,3,0,0,0,0,,0,0,0,,,early days (1h in)
+13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,101,0,101,0,0,0,0,2.3,3100,5,0,,,early days (22h in)
+13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,21,0,41,0,41,0,0,0,0,4.2,950,95,0,,,early days (17h in)
+14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,111,1,111,1,0,1,0,2.6,79,29,0,18s · Claude · v4,,early days (12h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+14 Oct '26 (Wed),07:31 IST,reel,tr-weknora,published,https://www.instagram.com/reel/DedQwMZjnm0/,3,1,110,1,110,1,110,1,0,1,1,3.7,3567,0,0,18s · ChatGPT · v4,,early days (7h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,11,0,11,0,11,0,0,0,0,4.0,267,0,0,,,early days (2h in)
