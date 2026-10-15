@@ -1,6 +1,36 @@
 {
-  "builtAt": "2026-10-14T23:00:07.418Z",
+  "builtAt": "2026-10-15T23:00:07.661Z",
   "items": [
+    {
+      "slug": "officecli",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-15T15:34:24.160Z",
+      "permalink": "https://www.instagram.com/reel/DehSlK2ASMe/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/officecli.jpg",
+      "resource": null
+    },
+    {
+      "slug": "codewhale",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-15T11:02:49.978Z",
+      "permalink": "https://www.instagram.com/reel/Degzgc2D8Iv/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/codewhale.jpg",
+      "resource": null
+    },
+    {
+      "slug": "agentic-awesome-skills",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-15T07:03:37.165Z",
+      "permalink": "https://www.instagram.com/reel/DegYIB_FHeX/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/agentic-awesome-skills.jpg",
+      "resource": null
+    },
     {
       "slug": "qwenpaw",
       "kind": "reel",
