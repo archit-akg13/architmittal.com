@@ -1,6 +1,49 @@
 {
-  "builtAt": "2026-10-15T23:00:07.661Z",
+  "builtAt": "2026-10-16T21:11:03.938Z",
   "items": [
+    {
+      "slug": "tr-next-ai-draw-io",
+      "kind": "reel",
+      "hook": "Your Claude draws your diagrams now, and it's OPEN SOURCE",
+      "postedAt": "2026-10-16T21:10:56.488Z",
+      "permalink": "https://www.instagram.com/reel/Dekd4qQEz9a/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-next-ai-draw-io.jpg",
+      "resource": {
+        "name": "DayuanJiang/next-ai-draw-io",
+        "url": "https://github.com/DayuanJiang/next-ai-draw-io"
+      }
+    },
+    {
+      "slug": "deeptutor",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-16T15:32:09.010Z",
+      "permalink": "https://www.instagram.com/reel/Dej3FG7iJXN/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/deeptutor.jpg",
+      "resource": null
+    },
+    {
+      "slug": "oh-my-claudecode",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-16T11:02:25.330Z",
+      "permalink": "https://www.instagram.com/reel/DejYP-xiG_q/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/oh-my-claudecode.jpg",
+      "resource": null
+    },
+    {
+      "slug": "opencodex",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-16T07:01:48.613Z",
+      "permalink": "https://www.instagram.com/reel/Dei8tfhlRfb/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/opencodex.jpg",
+      "resource": null
+    },
     {
       "slug": "officecli",
       "kind": "reel",
