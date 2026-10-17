@@ -1,6 +1,26 @@
 {
-  "builtAt": "2026-10-16T23:00:07.912Z",
+  "builtAt": "2026-10-17T23:00:13.685Z",
   "items": [
+    {
+      "slug": "cli",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-17T11:02:31.011Z",
+      "permalink": "https://www.instagram.com/reel/Del9E1fCUrl/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/cli.jpg",
+      "resource": null
+    },
+    {
+      "slug": "opencli",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-17T07:02:53.237Z",
+      "permalink": "https://www.instagram.com/reel/Delhof8Ci5v/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/opencli.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-next-ai-draw-io",
       "kind": "reel",
