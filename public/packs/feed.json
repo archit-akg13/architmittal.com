@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-17T23:00:13.685Z",
+  "builtAt": "2026-10-18T21:10:08.746Z",
   "items": [
+    {
+      "slug": "tr-ifixai",
+      "kind": "reel",
+      "hook": "Your Claude agent says it's done. Prove it, FREE",
+      "postedAt": "2026-10-18T21:10:01.079Z",
+      "permalink": "https://www.instagram.com/reel/DepnXHJgnh9/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-ifixai.jpg",
+      "resource": {
+        "name": "ifixai-ai/iFixAi",
+        "url": "https://github.com/ifixai-ai/iFixAi"
+      }
+    },
     {
       "slug": "cli",
       "kind": "reel",
