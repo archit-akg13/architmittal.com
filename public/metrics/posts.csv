@@ -209,13 +209,13 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,38,0,65,0,66,0,0,0,1,3.2,1167,71,2,,,steady
 15 Oct '26 (Thu),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: [2026-10-15T15:32:07.348Z] ABORT — nothing fit to publish after 0 candidate(s) and up to 3 redraft(s): · batch reel: [2026-10-15T15:32:07.627Z] Batch schedule fully published. · batch reel: [2026-10-15T15:32:07.657Z] Batch schedule fully published. · batch reel: [2026-10-15T15:32:07.689Z] Batch schedule fully published. · tool reel: null,
 15 Oct '26 (Thu),12:33 IST,reel,agentic-awesome-skills,published,https://www.instagram.com/reel/DegYIB_FHeX/,3,0,33,0,36,0,36,0,0,0,0,14.5,1000,9,0,,,underperformed — the hook likely did not stop the scroll
-15 Oct '26 (Thu),16:32 IST,reel,codewhale,published,https://www.instagram.com/reel/Degzgc2D8Iv/,0,0,29,0,52,0,52,0,0,0,0,2.1,,79,0,,,underperformed — the hook likely did not stop the scroll
+15 Oct '26 (Thu),16:32 IST,reel,codewhale,published,https://www.instagram.com/reel/Degzgc2D8Iv/,0,0,29,0,52,0,53,0,0,0,0,2.1,,79,2,,,steady
 15 Oct '26 (Thu),21:04 IST,reel,officecli,published,https://www.instagram.com/reel/DehSlK2ASMe/,1,0,7,0,8,0,8,0,0,0,0,1.3,600,14,0,,,underperformed — the hook likely did not stop the scroll
 16 Oct '26 (Fri),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
 16 Oct '26 (Fri),12:31 IST,reel,opencodex,published,https://www.instagram.com/reel/Dei8tfhlRfb/,8,0,26,0,32,0,32,0,0,0,0,2.2,225,23,0,,,underperformed — the hook likely did not stop the scroll
 16 Oct '26 (Fri),16:32 IST,reel,oh-my-claudecode,published,https://www.instagram.com/reel/DejYP-xiG_q/,1,0,17,0,25,0,28,0,0,1,0,3.0,1600,47,12,,,underperformed — the hook likely did not stop the scroll; 1 save(s)
-16 Oct '26 (Fri),21:02 IST,reel,deeptutor,published,https://www.instagram.com/reel/Dej3FG7iJXN/,0,0,0,0,9,0,10,0,0,0,0,0.9,,,11,,,underperformed — the hook likely did not stop the scroll
+16 Oct '26 (Fri),21:02 IST,reel,deeptutor,published,https://www.instagram.com/reel/Dej3FG7iJXN/,0,0,0,0,9,0,11,0,0,0,0,1.3,,,22,,,underperformed — the hook likely did not stop the scroll
 17 Oct '26 (Sat),02:40 IST,reel,tr-next-ai-draw-io,published,https://www.instagram.com/reel/Dekd4qQEz9a/,5,1,22,1,136,1,142,1,0,3,0,10.5,340,518,4,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 3 save(s)
 17 Oct '26 (Sat),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-17 Oct '26 (Sat),12:32 IST,reel,opencli,published,https://www.instagram.com/reel/Delhof8Ci5v/,0,0,103,0,104,0,104,0,0,0,6,2.2,,1,0,,,early days (21h in)
-17 Oct '26 (Sat),16:32 IST,reel,cli,published,https://www.instagram.com/reel/Del9E1fCUrl/,0,0,11,0,54,0,54,0,0,1,0,3.7,,391,0,,,early days (17h in); 1 save(s)
+17 Oct '26 (Sat),12:32 IST,reel,opencli,published,https://www.instagram.com/reel/Delhof8Ci5v/,0,0,103,0,104,0,104,0,0,0,6,2.2,,1,0,,,early days (23h in)
+17 Oct '26 (Sat),16:32 IST,reel,cli,published,https://www.instagram.com/reel/Del9E1fCUrl/,0,0,11,0,57,0,57,0,0,1,0,3.5,,418,0,,,early days (19h in); 1 save(s)
