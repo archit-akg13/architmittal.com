@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-21T11:01:09.196Z",
+  "builtAt": "2026-10-21T11:02:46.456Z",
   "items": [
+    {
+      "slug": "tr-lemo-opuscar",
+      "kind": "reel",
+      "hook": "Your Claude makes short films — no video model, OPEN SOURCE",
+      "postedAt": "2026-10-21T11:02:38.345Z",
+      "permalink": "https://www.instagram.com/reel/DewQPtnj4Zw/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-lemo-opuscar.jpg",
+      "resource": {
+        "name": "lemomo-ai/lemo-opuscar",
+        "url": "https://github.com/lemomo-ai/lemo-opuscar"
+      }
+    },
     {
       "slug": "tr-dsh-our-free-model",
       "kind": "reel",
