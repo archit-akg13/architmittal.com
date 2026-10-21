@@ -202,7 +202,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 13 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
 13 Oct '26 (Tue),12:31 IST,reel,obsidian-skills,published,https://www.instagram.com/reel/DebOTUcCcd2/,15,0,114,0,115,0,116,0,1,0,0,3.1,660,1,1,,,steady
 13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,102,0,104,0,0,0,0,2.3,3100,6,2,,,steady
-13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,21,0,103,0,107,0,0,1,0,4.2,950,390,4,,,steady; 1 save(s)
+13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,21,0,103,0,109,0,0,1,0,4.3,950,390,6,,,steady; 1 save(s)
 14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,114,1,116,1,0,1,0,2.6,79,33,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),07:31 IST,reel,tr-weknora,published,https://www.instagram.com/reel/DedQwMZjnm0/,3,1,110,1,111,1,113,1,0,1,1,3.8,3567,1,2,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
@@ -228,6 +228,6 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 20 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-20T15:30:07.840Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.886Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.917Z] Batch schedule fully published. · tool reel: null,
 20 Oct '26 (Tue),14:00 IST,reel,(reel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-20T15:30:07.840Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.886Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.917Z] Batch schedule fully published. · tool reel: null,
 20 Oct '26 (Tue),19:00 IST,reel,(reel slot),MISSED,,,,,,,,,,,,,,,,,,missing 3 reel · batch reel: [2026-10-20T15:30:07.840Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.886Z] Batch schedule fully published. · batch reel: [2026-10-20T15:30:07.917Z] Batch schedule fully published. · tool reel: null,
-21 Oct '26 (Wed),12:56 IST,reel,dsh-our-free-model,published,https://www.instagram.com/reel/Dev3jbXlHJT/,0,0,122,0,123,0,123,0,1,2,0,3.0,,1,0,,,early days (8h in); 2 save(s)
-21 Oct '26 (Wed),16:31 IST,reel,tr-dsh-our-free-model,published,https://www.instagram.com/reel/DewQEB2COdb/,0,1,8,1,8,1,8,1,0,0,0,3.1,,0,0,18s · Claude · v4,,early days (4h in); 1 comment(s) — the DM funnel fired
-21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,9,1,9,1,9,1,1,0,0,6.8,350,0,0,18s · Claude · v4,,early days (4h in); 1 comment(s) — the DM funnel fired
+21 Oct '26 (Wed),12:56 IST,reel,dsh-our-free-model,published,https://www.instagram.com/reel/Dev3jbXlHJT/,0,0,122,0,123,0,123,0,1,2,0,3.0,,1,0,,,early days (9h in); 2 save(s)
+21 Oct '26 (Wed),16:31 IST,reel,tr-dsh-our-free-model,published,https://www.instagram.com/reel/DewQEB2COdb/,0,1,10,1,10,1,10,1,0,0,0,3.5,,0,0,18s · Claude · v4,,early days (5h in); 1 comment(s) — the DM funnel fired
+21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,10,1,10,1,10,1,1,0,0,5.9,400,0,0,18s · Claude · v4,,early days (5h in); 1 comment(s) — the DM funnel fired
