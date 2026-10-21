@@ -1,6 +1,29 @@
 {
-  "builtAt": "2026-10-20T23:00:11.710Z",
+  "builtAt": "2026-10-21T11:01:09.196Z",
   "items": [
+    {
+      "slug": "tr-dsh-our-free-model",
+      "kind": "reel",
+      "hook": "Stop paying Claude — frontier models in your terminal, FREE",
+      "postedAt": "2026-10-21T11:01:00.735Z",
+      "permalink": "https://www.instagram.com/reel/DewQEB2COdb/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-dsh-our-free-model.jpg",
+      "resource": {
+        "name": "Ebony-Vinyl/dsh-our-free-model",
+        "url": "https://github.com/Ebony-Vinyl/dsh-our-free-model"
+      }
+    },
+    {
+      "slug": "dsh-our-free-model",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-21T07:26:52.445Z",
+      "permalink": "https://www.instagram.com/reel/Dev3jbXlHJT/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/dsh-our-free-model.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-ifixai",
       "kind": "reel",
