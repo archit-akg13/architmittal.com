@@ -1,6 +1,49 @@
 {
-  "builtAt": "2026-10-21T23:00:08.409Z",
+  "builtAt": "2026-10-22T21:07:21.918Z",
   "items": [
+    {
+      "slug": "tr-crewai",
+      "kind": "reel",
+      "hook": "Your Claude agent works alone — give it an OPEN SOURCE team",
+      "postedAt": "2026-10-22T21:07:13.477Z",
+      "permalink": "https://www.instagram.com/reel/Dez6P75jVhI/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-crewai.jpg",
+      "resource": {
+        "name": "crewAIInc/crewAI",
+        "url": "https://github.com/crewAIInc/crewAI"
+      }
+    },
+    {
+      "slug": "ai-agent-book",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-22T15:35:20.088Z",
+      "permalink": "https://www.instagram.com/reel/DezUQOwlNjT/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/ai-agent-book.jpg",
+      "resource": null
+    },
+    {
+      "slug": "lemo-opuscar",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-22T11:04:30.249Z",
+      "permalink": "https://www.instagram.com/reel/Dey1PU4jYUU/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/lemo-opuscar.jpg",
+      "resource": null
+    },
+    {
+      "slug": "codebase-memory-mcp",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-22T07:06:31.231Z",
+      "permalink": "https://www.instagram.com/reel/DeyaBbolF8W/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/codebase-memory-mcp.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-lemo-opuscar",
       "kind": "reel",
