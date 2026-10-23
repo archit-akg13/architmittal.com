@@ -1,6 +1,39 @@
 {
-  "builtAt": "2026-10-22T23:00:14.668Z",
+  "builtAt": "2026-10-23T21:08:30.159Z",
   "items": [
+    {
+      "slug": "tr-ai-engineering-hub",
+      "kind": "reel",
+      "hook": "Stop buying Claude agent courses — this is FREE",
+      "postedAt": "2026-10-23T21:08:20.720Z",
+      "permalink": "https://www.instagram.com/reel/De2fKxOkQvR/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-ai-engineering-hub.jpg",
+      "resource": {
+        "name": "patchy631/ai-engineering-hub",
+        "url": "https://github.com/patchy631/ai-engineering-hub"
+      }
+    },
+    {
+      "slug": "chrome-devtools-mcp",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-23T11:02:02.977Z",
+      "permalink": "https://www.instagram.com/reel/De1ZxMDDMbf/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/chrome-devtools-mcp.jpg",
+      "resource": null
+    },
+    {
+      "slug": "cloakbrowser",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-23T07:04:26.985Z",
+      "permalink": "https://www.instagram.com/reel/De0-kxXiLgr/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/cloakbrowser.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-crewai",
       "kind": "reel",
