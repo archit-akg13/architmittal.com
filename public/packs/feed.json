@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-23T23:00:14.848Z",
+  "builtAt": "2026-10-24T02:01:16.618Z",
   "items": [
+    {
+      "slug": "tr-serviette",
+      "kind": "reel",
+      "hook": "Claude reading your docs, but OPEN SOURCE and always current",
+      "postedAt": "2026-10-24T02:01:07.490Z",
+      "permalink": "https://www.instagram.com/reel/De3AqPNkwRH/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-serviette.jpg",
+      "resource": {
+        "name": "pathwaycom/serviette",
+        "url": "https://github.com/pathwaycom/serviette"
+      }
+    },
     {
       "slug": "tr-ai-engineering-hub",
       "kind": "reel",
