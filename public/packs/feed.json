@@ -1,6 +1,49 @@
 {
-  "builtAt": "2026-10-24T23:00:14.963Z",
+  "builtAt": "2026-10-25T21:22:44.010Z",
   "items": [
+    {
+      "slug": "tr-pentagi",
+      "kind": "reel",
+      "hook": "Claude won't pentest for you — this will, FREE",
+      "postedAt": "2026-10-25T21:22:29.202Z",
+      "permalink": "https://www.instagram.com/reel/De7qXlDioPM/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-pentagi.jpg",
+      "resource": {
+        "name": "vxcontrol/pentagi",
+        "url": "https://github.com/vxcontrol/pentagi"
+      }
+    },
+    {
+      "slug": "9router",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-25T15:32:39.605Z",
+      "permalink": "https://www.instagram.com/reel/De7CVp4jOTr/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/9router.jpg",
+      "resource": null
+    },
+    {
+      "slug": "nanoclaw",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-25T11:02:57.948Z",
+      "permalink": "https://www.instagram.com/reel/De6jcZ8kVxQ/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/nanoclaw.jpg",
+      "resource": null
+    },
+    {
+      "slug": "oh-my-pi",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-25T07:03:01.852Z",
+      "permalink": "https://www.instagram.com/reel/De6IAZjH8No/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/oh-my-pi.jpg",
+      "resource": null
+    },
     {
       "slug": "claude-plugins-official",
       "kind": "reel",
