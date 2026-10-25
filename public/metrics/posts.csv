@@ -206,7 +206,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,114,1,116,1,0,1,0,2.6,79,33,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),07:31 IST,reel,tr-weknora,published,https://www.instagram.com/reel/DedQwMZjnm0/,3,1,110,1,111,1,113,1,0,1,1,3.8,3567,1,2,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,38,0,65,0,66,0,0,0,1,3.2,1167,71,2,,,steady
+14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,38,0,65,0,67,0,0,0,1,3.2,1167,71,3,,,steady
 15 Oct '26 (Thu),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: [2026-10-15T15:32:07.348Z] ABORT — nothing fit to publish after 0 candidate(s) and up to 3 redraft(s): · batch reel: [2026-10-15T15:32:07.627Z] Batch schedule fully published. · batch reel: [2026-10-15T15:32:07.657Z] Batch schedule fully published. · batch reel: [2026-10-15T15:32:07.689Z] Batch schedule fully published. · tool reel: null,
 15 Oct '26 (Thu),12:33 IST,reel,agentic-awesome-skills,published,https://www.instagram.com/reel/DegYIB_FHeX/,3,0,33,0,36,0,36,0,0,0,0,14.5,1000,9,0,,,underperformed — the hook likely did not stop the scroll
 15 Oct '26 (Thu),16:32 IST,reel,codewhale,published,https://www.instagram.com/reel/Degzgc2D8Iv/,0,0,29,0,52,0,53,0,0,0,0,2.1,,79,2,,,underperformed — the hook likely did not stop the scroll
@@ -244,4 +244,4 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 24 Oct '26 (Sat),07:31 IST,reel,tr-serviette,published,https://www.instagram.com/reel/De3AqPNkwRH/,,,111,1,113,1,113,1,0,0,0,2.9,,2,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 24 Oct '26 (Sat),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 24 Oct '26 (Sat),12:31 IST,reel,claude-plugins-official,published,https://www.instagram.com/reel/De3jEL9Fblh/,0,0,111,0,111,0,111,0,0,1,0,3.2,,0,0,,,steady; 1 save(s)
-25 Oct '26 (Sun),12:33 IST,reel,oh-my-pi,published,https://www.instagram.com/reel/De6IAZjH8No/,6,0,117,0,117,0,117,0,1,0,1,3.4,1850,0,0,,,early days (3h in)
+25 Oct '26 (Sun),12:33 IST,reel,oh-my-pi,published,https://www.instagram.com/reel/De6IAZjH8No/,6,0,117,0,117,0,117,0,1,0,1,3.4,1850,0,0,,,early days (4h in)
