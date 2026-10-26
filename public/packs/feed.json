@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-25T23:00:17.484Z",
+  "builtAt": "2026-10-26T02:01:49.729Z",
   "items": [
+    {
+      "slug": "tr-awesome-n8n-templates",
+      "kind": "reel",
+      "hook": "Stop building n8n workflows from scratch — copy these FREE",
+      "postedAt": "2026-10-26T02:01:40.436Z",
+      "permalink": "https://www.instagram.com/reel/De8KUDQlDPO/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-awesome-n8n-templates.jpg",
+      "resource": {
+        "name": "enescingoz/awesome-n8n-templates",
+        "url": "https://github.com/enescingoz/awesome-n8n-templates"
+      }
+    },
     {
       "slug": "tr-pentagi",
       "kind": "reel",
