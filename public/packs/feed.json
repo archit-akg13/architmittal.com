@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-26T05:01:44.960Z",
+  "builtAt": "2026-10-26T07:02:06.757Z",
   "items": [
+    {
+      "slug": "tr-meetily",
+      "kind": "reel",
+      "hook": "Gemini meeting notes, but FREE and never leave your laptop",
+      "postedAt": "2026-10-26T07:01:57.081Z",
+      "permalink": "https://www.instagram.com/reel/De8srlSDYFa/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-meetily.jpg",
+      "resource": {
+        "name": "Zackriya-Solutions/meetily",
+        "url": "https://github.com/Zackriya-Solutions/meetily"
+      }
+    },
     {
       "slug": "tr-pdfmathtranslate",
       "kind": "reel",
