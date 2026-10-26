@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-26T07:02:06.757Z",
+  "builtAt": "2026-10-26T21:06:18.294Z",
   "items": [
+    {
+      "slug": "tr-12-factor-agents",
+      "kind": "reel",
+      "hook": "Your Claude agents demo well. Production needs this FREE playbook.",
+      "postedAt": "2026-10-26T21:06:07.112Z",
+      "permalink": "https://www.instagram.com/reel/De-NTDnlNn9/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-12-factor-agents.jpg",
+      "resource": {
+        "name": "humanlayer/12-factor-agents",
+        "url": "https://github.com/humanlayer/12-factor-agents"
+      }
+    },
     {
       "slug": "tr-meetily",
       "kind": "reel",
