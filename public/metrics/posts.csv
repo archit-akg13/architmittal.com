@@ -203,7 +203,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 13 Oct '26 (Tue),12:31 IST,reel,obsidian-skills,published,https://www.instagram.com/reel/DebOTUcCcd2/,15,0,114,0,115,0,116,0,1,0,0,3.1,660,1,1,,,steady
 13 Oct '26 (Tue),16:32 IST,reel,ai-website-cloner-template,published,https://www.instagram.com/reel/Debp2z1gVGY/,3,0,96,0,102,0,104,0,0,0,0,2.3,3100,6,2,,,steady
 13 Oct '26 (Tue),21:03 IST,reel,llmfit,published,https://www.instagram.com/reel/DecI2FDj8YH/,2,0,21,0,103,0,110,0,0,1,0,4.3,950,390,7,,,steady; 1 save(s)
-14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,114,1,116,1,0,1,0,2.6,79,33,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
+14 Oct '26 (Wed),02:35 IST,reel,tr-claude-skills,published,https://www.instagram.com/reel/Decu7-7ACcm/,48,1,86,1,114,1,117,1,0,1,0,2.6,79,33,3,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),07:31 IST,reel,tr-weknora,published,https://www.instagram.com/reel/DedQwMZjnm0/,3,1,110,1,111,1,113,1,0,1,1,3.8,3567,1,2,18s · ChatGPT · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 14 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 14 Oct '26 (Wed),12:32 IST,reel,qwenpaw,published,https://www.instagram.com/reel/DedzQX6l0tT/,3,0,38,0,65,0,67,0,0,0,1,3.2,1167,71,3,,,steady
@@ -231,7 +231,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 21 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 21 Oct '26 (Wed),12:56 IST,reel,dsh-our-free-model,published,https://www.instagram.com/reel/Dev3jbXlHJT/,0,0,122,0,124,0,126,0,1,2,0,2.9,,2,2,,,steady; 2 save(s)
 21 Oct '26 (Wed),16:31 IST,reel,tr-dsh-our-free-model,published,https://www.instagram.com/reel/DewQEB2COdb/,0,1,12,1,117,1,130,1,1,0,0,3.2,,875,11,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
-21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,24,1,74,1,76,1,1,2,0,3.7,1100,208,3,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
+21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,24,1,74,1,76,1,1,2,0,3.8,1100,208,3,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 22 Oct '26 (Thu),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: [2026-10-22T15:33:12.407Z] ABORT — nothing fit to publish after 0 candidate(s) and up to 3 redraft(s): · batch reel: [2026-10-22T15:33:12.584Z] Batch schedule fully published. · batch reel: [2026-10-22T15:33:12.616Z] Batch schedule fully published. · batch reel: [2026-10-22T15:33:12.646Z] Batch schedule fully published. · tool reel: null,
 22 Oct '26 (Thu),12:36 IST,reel,codebase-memory-mcp,published,https://www.instagram.com/reel/DeyaBbolF8W/,20,0,111,0,111,0,115,0,0,4,2,3.3,455,0,4,,,steady; 4 save(s)
 22 Oct '26 (Thu),16:34 IST,reel,lemo-opuscar,published,https://www.instagram.com/reel/Dey1PU4jYUU/,85,0,114,0,116,0,125,0,0,2,0,4.2,34,2,8,,,steady; 2 save(s)
@@ -247,9 +247,9 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 25 Oct '26 (Sun),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
 25 Oct '26 (Sun),12:33 IST,reel,oh-my-pi,published,https://www.instagram.com/reel/De6IAZjH8No/,6,0,117,0,118,0,118,0,1,0,1,3.4,1850,1,0,,,steady
 25 Oct '26 (Sun),16:32 IST,reel,nanoclaw,published,https://www.instagram.com/reel/De6jcZ8kVxQ/,46,0,127,0,150,0,150,0,2,4,1,3.3,176,18,0,,,steady; 4 save(s)
-25 Oct '26 (Sun),21:02 IST,reel,9router,published,https://www.instagram.com/reel/De7CVp4jOTr/,0,0,97,0,116,0,116,0,1,1,0,2.8,,20,0,,,early days (22h in); 1 save(s)
-26 Oct '26 (Mon),02:52 IST,reel,tr-pentagi,published,https://www.instagram.com/reel/De7qXlDioPM/,107,1,121,1,124,1,124,1,1,3,0,3.3,13,2,0,18s · Claude · v4,,early days (16h in); 1 comment(s) — the DM funnel fired; 3 save(s)
-26 Oct '26 (Mon),07:31 IST,reel,tr-awesome-n8n-templates,published,https://www.instagram.com/reel/De8KUDQlDPO/,33,1,110,1,114,1,114,1,1,1,0,2.2,233,4,0,18s · n8n · v4,,early days (11h in); 1 comment(s) — the DM funnel fired; 1 save(s)
-26 Oct '26 (Mon),10:31 IST,reel,tr-pdfmathtranslate,published,https://www.instagram.com/reel/De8e5rhFf0_/,103,1,118,1,118,1,118,1,1,2,0,2.5,15,0,0,18s · Google · v4,,early days (8h in); 1 comment(s) — the DM funnel fired; 2 save(s)
-26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,111,1,111,1,1,0,0,2.5,158,0,0,18s · Gemini · v4,,early days (6h in); 1 comment(s) — the DM funnel fired
-26 Oct '26 (Mon),19:00 IST,reel,tr-12-factor-agents,scheduled,,,,,,,,,,,,,,,,,18s · Claude · v4,,repo reserved: hidden until posted
+25 Oct '26 (Sun),21:02 IST,reel,9router,published,https://www.instagram.com/reel/De7CVp4jOTr/,0,0,97,0,116,0,116,0,1,1,0,2.8,,20,0,,,early days (23h in); 1 save(s)
+26 Oct '26 (Mon),02:52 IST,reel,tr-pentagi,published,https://www.instagram.com/reel/De7qXlDioPM/,107,1,121,1,124,1,124,1,1,3,0,3.3,13,2,0,18s · Claude · v4,,early days (17h in); 1 comment(s) — the DM funnel fired; 3 save(s)
+26 Oct '26 (Mon),07:31 IST,reel,tr-awesome-n8n-templates,published,https://www.instagram.com/reel/De8KUDQlDPO/,33,1,110,1,115,1,115,1,1,1,0,2.2,233,5,0,18s · n8n · v4,,early days (12h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+26 Oct '26 (Mon),10:31 IST,reel,tr-pdfmathtranslate,published,https://www.instagram.com/reel/De8e5rhFf0_/,103,1,118,1,119,1,119,1,1,2,0,2.5,15,1,0,18s · Google · v4,,early days (9h in); 1 comment(s) — the DM funnel fired; 2 save(s)
+26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,111,1,111,1,1,0,0,2.5,158,0,0,18s · Gemini · v4,,early days (7h in); 1 comment(s) — the DM funnel fired
+27 Oct '26 (Tue),14:00 IST,reel,tr-12-factor-agents,scheduled,,,,,,,,,,,,,,,,,18s · Claude · v4,,repo reserved: hidden until posted
