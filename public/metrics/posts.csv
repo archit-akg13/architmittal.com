@@ -253,6 +253,6 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 26 Oct '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 26 Oct '26 (Mon),10:31 IST,reel,tr-pdfmathtranslate,published,https://www.instagram.com/reel/De8e5rhFf0_/,103,1,118,1,119,1,119,1,1,2,0,2.6,15,1,0,18s · Google · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,113,1,113,1,1,0,0,2.5,158,2,0,18s · Gemini · v4,,1 comment(s) — the DM funnel fired; steady
-27 Oct '26 (Tue),02:36 IST,reel,tr-12-factor-agents,published,https://www.instagram.com/reel/De-NTDnlNn9/,1,1,117,1,118,1,118,1,0,2,0,3.3,11600,1,0,18s · Claude · v4,,early days (11h in); 1 comment(s) — the DM funnel fired; 2 save(s)
-27 Oct '26 (Tue),07:31 IST,reel,tr-jantt,published,https://www.instagram.com/reel/De-vFQ2DvHC/,4,1,42,1,42,1,42,1,0,0,0,2.0,950,0,0,18s · Claude · v4,,early days (6h in); 1 comment(s) — the DM funnel fired
-27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,98,0,98,0,98,0,0,0,1,2.4,0,0,0,,,early days (1h in)
+27 Oct '26 (Tue),02:36 IST,reel,tr-12-factor-agents,published,https://www.instagram.com/reel/De-NTDnlNn9/,1,1,117,1,118,1,118,1,0,2,0,3.3,11600,1,0,18s · Claude · v4,,early days (12h in); 1 comment(s) — the DM funnel fired; 2 save(s)
+27 Oct '26 (Tue),07:31 IST,reel,tr-jantt,published,https://www.instagram.com/reel/De-vFQ2DvHC/,4,1,42,1,43,1,43,1,0,0,0,2.0,950,2,0,18s · Claude · v4,,early days (7h in); 1 comment(s) — the DM funnel fired
+27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,110,0,110,0,110,0,0,0,1,2.5,12,0,0,,,early days (2h in)
