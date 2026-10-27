@@ -1,6 +1,29 @@
 {
-  "builtAt": "2026-10-27T02:01:35.139Z",
+  "builtAt": "2026-10-27T21:17:47.607Z",
   "items": [
+    {
+      "slug": "tr-sim",
+      "kind": "reel",
+      "hook": "Stop renting Claude agent builders, this one is OPEN SOURCE",
+      "postedAt": "2026-10-27T21:17:37.350Z",
+      "permalink": "https://www.instagram.com/reel/DfAzZKfCsBr/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-sim.jpg",
+      "resource": {
+        "name": "simstudioai/sim",
+        "url": "https://github.com/simstudioai/sim"
+      }
+    },
+    {
+      "slug": "ego-lite",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-27T07:03:12.860Z",
+      "permalink": "https://www.instagram.com/reel/De_RncIjkrS/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/ego-lite.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-jantt",
       "kind": "reel",
