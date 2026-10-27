@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-26T23:00:15.857Z",
+  "builtAt": "2026-10-27T02:01:35.139Z",
   "items": [
+    {
+      "slug": "tr-jantt",
+      "kind": "reel",
+      "hook": "Your Claude project plans, now OPEN SOURCE Gantt charts",
+      "postedAt": "2026-10-27T02:01:25.444Z",
+      "permalink": "https://www.instagram.com/reel/De-vFQ2DvHC/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-jantt.jpg",
+      "resource": {
+        "name": "AhmadHassan-BTed/Jantt",
+        "url": "https://github.com/AhmadHassan-BTed/Jantt"
+      }
+    },
     {
       "slug": "tr-12-factor-agents",
       "kind": "reel",
