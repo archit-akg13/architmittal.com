@@ -1,6 +1,39 @@
 {
-  "builtAt": "2026-10-27T23:00:14.631Z",
+  "builtAt": "2026-10-28T21:23:43.907Z",
   "items": [
+    {
+      "slug": "tr-new-api",
+      "kind": "reel",
+      "hook": "Stop handing Claude keys to every app — OPEN SOURCE gateway",
+      "postedAt": "2026-10-28T21:23:22.351Z",
+      "permalink": "https://www.instagram.com/reel/DfDY2UXkyg-/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-new-api.jpg",
+      "resource": {
+        "name": "QuantumNous/new-api",
+        "url": "https://github.com/QuantumNous/new-api"
+      }
+    },
+    {
+      "slug": "voxcpm",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-28T11:09:20.106Z",
+      "permalink": "https://www.instagram.com/reel/DfCSk42oELu/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/voxcpm.jpg",
+      "resource": null
+    },
+    {
+      "slug": "awesome-claude-code",
+      "kind": "reel",
+      "hook": "",
+      "postedAt": "2026-10-28T07:05:43.519Z",
+      "permalink": "https://www.instagram.com/reel/DfB2s-GFXRY/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/awesome-claude-code.jpg",
+      "resource": null
+    },
     {
       "slug": "tr-sim",
       "kind": "reel",
