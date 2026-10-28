@@ -236,14 +236,14 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 22 Oct '26 (Thu),12:36 IST,reel,codebase-memory-mcp,published,https://www.instagram.com/reel/DeyaBbolF8W/,20,0,111,0,111,0,115,0,0,4,2,3.3,455,0,4,,,steady; 4 save(s)
 22 Oct '26 (Thu),16:34 IST,reel,lemo-opuscar,published,https://www.instagram.com/reel/Dey1PU4jYUU/,85,0,114,0,116,0,128,0,0,2,0,4.5,34,2,10,,,steady; 2 save(s)
 22 Oct '26 (Thu),21:05 IST,reel,ai-agent-book,published,https://www.instagram.com/reel/DezUQOwlNjT/,0,0,2,0,32,0,34,0,0,1,2,5.1,,1500,6,,,underperformed — the hook likely did not stop the scroll; 1 save(s)
-23 Oct '26 (Fri),02:37 IST,reel,tr-crewai,published,https://www.instagram.com/reel/Dez6P75jVhI/,20,1,121,1,130,1,137,1,2,3,1,4.0,505,7,5,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 3 save(s)
+23 Oct '26 (Fri),02:37 IST,reel,tr-crewai,published,https://www.instagram.com/reel/Dez6P75jVhI/,20,1,121,1,130,1,138,1,3,3,1,4.0,505,7,6,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 3 save(s)
 23 Oct '26 (Fri),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 23 Oct '26 (Fri),12:34 IST,reel,cloakbrowser,published,https://www.instagram.com/reel/De0-kxXiLgr/,192,0,1229,0,1754,0,1801,0,31,48,19,5.5,540,43,3,,,top performer: 1801 views vs 110 median; 48 save(s)
 23 Oct '26 (Fri),16:32 IST,reel,chrome-devtools-mcp,published,https://www.instagram.com/reel/De1ZxMDDMbf/,0,0,64,0,105,0,106,0,0,1,0,2.2,,64,1,,,steady; 1 save(s)
 24 Oct '26 (Sat),02:38 IST,reel,tr-ai-engineering-hub,published,https://www.instagram.com/reel/De2fKxOkQvR/,49,2,107,2,109,2,110,2,0,1,0,2.6,118,2,1,18s · Claude · v4,,2 comment(s) — the DM funnel fired; steady; 1 save(s)
 24 Oct '26 (Sat),07:31 IST,reel,tr-serviette,published,https://www.instagram.com/reel/De3AqPNkwRH/,,,111,1,113,1,113,1,0,0,0,2.9,,2,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 24 Oct '26 (Sat),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-24 Oct '26 (Sat),12:31 IST,reel,claude-plugins-official,published,https://www.instagram.com/reel/De3jEL9Fblh/,0,0,111,0,111,0,119,0,0,1,0,3.3,,0,7,,,steady; 1 save(s)
+24 Oct '26 (Sat),12:31 IST,reel,claude-plugins-official,published,https://www.instagram.com/reel/De3jEL9Fblh/,0,0,111,0,111,0,119,0,0,1,0,3.6,,0,7,,,steady; 1 save(s)
 25 Oct '26 (Sun),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,backfilled via tool reel,
 25 Oct '26 (Sun),12:33 IST,reel,oh-my-pi,published,https://www.instagram.com/reel/De6IAZjH8No/,6,0,117,0,118,0,118,0,1,0,1,3.4,1850,1,0,,,steady
 25 Oct '26 (Sun),16:32 IST,reel,nanoclaw,published,https://www.instagram.com/reel/De6jcZ8kVxQ/,46,0,127,0,150,0,153,0,2,4,1,3.8,176,18,2,,,steady; 4 save(s)
@@ -256,5 +256,6 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 27 Oct '26 (Tue),02:36 IST,reel,tr-12-factor-agents,published,https://www.instagram.com/reel/De-NTDnlNn9/,1,1,117,1,124,1,126,1,0,2,0,3.3,11600,6,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 27 Oct '26 (Tue),07:31 IST,reel,tr-jantt,published,https://www.instagram.com/reel/De-vFQ2DvHC/,4,1,42,1,49,1,49,1,0,0,0,2.3,950,17,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
 27 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,110,0,110,0,110,0,0,0,1,2.5,12,0,0,,,early days (23h in)
-28 Oct '26 (Wed),02:47 IST,reel,tr-sim,published,https://www.instagram.com/reel/DfAzZKfCsBr/,26,1,117,1,119,1,119,1,0,0,0,22.6,350,2,0,18s · Claude · v4,,early days (9h in); 1 comment(s) — the DM funnel fired
+27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,110,0,112,0,112,0,0,0,1,2.8,12,2,0,,,steady
+28 Oct '26 (Wed),02:47 IST,reel,tr-sim,published,https://www.instagram.com/reel/DfAzZKfCsBr/,26,1,117,1,119,1,119,1,0,0,0,22.6,350,2,0,18s · Claude · v4,,early days (10h in); 1 comment(s) — the DM funnel fired
+28 Oct '26 (Wed),12:35 IST,reel,awesome-claude-code,published,https://www.instagram.com/reel/DfB2s-GFXRY/,0,0,0,0,0,0,0,0,0,0,0,,,,,,,early days (0h in)
