@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-28T23:00:23.592Z",
+  "builtAt": "2026-10-29T02:02:01.866Z",
   "items": [
+    {
+      "slug": "tr-chattts",
+      "kind": "reel",
+      "hook": "Stop paying ElevenLabs — this dialogue voice model is FREE",
+      "postedAt": "2026-10-29T02:01:52.708Z",
+      "permalink": "https://www.instagram.com/reel/DfD4uJVE3ZT/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-chattts.jpg",
+      "resource": {
+        "name": "2noise/ChatTTS",
+        "url": "https://github.com/2noise/ChatTTS"
+      }
+    },
     {
       "slug": "tr-new-api",
       "kind": "reel",
