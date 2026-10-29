@@ -261,5 +261,5 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 28 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 28 Oct '26 (Wed),12:35 IST,reel,awesome-claude-code,published,https://www.instagram.com/reel/DfB2s-GFXRY/,0,0,16,0,20,0,20,0,0,0,0,1.4,,25,0,,,underperformed — the hook likely did not stop the scroll
 28 Oct '26 (Wed),16:39 IST,reel,voxcpm,published,https://www.instagram.com/reel/DfCSk42oELu/,1,0,6,0,7,0,7,0,0,0,0,1.6,500,17,0,,,underperformed — the hook likely did not stop the scroll
-29 Oct '26 (Thu),02:53 IST,reel,tr-new-api,published,https://www.instagram.com/reel/DfDY2UXkyg-/,12,1,53,1,94,1,94,1,0,2,0,3.6,342,77,0,18s · Claude · v4,,early days (18h in); 1 comment(s) — the DM funnel fired; 2 save(s)
-29 Oct '26 (Thu),07:31 IST,reel,tr-chattts,published,https://www.instagram.com/reel/DfD4uJVE3ZT/,6,1,51,1,95,1,95,1,0,1,0,3.7,750,86,0,18s · ElevenLabs · v4,,early days (14h in); 1 comment(s) — the DM funnel fired; 1 save(s)
+29 Oct '26 (Thu),02:53 IST,reel,tr-new-api,published,https://www.instagram.com/reel/DfDY2UXkyg-/,12,1,53,1,96,1,96,1,0,2,0,3.7,342,81,0,18s · Claude · v4,,early days (19h in); 1 comment(s) — the DM funnel fired; 2 save(s)
+29 Oct '26 (Thu),07:31 IST,reel,tr-chattts,published,https://www.instagram.com/reel/DfD4uJVE3ZT/,6,1,51,1,110,1,110,1,0,1,0,3.6,750,116,0,18s · ElevenLabs · v4,,early days (15h in); 1 comment(s) — the DM funnel fired; 1 save(s)
