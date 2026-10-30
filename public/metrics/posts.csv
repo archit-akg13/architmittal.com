@@ -231,7 +231,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 21 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 21 Oct '26 (Wed),12:56 IST,reel,dsh-our-free-model,published,https://www.instagram.com/reel/Dev3jbXlHJT/,0,0,122,0,124,0,126,0,1,2,0,2.9,,2,2,,,steady; 2 save(s)
 21 Oct '26 (Wed),16:31 IST,reel,tr-dsh-our-free-model,published,https://www.instagram.com/reel/DewQEB2COdb/,0,1,12,1,117,1,130,1,1,0,0,3.2,,875,11,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
-21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,24,1,74,1,76,1,1,2,0,3.8,1100,208,3,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
+21 Oct '26 (Wed),16:32 IST,reel,tr-lemo-opuscar,published,https://www.instagram.com/reel/DewQPtnj4Zw/,2,1,24,1,74,1,79,1,1,2,0,3.8,1100,208,7,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 22 Oct '26 (Thu),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,missing 1 carousel · carousel: [2026-10-22T15:33:12.407Z] ABORT — nothing fit to publish after 0 candidate(s) and up to 3 redraft(s): · batch reel: [2026-10-22T15:33:12.584Z] Batch schedule fully published. · batch reel: [2026-10-22T15:33:12.616Z] Batch schedule fully published. · batch reel: [2026-10-22T15:33:12.646Z] Batch schedule fully published. · tool reel: null,
 22 Oct '26 (Thu),12:36 IST,reel,codebase-memory-mcp,published,https://www.instagram.com/reel/DeyaBbolF8W/,20,0,111,0,111,0,115,0,0,4,2,3.3,455,0,4,,,steady; 4 save(s)
 22 Oct '26 (Thu),16:34 IST,reel,lemo-opuscar,published,https://www.instagram.com/reel/Dey1PU4jYUU/,85,0,114,0,116,0,130,0,0,2,0,4.8,34,2,12,,,steady; 2 save(s)
@@ -252,9 +252,9 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 26 Oct '26 (Mon),07:31 IST,reel,tr-awesome-n8n-templates,published,https://www.instagram.com/reel/De8KUDQlDPO/,33,1,110,1,115,1,115,1,1,1,0,2.2,233,5,0,18s · n8n · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 26 Oct '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 26 Oct '26 (Mon),10:31 IST,reel,tr-pdfmathtranslate,published,https://www.instagram.com/reel/De8e5rhFf0_/,103,1,118,1,119,1,119,1,1,2,0,2.6,15,1,0,18s · Google · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
-26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,113,1,113,1,1,0,0,2.5,158,2,0,18s · Gemini · v4,,1 comment(s) — the DM funnel fired; steady
+26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,113,1,114,1,1,0,0,2.5,158,2,1,18s · Gemini · v4,,1 comment(s) — the DM funnel fired; steady
 27 Oct '26 (Tue),02:36 IST,reel,tr-12-factor-agents,published,https://www.instagram.com/reel/De-NTDnlNn9/,1,1,117,1,124,1,126,1,0,2,0,3.3,11600,6,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
-27 Oct '26 (Tue),07:31 IST,reel,tr-jantt,published,https://www.instagram.com/reel/De-vFQ2DvHC/,4,1,42,1,49,1,49,1,0,0,0,2.3,950,17,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
+27 Oct '26 (Tue),07:31 IST,reel,tr-jantt,published,https://www.instagram.com/reel/De-vFQ2DvHC/,4,1,42,1,49,1,50,1,0,0,0,2.3,950,17,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; underperformed — the hook likely did not stop the scroll
 27 Oct '26 (Tue),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,110,0,112,0,112,0,0,0,1,2.8,12,2,0,,,steady
 28 Oct '26 (Wed),02:47 IST,reel,tr-sim,published,https://www.instagram.com/reel/DfAzZKfCsBr/,26,1,117,1,125,1,125,1,0,0,0,22.2,350,7,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
