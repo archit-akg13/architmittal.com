@@ -1,9 +1,9 @@
 SYSTEM COMMENTARY
-Updated 2026-10-30 06:40 IST. Collector runs hourly; sheet re-imports on Google's cycle.
+Updated 2026-10-30 07:44 IST. Collector runs hourly; sheet re-imports on Google's cycle.
 "Runway: 0 carousel(s) and 0 reel(s) built, QA-passed and scheduled — about 0 days at 3 reels a day."
 "Last 7 days: 7 missed slot(s): carousel on 2026-10-23, carousel on 2026-10-24, carousel on 2026-10-25, carousel on 2026-10-26, carousel on 2026-10-27, carousel on 2026-10-28, carousel on 2026-10-29."
 Followers: 29 (was 23 a week ago).
-"Top post so far: cloakbrowser — 1801 views, 0 comments (https://www.instagram.com/reel/De0-kxXiLgr/)."
+"Top post so far: cloakbrowser — 1803 views, 0 comments (https://www.instagram.com/reel/De0-kxXiLgr/)."
 "Latest day analysis (2026-10-29): Nothing clearly worked: both reels landed at about 95 views and 1 comment each, and tr-new-api's 2 saves against 1 is too small a gap to call a winner. The problem is reach stuck under 100 views, so tomorrow change only the first-second hook to show the tool's result on screen before naming it."
 "Optimizer (2026-10-29): WORKED: tr-sim (Claude anchor, 02:47) had 125 views and 22.168s average watch time, against the arm A median of 119.5 views and 3.223s. tr-new-api added 2 saves from 106 views. DID NOT: The two reels without an arm or anchor flopped. awesome-claude-code got 0 views at 12:30, where that slot's median is 112, and voxcpm got 7 views at 16:39 with 1.577s watch time. CHANGE: holding — not enough data."
 "Strategy now: reels 07:30/10:30/12:30 · length 18s · carousel every 7d · CTA ""Comment REPO"" · anchors Claude"
