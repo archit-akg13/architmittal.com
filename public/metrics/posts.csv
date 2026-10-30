@@ -249,7 +249,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 25 Oct '26 (Sun),16:32 IST,reel,nanoclaw,published,https://www.instagram.com/reel/De6jcZ8kVxQ/,46,0,127,0,150,0,153,0,2,4,1,3.8,176,18,2,,,steady; 4 save(s)
 25 Oct '26 (Sun),21:02 IST,reel,9router,published,https://www.instagram.com/reel/De7CVp4jOTr/,0,0,97,0,116,0,118,0,1,1,0,2.8,,20,2,,,steady; 1 save(s)
 26 Oct '26 (Mon),02:52 IST,reel,tr-pentagi,published,https://www.instagram.com/reel/De7qXlDioPM/,107,1,121,1,124,1,126,1,1,3,0,3.3,13,2,2,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 3 save(s)
-26 Oct '26 (Mon),07:31 IST,reel,tr-awesome-n8n-templates,published,https://www.instagram.com/reel/De8KUDQlDPO/,33,1,110,1,115,1,115,1,1,1,0,2.2,233,5,0,18s · n8n · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
+26 Oct '26 (Mon),07:31 IST,reel,tr-awesome-n8n-templates,published,https://www.instagram.com/reel/De8KUDQlDPO/,33,1,110,1,115,1,118,1,1,1,0,2.4,233,5,3,18s · n8n · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
 26 Oct '26 (Mon),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
 26 Oct '26 (Mon),10:31 IST,reel,tr-pdfmathtranslate,published,https://www.instagram.com/reel/De8e5rhFf0_/,103,1,118,1,119,1,121,1,1,2,0,2.6,15,1,2,18s · Google · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 26 Oct '26 (Mon),12:31 IST,reel,tr-meetily,published,https://www.instagram.com/reel/De8srlSDYFa/,43,1,111,1,113,1,116,1,1,0,0,2.5,158,2,3,18s · Gemini · v4,,1 comment(s) — the DM funnel fired; steady
@@ -259,7 +259,7 @@ date,time_ist,type,slug,status,link,views_1h,comments_1h,views_6h,comments_6h,vi
 27 Oct '26 (Tue),12:33 IST,reel,ego-lite,published,https://www.instagram.com/reel/De_RncIjkrS/,98,0,110,0,112,0,112,0,0,0,1,2.8,12,2,0,,,steady
 28 Oct '26 (Wed),02:47 IST,reel,tr-sim,published,https://www.instagram.com/reel/DfAzZKfCsBr/,26,1,117,1,125,1,125,1,0,0,0,22.2,350,7,0,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady
 28 Oct '26 (Wed),10:30 IST,carousel,(carousel slot),MISSED,,,,,,,,,,,,,,,,,,slot passed without a publish — see the agent log for that day,
-28 Oct '26 (Wed),12:35 IST,reel,awesome-claude-code,published,https://www.instagram.com/reel/DfB2s-GFXRY/,0,0,16,0,20,0,20,0,0,0,0,1.4,,25,0,,,underperformed — the hook likely did not stop the scroll
+28 Oct '26 (Wed),12:35 IST,reel,awesome-claude-code,published,https://www.instagram.com/reel/DfB2s-GFXRY/,0,0,16,0,20,0,23,0,0,0,0,2.2,,25,15,,,underperformed — the hook likely did not stop the scroll
 28 Oct '26 (Wed),16:39 IST,reel,voxcpm,published,https://www.instagram.com/reel/DfCSk42oELu/,1,0,6,0,7,0,7,0,0,0,0,1.6,500,17,0,,,underperformed — the hook likely did not stop the scroll
 29 Oct '26 (Thu),02:53 IST,reel,tr-new-api,published,https://www.instagram.com/reel/DfDY2UXkyg-/,12,1,53,1,109,1,110,1,0,2,0,3.6,342,106,1,18s · Claude · v4,,1 comment(s) — the DM funnel fired; steady; 2 save(s)
 29 Oct '26 (Thu),07:31 IST,reel,tr-chattts,published,https://www.instagram.com/reel/DfD4uJVE3ZT/,6,1,51,1,113,1,117,1,0,1,0,3.4,750,122,4,18s · ElevenLabs · v4,,1 comment(s) — the DM funnel fired; steady; 1 save(s)
