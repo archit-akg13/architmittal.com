@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-29T23:00:11.615Z",
+  "builtAt": "2026-10-30T21:13:06.388Z",
   "items": [
+    {
+      "slug": "tr-cherry-studio",
+      "kind": "reel",
+      "hook": "Keep Claude, own the workspace — this one is OPEN SOURCE",
+      "postedAt": "2026-10-30T21:12:33.257Z",
+      "permalink": "https://www.instagram.com/reel/DfIhMfOilYy/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-cherry-studio.jpg",
+      "resource": {
+        "name": "CherryHQ/cherry-studio",
+        "url": "https://github.com/CherryHQ/cherry-studio"
+      }
+    },
     {
       "slug": "tr-chattts",
       "kind": "reel",
