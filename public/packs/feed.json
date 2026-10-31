@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-31T04:23:15.778Z",
+  "builtAt": "2026-10-31T05:01:18.743Z",
   "items": [
+    {
+      "slug": "tr-thinkrail",
+      "kind": "reel",
+      "hook": "Cursor makes you adapt. This OPEN SOURCE IDE adapts to you",
+      "postedAt": "2026-10-31T05:01:09.601Z",
+      "permalink": "https://www.instagram.com/reel/DfJW075AtMa/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-thinkrail.jpg",
+      "resource": {
+        "name": "JetBrains/thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail"
+      }
+    },
     {
       "slug": "tr-cherry-studio",
       "kind": "reel",
