@@ -1,6 +1,19 @@
 {
-  "builtAt": "2026-10-31T23:00:13.278Z",
+  "builtAt": "2026-11-01T21:15:06.094Z",
   "items": [
+    {
+      "slug": "tr-heretic",
+      "kind": "reel",
+      "hook": "Claude refuses? Your own model won't, and it's FREE",
+      "postedAt": "2026-11-01T21:14:56.916Z",
+      "permalink": "https://www.instagram.com/reel/DfNrEB6igJX/",
+      "trigger": "REPO",
+      "thumb": "/packs/feed/tr-heretic.jpg",
+      "resource": {
+        "name": "p-e-w/heretic",
+        "url": "https://github.com/p-e-w/heretic"
+      }
+    },
     {
       "slug": "claude-code-game-studios",
       "kind": "reel",
