@@ -1,9 +1,11 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
-import { CAL_URL } from '@/lib/constants'
+import { callUrlFor } from '@/lib/constants'
 
 export default function FloatingCTA() {
+  const callUrl = callUrlFor(usePathname())
   const [visible, setVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
@@ -19,7 +21,7 @@ export default function FloatingCTA() {
 
   return (
     <a
-      href={CAL_URL}
+      href={callUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={`fixed bottom-6 right-6 bg-[--red] hover:bg-[#a90d29] text-white px-5 py-3 rounded-full shadow-lg font-heading font-semibold z-50 transition-all duration-300 hover:scale-105 text-sm ${

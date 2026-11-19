@@ -105,3 +105,6 @@ export const FAQ_ITEMS = [
 // Paid 1:1 consultation. Everything else on the site is free (Archit, 27 Aug 2026).
 // Override with NEXT_PUBLIC_CAL_URL once the cal.com event exists.
 export const CAL_URL = '/book'
+// Free 15-min call for international agency leads (shown on /agencies instead of the paid /book).
+export const AGENCY_CALL_URL = 'https://cal.com/archit-mittal-yqls6c/15min'
+export const callUrlFor = (pathname: string | null) => (pathname?.startsWith('/agencies') ? AGENCY_CALL_URL : CAL_URL)

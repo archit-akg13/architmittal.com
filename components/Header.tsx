@@ -1,10 +1,12 @@
 'use client'
 
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import Link from 'next/link'
-import { NAV_LINKS, CAL_URL } from '@/lib/constants'
+import { NAV_LINKS, callUrlFor } from '@/lib/constants'
 
 export default function Header() {
+  const callUrl = callUrlFor(usePathname())
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
@@ -26,7 +28,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href={CAL_URL}
+            href={callUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-md bg-[--red] px-4 py-2 font-body text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
@@ -65,7 +67,7 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href={CAL_URL}
+            href={callUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="block rounded-md bg-[--red] px-4 py-2 text-center font-body font-semibold text-white"
