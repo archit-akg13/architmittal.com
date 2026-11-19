@@ -4,7 +4,7 @@ import OfferPage, { type OfferPageData } from '@/components/OfferPage'
 export const metadata: Metadata = {
   title: 'White-label AI automation builds for agencies',
   description:
-    'Your client wants AI. We build it under your brand. $1,500 pilot: one automation, live in 7 days. Case studies, sample workflows and a free 15-minute call.',
+    'Your client wants AI. We build it under your brand. $1,500 pilot: one automation, first working version in 7 days. Case studies, sample workflows and a free 15-minute call.',
   alternates: { canonical: 'https://architmittal.com/agencies' },
 }
 
@@ -20,13 +20,13 @@ const ITR_CASE = {
 const DATA: OfferPageData = {
   eyebrow: 'For agencies · white-label · NDA',
   h1: ['Your client wants AI.', 'We build it under your brand.'],
-  sub: 'A small dev team that builds AI agents and automations for agencies. Start with a $1,500 pilot: one automation, live in 7 days. You keep the client, the margin and the credit.',
+  sub: 'A small dev team that builds AI agents and automations for agencies. Start with a $1,500 pilot: one automation, with a first working version in 7 days. You keep the client, the margin and the credit.',
   ctaNote: 'Free call, no deck. Bring one client request that is stuck waiting on a developer.',
-  stats: [['7 days', 'From kickoff to live'], ['209 hrs', 'Saved for one firm in one season'], ['50 hrs/wk', 'Returned to one agency team'], ['85.9%', 'Biggest cost cut delivered']],
+  stats: [['7 days', 'To a first working version'], ['209 hrs', 'Saved for one firm in one season'], ['50 hrs/wk', 'Returned to one agency team'], ['85.9%', 'Biggest cost cut delivered']],
   offers: [
-    { name: 'Pilot', price: '$1,500', line: 'One automation, live in 7 days.', points: ['Fixed price, fixed scope', 'Delivered under your brand', 'You own the code and the accounts'] },
-    { name: 'Sprint', price: '$4,500', line: 'One full client workflow, live in 7 days. Two for $7,500.', points: ['White-label, NDA signed', '50% to start, 50% on delivery', 'Not live in 7 working days? We keep working free until it is'] },
-    { name: 'Retainer', price: '$1,500–2,000/mo', line: 'After a sprint: maintenance plus one new automation a month.', points: ['Fixes and changes included', 'One new build every month', 'Cancel any month'] },
+    { name: 'Pilot', price: '$1,500', line: 'One automation. First working version in 7 days.', points: ['Fixed price, fixed scope', 'Delivered under your brand', 'You own the code and the accounts'] },
+    { name: 'Sprint', price: 'From $4,500', line: 'One full client workflow, scoped and priced on the call.', points: ['White-label, NDA signed', '50% to start, 50% on delivery', 'No working version in 7 days? You do not pay the second half'] },
+    { name: 'Retainer', price: 'Monthly', line: 'After the first build: maintenance plus one new automation a month. Quoted once we have worked together.', points: ['Fixes and changes included', 'One new build every month', 'Cancel any month'] },
   ],
   buildsTitle: 'What we build',
   builds: [
@@ -79,16 +79,16 @@ const DATA: OfferPageData = {
   steps: [
     ['15-minute call', 'You describe one client request. We tell you how we would build it and what it costs.'],
     ['Fixed scope, fixed price', 'One page: what gets built, what "live" means, the date. You approve it, we start.'],
-    ['Live in 7 days', 'Built, tested and handed over under your brand, with a walkthrough for your team.'],
+    ['Working version in 7 days', 'You see it running within a week. Then it is tested, finished and handed over under your brand, with a walkthrough for your team.'],
   ],
   faq: [
     { q: 'Do you work inside GoHighLevel or HubSpot?', a: 'We build the AI agents and automations as custom code or n8n workflows, then connect them to the CRM you already run through its API and webhooks. Your client keeps using the tool they know.' },
     { q: 'Will my client know you exist?', a: 'No. Everything ships under your brand, and we sign an NDA before the first call with your team if you want one.' },
-    { q: 'What if it is not live in 7 days?', a: 'On a Sprint, if it is not live in 7 working days we keep working at no extra cost until it is.' },
+    { q: 'What if there is no working version in 7 days?', a: 'Then you do not pay the second half. Payment is 50% to start and 50% on delivery.' },
     { q: 'Who owns the build?', a: 'You do. Code, workflows and accounts are handed over on delivery.' },
     { q: 'How do we start?', a: 'A 15-minute call. Bring one client request that is stuck. You leave with how we would build it and a fixed price.' },
   ],
-  closing: ['One stuck client request.', 'Live in 7 days.'],
+  closing: ['One stuck client request.', 'Working in 7 days.'],
 }
 
 export default function AgenciesPage() {
