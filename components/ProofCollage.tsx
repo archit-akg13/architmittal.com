@@ -20,7 +20,7 @@ export default function ProofCollage() {
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {SHOTS.map((s) => (
             <a key={s.src} href={s.href} target="_blank" rel="noopener noreferrer" data-reveal
-              className={`dcard block overflow-hidden p-3 ${s.tilt} transition-transform duration-300 hover:rotate-0`}>
+              className={`dcard block overflow-hidden p-3`}>
               <Image src={s.src} alt={s.alt} width={692} height={445} className="w-full rounded-lg border border-[--ink]/10 object-cover" />
               <p className="px-2 pb-1 pt-3 font-mono text-xs text-[--ink]/55">{s.label}</p>
             </a>

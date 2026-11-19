@@ -5,20 +5,23 @@
 /* Hallmark · studied-DNA (source: local project social_media_agency / Sprynt tokens)
  * macrostructure: Marquee Hero (long-scroll consultancy) · paper oklch(6% .005 60) · ink #FFF3E2
  * accents: gold #F4BD45 · red #CF1134 · display Anton · body Geist */
+/* Theme v3 (19 Nov 2026): quiet consultancy. White paper, ink text, one blue accent, sentence-case
+ * Geist headings. Variable names kept (--red is now the accent blue) so every component rethemes at once. */
 :root {
-  /* Light premium — the carousel brand system: warm paper, ink, red action, ochre details. */
-  --paper: #FBF7EF; --paper2: #FFFFFF; --paper3: #F3EDE0;
-  --ink: #16130E; --ink-dim: rgba(22,19,14,.60); --ink-faint: rgba(22,19,14,.12);
-  --gold: #A97B10; --gold-fill: #F4BD45; --red: #CF1134;
+  --paper: #FFFFFF; --paper2: #FFFFFF; --paper3: #F5F6F8;
+  --ink: #0E1726; --ink-dim: rgba(14,23,38,.68); --ink-faint: rgba(14,23,38,.12);
+  --gold: #5B6677; --gold-fill: #E8ECF3; --red: #1746A2;
 }
-.display { font-family: var(--font-anton), sans-serif; text-transform: uppercase; letter-spacing: .01em; line-height: .92; font-weight: 400; }
-.eyebrow { font-size: .8125rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
-.dcard { background: var(--paper2); border: 1px solid rgba(22,19,14,.10); border-radius: 18px;
-  box-shadow: 0 1px 2px rgba(22,19,14,.05), 0 10px 28px rgba(22,19,14,.08);
-  transition: translate .25s cubic-bezier(.22,1,.36,1), box-shadow .25s cubic-bezier(.22,1,.36,1); }
-.dcard:hover { translate: 0 -6px; box-shadow: 0 2px 4px rgba(22,19,14,.06), 0 22px 44px rgba(22,19,14,.14); }
+.display { font-family: var(--font-geist-sans), sans-serif; text-transform: none; letter-spacing: -.025em; line-height: 1.08; font-weight: 650; }
+/* Components size headlines for a condensed all-caps face; cap them for a normal-width one. */
+h1.display { font-size: clamp(2.25rem, 4.8vw, 3.75rem) !important; }
+h2.display { font-size: clamp(1.75rem, 3.4vw, 2.75rem) !important; }
+h3.display { font-size: clamp(1.3rem, 2.2vw, 1.75rem) !important; }
+.eyebrow { font-size: .8125rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); }
+.dcard { background: var(--paper2); border: 1px solid rgba(14,23,38,.12); border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(14,23,38,.04); transition: border-color .2s ease, box-shadow .2s ease; }
+.dcard:hover { border-color: rgba(14,23,38,.22); box-shadow: 0 4px 14px rgba(14,23,38,.07); }
 .tnum { font-variant-numeric: tabular-nums; }
-@media (prefers-reduced-motion: reduce) { .dcard, .dcard:hover { transition: none; translate: none; } }
 
 
 @layer base {
@@ -77,9 +80,7 @@
 @media (prefers-reduced-motion: reduce) { .mq-row, .wf-wire, .wf-node { animation: none } }
 
 /* interactivity pass */
-.dcard:hover { rotate: -0.4deg; }
 .dcard img { transition: transform .3s cubic-bezier(.22,1,.36,1); }
-.dcard:hover img { transform: scale(1.02); }
 a.inline-flex:active { transform: translateY(1px); }
 /* blog post body type */
 .prose { font-family: var(--font-geist-sans), sans-serif; }

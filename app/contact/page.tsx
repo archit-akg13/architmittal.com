@@ -33,7 +33,7 @@ export default function ContactPage() {
               href={CAL_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[--red] hover:bg-[#a90d29] text-white px-5 py-2 rounded-lg font-heading font-semibold text-sm transition-colors"
+              className="inline-block bg-[--red] hover:bg-[#123a85] text-white px-5 py-2 rounded-lg font-heading font-semibold text-sm transition-colors"
             >
               Book on Topmate
             </a>

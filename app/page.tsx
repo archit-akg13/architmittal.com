@@ -2,7 +2,6 @@ import Hero from '@/components/Hero'
 import ServicesSection from '@/components/ServiceCard'
 import StatsSection from '@/components/StatsSection'
 import CaseStudyPreview from '@/components/CaseStudyPreview'
-import CollageMarquee from '@/components/CollageMarquee'
 import LinkedInStrip from '@/components/LinkedInStrip'
 import ProofCollage from '@/components/ProofCollage'
 import WorkflowShowcase from '@/components/WorkflowShowcase'
@@ -34,7 +33,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Hero />
-      <CollageMarquee />
       <StatsSection />
       <CaseStudyPreview />
       <WorkflowShowcase />

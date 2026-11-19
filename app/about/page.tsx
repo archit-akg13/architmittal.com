@@ -71,7 +71,7 @@ export default function AboutPage() {
           href={CAL_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[--red] hover:bg-[#a90d29] text-white px-8 py-3 rounded-lg font-heading font-bold transition-colors"
+          className="inline-block bg-[--red] hover:bg-[#123a85] text-white px-8 py-3 rounded-lg font-heading font-bold transition-colors"
         >
           Book a Consultation
         </a>

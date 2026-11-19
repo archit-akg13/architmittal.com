@@ -1,7 +1,7 @@
 /* n8n-style workflow diagram, animated: marching wires + pulsing nodes. Pure SVG/CSS. */
 const NODES = [
-  { x: 8, y: 24, label: 'Lead in', icon: '⚡', c: '#F4BD45' },
-  { x: 36, y: 8, label: 'AI agent', icon: '🤖', c: '#CF1134' },
+  { x: 8, y: 24, label: 'Lead in', icon: '⚡', c: '#C9D6F0' },
+  { x: 36, y: 8, label: 'AI agent', icon: '🤖', c: '#1746A2' },
   { x: 36, y: 44, label: 'CRM', icon: '📊', c: '#5B4BA6' },
   { x: 66, y: 24, label: 'WhatsApp', icon: '💬', c: '#1F7A3D' },
 ]

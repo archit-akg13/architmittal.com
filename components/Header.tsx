@@ -10,9 +10,9 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[--ink]/10 bg-[#FBF7EF]/97 backdrop-blur-md shadow-[0_1px_0_rgba(22,19,14,.08)]">
+    <header className="sticky top-0 z-40 border-b border-[--ink]/10 bg-[--paper]/95 backdrop-blur-md shadow-[0_1px_0_rgba(22,19,14,.08)]">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="display text-xl text-[--ink]">
+        <Link href="/" className="font-body text-lg font-semibold tracking-tight text-[--ink]">
           Archit Mittal
         </Link>
 
@@ -55,7 +55,7 @@ export default function Header() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden space-y-3 border-t border-[--ink]/10 bg-[#FBF7EF] px-4 py-4">
+        <div className="md:hidden space-y-3 border-t border-[--ink]/10 bg-[--paper] px-4 py-4">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.href}

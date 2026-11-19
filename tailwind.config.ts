@@ -10,11 +10,11 @@ const config: Config = {
     extend: {
       colors: {
         // Sprynt-derived system (studied-DNA): warm near-black, cream ink, gold + red accents.
-        // 'lime' keys intentionally now GOLD so every legacy usage rethemes in one move.
-        lime: '#A97B10',
-        'lime-dark': '#8A6209',
-        gold: '#F4BD45',
-        crimson: '#CF1134',
+        // Theme v3: legacy 'lime'/'crimson' keys now map to the accent blue so old usages retheme in one move.
+        lime: '#1746A2',
+        'lime-dark': '#123A85',
+        gold: '#C9D6F0',
+        crimson: '#1746A2',
         paper: '#0B0908',
         'paper-2': '#171310',
         'paper-3': '#221D18',
